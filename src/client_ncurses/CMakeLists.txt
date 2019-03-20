@@ -1,0 +1,9 @@
+project(${BR_CLIENT_NCURSES_NAME})
+
+set(BR_CLIENT_NCURSES_HEADERS
+	BattleshipRoyale.h)
+
+set(BR_CLIENT_NCURSES_SOURCES
+	BattleshipRoyale.cpp)
+
+add_executable(${BR_CLIENT_NCURSES_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
