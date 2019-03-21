@@ -17,18 +17,25 @@ private:
     std::string *s_name = new std::string;
 
     /* func */
-    //void setId();
-    //void setName();
-    //void setPos();
-    //void setNumber();
-    //void setLive();
-    //void setBot();
+    void setUnique();
+    void setName();
+    void setPos();
+    void setNumber();
+    void setLive();
+    void setBot();
 public:
     /* data */
 
 
     /* func */
     Player(/* args */);
+
+    int getId();
+    std::string getName();
+    Pos getPos();
+    int getNumber();
+    bool getLive();
+    bool getBot();
 
     /* des */
     ~Player();
