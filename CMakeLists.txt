@@ -15,7 +15,8 @@ set(BR_CLIENT_CURSES_NAME BattleshipRoyale_Client_curses)
 ################################
 # Build
 ################################
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -lncurses")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+
 #set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -g")
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O2")
 
