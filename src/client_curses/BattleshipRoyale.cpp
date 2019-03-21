@@ -1,11 +1,11 @@
-#include <curses.h>
-
-#include <stdio.h>
+#include <ncurses.h>
 
 int main()
 {
 	initscr();
-	mvprintw( 5, 5, "Run 5,5 " );
+	printw("Run");
+	refresh();
+	getch();
 	endwin();
 	return 0;
 }

@@ -6,8 +6,8 @@ cmake_minimum_required (VERSION 2.6)
 set(BR_SERVER 1 CACHE BOOL "BR_SERVER")
 set(BR_CLIENT_CURSES 1 CACHE BOOL "BR_CLIENT_CURSES")
 
-set(PDCURSES_LIB "${CMAKE_SOURCE_DIR}/lib/pdcurses/pdcurses.a" CACHE FILEPATH "PDCurses *.a file")
-set(PDCURSES_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/pdcurses/include" CACHE PATH "PDCurses lib include")
+#set(PDCURSES_LIB "${CMAKE_SOURCE_DIR}/lib/pdcurses/pdcurses.a" CACHE FILEPATH "PDCurses *.a file")
+#set(PDCURSES_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/pdcurses/include" CACHE PATH "PDCurses lib include")
 
 set(BR_SERVER_NAME BattleshipRoyale_Server)
 set(BR_CLIENT_CURSES_NAME BattleshipRoyale_Client_curses)
