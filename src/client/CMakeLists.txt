@@ -2,11 +2,11 @@ project(${BR_CLIENT_CURSES_NAME})
 
 set(BR_CLIENT_CURSES_HEADERS
 	BattleshipRoyale.h
-	../bd/Client.h)
+	Registration.h)
 
 set(BR_CLIENT_CURSES_SOURCES
 	BattleshipRoyale.cpp
-	../bd/Client.cpp)
+	Registration.cpp)
 
 
 find_package(Curses REQUIRED)

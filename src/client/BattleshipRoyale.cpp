@@ -1,0 +1,6 @@
+#include "Registration.h"
+
+int main()
+{
+	return 0;
+}
