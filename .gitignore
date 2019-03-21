@@ -1,0 +1,8 @@
+*.test
+*.exe
+*.so
+*.o
+*.dll
+*.com
+*.bin
+*.ipch
