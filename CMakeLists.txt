@@ -22,7 +22,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 ################################
 
 if(BR_CLIENT_CURSES)
-	add_subdirectory(src/client)
+	#add_subdirectory(src/client)
 endif()
 
 if(BR_SERVER)

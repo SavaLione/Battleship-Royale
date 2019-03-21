@@ -8,6 +8,12 @@ struct Pos
 
 };
 
+struct Size
+{
+    int i_x;
+    int i_y;
+
+};
 
 
 #endif // BATTLESHIPROYALE_H
