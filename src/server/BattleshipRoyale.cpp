@@ -1,17 +1,40 @@
 #include <iostream>
 #include <string>
 
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/basic_file_sink.h>
+
 #include "BattleshipRoyale.h"
 #include "Player.h"
 
 using namespace std;
 
 void test();
+void log_test();
+void log_file();
 
 int main()
 {
-    test();
+    //test();
+    log_test();
+    log_file();
     return 0;
+}
+
+void log_file()
+{
+    auto my_logger = spdlog::basic_logger_mt("basic_logger", "server.log");
+    my_logger->info("Some log message");
+    spdlog::info("Some log message");
+}
+
+void log_test()
+{
+    spdlog::info("Welcome to spdlog!");
+    spdlog::info("INFO");
+    spdlog::warn("WARN");
+    spdlog::critical("CRITICAL");
+    spdlog::debug("DEBUG");
 }
 
 void test()
@@ -579,4 +602,5 @@ void test()
 
                 USE ARROW KEY TO NAVIGATE, TAB TO SWITCH BUTTONS
     */
+
 }

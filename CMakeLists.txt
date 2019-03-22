@@ -9,10 +9,14 @@ set(BR_CLIENT_CURSES 0 CACHE BOOL "BR_CLIENT_CURSES")
 set(BR_SERVER_NAME BattleshipRoyale_Server)
 set(BR_CLIENT_CURSES_NAME BattleshipRoyale_Client_curses)
 
+# Lib
+set(SPDLOG_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/spdlog" CACHE PATH "spdlog lib")
+
 ################################
 # Build
 ################################
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O0")
 
 #set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS} -g")
 #set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS} -O2")
@@ -22,7 +26,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 ################################
 
 if(BR_CLIENT_CURSES)
-	#add_subdirectory(src/client)
+	add_subdirectory(src/client)
 endif()
 
 if(BR_SERVER)
