@@ -3,6 +3,7 @@
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
+#include <sqlite3.h>
 
 #include <cxxopts.hpp>
 
@@ -10,6 +11,8 @@
 #include "Player.h"
 
 using namespace std;
+
+void test_bd();
 
 int main(int argc, char *argv[])
 {
@@ -55,7 +58,24 @@ int main(int argc, char *argv[])
     spdlog::info("Start Battleship Royale Server!");
     spdlog::info("Port: {}", PORT);
     
+    test_bd();
+    
     return 0;
+}
+
+void test_bd()
+{
+    sqlite3 *db;
+    int rc;
+
+    rc = sqlite3_open("test.db", &db);
+
+    if(rc) {
+        spdlog::warn("Can't open database: {}", sqlite3_errmsg(db));
+    } else {
+        spdlog::info("Opened database successfully");
+    }
+    sqlite3_close(db);
 }
 
 /*
