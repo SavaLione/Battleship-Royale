@@ -2,15 +2,15 @@ project(${BR_SERVER_NAME})
 
 set(BR_SERVER_HEADERS
 	BattleshipRoyale.h
+	Db.h
 	Map.h
-	Player.h
-	../bd/Server.h)
+	Player.h)
 
 set(BR_SERVER_SOURCES
 	BattleshipRoyale.cpp
+	Db.cpp
 	Map.cpp
-	Player.cpp
-	../bd/Server.cpp)
+	Player.cpp)
 
 add_executable(${BR_SERVER_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
 
