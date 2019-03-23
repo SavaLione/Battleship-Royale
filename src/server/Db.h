@@ -20,6 +20,7 @@ private:
     void db_create();
     bool db_table_check();
     int db_id_check();
+    void db_add_some();
 public:
 
     /* func */
