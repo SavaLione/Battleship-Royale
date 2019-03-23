@@ -22,11 +22,16 @@ DB::DB(/* args */)
         spdlog::warn("Creating the initial data in the database");
     }
 
-    db_all_check();
+    //db_all_check();
 
-    db_add_player("test1", "pass");
-    db_add_player("asd", "asdas");
-    db_add_player("w1sdaw", "pass");
+    //db_add_player("test1", "pass");
+    //db_add_player("asd", "asdas");
+    //db_add_player("w1sdaw", "pass");
+
+    db_player dbPlayer;
+
+    db_get_player("asd", &dbPlayer);
+    db_get_player_print(&dbPlayer);
 
     db_close();
 }
@@ -144,8 +149,6 @@ void DB::db_add_player(std::string s_name, std::string s_password)
 {
     std::string sql =
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1,";
-    
-    // "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'SavaLione', 'MyOwOpass', 'now', 0, 0, 7);"
 
     sql += "'";
     sql += s_name;
@@ -180,4 +183,41 @@ void DB::db_add_player(std::string s_name, std::string s_password)
         spdlog::info("Player {} successfully created.", s_name);
     }
 
+}
+
+void DB::db_get_player(std::string name, db_player *pl)
+{
+    const char *tail;
+
+    std::string sql = "SELECT ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL FROM PLAYER WHERE NAME =\"";
+    sql += name;
+    sql += "\"";
+
+   *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        
+        pl->id = sqlite3_column_int(stmt, 0);
+        //pl->name += sqlite3_column_text(stmt, 1);
+        pl->name = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
+        pl->password = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
+        pl->reg_date = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
+        //pl->password += sqlite3_column_text(stmt, 2);
+        //pl->reg_date += sqlite3_column_text(stmt, 3);
+        pl->score = sqlite3_column_int(stmt, 4);
+        pl->money = sqlite3_column_int(stmt, 5);
+        pl->level = sqlite3_column_int(stmt, 6);
+    }
+}
+
+void DB::db_get_player_print(db_player *pl)
+{
+    spdlog::info("id: {}", pl->id);
+    spdlog::info("name: {}", pl->name);
+    spdlog::info("password: {}", pl->password);
+    spdlog::info("reg_date: {}", pl->reg_date);
+    spdlog::info("score: {}", pl->score);
+    spdlog::info("money: {}", pl->money);
+    spdlog::info("level: {}", pl->level);
 }
