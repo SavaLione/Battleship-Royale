@@ -21,9 +21,9 @@ DB::DB(/* args */)
         spdlog::warn("Creating the initial data in the database");
     }
 
-    spdlog::info(db_id_check());
+    db_all_check();
 
-    db_add_some();
+
 
     db_close();
 }
@@ -55,7 +55,7 @@ void DB::db_close()
 void DB::db_create()
 {
     std::string sql = 
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES(1, 'ZERO', 'ZEROZERO', 'ZERO', 0, 0);"
+        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES(1, 'ZERO', 'ZEROZERO', 'ZERO', 1, 1);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'SavaLione', 'MyOwOpass', 'now', 0, 0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'OwO', 'OwO', '1234d', 0, 0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'UwU', 'UwU', 'a', 0, 0);"
@@ -76,21 +76,6 @@ void DB::db_create()
 
 bool DB::db_table_check()
 {
-    /*
-    std::string sql = 
-        "INSERT INTO PLAYER VALUES(0, 'ZERO', 'ZEROZERO', 'ZERO', 100, 100);"
-        "INSERT INTO PLAYER VALUES(1, 'SavaLione', 'MYPASS', 'NOW', 200, 1000);"
-        "INSERT INTO PLAYER VALUES(2, 'Admin', 'Admin', 'OwO', 0, 0);";
-    
-    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-
-    if(*rc != SQLITE_OK)
-    {
-        spdlog::warn("Error create table. Code: {}", sqlite3_errmsg(db));
-        return false;
-    }
-    return true;
-    */
     std::string sql = 
         "CREATE TABLE PLAYER("
         "ID INT PRIMARY KEY     NOT NULL, "
@@ -111,17 +96,9 @@ bool DB::db_table_check()
    return true;
 }
 
-int DB::db_id_check()
+void DB::db_all_check()
 {
-    /*
-    std::string sql = "SELECT count(*) FROM PLAYER";
-
-    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-
-    spdlog::error("rc id: {}", *rc);
-    spdlog::error("rc id: {}", *rc);
-    */
-   const char *tail;
+    const char *tail;
 
     std::string sql = "SELECT ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY from PLAYER";
 
@@ -129,30 +106,36 @@ int DB::db_id_check()
 
     while(sqlite3_step(stmt) == SQLITE_ROW)
     {
-        spdlog::info("ID: {}", sqlite3_column_text(stmt, 0));
+        spdlog::info("ID: {}", sqlite3_column_int(stmt, 0));
         spdlog::info("NAME: {}", sqlite3_column_text(stmt, 1));
         spdlog::info("PASSWORD: {}", sqlite3_column_text(stmt, 2));
         spdlog::info("REG_DATE: {}", sqlite3_column_text(stmt, 3));
-        spdlog::info("SCORE: {}", sqlite3_column_text(stmt, 4));
-        spdlog::info("MONEY: {}", sqlite3_column_text(stmt, 5));
+        spdlog::info("SCORE: {}", sqlite3_column_int(stmt, 4));
+        spdlog::info("MONEY: {}", sqlite3_column_int(stmt, 5));
         spdlog::info("------------------");
     }
-
-    return 0;
 }
 
-void DB::db_add_some()
+bool DB::db_check_player(std::string s_name)
 {
-    std::string sql =
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'ZEROa', 'ZEROZERO', 'ZERO', 100, 100);"
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'ZEROa', 'ZEROZERO', 'ZERO', 100, 100);"
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'ZEROa', 'ZEROZERO', 'ZERO', 100, 100);"
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'ZEROa', 'ZEROZERO', 'ZERO', 100, 100);";
+    std::string sql = "SELECT ID, NAME FROM PLAYER WHERE NAME = \"";
+    sql += s_name;
+    sql += "\"";
     
-    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
+    const char *tail;
 
-    if(*rc != SQLITE_OK)
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+
+    while(sqlite3_step(stmt) == SQLITE_ROW)
     {
-        spdlog::warn("Error add some. Code: {}", sqlite3_errmsg(db));
+        spdlog::warn("DB name: {} found. ID: {}", sqlite3_column_text(stmt, 1), sqlite3_column_int(stmt, 0));
+        return true;
     }
+
+    return false;
+}
+
+void DB::db_add_player()
+{
+
 }

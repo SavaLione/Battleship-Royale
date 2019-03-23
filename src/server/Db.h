@@ -19,12 +19,14 @@ private:
     void db_close();
     void db_create();
     bool db_table_check();
-    int db_id_check();
+    void db_all_check();
     void db_add_some();
 public:
 
     /* func */
     DB(/* args */);
+    void db_add_player();
+    bool db_check_player(std::string s_name);
 
     /* des */
     ~DB();
