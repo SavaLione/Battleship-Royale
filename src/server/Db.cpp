@@ -19,7 +19,7 @@ DB::DB(/* args */)
         spdlog::warn("Table not found. Create table");
     }
 
-    
+    spdlog::info(db_id_check());
 
     db_close();
 }
@@ -28,6 +28,7 @@ DB::~DB()
 {
     delete zErrMsg;
     delete rc;
+    delete id;
 }
 
 void DB::db_open()
@@ -106,4 +107,37 @@ bool DB::db_table_check()
     }
 
    return true;
+}
+
+int DB::db_id_check()
+{
+    /*
+    std::string sql = "SELECT count(*) FROM PLAYER";
+
+    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
+
+    spdlog::error("rc id: {}", *rc);
+    spdlog::error("rc id: {}", *rc);
+    */
+   const char *tail;
+
+    std::string sql = "SELECT NAME, PASSWORD,id from PLAYER order by id";
+
+   *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+
+    spdlog::error("Display");
+
+    int i = 0;
+
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        spdlog::error("i: {}", i);
+        spdlog::error(sqlite3_column_text(stmt, 0));
+        spdlog::error(sqlite3_column_text(stmt, 1));
+        spdlog::error(sqlite3_column_text(stmt, 2));
+
+        i++;
+    }
+
+    return 0;
 }

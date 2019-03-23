@@ -8,8 +8,10 @@ class DB
 private:
     /* data */
     sqlite3 *db;
+    sqlite3_stmt *stmt;
     char *zErrMsg = new char;
     int *rc = new int;
+    int *id = new int;
     char *messageError;
 
     /* func */
@@ -17,6 +19,7 @@ private:
     void db_close();
     void db_create();
     bool db_table_check();
+    int db_id_check();
 public:
 
     /* func */
