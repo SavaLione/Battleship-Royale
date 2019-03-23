@@ -25,7 +25,7 @@ public:
 
     /* func */
     DB(/* args */);
-    void db_add_player();
+    void db_add_player(std::string s_name, std::string s_password);
     bool db_check_player(std::string s_name);
 
     /* des */
