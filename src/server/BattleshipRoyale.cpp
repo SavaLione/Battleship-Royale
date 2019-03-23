@@ -4,23 +4,61 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
+#include <cxxopts.hpp>
+
 #include "BattleshipRoyale.h"
 #include "Player.h"
 
 using namespace std;
 
-void test();
-void log_test();
-void log_file();
-
-int main()
+int main(int argc, char *argv[])
 {
-    //test();
-    log_test();
-    log_file();
+    spdlog::info("Welcome to Battleship Royale Server!");
+    /*
+        Arg opt
+    */
+    bool HIDE_LOG = false;
+    int PORT = 49939;
+
+    try
+    {
+        cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
+
+        options.add_options()
+		    ("h,help", 		"Help"											)
+            ("v,version", 	"Version"										)
+		    ("l,log", 		"Log", 			cxxopts::value<bool>(HIDE_LOG)	)
+            ("p,port", 		"Port", 		cxxopts::value<int>(PORT)	    );
+
+        auto result = options.parse(argc, argv);
+
+        if(result.count("help"))
+        {
+            spdlog::info(options.help({"", "Group"}));
+            exit(0);
+        }
+
+        if(result.count("version"))
+        {
+            spdlog::info(BR::VERSION);
+            exit(0);
+        }
+    } catch (const cxxopts::OptionException& e)
+    {
+        spdlog::warn(e.what());
+        exit(1);
+    }
+
+    /*
+        Start server
+    */
+    spdlog::info("Start Battleship Royale Server!");
+    spdlog::info("Port: {}", PORT);
+    
     return 0;
 }
 
+/*
 void log_file()
 {
     auto my_logger = spdlog::basic_logger_mt("basic_logger", "server.log");
@@ -36,7 +74,7 @@ void log_test()
     spdlog::critical("CRITICAL");
     spdlog::debug("DEBUG");
 }
-
+*/
 void test()
 {
     int i_size = 16;

@@ -11,6 +11,7 @@ set(BR_CLIENT_CURSES_NAME BattleshipRoyale_Client_curses)
 
 # Lib
 set(SPDLOG_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/spdlog" CACHE PATH "spdlog lib")
+set(CXXOPTS_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/cxxopts" CACHE PATH "cxxopts lib")
 
 ################################
 # Build

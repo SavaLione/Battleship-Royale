@@ -15,3 +15,4 @@ set(BR_SERVER_SOURCES
 add_executable(${BR_SERVER_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
 
 include_directories(${SPDLOG_LIB_INCLUDE})
+include_directories(${CXXOPTS_LIB_INCLUDE})
