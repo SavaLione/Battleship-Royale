@@ -4,6 +4,8 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
+#include <picosha2.h>
+
 #include "Db.h"
 #include "BattleshipRoyale.h"
 
@@ -28,11 +30,19 @@ DB::DB(/* args */)
     //db_add_player("asd", "asdas");
     //db_add_player("w1sdaw", "pass");
 
-    db_player dbPlayer;
+    //db_player dbPlayer;
 
-    db_get_player("asd", &dbPlayer);
-    db_get_player_print(&dbPlayer);
+    //db_get_player("asd", &dbPlayer);
+    //db_get_player_print(&dbPlayer);
 
+    //std::string s = "SavaLione";
+    //spdlog::info("s: {}", s);
+    //spdlog::info("sha2(): {}", sha2(&s));
+
+    db_add_player("SavaLione", "SavaLione");
+    db_add_player("pass", "pass");
+    db_add_player("Some", "pass");
+    
     db_close();
 }
 
@@ -156,7 +166,8 @@ void DB::db_add_player(std::string s_name, std::string s_password)
     sql += ",";
 
     sql += "'";
-    sql += s_password;
+    //sql += s_password;
+    sql += sha2(&s_password);
     sql += "'";
     sql += ",";
 
@@ -220,4 +231,11 @@ void DB::db_get_player_print(db_player *pl)
     spdlog::info("score: {}", pl->score);
     spdlog::info("money: {}", pl->money);
     spdlog::info("level: {}", pl->level);
+}
+
+std::string DB::sha2(std::string *s)
+{
+    std::string ret;
+    picosha2::hash256_hex_string(*s, ret);
+    return ret;
 }

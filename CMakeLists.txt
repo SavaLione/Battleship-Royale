@@ -14,6 +14,7 @@ set(SPDLOG_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/spdlog" CACHE PATH "spdlog lib")
 set(CXXOPTS_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/cxxopts" CACHE PATH "cxxopts lib")
 set(SQLITE3_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/sqlite3" CACHE PATH "sqlite3 lib")
 set(SQLITE3_LIB "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll" CACHE FILEPATH "sqlite3 *.dll file")
+set(PICOSHA2_LIB_INCLUDE "${CMAKE_SOURCE_DIR}/lib/picosha2" CACHE PATH "picosha2 lib")
 
 # Boost
 

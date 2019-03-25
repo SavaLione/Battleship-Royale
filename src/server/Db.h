@@ -33,6 +33,7 @@ private:
     void db_all_check();
     void db_add_some();
     void db_get_player_print(db_player *pl);
+    std::string sha2(std::string *s);
 public:
 
     /* func */
