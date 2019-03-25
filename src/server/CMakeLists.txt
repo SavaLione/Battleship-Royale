@@ -27,5 +27,6 @@ target_link_libraries(${BR_SERVER_NAME} ${SQLITE3_LIB})
 # Boost
 target_link_libraries(${BR_SERVER_NAME} ${Boost_LIBRARIES})
 if(MINGW)
-  target_link_libraries(${BR_SERVER_NAME} ws2_32)
+	target_link_libraries(${BR_SERVER_NAME} ws2_32)
+	target_link_libraries(${BR_SERVER_NAME} wsock32)
 endif()
