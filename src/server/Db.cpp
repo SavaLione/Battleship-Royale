@@ -23,25 +23,6 @@ DB::DB(/* args */)
         db_create();
         spdlog::warn("Creating the initial data in the database");
     }
-
-    //db_all_check();
-
-    //db_add_player("test1", "pass");
-    //db_add_player("asd", "asdas");
-    //db_add_player("w1sdaw", "pass");
-
-    //db_player dbPlayer;
-
-    //db_get_player("asd", &dbPlayer);
-    //db_get_player_print(&dbPlayer);
-
-    //std::string s = "SavaLione";
-    //spdlog::info("s: {}", s);
-    //spdlog::info("sha2(): {}", sha2(&s));
-
-    db_add_player("SavaLione", "SavaLione");
-    db_add_player("pass", "pass");
-    db_add_player("Some", "pass");
     
     db_close();
 }
@@ -166,7 +147,6 @@ void DB::db_add_player(std::string s_name, std::string s_password)
     sql += ",";
 
     sql += "'";
-    //sql += s_password;
     sql += sha2(&s_password);
     sql += "'";
     sql += ",";
@@ -210,12 +190,9 @@ void DB::db_get_player(std::string name, db_player *pl)
     {
         
         pl->id = sqlite3_column_int(stmt, 0);
-        //pl->name += sqlite3_column_text(stmt, 1);
         pl->name = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
         pl->password = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
         pl->reg_date = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
-        //pl->password += sqlite3_column_text(stmt, 2);
-        //pl->reg_date += sqlite3_column_text(stmt, 3);
         pl->score = sqlite3_column_int(stmt, 4);
         pl->money = sqlite3_column_int(stmt, 5);
         pl->level = sqlite3_column_int(stmt, 6);
