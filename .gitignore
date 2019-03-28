@@ -1,0 +1,10 @@
+*.test
+*.exe
+*.so
+*.o
+*.dll
+*.com
+*.bin
+*.ipch
+*.json
+lib/boost/*
