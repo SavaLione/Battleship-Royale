@@ -36,16 +36,6 @@ if(BR_WINDOWS)
     set(    SQLITE3_LIBRARY     "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   CACHE FILEPATH  "sqlite3 *.dll file)"   )
 endif()
 
-# Boost
-#set(boost_COMPONENTS
-#    date_time
-#    regex
-#    system
-#)
-#set(Boost_USE_STATIC_LIBS OFF)
-#set(Boost_USE_MULTITHREADED ON)
-#find_package(Boost COMPONENTS ${boost_COMPONENTS} REQUIRED)
-
 ################################
 # Build
 ################################
