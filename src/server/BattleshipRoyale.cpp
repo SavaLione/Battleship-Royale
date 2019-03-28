@@ -4,7 +4,6 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <sqlite3.h>
-#include <boost/asio.hpp>
 
 #include <cxxopts.hpp>
 

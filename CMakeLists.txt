@@ -7,7 +7,7 @@ set(    CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmak
 # Variables
 ################################
 set(    BR_WINDOWS 0    )
-set(    BR_UNIX 0       )
+set(    BR_UNIX 1       )
 
 if(MINGW)
     set(    BR_WINDOWS 1    )
@@ -30,7 +30,6 @@ set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"            CACH
 set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"           CACHE PATH "cxxopts lib include"    )
 set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"           CACHE PATH "sqlite3 lib include"    )
 set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"          CACHE PATH "picosha2 lib include"   )
-set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3/include"   CACHE PATH "sqlite3 lib include"    )
 
 if(BR_WINDOWS)
     # SQLite3
@@ -38,29 +37,27 @@ if(BR_WINDOWS)
 endif()
 
 # Boost
-set(boost_COMPONENTS
-    date_time
-    regex
-    system
-)
-set(Boost_USE_STATIC_LIBS OFF)
-set(Boost_USE_MULTITHREADED ON)
-find_package(Boost COMPONENTS ${boost_COMPONENTS} REQUIRED)
+#set(boost_COMPONENTS
+#    date_time
+#    regex
+#    system
+#)
+#set(Boost_USE_STATIC_LIBS OFF)
+#set(Boost_USE_MULTITHREADED ON)
+#find_package(Boost COMPONENTS ${boost_COMPONENTS} REQUIRED)
 
 ################################
 # Build
 ################################
 if(BR_WINDOWS)
-    #set( BR_ARGS -Wall -O0 -pipe)
     add_compile_options(-Wall)
     add_compile_options(-O0)
     add_compile_options(-pipe)
 endif()
 
 if(BR_UNIX)
-    add_compile_options(-Wall)
-    add_compile_options(-O0)
-    add_compile_options(-pipe)
+    add_compile_options(-Wall -O0 -pipe)
+    add_compile_options(-lsqlite3 -lpthread)
 endif()
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${BR_ARGS}")

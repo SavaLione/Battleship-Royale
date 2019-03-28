@@ -27,7 +27,7 @@ include_directories(${SQLITE3_LIB_INCLUDE})
 include_directories(${PICOSHA2_LIB_INCLUDE})
 
 # Boost
-include_directories(${Boost_INCLUDE_DIRS})
+#include_directories(${Boost_INCLUDE_DIRS})
 
 ################################
 # Executable
@@ -37,9 +37,15 @@ add_executable(${BR_SERVER_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
 ################################
 # Link Lib
 ################################
+#target_link_libraries(${BR_SERVER_NAME} ${Boost_LIBRARIES})
 if(BR_WINDOWS)
-	target_link_libraries(${BR_SERVER_NAME} ${Boost_LIBRARIES})
 	target_link_libraries (${BR_SERVER_NAME} ${SQLITE3_LIBRARY})
+endif()
+
+if(BR_UNIX)
+	include_directories(/usr/include)
+	link_directories(/usr/lib)
+	target_link_libraries(${BR_SERVER_NAME} sqlite3)
 endif()
 
 ################################
