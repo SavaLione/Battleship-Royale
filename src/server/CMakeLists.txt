@@ -14,11 +14,8 @@ set(BR_SERVER_SOURCES
 
 
 # SQLite3
-if(MINGW)
-	include_directories(${SQLITE3_INCLUDE_DIR})
-else()
-	include_directories(${SQLITE3_INCLUDE_DIRS})
-endif()
+include_directories(${SQLITE3_INCLUDE_DIR})
+
 
 # Boost
 include_directories(${Boost_INCLUDE_DIRS})
@@ -34,11 +31,7 @@ include_directories(${PICOSHA2_LIB_INCLUDE})
 #target_link_libraries(${BR_SERVER_NAME} ${SQLITE3_LIB})
 
 # SQLite3
-if(MINGW)
-	target_link_libraries (${BR_SERVER_NAME} ${SQLITE3_LIBRARY})
-else()
-	target_link_libraries (${BR_SERVER_NAME} ${SQLITE3_LIBRARIES})
-endif()
+target_link_libraries (${BR_SERVER_NAME} ${SQLITE3_LIBRARY})
 
 # Boost
 target_link_libraries(${BR_SERVER_NAME} ${Boost_LIBRARIES})
