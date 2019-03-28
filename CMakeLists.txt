@@ -1,8 +1,5 @@
 cmake_minimum_required (VERSION 2.6)
 
-# Подключение модулей
-set(    CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake"  )
-
 ################################
 # Variables
 ################################
@@ -26,14 +23,31 @@ set(    BR_CLIENT_CURSES_NAME   BattleshipRoyale_Client_curses  )
 ################################
 # Lib
 ################################
-set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"            CACHE PATH "spdlog lib include"     )
-set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"           CACHE PATH "cxxopts lib include"    )
-set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"           CACHE PATH "sqlite3 lib include"    )
-set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"          CACHE PATH "picosha2 lib include"   )
+set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"                CACHE PATH "spdlog lib include"         )
+set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"               CACHE PATH "cxxopts lib include"        )
+set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"               CACHE PATH "sqlite3 lib include"        )
+set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"              CACHE PATH "picosha2 lib include"       )
 
+set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   CACHE FILEPATH  "sqlite3 *.dll file"    )
+
+
+################################
+# Inclu desu
+################################
+
+# Header only
+include_directories(${SPDLOG_LIB_INCLUDE})
+include_directories(${CXXOPTS_LIB_INCLUDE})
+include_directories(${PICOSHA2_LIB_INCLUDE})
+
+# OS Specific
 if(BR_WINDOWS)
-    # SQLite3
-    set(    SQLITE3_LIBRARY     "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   CACHE FILEPATH  "sqlite3 *.dll file)"   )
+    include_directories(${SQLITE3_LIB_INCLUDE})
+endif()
+
+if(BR_UNIX)
+    include_directories(/usr/include)
+    link_directories(/usr/lib)
 endif()
 
 ################################
