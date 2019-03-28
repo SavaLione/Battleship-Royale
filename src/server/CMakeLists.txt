@@ -24,6 +24,7 @@ add_executable(${BR_SERVER_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
 ################################
 # Link Lib
 ################################
+target_link_libraries(${BR_SERVER_NAME} ${USE_LIB})
 
 if(BR_UNIX)
 	target_link_libraries(${BR_SERVER_NAME} sqlite3)

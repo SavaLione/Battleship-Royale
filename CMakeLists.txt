@@ -30,6 +30,10 @@ set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"              
 
 set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   CACHE FILEPATH  "sqlite3 *.dll file"    )
 
+# Boost
+set(    Boost_USE_STATIC_LIBS   OFF     )
+set(    Boost_USE_MULTITHREAD   ON      )
+find_package(Boost 1.67.0 REQUIRED COMPONENTS system thread regex)
 
 ################################
 # Inclu desu
@@ -43,12 +47,17 @@ include_directories(${PICOSHA2_LIB_INCLUDE})
 # OS Specific
 if(BR_WINDOWS)
     include_directories(${SQLITE3_LIB_INCLUDE})
+    include_directories(${Boost_INCLUDE_DIRS})
+    link_directories(${Boost_LIBRARY_DIRS})
 endif()
 
 if(BR_UNIX)
     include_directories(/usr/include)
     link_directories(/usr/lib)
 endif()
+
+#
+set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY})
 
 ################################
 # Build
