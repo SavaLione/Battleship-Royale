@@ -7,14 +7,16 @@ project(${BR_SERVER_NAME})
 set(BR_SERVER_HEADERS
 	BattleshipRoyale.h
 	DB.h
-	Map.h
-	Player.h)
+	Player.h
+	rand_sse.h
+	UID.h)
 
 set(BR_SERVER_SOURCES
 	BattleshipRoyale.cpp
 	DB.cpp
-	Map.cpp
-	Player.cpp)
+	Player.cpp
+	rand_sse.cpp
+	UID.cpp)
 
 ################################
 # Executable
@@ -36,3 +38,6 @@ if(BR_WINDOWS)
 	target_link_libraries(${BR_SERVER_NAME} ws2_32)
 	target_link_libraries(${BR_SERVER_NAME} wsock32)
 endif()
+
+# Compiler
+#target_compile_options(${BR_SERVER_NAME} PUBLIC -j4)

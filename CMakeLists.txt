@@ -4,7 +4,7 @@ cmake_minimum_required (VERSION 2.6)
 # Variables
 ################################
 set(    BR_WINDOWS 0    )
-set(    BR_UNIX 1       )
+set(    BR_UNIX 0       )
 
 if(MINGW)
     set(    BR_WINDOWS 1    )
@@ -63,14 +63,13 @@ set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY
 # Build
 ################################
 if(BR_WINDOWS)
-    add_compile_options(-Wall)
-    add_compile_options(-O0)
-    add_compile_options(-pipe)
+    add_compile_options(-Wall -O0 -pipe -msse2)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 
 if(BR_UNIX)
-    add_compile_options(-Wall -O0 -pipe)
-    add_compile_options(-lsqlite3 -lpthread)
+    add_compile_options(-Wall -O0 -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${BR_ARGS}")

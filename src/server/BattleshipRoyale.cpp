@@ -12,10 +12,35 @@
 #include "Player.h"
 #include "DB.h"
 
+#include "rand_sse.h"
+
 using namespace std;
 
 int main(int argc, char *argv[])
 {
+	/* RandSSE Seed */
+	srand_sse(time(NULL));
+
+	#ifdef _OPENMP
+	/*
+		Выводим текст в консоль каждым потоком
+		Нужно для проверки количества задействованных потоков
+	*/
+	string s_omp_parallel_cores_test = "";
+	#pragma omp parallel
+	{
+		s_omp_parallel_cores_test += "[CORE] ";
+	}
+	spdlog::info("Cores: {}", s_omp_parallel_cores_test);
+
+	/*
+		Вывод данных о возможности использования OpenMP 
+	*/
+	spdlog::info("Compiled by an OpenMP-compliant implementation.");
+	#else
+	spdlog::warn("Compiled WITHOUT an OpenMP-compliant implementation.");
+	#endif
+
 	spdlog::info("Welcome to Battleship Royale Server!");
 	/*
 		Arg opt
