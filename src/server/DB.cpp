@@ -26,18 +26,6 @@ DB::DB(/* args */)
         spdlog::warn("Creating the initial data in the database");
     }
 
-    // UID DB::uid_get_np(login *l)
-
-    login l;
-    l.s_name = "SavaLione";
-    l.s_password = "some";
-
-    UID uid_test = uid_get_np(&l);
-    
-    spdlog::info("uid_test.s_name {}", uid_test.s_name);
-    spdlog::info("uid_test.co_uid.id {}", uid_test.co_uid.id);
-    spdlog::info("uid_test.co_uid.u_i_random {}", uid_test.co_uid.u_i_random);
-
     db_close();
 }
 
