@@ -3,6 +3,7 @@
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
+
 #include <sqlite3.h>
 
 #include <cxxopts.hpp>
@@ -10,10 +11,8 @@
 #include "BattleshipRoyale.h"
 #include "Player.h"
 #include "Db.h"
-//#include "MainCycle.h"
 
 using namespace std;
-//using namespace Cycle;
 
 int main(int argc, char *argv[])
 {
@@ -24,6 +23,13 @@ int main(int argc, char *argv[])
 	bool HIDE_LOG = false;
 	int PORT = 49939;
 
+	/*
+		Парсер аргументов к программе
+			h	help	Помощь
+			v	version	Версия программы
+			l	log		Логирование. Возможно стоит убрать
+			p	port	Порт сервера
+	*/
 	try
 	{
 		cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
@@ -61,21 +67,18 @@ int main(int argc, char *argv[])
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
 
-	DB *db_test = new DB;
+	return 0;
+}
 
-	delete db_test;
+/*
+	Short description of the machine
 
-	/*
-		Short description of the machine
-	*/
-	/*MainCycle cycle;
+	MainCycle cycle;
 	cycle.Start();
 	while (!cycle.Exit)
 	{
 		cycle.Update();
 	}
 	cycle.End();
-	delete cycle;*/
-
-	return 0;
-}
+	delete cycle;
+*/
