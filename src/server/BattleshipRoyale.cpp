@@ -10,57 +10,72 @@
 #include "BattleshipRoyale.h"
 #include "Player.h"
 #include "Db.h"
+//#include "MainCycle.h"
 
 using namespace std;
+//using namespace Cycle;
 
 int main(int argc, char *argv[])
 {
-    spdlog::info("Welcome to Battleship Royale Server!");
-    /*
-        Arg opt
-    */
-    bool HIDE_LOG = false;
-    int PORT = 49939;
+	spdlog::info("Welcome to Battleship Royale Server!");
+	/*
+		Arg opt
+	*/
+	bool HIDE_LOG = false;
+	int PORT = 49939;
 
-    try
-    {
-        cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
+	try
+	{
+		cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
 
-        options.add_options()
-		    ("h,help", 		"Help"											)
-            ("v,version", 	"Version"										)
-		    ("l,log", 		"Log", 			cxxopts::value<bool>(HIDE_LOG)	)
-            ("p,port", 		"Port", 		cxxopts::value<int>(PORT)	    );
+		options.add_options()
+			("h,help", "Help")
+			("v,version", "Version")
+			("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))
+			("p,port", "Port", cxxopts::value<int>(PORT));
 
-        auto result = options.parse(argc, argv);
+		auto result = options.parse(argc, argv);
 
-        if(result.count("help"))
-        {
-            spdlog::info(options.help({"", "Group"}));
-            exit(0);
-        }
+		if (result.count("help"))
+		{
+			spdlog::info(options.help({ "", "Group" }));
+			exit(0);
+		}
 
-        if(result.count("version"))
-        {
-            spdlog::info(BR::VERSION_SERVER);
-            spdlog::info(BR::VERSION_DATABASE);
-            exit(0);
-        }
-    } catch (const cxxopts::OptionException& e)
-    {
-        spdlog::warn(e.what());
-        exit(1);
-    }
+		if (result.count("version"))
+		{
+			spdlog::info(BR::VERSION_SERVER);
+			spdlog::info(BR::VERSION_DATABASE);
+			exit(0);
+		}
+	}
+	catch (const cxxopts::OptionException& e)
+	{
+		spdlog::warn(e.what());
+		exit(1);
+	}
 
-    /*
-        Start server
-    */
-    spdlog::info("Start Battleship Royale Server!");
-    spdlog::info("Port: {}", PORT);
+	/*
+		Start server
+	*/
+	spdlog::info("Start Battleship Royale Server!");
+	spdlog::info("Port: {}", PORT);
 
-    DB *db_test = new DB;
-    
-    delete db_test;
+	DB *db_test = new DB;
 
-    return 0;
+	delete db_test;
+
+	/*
+		Short description of the machine
+	*/
+	/*MainCycle cycle;
+	cycle.Start();
+	while (!cycle.Exit)
+	{
+		cycle.Update();
+	}
+	cycle.End();
+	delete cycle;*/
+
+	return 0;
 }
