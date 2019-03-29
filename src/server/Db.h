@@ -3,14 +3,33 @@
 
 #include <sqlite3.h>
 
+/* Карточка пользователя */
 struct db_player
 {
+    /* id */
     int id;
+
+    /* Имя */
     std::string name;
+
+    /* Пароль */
     std::string password;
+
+    /* Дата регистрации */
     std::string reg_date;
+
+    /* Очки */
     int score;
+
+    /* Валюта */
     int money;
+
+    /*
+        Уровень доступа
+            0   -   Пользователи
+            1   -   Бета
+            3   -   Админ
+    */
     int level;
 };
 
