@@ -10,7 +10,7 @@
 
 #include "BattleshipRoyale.h"
 #include "Player.h"
-#include "Db.h"
+#include "DB.h"
 
 using namespace std;
 

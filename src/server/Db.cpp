@@ -6,7 +6,7 @@
 
 #include <picosha2.h>
 
-#include "Db.h"
+#include "DB.h"
 #include "BattleshipRoyale.h"
 
 DB::DB(/* args */)

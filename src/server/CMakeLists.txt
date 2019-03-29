@@ -6,13 +6,13 @@ project(${BR_SERVER_NAME})
 
 set(BR_SERVER_HEADERS
 	BattleshipRoyale.h
-	Db.h
+	DB.h
 	Map.h
 	Player.h)
 
 set(BR_SERVER_SOURCES
 	BattleshipRoyale.cpp
-	Db.cpp
+	DB.cpp
 	Map.cpp
 	Player.cpp)
 
