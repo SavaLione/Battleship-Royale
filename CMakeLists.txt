@@ -33,7 +33,7 @@ set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   
 # Boost
 set(    Boost_USE_STATIC_LIBS   OFF     )
 set(    Boost_USE_MULTITHREAD   ON      )
-find_package(Boost 1.67.0 REQUIRED COMPONENTS system thread regex)
+find_package(Boost 1.65.0 REQUIRED COMPONENTS system thread regex)
 
 ################################
 # Inclu desu
