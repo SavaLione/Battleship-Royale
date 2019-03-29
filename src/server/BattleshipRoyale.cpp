@@ -9,7 +9,6 @@
 #include <cxxopts.hpp>
 
 #include "BattleshipRoyale.h"
-#include "Player.h"
 #include "DB.h"
 
 #include "rand_sse.h"
