@@ -71,6 +71,24 @@ int main(int argc, char *argv[])
 }
 
 /*
+	Можно создать 2 вектора
+	Вектор под очередь из игроков
+	И вектор из векторов - карта
+
+	vector<Player> vec_Player;
+	vector<vector<Map>> vec_Map;
+
+	Игроки, которые ожидают игру, добавляются в вектор vec_Player
+	По истечении времени, игроки отсекаются и закидываются на карту
+	
+	--------------------------
+	1. vec_Player		|a|b|f|e|z|x|q|
+	2. timer					|--------------> Map
+	3. wait				|z|x|q|
+	--------------------------
+*/
+
+/*
 	Short description of the machine
 
 	MainCycle cycle;
