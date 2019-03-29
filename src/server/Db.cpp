@@ -9,6 +9,8 @@
 #include "DB.h"
 #include "BattleshipRoyale.h"
 
+#include "rand_sse.h"
+
 DB::DB(/* args */)
 {
     db_open();
@@ -23,7 +25,19 @@ DB::DB(/* args */)
         db_create();
         spdlog::warn("Creating the initial data in the database");
     }
+
+    // UID DB::uid_get_np(login *l)
+
+    login l;
+    l.s_name = "SavaLione";
+    l.s_password = "some";
+
+    UID uid_test = uid_get_np(&l);
     
+    spdlog::info("uid_test.s_name {}", uid_test.s_name);
+    spdlog::info("uid_test.co_uid.id {}", uid_test.co_uid.id);
+    spdlog::info("uid_test.co_uid.u_i_random {}", uid_test.co_uid.u_i_random);
+
     db_close();
 }
 
@@ -117,10 +131,10 @@ void DB::db_all_check()
     }
 }
 
-bool DB::db_check_player(std::string s_name)
+bool DB::db_check_player(std::string *s_name)
 {
     std::string sql = "SELECT ID, NAME FROM PLAYER WHERE NAME = \"";
-    sql += s_name;
+    sql += *s_name;
     sql += "\"";
     
     const char *tail;
@@ -136,18 +150,18 @@ bool DB::db_check_player(std::string s_name)
     return false;
 }
 
-void DB::db_add_player(std::string s_name, std::string s_password)
+void DB::db_add_player(login *l)
 {
     std::string sql =
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1,";
 
     sql += "'";
-    sql += s_name;
+    sql += l->s_name;
     sql += "'";
     sql += ",";
 
     sql += "'";
-    sql += sha2(&s_password);
+    sql += sha2(&l->s_password);
     sql += "'";
     sql += ",";
 
@@ -167,21 +181,22 @@ void DB::db_add_player(std::string s_name, std::string s_password)
 
     if(*rc != SQLITE_OK)
     {
-        spdlog::error("Failed to create player: {}", sqlite3_errmsg(db));
+        spdlog::error("Failed to create player: {}", l->s_name);
+        spdlog::error("Error: {}", sqlite3_errmsg(db));
     }
     else
     {
-        spdlog::info("Player {} successfully created.", s_name);
+        spdlog::info("Player {} successfully created.", l->s_name);
     }
 
 }
 
-void DB::db_get_player(std::string name, db_player *pl)
+void DB::db_get_player(std::string *name, db_player *pl)
 {
     const char *tail;
 
     std::string sql = "SELECT ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL FROM PLAYER WHERE NAME =\"";
-    sql += name;
+    sql += *name;
     sql += "\"";
 
    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
@@ -215,4 +230,44 @@ std::string DB::sha2(std::string *s)
     std::string ret;
     picosha2::hash256_hex_string(*s, ret);
     return ret;
+}
+
+int DB::db_get_id(std::string *s_name)
+{
+    int i_ret = -1;
+    const char *tail;
+
+    std::string sql = "SELECT ID FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        i_ret = sqlite3_column_int(stmt, 0);
+    }
+
+   return i_ret;
+}
+
+UID DB::uid_get_np(login *l)
+{
+    unsigned int u_i_random[4];
+    rand_sse(u_i_random);
+
+    UID uid_ret;
+    uid_ret.s_name = l->s_name;
+    uid_ret.co_uid.id = db_get_id(&l->s_name);
+    uid_ret.co_uid.u_i_random = u_i_random[0];
+
+    return uid_ret;
+}
+UID DB::uid_get_np(login *l, int *id)
+{
+    UID uid_ret;
+    uid_ret.s_name = l->s_name;
+    uid_ret.co_uid.id = db_get_id(&l->s_name);
+    uid_ret.co_uid.u_i_random = *id;
+
+    return uid_ret;
 }

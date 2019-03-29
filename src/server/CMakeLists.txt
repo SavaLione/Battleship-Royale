@@ -7,16 +7,12 @@ project(${BR_SERVER_NAME})
 set(BR_SERVER_HEADERS
 	BattleshipRoyale.h
 	DB.h
-	Player.h
-	rand_sse.h
-	UID.h)
+	rand_sse.h)
 
 set(BR_SERVER_SOURCES
 	BattleshipRoyale.cpp
 	DB.cpp
-	Player.cpp
-	rand_sse.cpp
-	UID.cpp)
+	rand_sse.cpp)
 
 ################################
 # Executable

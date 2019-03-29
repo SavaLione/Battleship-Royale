@@ -3,6 +3,8 @@
 
 #include <sqlite3.h>
 
+#include "BattleshipRoyale.h"
+
 /* Карточка пользователя */
 struct db_player
 {
@@ -32,6 +34,13 @@ struct db_player
     */
     int level;
 };
+
+struct login
+{
+   std::string s_name;
+   std::string s_password;
+};
+
 
 class DB
 {
@@ -74,14 +83,24 @@ public:
 
     DB();
 
-    /* Создать пользователя s_name с паролем s_password */
-    void db_add_player(std::string s_name, std::string s_password);
+    /* Создать пользователя l */
+    void db_add_player(login *l);
 
     /* Проверка существования пользователя s_name */
-    bool db_check_player(std::string s_name);
+    bool db_check_player(std::string *s_name);
 
     /* Получить карточку пользователя db_player по ссылке */
-    void db_get_player(std::string name, db_player *pl);
+    void db_get_player(std::string *name, db_player *pl);
+
+    /* Получение id пользователя по имени. id уникальный */
+    int db_get_id(std::string *s_name);
+
+    /* Проверка пароля */
+    bool db_check_pass(login *l);
+
+    /* Получение UID пользователя */
+    UID uid_get_np(login *l);
+    UID uid_get_np(login *l, int *id);
 
     /* des */
     ~DB();

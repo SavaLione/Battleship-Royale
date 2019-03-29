@@ -92,6 +92,12 @@ int main(int argc, char *argv[])
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
 
+	DB *db_test = new DB;
+
+	
+
+	delete db_test;
+
 	return 0;
 }
 
