@@ -259,3 +259,93 @@ UID DB::uid_get_np(login *l, int *id)
 
     return uid_ret;
 }
+
+std::string DB::db_get_reg_date(std::string *s_name)
+{
+    std::string s_ret = "";
+    const char *tail;
+
+    std::string sql = "SELECT REG_DATE FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        s_ret = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+    }
+
+   return s_ret;
+}
+
+std::string DB::db_get_password(std::string *s_name)
+{
+    std::string s_ret = "";
+    const char *tail;
+
+    std::string sql = "SELECT PASSWORD FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        s_ret = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+    }
+
+   return s_ret;
+}
+
+int DB::db_get_score(std::string *s_name)
+{
+    int i_ret = -1;
+    const char *tail;
+
+    std::string sql = "SELECT SCORE FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        i_ret = sqlite3_column_int(stmt, 0);
+    }
+
+   return i_ret;
+}
+
+int DB::db_get_money(std::string *s_name)
+{
+    int i_ret = -1;
+    const char *tail;
+
+    std::string sql = "SELECT MONEY FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        i_ret = sqlite3_column_int(stmt, 0);
+    }
+
+   return i_ret;
+}
+
+int DB::db_get_level(std::string *s_name)
+{
+    int i_ret = -1;
+    const char *tail;
+
+    std::string sql = "SELECT LEVEL FROM PLAYER WHERE NAME =\"";
+    sql += *s_name;
+    sql += "\"";
+
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    while(sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        i_ret = sqlite3_column_int(stmt, 0);
+    }
+
+   return i_ret;
+}

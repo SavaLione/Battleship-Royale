@@ -41,7 +41,6 @@ struct login
    std::string s_password;
 };
 
-
 class DB
 {
 private:
@@ -70,10 +69,7 @@ private:
     /* Вывод всех пользователей с информацией в консоль */
     void db_all_check();
 
-    /* Some */
-    //void db_add_some();
-
-    /* Вывод информации о пользователе поссылке */
+    /* Вывод информации о пользователе по ссылке */
     void db_get_player_print(db_player *pl);
 
     /* Создание sha2 по ссылке */
@@ -101,6 +97,22 @@ public:
     /* Получение UID пользователя */
     UID uid_get_np(login *l);
     UID uid_get_np(login *l, int *id);
+
+    /* Получение даты регистрации по имени */
+    std::string db_get_reg_date(std::string *s_name);
+
+    /* Получение пароля по имени */
+    std::string db_get_password(std::string *s_name);
+
+    /* Получение результата по имени */
+    int db_get_score(std::string *s_name);
+
+    /* Получение счёта по имени */
+    int db_get_money(std::string *s_name);
+
+    /* Получение уровня доступа по имени */
+    int db_get_level(std::string *s_name);
+
 
     /* des */
     ~DB();
