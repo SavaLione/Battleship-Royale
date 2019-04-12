@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
 		Arg opt
 	*/
 	bool HIDE_LOG = false;
-	int PORT = 49939;
+	int PORT = BR::SERVER_PORT;
 
 	/*
 		Парсер аргументов к программе
