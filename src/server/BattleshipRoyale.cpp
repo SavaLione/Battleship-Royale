@@ -11,6 +11,8 @@
 #include "BattleshipRoyale.h"
 #include "DB.h"
 
+#include "Server.h"
+
 #include "rand_sse.h"
 
 using namespace std;
@@ -91,40 +93,17 @@ int main(int argc, char *argv[])
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
 
-	// Тест базы данных
-	DB *db_test = new DB;
-	delete db_test;
+	try 
+	{
+		boost::asio::io_service io_service;   
+		Server server(io_service);
+		io_service.run();
+	} 
+	catch(std::exception& e) 
+	{
+		spdlog::error("Error create Server!");
+		spdlog::error(e.what());
+	}
 
 	return 0;
 }
-
-/*
-	Можно создать 2 вектора
-	Вектор под очередь из игроков
-	И вектор из векторов - карта
-
-	vector<Player> vec_Player;
-	vector<vector<Map>> vec_Map;
-
-	Игроки, которые ожидают игру, добавляются в вектор vec_Player
-	По истечении времени, игроки отсекаются и закидываются на карту
-	
-	--------------------------
-	1. vec_Player		|a|b|f|e|z|x|q|
-	2. timer					|--------------> Map
-	3. wait				|z|x|q|
-	--------------------------
-*/
-
-/*
-	Short description of the machine
-
-	MainCycle cycle;
-	cycle.Start();
-	while (!cycle.Exit)
-	{
-		cycle.Update();
-	}
-	cycle.End();
-	delete cycle;
-*/

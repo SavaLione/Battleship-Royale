@@ -6,13 +6,17 @@ project(${BR_SERVER_NAME})
 
 set(BR_SERVER_HEADERS
 	BattleshipRoyale.h
+	con_handler.h
 	DB.h
-	rand_sse.h)
+	rand_sse.h
+	Server.h)
 
 set(BR_SERVER_SOURCES
 	BattleshipRoyale.cpp
+	con_handler.cpp
 	DB.cpp
-	rand_sse.cpp)
+	rand_sse.cpp
+	Server.cpp)
 
 ################################
 # Executable
