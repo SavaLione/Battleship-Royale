@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info(BR::VERSION_CLIENT);
+			spdlog::info("client version: {}", BR::CLIENT_VERSION);
 			exit(0);
 		}
 	}

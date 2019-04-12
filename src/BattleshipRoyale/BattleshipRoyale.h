@@ -5,14 +5,12 @@ struct Pos
 {
     int i_x;
     int i_y;
-
 };
 
 struct Size
 {
     int i_x;
     int i_y;
-
 };
 
 /*
@@ -23,6 +21,20 @@ struct Size
 
 namespace BR
 {
+    /*
+        Version
+    */
+    const int SERVER_VERSION_MAJOR = 0,
+              SERVER_VERSION_MINOR = 2,
+              SERVER_VERSION_PATCH = 5;
+    
+    const int CLIENT_VERSION_MAJOR = 0,
+              CLIENT_VERSION_MINOR = 1,
+              CLIENT_VERSION_PATCH = 3;
+
+    const int SERVER_VERSION = (SERVER_VERSION_MAJOR * 10000 + SERVER_VERSION_MINOR * 100 + SERVER_VERSION_PATCH);
+    const int CLIENT_VERSION = (CLIENT_VERSION_MAJOR * 10000 + CLIENT_VERSION_MINOR * 100 + CLIENT_VERSION_PATCH);
+
     /*
         bd
     */
