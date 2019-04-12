@@ -20,6 +20,7 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 {
     if (!err)
     {
+        spdlog::info("--------------------------");
         spdlog::info(data);
     }
     else

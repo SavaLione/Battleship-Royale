@@ -41,6 +41,7 @@ int main(int argc, char *argv[])
 	bool HIDE_LOG = false;
 	int PORT = BR::SERVER_PORT;
     std::string s_ip = BR::SERVER_IP;
+    std::string s_test = "1";
 	/*
 		Парсер аргументов к программе
 			h	help	Помощь
@@ -48,6 +49,7 @@ int main(int argc, char *argv[])
 			l	log		Логирование. Возможно стоит убрать
 			p	port	Порт сервера
             i   ip      Адрес сервера
+            t   test    Тест
 	*/
 	try
 	{
@@ -58,7 +60,8 @@ int main(int argc, char *argv[])
 			("v,version", "Version")
 			("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))
 			("p,port", "Port", cxxopts::value<int>(PORT))
-            ("i,ip", "IP", cxxopts::value<std::string>(s_ip));
+            ("i,ip", "IP", cxxopts::value<std::string>(s_ip))
+            ("t,test", "Test", cxxopts::value<std::string>(s_test));
 
 		auto result = options.parse(argc, argv);
 
@@ -88,7 +91,8 @@ int main(int argc, char *argv[])
 
     socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(s_ip), PORT));
 
-    const std::string msg = "[Message from Client]";
+    std::string msg = "[Message from Client] ";
+    msg += s_test;
     boost::system::error_code error;
     boost::asio::write(socket, boost::asio::buffer(msg), error);
 
@@ -111,9 +115,10 @@ int main(int argc, char *argv[])
     else
     {
         const char *data = boost::asio::buffer_cast<const char *>(receive_buffer.data());
+        spdlog::info("-----------------");
         spdlog::info("Data from server:");
         spdlog::info(data);
-        spdlog::info("End data from server");
     }
+    
     return 0;
 }
