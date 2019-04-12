@@ -79,6 +79,8 @@ int main(int argc, char *argv[])
 			spdlog::info(BR::VERSION_SERVER);
 			spdlog::info(BR::VERSION_DATABASE);
 
+			spdlog::info("sqlite3 version: {} ({})", SQLITE_VERSION, SQLITE_VERSION_NUMBER);
+
 			int i_cxxopts_version = (CXXOPTS__VERSION_MAJOR * 10000) + (CXXOPTS__VERSION_MINOR * 100) + (SPDLOG_VER_PATCH);
 			spdlog::info("cxxopts version: {}", i_cxxopts_version);
 
