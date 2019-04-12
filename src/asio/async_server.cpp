@@ -2,16 +2,16 @@
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
 #include <boost/enable_shared_from_this.hpp>
-using namespace boost::asio;
-using ip::tcp;
-using std::cout;
-using std::endl;
+//using namespace boost::asio;
+//using ip::tcp;
+//using std::cout;
+//using std::endl;
 
 
 class con_handler : public boost::enable_shared_from_this<con_handler>
 {
 private:
-  tcp::socket sock;
+  boost::asio::ip::tcp::socket sock;
   std::string message="Hello From Server!";
   enum { max_length = 1024 };
   char data[max_length];
@@ -29,7 +29,7 @@ typedef boost::shared_ptr<con_handler> pointer;
     return pointer(new con_handler(io_service));
   }
   
-  tcp::socket& socket()
+  boost::asio::ip::tcp::socket& socket()
   {
     return sock;
   }
@@ -56,7 +56,7 @@ typedef boost::shared_ptr<con_handler> pointer;
                    size_t bytes_transferred)
   {
     if (!err) {
-      cout << data << endl;
+      std::cout << data << std::endl;
 
 			
 
@@ -70,7 +70,7 @@ std::cerr << "err (recv): " << err.message() << std::endl;
   {
     if (!err) {
  
-	cout << "Server sent Hello message!"<< endl;
+	std::cout << "Server sent Hello message!"<< std::endl;
 	
     } else {
       std::cerr << "err (recv): " << err.message() << std::endl;
@@ -83,7 +83,7 @@ std::cerr << "err (recv): " << err.message() << std::endl;
 class Server {
 
 private:
-  tcp::acceptor acceptor_;
+  boost::asio::ip::tcp::acceptor acceptor_;
 
 void start_accept()
   {
@@ -98,7 +98,7 @@ void start_accept()
           boost::asio::placeholders::error));
   }
 public:
-  Server(boost::asio::io_service& io_service): acceptor_(io_service, tcp::endpoint(tcp::v4(), 1234))
+  Server(boost::asio::io_service& io_service): acceptor_(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), 1234))
   { 
      start_accept();
 }
@@ -126,7 +126,7 @@ int main(int argc, char *argv[])
 } 
 catch(std::exception& e) 
 {
-    std::cerr << e.what() << endl;
+    std::cerr << e.what() << std::endl;
 }
   return 0;
 }
