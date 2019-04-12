@@ -20,12 +20,10 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 {
     if (!err)
     {
-        //std::cout << data << std::endl;
         spdlog::info(data);
     }
     else
     {
-        //std::cerr << "err (recv): " << err.message() << std::endl;
         spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
@@ -35,12 +33,10 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
 {
     if (!err)
     {
-        //std::cout << "Server sent Hello message!" << std::endl;
         spdlog::info("Server sent Hello message!");
     }
     else
     {
-        //std::cerr << "err (recv): " << err.message() << std::endl;
         spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }

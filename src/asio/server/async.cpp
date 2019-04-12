@@ -13,7 +13,6 @@ int main(int argc, char *argv[])
 	} 
 	catch(std::exception& e) 
 	{
-		//std::cerr << e.what() << std::endl;
 		spdlog::error("Error create Server!");
 		spdlog::error(e.what());
 	}
