@@ -1,14 +1,6 @@
 #include "con_handler.h"
 
 #include <iostream>
-#include <boost/asio.hpp>
-#include <boost/bind.hpp>
-#include <boost/enable_shared_from_this.hpp>
-
-static pointer con_handler::create(boost::asio::io_service &io_service)
-{
-    return pointer(new con_handler(io_service));
-}
 
 boost::asio::ip::tcp::socket& con_handler::socket()
 {
