@@ -1,5 +1,9 @@
 #include "Server.h"
 
+#include <boost/asio.hpp>
+#include <boost/bind.hpp>
+#include <boost/enable_shared_from_this.hpp>
+
 Server::~Server()
 {
 
