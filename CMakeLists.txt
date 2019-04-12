@@ -4,23 +4,23 @@ cmake_minimum_required (VERSION 2.6)
 # Variables
 ################################
 set(    BR_WINDOWS 0    )
-set(    BR_UNIX 0       )
+set(    BR_UNIX    0    )
 
 if(MINGW)
     set(    BR_WINDOWS 1    )
-    set(    BR_UNIX 0       )
+    set(    BR_UNIX    0    )
 else()
     set(    BR_WINDOWS 0    )
-    set(    BR_UNIX 1       )
+    set(    BR_UNIX    1    )
 endif()
 
-set(    BR_SERVER 1         CACHE BOOL "BR_SERVER"          )
-set(    BR_CLIENT_CURSES 0  CACHE BOOL "BR_CLIENT_CURSES"   )
+set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
+set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT_CURSES"   )
 set(    BR_SERVER_TEST 1    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_TEST 1    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
-set(    BR_CLIENT_CURSES_NAME   BattleshipRoyale_Client_curses  )
+set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
 set(    BR_SERVER_NAME_TEST     BattleshipRoyale_Server_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_NAME_TEST     BattleshipRoyale_CLIENT_TEST    )       # <--- DELETE THIS ON STABLE
 
@@ -82,7 +82,7 @@ endif()
 # SubDirs
 ################################
 
-if(BR_CLIENT_CURSES)
+if(BR_CLIENT)
 	add_subdirectory(src/client)
 endif()
 
