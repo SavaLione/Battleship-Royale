@@ -1,13 +1,13 @@
-#include <iostream>
+#include <string>
 #include <boost/asio.hpp>
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
 using namespace boost::asio;
 using ip::tcp;
-using std::cout;
-using std::endl;
-using std::string;
+//using std::cout;
+//using std::endl;
+//using std::string;
 
 int main()
 {
@@ -16,7 +16,7 @@ int main()
 
     socket.connect(tcp::endpoint(boost::asio::ip::address::from_string("127.0.0.1"), 1234));
 
-    const string msg = "[Message from Client]\n";
+    const std::string msg = "[Message from Client]\n";
     boost::system::error_code error;
     boost::asio::write(socket, boost::asio::buffer(msg), error);
 
