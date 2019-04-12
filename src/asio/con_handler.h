@@ -2,7 +2,6 @@
 #define CON_HANDLER_H
 
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
 #include <boost/enable_shared_from_this.hpp>
 
 class con_handler : public boost::enable_shared_from_this<con_handler>

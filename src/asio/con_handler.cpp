@@ -1,6 +1,7 @@
 #include "con_handler.h"
 
 #include <iostream>
+#include <boost/bind.hpp>
 
 boost::asio::ip::tcp::socket& con_handler::socket()
 {
