@@ -1,7 +1,9 @@
 #include "con_handler.h"
 
-#include <iostream>
 #include <boost/bind.hpp>
+
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/basic_file_sink.h>
 
 boost::asio::ip::tcp::socket& con_handler::socket()
 {
@@ -18,11 +20,13 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 {
     if (!err)
     {
-        std::cout << data << std::endl;
+        //std::cout << data << std::endl;
+        spdlog::info(data);
     }
     else
     {
-        std::cerr << "err (recv): " << err.message() << std::endl;
+        //std::cerr << "err (recv): " << err.message() << std::endl;
+        spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
 }
@@ -31,11 +35,13 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
 {
     if (!err)
     {
-        std::cout << "Server sent Hello message!" << std::endl;
+        //std::cout << "Server sent Hello message!" << std::endl;
+        spdlog::info("Server sent Hello message!");
     }
     else
     {
-        std::cerr << "err (recv): " << err.message() << std::endl;
+        //std::cerr << "err (recv): " << err.message() << std::endl;
+        spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
 }

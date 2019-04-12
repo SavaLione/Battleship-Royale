@@ -1,6 +1,7 @@
 #include "Server.h"
 
-#include <iostream>
+#include <spdlog/spdlog.h>
+#include <spdlog/sinks/basic_file_sink.h>
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +13,9 @@ int main(int argc, char *argv[])
 	} 
 	catch(std::exception& e) 
 	{
-		std::cerr << e.what() << std::endl;
+		//std::cerr << e.what() << std::endl;
+		spdlog::error("Error create Server!");
+		spdlog::error(e.what());
 	}
 	
 	return 0;
