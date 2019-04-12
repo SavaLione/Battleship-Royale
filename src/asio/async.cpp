@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <boost/asio.hpp>
-#include <boost/bind.hpp>
 
 int main(int argc, char *argv[])
 {
