@@ -16,9 +16,11 @@ endif()
 
 set(    BR_SERVER 1         CACHE BOOL "BR_SERVER"          )
 set(    BR_CLIENT_CURSES 0  CACHE BOOL "BR_CLIENT_CURSES"   )
+set(    BR_SERVER_TEST 1    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_CURSES_NAME   BattleshipRoyale_Client_curses  )
+set(    BR_SERVER_NAME_TEST     BattleshipRoyale_Server_TEST    )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -85,3 +87,7 @@ endif()
 if(BR_SERVER)
 	add_subdirectory(src/server)
 endif()
+
+if(BR_SERVER_TEST)                      # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/asio)          # <--- DELETE THIS ON STABLE
+endif()                                 # <--- DELETE THIS ON STABLE
