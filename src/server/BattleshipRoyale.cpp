@@ -78,6 +78,7 @@ int main(int argc, char *argv[])
 		{
 			spdlog::info(BR::VERSION_SERVER);
 			spdlog::info(BR::VERSION_DATABASE);
+			spdlog::info("cxxopts version: \n\t\t\t\t\t\t  major: {}\n\t\t\t\t\t\t  minor: {}\n\t\t\t\t\t\t  patch {}", CXXOPTS__VERSION_MAJOR, CXXOPTS__VERSION_MINOR, CXXOPTS__VERSION_PATCH);
 			exit(0);
 		}
 	}
