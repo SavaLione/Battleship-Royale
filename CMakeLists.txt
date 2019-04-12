@@ -40,6 +40,11 @@ set(    Boost_USE_MULTITHREAD   ON      )
 find_package(Boost 1.65.0 REQUIRED COMPONENTS system thread regex)
 
 ################################
+# Local Lib
+################################
+set(    BR_LIB_INCLUDE          "${CMAKE_SOURCE_DIR}/src/BattleshipRoyale"      CACHE PATH "BattleshipRoyale lib include")
+
+################################
 # Inclu desu
 ################################
 
@@ -47,6 +52,7 @@ find_package(Boost 1.65.0 REQUIRED COMPONENTS system thread regex)
 include_directories(${SPDLOG_LIB_INCLUDE})
 include_directories(${CXXOPTS_LIB_INCLUDE})
 include_directories(${PICOSHA2_LIB_INCLUDE})
+include_directories(${BR_LIB_INCLUDE})
 
 # OS Specific
 if(BR_WINDOWS)

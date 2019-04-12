@@ -26,18 +26,20 @@ namespace BR
     /*
         Info
     */
-    const char VERSION_SERVER[] = "Server version: 0.0.1_b";
+    const char VERSION_SERVER[] = "Server version: 0.5.2";
+    const char VERSION_CLIENT[] = "Client version: 0.1.7";
     const char VERSION_DATABASE[] = "sqlite3 version: 3270200";
 
     /*
         bd
     */
-   const char DB_NAME[] = "test.db";
+    const char DB_NAME[] = "test.db";
 
-   /*
-        Char name
-   */
-    // const unsigned int NAME_LENGTH = 32;
+    /*
+        Const
+    */
+    const char SERVER_IP[] = "127.0.0.1";
+    const int  SERVER_PORT = 1234;
 
 } // BR
 

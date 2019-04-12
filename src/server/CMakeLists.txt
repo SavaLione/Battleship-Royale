@@ -5,7 +5,6 @@ project(${BR_SERVER_NAME})
 ################################
 
 set(BR_SERVER_HEADERS
-	BattleshipRoyale.h
 	con_handler.h
 	DB.h
 	rand_sse.h
