@@ -24,13 +24,6 @@ struct Size
 namespace BR
 {
     /*
-        Info
-    */
-    const char VERSION_SERVER[] = "Server version: 0.5.2";
-    const char VERSION_CLIENT[] = "Client version: 0.1.7";
-    const char VERSION_DATABASE[] = "sqlite3 version: 3270200";
-
-    /*
         bd
     */
     const char DB_NAME[] = "test.db";

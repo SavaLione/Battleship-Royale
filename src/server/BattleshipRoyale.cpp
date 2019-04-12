@@ -76,8 +76,6 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info(BR::VERSION_SERVER);
-			spdlog::info(BR::VERSION_DATABASE);
 
 			spdlog::info("sqlite3 version: {} ({})", SQLITE_VERSION, SQLITE_VERSION_NUMBER);
 
