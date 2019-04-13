@@ -62,6 +62,8 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         std::string s_pattern_reg_user_pass = BR::REG_USER_PASS;
         std::string s_pattern_reg_uid = BR::REG_UID;
 
+        spdlog::warn(s_data);
+
         if(check_pattern(&s_data, &s_pattern_reg_user))
         {
             getData(&s_data, &s_pattern_reg_user, &s_param_one);
