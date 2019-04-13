@@ -119,6 +119,9 @@ private:
      */
     std::string sha2(std::string *s);
 
+    /**
+     * @brief Задать флаги sqlite3
+     */
     void db_PRAGMA();
 
 public:
@@ -131,6 +134,11 @@ public:
      * @brief Проверка существования таблицы Player
      */
     void db_table_check();
+
+    /**
+     * @brief Проверка бд(получается открыть?)
+     */
+    void db_open_log();
 
     /**
      * @brief Создать пользователя l
@@ -216,6 +224,11 @@ public:
      */
     int db_get_level(std::string *s_name);
 
+    /**
+     * @brief Задать флаги sqlite3. Проверка возможности
+     */
+    void db_PRAGMA_log();
+    
     /**
      * @brief Деструктор класса
      */
