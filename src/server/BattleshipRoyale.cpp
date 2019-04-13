@@ -97,7 +97,7 @@ int main(int argc, char *argv[])
 	*/
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
-	/*
+
 	try 
 	{
 		boost::asio::io_service io_service;   
@@ -109,16 +109,6 @@ int main(int argc, char *argv[])
 		spdlog::error("Error create Server!");
 		spdlog::error(e.what());
 	}
-	*/
-	std::string s_reg_user = BR::REG_USER;
-	std::string s_reg_user_pass = BR::REG_USER_PASS;
-	std::string s_reg_uid = BR::REG_UID;
 
-	std::string user = "user:[some]";
-	std::string user_pass = "user:[some] pass:[wrong]";
-	std::string uid = "UID:[some] data:[ok ok ok]";
-	spdlog::error(check_pattern(&user, &s_reg_user));
-	spdlog::error(check_pattern(&user_pass, &s_reg_user_pass));
-	spdlog::error(check_pattern(&uid, &s_reg_uid));
 	return 0;
 }
