@@ -1,12 +1,26 @@
+/**
+ * @file
+ * @brief Асинхронный сервер написанный на boost asio
+ * @author SavaLione
+ * @date 14 Apr 2019
+*/
+/**
+ * @defgroup servercpp Server.cpp
+ * @ingroup server
+ * @{
+*/
 #include "Server.h"
 
 #include <boost/bind.hpp>
 
-Server::~Server()
-{
-
-}
-
+/**
+ * @brief Конструктор класса
+ * 
+ * С списком инициализации
+ * 
+ * @param [in] io_service сервис
+ * @param [in] i_port порт сервера
+ */
 void Server::start_accept()
 {
 	// creates a socket
@@ -16,6 +30,11 @@ void Server::start_accept()
 	acceptor_.async_accept(connection->socket(), boost::bind(&Server::handle_accept, this, connection, boost::asio::placeholders::error));
 }
 
+/**
+ * @brief handle
+ * @param [in] connection указатель на подключение
+ * @param [out] i_port err сервера ссылка на ошибку
+ */
 void Server::handle_accept(con_handler::pointer connection, const boost::system::error_code& err)
 {
 	if (!err)
@@ -24,3 +43,13 @@ void Server::handle_accept(con_handler::pointer connection, const boost::system:
 	}
 	start_accept();
 }
+
+/**
+ * @brief Деструктор класса
+ */
+Server::~Server()
+{
+
+}
+
+/** @} */
