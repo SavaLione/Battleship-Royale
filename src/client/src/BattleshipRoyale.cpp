@@ -103,13 +103,14 @@ int main(int argc, char *argv[])
 
     spdlog::info("IP: {}", s_ip);
     spdlog::info("PORT: {}", PORT);
-
+	while(true)
+	{
     boost::asio::io_service io_service;
     tcp::socket socket(io_service);
 
     socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(s_ip), PORT));
 
-    std::string msg = "[Message from Client] ";
+    std::string msg = "";
     msg += s_test;
     boost::system::error_code error;
     boost::asio::write(socket, boost::asio::buffer(msg), error);
@@ -137,6 +138,7 @@ int main(int argc, char *argv[])
         spdlog::info("Data from server:");
         spdlog::info(data);
     }
+	}
     
     return 0;
 }
