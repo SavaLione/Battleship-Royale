@@ -117,8 +117,14 @@ int main(int argc, char *argv[])
 	std::string user = "user:[some]";
 	std::string user_pass = "user:[some] pass:[wrong]";
 	std::string uid = "UID:[some] data:[ok ok ok]";
-	spdlog::error(check_pattern(&user, &s_reg_user));
-	spdlog::error(check_pattern(&user_pass, &s_reg_user_pass));
-	spdlog::error(check_pattern(&uid, &s_reg_uid));
+
+	std::string s_ans_one = "";
+	std::string s_ans_two = "";
+
+	getData(&user, &s_reg_user, &s_ans_one);
+
+	spdlog::error(s_ans_one);
+	spdlog::error(s_ans_two);
+
 	return 0;
 }
