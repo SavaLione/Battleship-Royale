@@ -3,12 +3,12 @@
  * @brief Работа с базой данных
  * @author SavaLione
  * @date 14 Apr 2019
-*/
+ */
 /**
  * @defgroup dbcpp DB.cpp
  * @ingroup server
  * @{
-*/
+ */
 #include <string>
 #include <ctime>
 

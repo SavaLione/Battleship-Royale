@@ -3,12 +3,12 @@
  * @brief Асинхронный сервер написанный на boost asio
  * @author SavaLione
  * @date 14 Apr 2019
-*/
+ */
 /**
  * @defgroup serverh Server.h
  * @ingroup server
  * @{
-*/
+ */
 #ifndef SERVER_H
 #define SERVER_H
 

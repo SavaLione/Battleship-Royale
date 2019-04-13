@@ -3,12 +3,12 @@
  * @brief Работа с регулярными выражениями
  * @author SavaLione
  * @date 13 Apr 2019
-*/
+ */
 /**
  * @defgroup regexh Regex.h
  * @ingroup server
  * @{
-*/
+ */
 #ifndef REGEX_H
 #define REGEX_H
 
@@ -27,7 +27,7 @@
  * @param [in] msg Строка
  * @param [in] pattern Паттерн
  * @return true - соответствует, false - не соответствует.
-*/
+ */
 bool check_pattern(std::string *msg, std::string *pattern);
 
 /**
@@ -41,7 +41,7 @@ bool check_pattern(std::string *msg, std::string *pattern);
  * @param [in] msg Строка
  * @param [in] pattern Паттерн
  * @param [out] ret_one Информация с первого нахождения в строке
-*/
+ */
 void getData(std::string *msg, std::string *pattern, std::string *ret_one);
 
 /**
@@ -56,7 +56,7 @@ void getData(std::string *msg, std::string *pattern, std::string *ret_one);
  * @param [in] pattern Паттерн
  * @param [out] ret_one Информация с первого нахождения в строке
  * @param [out] ret_two Информация с второго нахождения в строке
-*/
+ */
 void getData(std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two);
 
 #endif // REGEX_H

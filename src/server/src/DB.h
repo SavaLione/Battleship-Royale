@@ -3,12 +3,12 @@
  * @brief Работа с базой данных
  * @author SavaLione
  * @date 13 Apr 2019
-*/
+ */
 /**
  * @defgroup dbh DB.h
  * @ingroup server
  * @{
-*/
+ */
 #ifndef DB_H
 #define DB_H
 
@@ -58,22 +58,32 @@ struct login
 class DB
 {
 private:
-    /// База данных
+    /**
+     * @brief База данных
+     */
     sqlite3 *db;
 
-    /// Необходимо для получения данных из бд
+    /**
+     * @brief Необходимо для получения данных из бд
+     */
     sqlite3_stmt *stmt;
 
-    /// Сообщение о ошибке
+    /**
+     * @brief Сообщение о ошибке
+     */
     char *zErrMsg = new char;
 
-    /// Ответ базы данных
+    /**
+     * @brief Ответ базы данных
+     */
     int *rc = new int;
 
     /// 
     int *id = new int;
 
-    /// Сообщение о ошибке
+    /**
+     * @brief Сообщение о ошибке
+     */
     char *messageError;
 
     /**

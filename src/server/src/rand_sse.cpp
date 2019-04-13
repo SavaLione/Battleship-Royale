@@ -28,12 +28,12 @@
  * @brief Генерация рандомных чисел через SSE
  * @author Kipp Owens, Rajiv Parikh, SavaLione
  * @date 13 Apr 2019
-*/
+ */
 /**
  * @defgroup rand_ssecpp rand_sse.cpp
  * @ingroup server
  * @{
-*/
+ */
 #include "emmintrin.h"
 
 #include "rand_sse.h"
@@ -53,7 +53,7 @@ static __m128i cur_seed;
  *      srand_sse(time(NULL));
  * @endcode
  * @param [in] seed Seed
-*/
+ */
 void srand_sse(unsigned int seed)
 {
     cur_seed = _mm_set_epi32(seed, seed + 1, seed, seed + 1);
@@ -66,7 +66,7 @@ void srand_sse(unsigned int seed)
  *      rand_sse(u_i_random);
  * @endcode
  * @param [out] result вектор с случайными числами
-*/
+ */
 void rand_sse(unsigned int *result)
 {
 

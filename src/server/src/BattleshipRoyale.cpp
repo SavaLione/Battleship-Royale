@@ -8,7 +8,7 @@
  * @defgroup battleshiproyalecpp BattleShiproyale.cpp
  * @ingroup server
  * @{
-*/
+ */
 #include <iostream>
 #include <string>
 
@@ -34,7 +34,7 @@ using namespace std;
  * @param [in] argc количество аргументов для парсера
  * @param [in] argv[] аргументы для парсера
  * @return 0 - успешное выполнение программы, 1 - выполнение программы с ошибкой.
-*/
+ */
 int main(int argc, char *argv[])
 {
 	/*

@@ -3,12 +3,12 @@
  * @brief Асинхронный сервер написанный на boost asio
  * @author SavaLione
  * @date 14 Apr 2019
-*/
+ */
 /**
  * @defgroup servercpp Server.cpp
  * @ingroup server
  * @{
-*/
+ */
 #include "Server.h"
 
 #include <boost/bind.hpp>

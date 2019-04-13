@@ -3,12 +3,12 @@
  * @brief handler
  * @author SavaLione
  * @date 14 Apr 2019
-*/
+ */
 /**
  * @defgroup con_handler_cpp con_handler.cpp
  * @ingroup server
  * @{
-*/
+ */
 #include "con_handler.h"
 
 #include <string>

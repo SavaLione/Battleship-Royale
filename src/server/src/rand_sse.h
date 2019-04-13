@@ -45,7 +45,7 @@
  *      srand_sse(time(NULL));
  * @endcode
  * @param [in] seed Seed
-*/
+ */
 void srand_sse( unsigned int seed );
 
 /**
@@ -55,7 +55,7 @@ void srand_sse( unsigned int seed );
  *      rand_sse(u_i_random);
  * @endcode
  * @param [out] result вектор с случайными числами
-*/
+ */
 void rand_sse( unsigned int* result);
 
 #endif // RAND_SSE_H
