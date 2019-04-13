@@ -2,47 +2,102 @@
 
 #include <iostream>
 #include <string>
-#include <boost/thread.hpp>
-#include <boost/bind.hpp>
+#include <thread>
 #include <boost/asio.hpp>
-#include <boost/shared_ptr.hpp>
+#include <boost/bind.hpp>
 #include <boost/enable_shared_from_this.hpp>
-#include <boost/scoped_ptr.hpp>
-#include <boost/chrono.hpp>
 
-#define MEM_FN(x) boost::bind(&Client::x, shared_from_this())
-#define MEM_FN1(x,y) boost::bind(&Client::x, shared_from_this(),y)
-#define MEM_FN2(x,y,z) boost::bind(&Client::x, shared_from_this(),y,z)
-class Client : public boost::enable_shared_from_this<Client>, boost::asio::noncopyable
+using namespace boost;
+using namespace asio;
+using namespace ip;
+
+io_service service;
+
+class ServerLink : public enable_shared_from_this<ServerLink>, noncopyable
 {
-	Client(boost::asio::io_service *service, const std::string & message) : started(true), message(message)
+public:
+	typedef shared_ptr<ServerLink> ptr;
+
+	bool IsConnected() { return connected; }
+	bool IsSending() { return sending; }
+	bool IsReading() { return reading; }
+	std::string Message() { return message; }
+
+	static ptr Start(ip::tcp::endpoint ep)
 	{
-		socket(*service);
+		ptr link(new ServerLink());
+		link->Connect(ep);
+		return link;
 	}
 
-	void start(boost::asio::ip::tcp::endpoint ep);
+	void Disconnect()
+	{
+		if (!connected)return;
+		connected = false;
+		sock.close();
+	}
 
-public:
-	typedef boost::system::error_code error_code;
-	typedef boost::shared_ptr<Client> ptr;
+	void Send(const std::string & msg)
+	{
+		if (!connected || sending)return;
 
-	bool IsStarted();
+		sending = true;
+		std::copy(msg.begin(), msg.end(), sendBuffer);
+		sock.async_write_some(buffer(sendBuffer, msg.size()), boost::bind(&ServerLink::OnSend, shared_from_this(), _1, _2));
+	}
 
-	static ptr start(boost::asio::io_service *service, boost::asio::ip::tcp::endpoint ep, const std::string & message);
-	void Stop();
-	void Read();
-	void Send(const std::string & msg);
-	size_t ReadComplete(const error_code & err, size_t bytes);
+	size_t ReadComplete(const system::error_code & error, size_t bytes)
+	{
+		if (error) return 0;
+		bool found = std::find(readBuffer, readBuffer + bytes, '\n') < readBuffer + bytes;
+		// we read one-by-one until we get to enter, no buffering
+		return found ? 0 : 1;
+	}
 
 private:
-	boost::asio::ip::tcp::socket socket;
-	enum { max_msg = 1024 };
-	char readBuffer[max_msg];
-	char sendBuffer[max_msg];
-	bool started;
+	tcp::socket sock;
+	char readBuffer[1024];
+	char sendBuffer[1024];
+	bool connected, sending, reading;
 	std::string message;
 
-	void OnConnect(const error_code & err);
-	void OnRead(const error_code & err, size_t bytes);
-	void OnSend(const error_code & err, size_t bytes);
+	ServerLink() : sock(service), connected(false) { }
+
+	void Connect(tcp::endpoint ep)
+	{
+		sock.connect(ep);
+		connected = true;
+	}
+
+	void Read()
+	{
+		if (!connected || reading)return;
+
+		reading = true;
+		async_read(sock, buffer(readBuffer),
+			boost::bind(&ServerLink::ReadComplete, shared_from_this(), _1, _2), boost::bind(&ServerLink::OnRead, shared_from_this(), _1, _2));
+	}
+
+	void OnConnect(const system::error_code & error)
+	{
+		connected = true;
+		Read();
+	}
+
+	void OnRead(const system::error_code & error, size_t bytes)
+	{
+		reading = false;
+		if (!error)
+		{
+			std::string msg(readBuffer, bytes - 1);
+			message = msg;
+		}
+		if (connected)
+			Read();
+	}
+
+	void OnSend(const system::error_code & error, size_t bytes)
+	{
+		sending = false;
+	}
 };
