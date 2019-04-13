@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Сервер
+ * @author SavaLione
+ * @date 13 Apr 2019
+*/
+/**
+ * @defgroup battleshiproyalecpp BattleShiproyale.cpp
+ * @ingroup server
+ * @{
+*/
 #include <iostream>
 #include <string>
 
@@ -18,6 +29,12 @@
 
 using namespace std;
 
+/**
+ * @brief Точка входа в программу
+ * @param [in] argc количество аргументов для парсера
+ * @param [in] argv[] аргументы для парсера
+ * @return 0 - успешное выполнение программы, 1 - выполнение программы с ошибкой.
+*/
 int main(int argc, char *argv[])
 {
 	/*
@@ -112,3 +129,4 @@ int main(int argc, char *argv[])
 
 	return 0;
 }
+/** @} */
