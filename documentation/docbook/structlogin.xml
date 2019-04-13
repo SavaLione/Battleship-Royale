@@ -17,7 +17,7 @@
 <section>
 <title>Подробное описание</title>
 <para>
-См. определение в файле DB.h строка 38</para>
+См. определение в файле DB.h строка 49</para>
 </section>
 <section>
 <title>Данные класса</title>
@@ -26,13 +26,13 @@
 <indexterm><primary>s_name</primary><secondary>login</secondary></indexterm>
 <indexterm><primary>login</primary><secondary>s_name</secondary></indexterm>
 <para><computeroutput>std::string login::s_name</computeroutput></para><para>
-См. определение в файле DB.h строка 40</para>
+См. определение в файле DB.h строка 51</para>
     </section><anchor xml:id="_structlogin_1a9c4b7efff9382117bd288f9cc42a4e28"/>    <section>
     <title>s_password</title>
 <indexterm><primary>s_password</primary><secondary>login</secondary></indexterm>
 <indexterm><primary>login</primary><secondary>s_password</secondary></indexterm>
 <para><computeroutput>std::string login::s_password</computeroutput></para><para>
-См. определение в файле DB.h строка 41</para>
+См. определение в файле DB.h строка 52</para>
 </section>
 <para>
 Объявления и описания членов структуры находятся в файле:</para>

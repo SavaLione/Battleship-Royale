@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Работа с базой данных
+ * @author SavaLione
+ * @date 14 Apr 2019
+*/
+/**
+ * @defgroup dbcpp DB.cpp
+ * @ingroup server
+ * @{
+*/
 #include <string>
 #include <ctime>
 
@@ -11,11 +22,14 @@
 
 #include "rand_sse.h"
 
+/**
+ * @brief Конструктор класса
+ */
 DB::DB(/* args */)
 {
     db_open();
 
-    if(db_table_check())
+    if (db_table_check())
     {
         spdlog::info("Table found");
     }
@@ -29,6 +43,9 @@ DB::DB(/* args */)
     db_close();
 }
 
+/**
+ * @brief Деструктор класса
+ */
 DB::~DB()
 {
     delete zErrMsg;
@@ -36,36 +53,48 @@ DB::~DB()
     delete id;
 }
 
+/**
+ * @brief Открытие базы данных
+ */
 void DB::db_open()
 {
     *rc = sqlite3_open(BR::DB_NAME, &db);
 
-    if(*rc) {
+    if (*rc)
+    {
         spdlog::error("Can't open database: {}", sqlite3_errmsg(db));
-    } else {
+    }
+    else
+    {
         spdlog::info("Opened database successfully");
     }
 }
 
+/**
+ * @brief Закытие базы данных
+ */
 void DB::db_close()
 {
     sqlite3_close(db);
     spdlog::info("DataBase close");
 }
 
+/**
+ * @brief Создание базы данных
+ */
 void DB::db_create()
 {
-    std::string sql = 
+    std::string sql =
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES(1, 'ZERO', 'ZEROZERO', 'ZERO', 1, 1, 1);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'SavaLione', 'MyOwOpass', 'now', 0, 0, 7);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'OwO', 'OwO', '1234d', 0, 0, 0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'UwU', 'UwU', 'a', 0, 0, 0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'Hewwwoo', 'Hiii', 'n', 0, 0, 0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'Awwww', 'Awwwwwwwwwwwww', 'www', 1234, 1234, 0);";
-    
+
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
-    if(*rc != SQLITE_OK)
+    if (*rc != SQLITE_OK)
     {
         spdlog::error("Failed to create initial entries in the database: {}", sqlite3_errmsg(db));
     }
@@ -75,9 +104,12 @@ void DB::db_create()
     }
 }
 
+/**
+ * @brief Проверка существования таблицы Player
+ */
 bool DB::db_table_check()
 {
-    std::string sql = 
+    std::string sql =
         "CREATE TABLE PLAYER("
         "ID INT PRIMARY KEY     NOT NULL, "
         "NAME           TEXT    NOT NULL, "
@@ -90,23 +122,26 @@ bool DB::db_table_check()
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
-    if(*rc == 0)
+    if (*rc == 0)
     {
         return false;
     }
 
-   return true;
+    return true;
 }
 
+/**
+ * @brief Вывод всех пользователей с информацией в консоль
+ */
 void DB::db_all_check()
 {
     const char *tail;
 
     std::string sql = "SELECT ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL from PLAYER";
 
-   *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
 
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         spdlog::info("ID: {}", sqlite3_column_int(stmt, 0));
         spdlog::info("NAME: {}", sqlite3_column_text(stmt, 1));
@@ -119,17 +154,22 @@ void DB::db_all_check()
     }
 }
 
+/**
+ * @brief Проверка существования пользователя
+ * @param [in] s_name имя пользователя
+ * @return true - пользователь существует, false - пользователь не существует.
+ */
 bool DB::db_check_player(std::string *s_name)
 {
     std::string sql = "SELECT ID, NAME FROM PLAYER WHERE NAME = \"";
     sql += *s_name;
     sql += "\"";
-    
+
     const char *tail;
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
 
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         spdlog::warn("DB name: {} found. ID: {}", sqlite3_column_text(stmt, 1), sqlite3_column_int(stmt, 0));
         return true;
@@ -138,6 +178,10 @@ bool DB::db_check_player(std::string *s_name)
     return false;
 }
 
+/**
+ * @brief Создать пользователя l
+ * @param [in] l пользователь
+ */
 void DB::db_add_player(login *l)
 {
     std::string sql =
@@ -154,8 +198,8 @@ void DB::db_add_player(login *l)
     sql += ",";
 
     sql += "'";
-    time_t  now = time(0);
-    struct tm  tstruct;
+    time_t now = time(0);
+    struct tm tstruct;
     char buf[80];
     tstruct = *localtime(&now);
     strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
@@ -167,7 +211,7 @@ void DB::db_add_player(login *l)
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
-    if(*rc != SQLITE_OK)
+    if (*rc != SQLITE_OK)
     {
         spdlog::error("Failed to create player: {}", l->s_name);
         spdlog::error("Error: {}", sqlite3_errmsg(db));
@@ -176,9 +220,13 @@ void DB::db_add_player(login *l)
     {
         spdlog::info("Player {} successfully created.", l->s_name);
     }
-
 }
 
+/**
+ * @brief Получить карточку пользователя db_player по ссылке
+ * @param [in] name имя пользователя
+ * @param [out] pl карточка пользователя
+ */
 void DB::db_get_player(std::string *name, db_player *pl)
 {
     const char *tail;
@@ -187,21 +235,25 @@ void DB::db_get_player(std::string *name, db_player *pl)
     sql += *name;
     sql += "\"";
 
-   *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
 
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        
+
         pl->id = sqlite3_column_int(stmt, 0);
-        pl->name = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)));
-        pl->password = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 2)));
-        pl->reg_date = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 3)));
+        pl->name = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 1)));
+        pl->password = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 2)));
+        pl->reg_date = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 3)));
         pl->score = sqlite3_column_int(stmt, 4);
         pl->money = sqlite3_column_int(stmt, 5);
         pl->level = sqlite3_column_int(stmt, 6);
     }
 }
 
+/**
+ * @brief Вывод информации о пользователе по ссылке
+ * @param [in] pl имя пользователя
+ */
 void DB::db_get_player_print(db_player *pl)
 {
     spdlog::info("id: {}", pl->id);
@@ -213,6 +265,11 @@ void DB::db_get_player_print(db_player *pl)
     spdlog::info("level: {}", pl->level);
 }
 
+/**
+ * @brief Создание sha2 по ссылке
+ * @param [in] s строка для преобразования в sha2
+ * @return sha2 сообщение
+ */
 std::string DB::sha2(std::string *s)
 {
     std::string ret;
@@ -220,6 +277,11 @@ std::string DB::sha2(std::string *s)
     return ret;
 }
 
+/**
+ * @brief Получение id пользователя по имени. id уникальный
+ * @param [in] s_name имя пользователя
+ * @return id пользователя
+ */
 int DB::db_get_id(std::string *s_name)
 {
     int i_ret = -1;
@@ -230,14 +292,19 @@ int DB::db_get_id(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         i_ret = sqlite3_column_int(stmt, 0);
     }
 
-   return i_ret;
+    return i_ret;
 }
 
+/**
+ * @brief Получение UID пользователя
+ * @param [in] l пользователь
+ * @return UID
+ */
 UID DB::uid_get_np(login *l)
 {
     unsigned int u_i_random[4];
@@ -250,6 +317,13 @@ UID DB::uid_get_np(login *l)
 
     return uid_ret;
 }
+
+/**
+ * @brief Получение UID пользователя
+ * @param [in] l пользователь
+ * @param [in] id id
+ * @return UID
+ */
 UID DB::uid_get_np(login *l, int *id)
 {
     UID uid_ret;
@@ -260,6 +334,11 @@ UID DB::uid_get_np(login *l, int *id)
     return uid_ret;
 }
 
+/**
+ * @brief Получение даты регистрации по имени
+ * @param [in] s_name имя пользователя
+ * @return дата регистрации
+ */
 std::string DB::db_get_reg_date(std::string *s_name)
 {
     std::string s_ret = "";
@@ -270,14 +349,19 @@ std::string DB::db_get_reg_date(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        s_ret = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        s_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
 
-   return s_ret;
+    return s_ret;
 }
 
+/**
+ * @brief Получение пароля по имени
+ * @param [in] s_name имя пользователя
+ * @return пароль (из бд. в sha2)
+ */
 std::string DB::db_get_password(std::string *s_name)
 {
     std::string s_ret = "";
@@ -288,14 +372,19 @@ std::string DB::db_get_password(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        s_ret = std::string(reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)));
+        s_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
 
-   return s_ret;
+    return s_ret;
 }
 
+/**
+ * @brief Получение результата по имени
+ * @param [in] s_name имя пользователя
+ * @return результат(очки)
+ */
 int DB::db_get_score(std::string *s_name)
 {
     int i_ret = -1;
@@ -306,14 +395,19 @@ int DB::db_get_score(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         i_ret = sqlite3_column_int(stmt, 0);
     }
 
-   return i_ret;
+    return i_ret;
 }
 
+/**
+ * @brief Получение счёта по имени
+ * @param [in] s_name имя пользователя
+ * @return счёт
+ */
 int DB::db_get_money(std::string *s_name)
 {
     int i_ret = -1;
@@ -324,14 +418,19 @@ int DB::db_get_money(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         i_ret = sqlite3_column_int(stmt, 0);
     }
 
-   return i_ret;
+    return i_ret;
 }
 
+/**
+ * @brief Получение уровня доступа по имени
+ * @param [in] s_name имя пользователя
+ * @return уровень доступа
+ */
 int DB::db_get_level(std::string *s_name)
 {
     int i_ret = -1;
@@ -342,10 +441,11 @@ int DB::db_get_level(std::string *s_name)
     sql += "\"";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
-    while(sqlite3_step(stmt) == SQLITE_ROW)
+    while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         i_ret = sqlite3_column_int(stmt, 0);
     }
 
-   return i_ret;
+    return i_ret;
 }
+/** @} */

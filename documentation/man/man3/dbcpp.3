@@ -1,0 +1,276 @@
+.TH "dbcpp" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dbcpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "\fBDB::DB\fP ()"
+.br
+.RI "Конструктор класса "
+.ti -1c
+.RI "\fBDB::~DB\fP ()"
+.br
+.RI "Деструктор класса "
+.ti -1c
+.RI "bool \fBDB::db_check_player\fP (std::string *s_name)"
+.br
+.RI "Проверка существования пользователя "
+.ti -1c
+.RI "void \fBDB::db_add_player\fP (\fBlogin\fP *l)"
+.br
+.RI "Создать пользователя l\&. "
+.ti -1c
+.RI "void \fBDB::db_get_player\fP (std::string *name, \fBdb_player\fP *pl)"
+.br
+.RI "Получить карточку пользователя \fBdb_player\fP по ссылке "
+.ti -1c
+.RI "int \fBDB::db_get_id\fP (std::string *s_name)"
+.br
+.RI "Получение id пользователя по имени\&. id уникальный "
+.ti -1c
+.RI "\fBUID\fP \fBDB::uid_get_np\fP (\fBlogin\fP *l)"
+.br
+.RI "Получение \fBUID\fP пользователя "
+.ti -1c
+.RI "\fBUID\fP \fBDB::uid_get_np\fP (\fBlogin\fP *l, int *id)"
+.br
+.RI "Получение \fBUID\fP пользователя "
+.ti -1c
+.RI "std::string \fBDB::db_get_reg_date\fP (std::string *s_name)"
+.br
+.RI "Получение даты регистрации по имени "
+.ti -1c
+.RI "std::string \fBDB::db_get_password\fP (std::string *s_name)"
+.br
+.RI "Получение пароля по имени "
+.ti -1c
+.RI "int \fBDB::db_get_score\fP (std::string *s_name)"
+.br
+.RI "Получение результата по имени "
+.ti -1c
+.RI "int \fBDB::db_get_money\fP (std::string *s_name)"
+.br
+.RI "Получение счёта по имени "
+.ti -1c
+.RI "int \fBDB::db_get_level\fP (std::string *s_name)"
+.br
+.RI "Получение уровня доступа по имени "
+.in -1c
+.SH "Подробное описание"
+.PP 
+
+.SH "Функции"
+.PP 
+.SS "DB::DB ()"
+
+.PP
+Конструктор класса 
+.PP
+См\&. определение в файле DB\&.cpp строка 28
+.SS "void DB::db_add_player (\fBlogin\fP * l)"
+
+.PP
+Создать пользователя l\&. 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIl\fP пользователь 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 185
+.SS "bool DB::db_check_player (std::string * s_name)"
+
+.PP
+Проверка существования пользователя 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+true - пользователь существует, false - пользователь не существует\&. 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 162
+.SS "int DB::db_get_id (std::string * s_name)"
+
+.PP
+Получение id пользователя по имени\&. id уникальный 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+id пользователя 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 285
+.SS "int DB::db_get_level (std::string * s_name)"
+
+.PP
+Получение уровня доступа по имени 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+уровень доступа 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 434
+.SS "int DB::db_get_money (std::string * s_name)"
+
+.PP
+Получение счёта по имени 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+счёт 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 411
+.SS "std::string DB::db_get_password (std::string * s_name)"
+
+.PP
+Получение пароля по имени 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+пароль (из бд\&. в sha2) 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 365
+.SS "void DB::db_get_player (std::string * name, \fBdb_player\fP * pl)"
+
+.PP
+Получить карточку пользователя \fBdb_player\fP по ссылке 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIname\fP имя пользователя 
+.br
+\fIpl\fP карточка пользователя 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 230
+.SS "std::string DB::db_get_reg_date (std::string * s_name)"
+
+.PP
+Получение даты регистрации по имени 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+дата регистрации 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 342
+.SS "int DB::db_get_score (std::string * s_name)"
+
+.PP
+Получение результата по имени 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIs_name\fP имя пользователя 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+результат(очки) 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 388
+.SS "\fBUID\fP DB::uid_get_np (\fBlogin\fP * l)"
+
+.PP
+Получение \fBUID\fP пользователя 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIl\fP пользователь 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+\fBUID\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 308
+.SS "\fBUID\fP DB::uid_get_np (\fBlogin\fP * l, int * id)"
+
+.PP
+Получение \fBUID\fP пользователя 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIl\fP пользователь 
+.br
+\fIid\fP id 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+\fBUID\fP 
+.RE
+.PP
+
+.PP
+См\&. определение в файле DB\&.cpp строка 327
+.SS "DB::~DB ()"
+
+.PP
+Деструктор класса 
+.PP
+См\&. определение в файле DB\&.cpp строка 49
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

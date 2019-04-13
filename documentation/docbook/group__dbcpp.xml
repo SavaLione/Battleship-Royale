@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__dbcpp">
+<title>DB.cpp</title>
+<indexterm><primary>DB.cpp</primary></indexterm>
+Граф связей класса DB.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__dbcpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__dbcpp_1ga29a603c52c10831cddee82518417f992">DB::DB</link> ()</para>
+
+<para>Конструктор класса </para>
+</listitem>
+            <listitem><para><link linkend="_group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28">DB::~DB</link> ()</para>
+
+<para>Деструктор класса </para>
+</listitem>
+            <listitem><para>bool <link linkend="_group__dbcpp_1gaea6044c3fffc4c31714c732bb3789f71">DB::db_check_player</link> (std::string *s_name)</para>
+
+<para>Проверка существования пользователя </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__dbcpp_1ga472c425f9a22c467e4acd0e800153837">DB::db_add_player</link> (<link linkend="_structlogin">login</link> *l)</para>
+
+<para>Создать пользователя l. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__dbcpp_1ga1e5d244a838c99a8753727cf0abd1f70">DB::db_get_player</link> (std::string *name, <link linkend="_structdb__player">db_player</link> *pl)</para>
+
+<para>Получить карточку пользователя <link linkend="_structdb__player">db_player</link> по ссылке </para>
+</listitem>
+            <listitem><para>int <link linkend="_group__dbcpp_1gaa8cdb5ec4f2f269d13cff52b9e47c4cb">DB::db_get_id</link> (std::string *s_name)</para>
+
+<para>Получение id пользователя по имени. id уникальный </para>
+</listitem>
+            <listitem><para><link linkend="_struct_u_i_d">UID</link> <link linkend="_group__dbcpp_1ga5acc70d365de65365c861533a2b755c3">DB::uid_get_np</link> (<link linkend="_structlogin">login</link> *l)</para>
+
+<para>Получение <link linkend="_struct_u_i_d">UID</link> пользователя </para>
+</listitem>
+            <listitem><para><link linkend="_struct_u_i_d">UID</link> <link linkend="_group__dbcpp_1ga9c55abcaab4db2b421bf72c968a818a4">DB::uid_get_np</link> (<link linkend="_structlogin">login</link> *l, int *id)</para>
+
+<para>Получение <link linkend="_struct_u_i_d">UID</link> пользователя </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_group__dbcpp_1gad7c6310d2669acd40978fd4662f90d53">DB::db_get_reg_date</link> (std::string *s_name)</para>
+
+<para>Получение даты регистрации по имени </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_group__dbcpp_1ga35efc0a2ff41b4ef47c88c87f20feee4">DB::db_get_password</link> (std::string *s_name)</para>
+
+<para>Получение пароля по имени </para>
+</listitem>
+            <listitem><para>int <link linkend="_group__dbcpp_1ga990cefb97ea7222649511f37334a8601">DB::db_get_score</link> (std::string *s_name)</para>
+
+<para>Получение результата по имени </para>
+</listitem>
+            <listitem><para>int <link linkend="_group__dbcpp_1ga004b212ee48936251ff24b9f70d67dd0">DB::db_get_money</link> (std::string *s_name)</para>
+
+<para>Получение счёта по имени </para>
+</listitem>
+            <listitem><para>int <link linkend="_group__dbcpp_1ga7792fdc9d2dc66bfa5ba84aa9db1ee8b">DB::db_get_level</link> (std::string *s_name)</para>
+
+<para>Получение уровня доступа по имени </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__dbcpp_1ga29a603c52c10831cddee82518417f992"/>    <section>
+    <title>DB()</title>
+<indexterm><primary>DB</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>DB</secondary></indexterm>
+<para><computeroutput>DB::DB ( )</computeroutput></para><para>
+
+<para>Конструктор класса </para>
+</para>
+<para>
+См. определение в файле DB.cpp строка 28</para>
+    </section><anchor xml:id="_group__dbcpp_1ga472c425f9a22c467e4acd0e800153837"/>    <section>
+    <title>db_add_player()</title>
+<indexterm><primary>db_add_player</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_add_player</secondary></indexterm>
+<para><computeroutput>void DB::db_add_player (<link linkend="_structlogin">login</link> * l)</computeroutput></para><para>
+
+<para>Создать пользователя l. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>пользователь </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле DB.cpp строка 185</para>
+    </section><anchor xml:id="_group__dbcpp_1gaea6044c3fffc4c31714c732bb3789f71"/>    <section>
+    <title>db_check_player()</title>
+<indexterm><primary>db_check_player</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_check_player</secondary></indexterm>
+<para><computeroutput>bool DB::db_check_player (std::string * s_name)</computeroutput></para><para>
+
+<para>Проверка существования пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>true - пользователь существует, false - пользователь не существует. </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 162</para>
+    </section><anchor xml:id="_group__dbcpp_1gaa8cdb5ec4f2f269d13cff52b9e47c4cb"/>    <section>
+    <title>db_get_id()</title>
+<indexterm><primary>db_get_id</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_id</secondary></indexterm>
+<para><computeroutput>int DB::db_get_id (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение id пользователя по имени. id уникальный </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>id пользователя </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 285</para>
+    </section><anchor xml:id="_group__dbcpp_1ga7792fdc9d2dc66bfa5ba84aa9db1ee8b"/>    <section>
+    <title>db_get_level()</title>
+<indexterm><primary>db_get_level</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_level</secondary></indexterm>
+<para><computeroutput>int DB::db_get_level (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение уровня доступа по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>уровень доступа </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 434</para>
+    </section><anchor xml:id="_group__dbcpp_1ga004b212ee48936251ff24b9f70d67dd0"/>    <section>
+    <title>db_get_money()</title>
+<indexterm><primary>db_get_money</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_money</secondary></indexterm>
+<para><computeroutput>int DB::db_get_money (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение счёта по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>счёт </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 411</para>
+    </section><anchor xml:id="_group__dbcpp_1ga35efc0a2ff41b4ef47c88c87f20feee4"/>    <section>
+    <title>db_get_password()</title>
+<indexterm><primary>db_get_password</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_password</secondary></indexterm>
+<para><computeroutput>std::string DB::db_get_password (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение пароля по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>пароль (из бд. в sha2) </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 365</para>
+    </section><anchor xml:id="_group__dbcpp_1ga1e5d244a838c99a8753727cf0abd1f70"/>    <section>
+    <title>db_get_player()</title>
+<indexterm><primary>db_get_player</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_player</secondary></indexterm>
+<para><computeroutput>void DB::db_get_player (std::string * name, <link linkend="_structdb__player">db_player</link> * pl)</computeroutput></para><para>
+
+<para>Получить карточку пользователя <link linkend="_structdb__player">db_player</link> по ссылке </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>pl</entry>
+                                <entry>
+<para>карточка пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле DB.cpp строка 230</para>
+    </section><anchor xml:id="_group__dbcpp_1gad7c6310d2669acd40978fd4662f90d53"/>    <section>
+    <title>db_get_reg_date()</title>
+<indexterm><primary>db_get_reg_date</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_reg_date</secondary></indexterm>
+<para><computeroutput>std::string DB::db_get_reg_date (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение даты регистрации по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>дата регистрации </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 342</para>
+    </section><anchor xml:id="_group__dbcpp_1ga990cefb97ea7222649511f37334a8601"/>    <section>
+    <title>db_get_score()</title>
+<indexterm><primary>db_get_score</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>db_get_score</secondary></indexterm>
+<para><computeroutput>int DB::db_get_score (std::string * s_name)</computeroutput></para><para>
+
+<para>Получение результата по имени </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>s_name</entry>
+                                <entry>
+<para>имя пользователя </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>результат(очки) </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 388</para>
+    </section><anchor xml:id="_group__dbcpp_1ga5acc70d365de65365c861533a2b755c3"/>    <section>
+    <title>uid_get_np()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>uid_get_np</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>uid_get_np</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_u_i_d">UID</link> DB::uid_get_np (<link linkend="_structlogin">login</link> * l)</computeroutput></para><para>
+
+<para>Получение <link linkend="_struct_u_i_d">UID</link> пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>пользователь </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para><link linkend="_struct_u_i_d">UID</link> </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 308</para>
+    </section><anchor xml:id="_group__dbcpp_1ga9c55abcaab4db2b421bf72c968a818a4"/>    <section>
+    <title>uid_get_np()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>uid_get_np</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>uid_get_np</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_u_i_d">UID</link> DB::uid_get_np (<link linkend="_structlogin">login</link> * l, int * id)</computeroutput></para><para>
+
+<para>Получение <link linkend="_struct_u_i_d">UID</link> пользователя </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>l</entry>
+                                <entry>
+<para>пользователь </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>id</entry>
+                                <entry>
+<para>id </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para><link linkend="_struct_u_i_d">UID</link> </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле DB.cpp строка 327</para>
+    </section><anchor xml:id="_group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28"/>    <section>
+    <title>~DB()</title>
+<indexterm><primary>~DB</primary><secondary>DB.cpp</secondary></indexterm>
+<indexterm><primary>DB.cpp</primary><secondary>~DB</secondary></indexterm>
+<para><computeroutput>DB::~DB ( )</computeroutput></para><para>
+
+<para>Деструктор класса </para>
+</para>
+<para>
+См. определение в файле DB.cpp строка 49</para>
+</section>
+</section>
+</section>

@@ -4,6 +4,8 @@
     <compoundname>server</compoundname>
     <title>Server</title>
     <innergroup refid="group__battleshiproyalecpp">BattleShiproyale.cpp</innergroup>
+    <innergroup refid="group__dbcpp">DB.cpp</innergroup>
+    <innergroup refid="group__dbh">DB.h</innergroup>
     <innergroup refid="group__rand__ssecpp">rand_sse.cpp</innergroup>
     <innergroup refid="group__rand__sseh">rand_sse.h</innergroup>
     <innergroup refid="group__regexcpp">Regex.cpp</innergroup>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="12" column="1" bodyfile="src/server/src/DB.h" bodystart="12" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="23" column="1" bodyfile="src/server/src/DB.h" bodystart="23" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1a182fb42d16b91d5dccc9c640bc649521" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="15" column="1" bodyfile="src/server/src/DB.h" bodystart="15" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="26" column="1" bodyfile="src/server/src/DB.h" bodystart="26" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1a44fb2105fb4d116447eee76a5494821d" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="18" column="1" bodyfile="src/server/src/DB.h" bodystart="18" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="29" column="1" bodyfile="src/server/src/DB.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1abef0de717f781b401effd7d3c35550c2" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="21" column="1" bodyfile="src/server/src/DB.h" bodystart="21" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="32" column="1" bodyfile="src/server/src/DB.h" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1a49a7074936df50c10ce3573663e902bc" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="24" column="1" bodyfile="src/server/src/DB.h" bodystart="24" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="35" column="1" bodyfile="src/server/src/DB.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1a11f7c74a3d7b7f6c91f5ac6823c848af" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="27" column="1" bodyfile="src/server/src/DB.h" bodystart="27" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="38" column="1" bodyfile="src/server/src/DB.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structdb__player_1a87ec3fa495482d1018974f2694430156" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -93,14 +93,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/DB.h" line="35" column="1" bodyfile="src/server/src/DB.h" bodystart="35" bodyend="-1"/>
+        <location file="src/server/src/DB.h" line="46" column="1" bodyfile="src/server/src/DB.h" bodystart="46" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="src/server/src/DB.h" line="10" column="1" bodyfile="src/server/src/DB.h" bodystart="9" bodyend="36"/>
+    <location file="src/server/src/DB.h" line="21" column="1" bodyfile="src/server/src/DB.h" bodystart="20" bodyend="47"/>
     <listofallmembers>
       <member refid="structdb__player_1adae59dcd7ab22b0e66cb829f1dc5b383" prot="public" virt="non-virtual"><scope>db_player</scope><name>id</name></member>
       <member refid="structdb__player_1a87ec3fa495482d1018974f2694430156" prot="public" virt="non-virtual"><scope>db_player</scope><name>level</name></member>

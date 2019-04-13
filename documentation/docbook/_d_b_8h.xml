@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_b_8h">
 <title>Файл DB.h</title>
 <indexterm><primary>DB.h</primary></indexterm>
+<para>
+
+<para>Работа с базой данных </para>
+ 
+</para>
 <programlisting>#include &lt;sqlite3.h&gt;
 #include &quot;BattleshipRoyale.h&quot;
 </programlisting>Граф включаемых заголовочных файлов для DB.h:<para>
@@ -30,7 +35,24 @@
             <listitem><para>struct <link linkend="_structlogin">login</link></para>
 </listitem>
             <listitem><para>class <link linkend="_class_d_b">DB</link></para>
+
+<para>Подключение к базе данных </para>
 </listitem>
         </itemizedlist>
 </simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Работа с базой данных </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>13 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
 </section>

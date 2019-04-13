@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__d_b_8cpp">
 <title>Файл DB.cpp</title>
 <indexterm><primary>DB.cpp</primary></indexterm>
+<para>
+
+<para>Работа с базой данных </para>
+ 
+</para>
 <programlisting>#include &lt;string&gt;
 #include &lt;ctime&gt;
 #include &lt;spdlog/spdlog.h&gt;
@@ -19,4 +24,19 @@
         </mediaobject>
     </informalfigure>
 </para>
+<section>
+<title>Подробное описание</title>
+
+<para>Работа с базой данных </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>14 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
 </section>

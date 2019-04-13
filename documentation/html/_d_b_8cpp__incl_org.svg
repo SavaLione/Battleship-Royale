@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-147 583,-147 583,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Работа с базой данных">
 <polygon fill="#bfbfbf" stroke="black" points="295,-123.5 295,-142.5 344,-142.5 344,-123.5 295,-123.5"/>
 <text text-anchor="middle" x="319.5" y="-130.5" font-family="Helvetica,sans-Serif" font-size="10.00">DB.cpp</text>
 </a>
@@ -85,7 +85,7 @@
 </g>
 <!-- Node6 -->
 <g id="node7" class="node"><title>Node6</title>
-<g id="a_node7"><a xlink:href="_d_b_8h.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="_d_b_8h.html" target="_top" xlink:title="Работа с базой данных">
 <polygon fill="white" stroke="black" points="419.5,-62 419.5,-81 457.5,-81 457.5,-62 419.5,-62"/>
 <text text-anchor="middle" x="438.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">DB.h</text>
 </a>

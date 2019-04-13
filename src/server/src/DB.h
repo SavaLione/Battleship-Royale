@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Работа с базой данных
+ * @author SavaLione
+ * @date 13 Apr 2019
+*/
+/**
+ * @defgroup dbh DB.h
+ * @ingroup server
+ * @{
+*/
 #ifndef DB_H
 #define DB_H
 
@@ -37,85 +48,167 @@ struct db_player
 
 struct login
 {
-   std::string s_name;
-   std::string s_password;
+    std::string s_name;
+    std::string s_password;
 };
 
+/**
+ * @brief Подключение к базе данных
+ */
 class DB
 {
 private:
-    /* data */
+    /// База данных
     sqlite3 *db;
+
+    /// Необходимо для получения данных из бд
     sqlite3_stmt *stmt;
+
+    /// Сообщение о ошибке
     char *zErrMsg = new char;
+
+    /// Ответ базы данных
     int *rc = new int;
+
+    /// 
     int *id = new int;
+
+    /// Сообщение о ошибке
     char *messageError;
 
-    /* func */
-
-    /* Открытие базы данных */
+    /**
+     * @brief Открытие базы данных
+     */
     void db_open();
 
-    /* Закытие базы данных */
+    /**
+     * @brief Закытие базы данных
+     */
     void db_close();
 
-    /* Создание базы данных */
+    /**
+     * @brief Создание базы данных
+     */
     void db_create();
 
-    /* Проверка существования таблицы Player */
+    /**
+     * @brief Проверка существования таблицы Player
+     */
     bool db_table_check();
 
-    /* Вывод всех пользователей с информацией в консоль */
+    /**
+     * @brief Вывод всех пользователей с информацией в консоль
+     */
     void db_all_check();
 
-    /* Вывод информации о пользователе по ссылке */
+    /**
+     * @brief Вывод информации о пользователе по ссылке
+     * @param [in] pl имя пользователя
+     */
     void db_get_player_print(db_player *pl);
 
-    /* Создание sha2 по ссылке */
+    /**
+     * @brief Создание sha2 по ссылке
+     * @param [in] s строка для преобразования в sha2
+     * @return sha2 сообщение
+     */
     std::string sha2(std::string *s);
-public:
-    /* func */
 
+public:
+    /**
+     * @brief Конструктор класса
+     */
     DB();
 
-    /* Создать пользователя l */
+    /**
+     * @brief Создать пользователя l
+     * @param [in] l пользователь
+     */
     void db_add_player(login *l);
 
-    /* Проверка существования пользователя s_name */
+    /**
+     * @brief Проверка существования пользователя
+     * @param [in] s_name имя пользователя
+     * @return true - пользователь существует, false - пользователь не существует.
+     */
     bool db_check_player(std::string *s_name);
 
-    /* Получить карточку пользователя db_player по ссылке */
+    /**
+     * @brief Получить карточку пользователя db_player по ссылке
+     * @param [in] name имя пользователя
+     * @param [out] pl карточка пользователя
+     */
     void db_get_player(std::string *name, db_player *pl);
 
-    /* Получение id пользователя по имени. id уникальный */
+    /**
+     * @brief Получение id пользователя по имени. id уникальный
+     * @param [in] s_name имя пользователя
+     * @return id пользователя
+     */
     int db_get_id(std::string *s_name);
 
-    /* Проверка пароля */
+    /**
+     * @brief Проверка пароля
+     * @param [in] l пользователь
+     * @return true - пароль правильный, false - пароль не правильный.
+     */
     bool db_check_pass(login *l);
 
-    /* Получение UID пользователя */
+    /**
+     * @brief Получение UID пользователя
+     * @param [in] l пользователь
+     * @return UID
+     */
     UID uid_get_np(login *l);
+
+    /**
+     * @brief Получение UID пользователя
+     * @param [in] l пользователь
+     * @param [in] id id
+     * @return UID
+     */
     UID uid_get_np(login *l, int *id);
 
-    /* Получение даты регистрации по имени */
+    /**
+     * @brief Получение даты регистрации по имени
+     * @param [in] s_name имя пользователя
+     * @return дата регистрации
+     */
     std::string db_get_reg_date(std::string *s_name);
 
-    /* Получение пароля по имени */
+    /**
+     * @brief Получение пароля по имени
+     * @param [in] s_name имя пользователя
+     * @return пароль (из бд. в sha2)
+     */
     std::string db_get_password(std::string *s_name);
 
-    /* Получение результата по имени */
+    /**
+     * @brief Получение результата по имени
+     * @param [in] s_name имя пользователя
+     * @return результат(очки)
+     */
     int db_get_score(std::string *s_name);
 
-    /* Получение счёта по имени */
+    /**
+     * @brief Получение счёта по имени
+     * @param [in] s_name имя пользователя
+     * @return счёт
+     */
     int db_get_money(std::string *s_name);
 
-    /* Получение уровня доступа по имени */
+    /**
+     * @brief Получение уровня доступа по имени
+     * @param [in] s_name имя пользователя
+     * @return уровень доступа
+     */
     int db_get_level(std::string *s_name);
 
-
-    /* des */
+    /**
+     * @brief Деструктор класса
+     */
     ~DB();
 };
 
 #endif // DB_H
+/** @} */

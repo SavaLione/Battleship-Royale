@@ -7,7 +7,7 @@
 <area shape="rect" id="node6" title=" " alt="" coords="637,169,707,196"/>
 <area shape="rect" id="node7" title=" " alt="" coords="541,87,635,114"/>
 <area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="732,169,863,196"/>
-<area shape="rect" id="node9" href="$_d_b_8h.html" title=" " alt="" coords="709,87,760,114"/>
+<area shape="rect" id="node9" href="$_d_b_8h.html" title="Работа с базой данных" alt="" coords="709,87,760,114"/>
 <area shape="rect" id="node10" href="$_regex_8h.html" title="Работа с регулярными выражениями" alt="" coords="446,87,517,114"/>
 <area shape="rect" id="node11" href="$server_2src_2_server_8h.html" title=" " alt="" coords="835,87,904,114"/>
 <area shape="rect" id="node15" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="929,87,1015,114"/>

@@ -1,8 +1,9 @@
-.TH "DB" 3 "Сб 13 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.TH "DB" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-DB
+DB \- Подключение к базе данных  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -14,107 +15,83 @@ DB
 .ti -1c
 .RI "\fBDB\fP ()"
 .br
+.RI "Конструктор класса "
 .ti -1c
 .RI "void \fBdb_add_player\fP (\fBlogin\fP *l)"
 .br
+.RI "Создать пользователя l\&. "
 .ti -1c
 .RI "bool \fBdb_check_player\fP (std::string *s_name)"
 .br
+.RI "Проверка существования пользователя "
 .ti -1c
 .RI "void \fBdb_get_player\fP (std::string *name, \fBdb_player\fP *pl)"
 .br
+.RI "Получить карточку пользователя \fBdb_player\fP по ссылке "
 .ti -1c
 .RI "int \fBdb_get_id\fP (std::string *s_name)"
 .br
+.RI "Получение id пользователя по имени\&. id уникальный "
 .ti -1c
 .RI "bool \fBdb_check_pass\fP (\fBlogin\fP *l)"
 .br
+.RI "Проверка пароля "
 .ti -1c
 .RI "\fBUID\fP \fBuid_get_np\fP (\fBlogin\fP *l)"
 .br
+.RI "Получение \fBUID\fP пользователя "
 .ti -1c
 .RI "\fBUID\fP \fBuid_get_np\fP (\fBlogin\fP *l, int *id)"
 .br
+.RI "Получение \fBUID\fP пользователя "
 .ti -1c
 .RI "std::string \fBdb_get_reg_date\fP (std::string *s_name)"
 .br
+.RI "Получение даты регистрации по имени "
 .ti -1c
 .RI "std::string \fBdb_get_password\fP (std::string *s_name)"
 .br
+.RI "Получение пароля по имени "
 .ti -1c
 .RI "int \fBdb_get_score\fP (std::string *s_name)"
 .br
+.RI "Получение результата по имени "
 .ti -1c
 .RI "int \fBdb_get_money\fP (std::string *s_name)"
 .br
+.RI "Получение счёта по имени "
 .ti -1c
 .RI "int \fBdb_get_level\fP (std::string *s_name)"
 .br
+.RI "Получение уровня доступа по имени "
 .ti -1c
 .RI "\fB~DB\fP ()"
 .br
+.RI "Деструктор класса "
 .in -1c
 .SH "Подробное описание"
 .PP 
-См\&. определение в файле DB\&.h строка 44
-.SH "Конструктор(ы)"
-.PP 
-.SS "DB::DB ()"
-
+Подключение к базе данных 
 .PP
-См\&. определение в файле DB\&.cpp строка 14
-.SS "DB::~DB ()"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 32
+См\&. определение в файле DB\&.h строка 58
 .SH "Методы"
 .PP 
-.SS "void DB::db_add_player (\fBlogin\fP * l)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 141
 .SS "bool DB::db_check_pass (\fBlogin\fP * l)"
 
-.SS "bool DB::db_check_player (std::string * s_name)"
-
 .PP
-См\&. определение в файле DB\&.cpp строка 122
-.SS "int DB::db_get_id (std::string * s_name)"
-
+Проверка пароля 
 .PP
-См\&. определение в файле DB\&.cpp строка 223
-.SS "int DB::db_get_level (std::string * s_name)"
-
+\fBАргументы:\fP
+.RS 4
+\fIl\fP пользователь 
+.RE
 .PP
-См\&. определение в файле DB\&.cpp строка 335
-.SS "int DB::db_get_money (std::string * s_name)"
-
+\fBВозвращает:\fP
+.RS 4
+true - пароль правильный, false - пароль не правильный\&. 
+.RE
 .PP
-См\&. определение в файле DB\&.cpp строка 317
-.SS "std::string DB::db_get_password (std::string * s_name)"
 
-.PP
-См\&. определение в файле DB\&.cpp строка 281
-.SS "void DB::db_get_player (std::string * name, \fBdb_player\fP * pl)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 182
-.SS "std::string DB::db_get_reg_date (std::string * s_name)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 263
-.SS "int DB::db_get_score (std::string * s_name)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 299
-.SS "\fBUID\fP DB::uid_get_np (\fBlogin\fP * l)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 241
-.SS "\fBUID\fP DB::uid_get_np (\fBlogin\fP * l, int * id)"
-
-.PP
-См\&. определение в файле DB\&.cpp строка 253
 
 .SH "Автор"
 .PP 

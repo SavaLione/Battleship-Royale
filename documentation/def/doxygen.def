@@ -589,7 +589,7 @@ class = {
     sec-kind = 'public-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a29a603c52c10831cddee82518417f992';
+      sec-mem-id   = 'group__dbcpp_1ga29a603c52c10831cddee82518417f992';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -597,9 +597,9 @@ class = {
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'DB';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '80';
+      sec-mem-desc-line = '121';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Конструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -607,7 +607,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a472c425f9a22c467e4acd0e800153837';
+      sec-mem-id   = 'group__dbcpp_1ga472c425f9a22c467e4acd0e800153837';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -621,17 +621,17 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '83';
+      sec-mem-desc-line = '127';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Создать пользователя l.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] l пользователь
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1aea6044c3fffc4c31714c732bb3789f71';
+      sec-mem-id   = 'group__dbcpp_1gaea6044c3fffc4c31714c732bb3789f71';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -645,17 +645,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '86';
+      sec-mem-desc-line = '134';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Проверка существования пользователя
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return true - пользователь существует, false - пользователь не существует.
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a1e5d244a838c99a8753727cf0abd1f70';
+      sec-mem-id   = 'group__dbcpp_1ga1e5d244a838c99a8753727cf0abd1f70';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -675,17 +676,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'pl';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '89';
+      sec-mem-desc-line = '141';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получить карточку пользователя db_player по ссылке
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] name имя пользователя
+@param [out] pl карточка пользователя
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb';
+      sec-mem-id   = 'group__dbcpp_1gaa8cdb5ec4f2f269d13cff52b9e47c4cb';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -699,12 +701,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '92';
+      sec-mem-desc-line = '148';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение id пользователя по имени. id уникальный
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return id пользователя
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -723,17 +726,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '95';
+      sec-mem-desc-line = '155';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Проверка пароля
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] l пользователь
+@return true - пароль правильный, false - пароль не правильный.
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a5acc70d365de65365c861533a2b755c3';
+      sec-mem-id   = 'group__dbcpp_1ga5acc70d365de65365c861533a2b755c3';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -747,17 +751,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'l';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '98';
+      sec-mem-desc-line = '162';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение UID пользователя
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] l пользователь
+@return UID
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a9c55abcaab4db2b421bf72c968a818a4';
+      sec-mem-id   = 'group__dbcpp_1ga9c55abcaab4db2b421bf72c968a818a4';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -777,17 +782,19 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'id';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '99';
+      sec-mem-desc-line = '170';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение UID пользователя
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] l пользователь
+@param [in] id id
+@return UID
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1ad7c6310d2669acd40978fd4662f90d53';
+      sec-mem-id   = 'group__dbcpp_1gad7c6310d2669acd40978fd4662f90d53';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -801,17 +808,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '102';
+      sec-mem-desc-line = '177';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение даты регистрации по имени
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return дата регистрации
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4';
+      sec-mem-id   = 'group__dbcpp_1ga35efc0a2ff41b4ef47c88c87f20feee4';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -825,17 +833,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '105';
+      sec-mem-desc-line = '184';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение пароля по имени
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return пароль (из бд. в sha2)
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a990cefb97ea7222649511f37334a8601';
+      sec-mem-id   = 'group__dbcpp_1ga990cefb97ea7222649511f37334a8601';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -849,17 +858,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '108';
+      sec-mem-desc-line = '191';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение результата по имени
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return результат(очки)
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a004b212ee48936251ff24b9f70d67dd0';
+      sec-mem-id   = 'group__dbcpp_1ga004b212ee48936251ff24b9f70d67dd0';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -873,17 +883,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '111';
+      sec-mem-desc-line = '198';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение счёта по имени
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return счёт
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b';
+      sec-mem-id   = 'group__dbcpp_1ga7792fdc9d2dc66bfa5ba84aa9db1ee8b';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -897,17 +908,18 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's_name';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '114';
+      sec-mem-desc-line = '205';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение уровня доступа по имени
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s_name имя пользователя
+@return уровень доступа
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a7bd1418f67b11d0f752537123e7e6d28';
+      sec-mem-id   = 'group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -915,9 +927,9 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~DB';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '118';
+      sec-mem-desc-line = '210';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Деструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -928,7 +940,7 @@ _EnD_oF_dEf_TeXt_;
     sec-kind = 'private-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a5e70db458c90e54a2d22d1167f7b52f7';
+      sec-mem-id   = 'group__dbcpp_1ga5e70db458c90e54a2d22d1167f7b52f7';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -936,9 +948,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db_open';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '58';
+      sec-mem-desc-line = '82';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Открытие базы данных
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -946,7 +958,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1aca4c951672c54766fdd039efd38e654b';
+      sec-mem-id   = 'group__dbcpp_1gaca4c951672c54766fdd039efd38e654b';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -954,9 +966,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db_close';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '61';
+      sec-mem-desc-line = '87';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Закытие базы данных
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -964,7 +976,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1ae7d842aa9002c6f8f7d026bcc55e88af';
+      sec-mem-id   = 'group__dbcpp_1gae7d842aa9002c6f8f7d026bcc55e88af';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -972,9 +984,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db_create';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '64';
+      sec-mem-desc-line = '92';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Создание базы данных
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -982,7 +994,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1aa8ad10f739676129552361075ddfc2c9';
+      sec-mem-id   = 'group__dbcpp_1gaa8ad10f739676129552361075ddfc2c9';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -990,9 +1002,9 @@ bool
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db_table_check';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '67';
+      sec-mem-desc-line = '97';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Проверка существования таблицы Player.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1000,7 +1012,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a880d6118bf0b4020049339afc7e825fd';
+      sec-mem-id   = 'group__dbcpp_1ga880d6118bf0b4020049339afc7e825fd';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1008,9 +1020,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db_all_check';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '70';
+      sec-mem-desc-line = '102';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Вывод всех пользователей с информацией в консоль
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1018,7 +1030,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1ade41c643f9d1e57ee02c107553877d64';
+      sec-mem-id   = 'group__dbcpp_1gade41c643f9d1e57ee02c107553877d64';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1032,17 +1044,17 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'pl';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '73';
+      sec-mem-desc-line = '108';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Вывод информации о пользователе по ссылке
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] pl имя пользователя
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_d_b_1a491541bd875d5fab95aa913b970132f6';
+      sec-mem-id   = 'group__dbcpp_1ga491541bd875d5fab95aa913b970132f6';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1056,12 +1068,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 's';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '76';
+      sec-mem-desc-line = '115';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Создание sha2 по ссылке
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] s строка для преобразования в sha2
+@return sha2 сообщение
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -1077,9 +1090,9 @@ sqlite3 *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'db';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '48';
+      sec-mem-desc-line = '62';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+База данных
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1095,9 +1108,9 @@ sqlite3_stmt *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'stmt';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '49';
+      sec-mem-desc-line = '65';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Необходимо для получения данных из бд
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1116,9 +1129,9 @@ _EnD_oF_dEf_TeXt_;
 = new char
 _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '50';
+      sec-mem-desc-line = '68';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сообщение о ошибке
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1137,9 +1150,9 @@ _EnD_oF_dEf_TeXt_;
 = new int
 _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '51';
+      sec-mem-desc-line = '71';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Ответ базы данных
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1158,7 +1171,7 @@ _EnD_oF_dEf_TeXt_;
 = new int
 _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '52';
+      sec-mem-desc-line = '74';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1176,9 +1189,9 @@ char *
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'messageError';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '53';
+      sec-mem-desc-line = '77';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сообщение о ошибке
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1186,9 +1199,9 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-  cp-fileline  = '45';
+  cp-fileline  = '59';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
-
+Подключение к базе данных
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1209,7 +1222,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'id';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '12';
+      sec-mem-desc-line = '23';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1227,7 +1240,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'name';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '15';
+      sec-mem-desc-line = '26';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1245,7 +1258,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'password';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '18';
+      sec-mem-desc-line = '29';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1263,7 +1276,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'reg_date';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '21';
+      sec-mem-desc-line = '32';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1281,7 +1294,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'score';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '24';
+      sec-mem-desc-line = '35';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1299,7 +1312,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'money';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '27';
+      sec-mem-desc-line = '38';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1317,7 +1330,7 @@ int
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'level';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '35';
+      sec-mem-desc-line = '46';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1327,7 +1340,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-  cp-fileline  = '10';
+  cp-fileline  = '21';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1413,7 +1426,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 's_name';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '40';
+      sec-mem-desc-line = '51';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1431,7 +1444,7 @@ std::string
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 's_password';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-      sec-mem-desc-line = '41';
+      sec-mem-desc-line = '52';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1441,7 +1454,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
   cp-filename  = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
-  cp-fileline  = '39';
+  cp-fileline  = '50';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -3305,10 +3318,11 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/DB.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Работа с базой данных
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 14 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -3317,10 +3331,11 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/DB.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Работа с базой данных
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {

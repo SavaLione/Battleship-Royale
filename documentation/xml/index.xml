@@ -36,27 +36,27 @@
     <member refid="class_d_b_1a8296a092faf547c071ed07e151f1e4d0" kind="variable"><name>rc</name></member>
     <member refid="class_d_b_1a09ea7b9c2e26a2754a5fb64db3836cdb" kind="variable"><name>id</name></member>
     <member refid="class_d_b_1a5f143c4e687a890164e95683113205d5" kind="variable"><name>messageError</name></member>
-    <member refid="class_d_b_1a5e70db458c90e54a2d22d1167f7b52f7" kind="function"><name>db_open</name></member>
-    <member refid="class_d_b_1aca4c951672c54766fdd039efd38e654b" kind="function"><name>db_close</name></member>
-    <member refid="class_d_b_1ae7d842aa9002c6f8f7d026bcc55e88af" kind="function"><name>db_create</name></member>
-    <member refid="class_d_b_1aa8ad10f739676129552361075ddfc2c9" kind="function"><name>db_table_check</name></member>
-    <member refid="class_d_b_1a880d6118bf0b4020049339afc7e825fd" kind="function"><name>db_all_check</name></member>
-    <member refid="class_d_b_1ade41c643f9d1e57ee02c107553877d64" kind="function"><name>db_get_player_print</name></member>
-    <member refid="class_d_b_1a491541bd875d5fab95aa913b970132f6" kind="function"><name>sha2</name></member>
-    <member refid="class_d_b_1a29a603c52c10831cddee82518417f992" kind="function"><name>DB</name></member>
-    <member refid="class_d_b_1a472c425f9a22c467e4acd0e800153837" kind="function"><name>db_add_player</name></member>
-    <member refid="class_d_b_1aea6044c3fffc4c31714c732bb3789f71" kind="function"><name>db_check_player</name></member>
-    <member refid="class_d_b_1a1e5d244a838c99a8753727cf0abd1f70" kind="function"><name>db_get_player</name></member>
-    <member refid="class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb" kind="function"><name>db_get_id</name></member>
+    <member refid="group__dbcpp_1ga5e70db458c90e54a2d22d1167f7b52f7" kind="function"><name>db_open</name></member>
+    <member refid="group__dbcpp_1gaca4c951672c54766fdd039efd38e654b" kind="function"><name>db_close</name></member>
+    <member refid="group__dbcpp_1gae7d842aa9002c6f8f7d026bcc55e88af" kind="function"><name>db_create</name></member>
+    <member refid="group__dbcpp_1gaa8ad10f739676129552361075ddfc2c9" kind="function"><name>db_table_check</name></member>
+    <member refid="group__dbcpp_1ga880d6118bf0b4020049339afc7e825fd" kind="function"><name>db_all_check</name></member>
+    <member refid="group__dbcpp_1gade41c643f9d1e57ee02c107553877d64" kind="function"><name>db_get_player_print</name></member>
+    <member refid="group__dbcpp_1ga491541bd875d5fab95aa913b970132f6" kind="function"><name>sha2</name></member>
+    <member refid="group__dbcpp_1ga29a603c52c10831cddee82518417f992" kind="function"><name>DB</name></member>
+    <member refid="group__dbcpp_1ga472c425f9a22c467e4acd0e800153837" kind="function"><name>db_add_player</name></member>
+    <member refid="group__dbcpp_1gaea6044c3fffc4c31714c732bb3789f71" kind="function"><name>db_check_player</name></member>
+    <member refid="group__dbcpp_1ga1e5d244a838c99a8753727cf0abd1f70" kind="function"><name>db_get_player</name></member>
+    <member refid="group__dbcpp_1gaa8cdb5ec4f2f269d13cff52b9e47c4cb" kind="function"><name>db_get_id</name></member>
     <member refid="class_d_b_1a0608c5cb7f815d143a54bda2e318de84" kind="function"><name>db_check_pass</name></member>
-    <member refid="class_d_b_1a5acc70d365de65365c861533a2b755c3" kind="function"><name>uid_get_np</name></member>
-    <member refid="class_d_b_1a9c55abcaab4db2b421bf72c968a818a4" kind="function"><name>uid_get_np</name></member>
-    <member refid="class_d_b_1ad7c6310d2669acd40978fd4662f90d53" kind="function"><name>db_get_reg_date</name></member>
-    <member refid="class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4" kind="function"><name>db_get_password</name></member>
-    <member refid="class_d_b_1a990cefb97ea7222649511f37334a8601" kind="function"><name>db_get_score</name></member>
-    <member refid="class_d_b_1a004b212ee48936251ff24b9f70d67dd0" kind="function"><name>db_get_money</name></member>
-    <member refid="class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b" kind="function"><name>db_get_level</name></member>
-    <member refid="class_d_b_1a7bd1418f67b11d0f752537123e7e6d28" kind="function"><name>~DB</name></member>
+    <member refid="group__dbcpp_1ga5acc70d365de65365c861533a2b755c3" kind="function"><name>uid_get_np</name></member>
+    <member refid="group__dbcpp_1ga9c55abcaab4db2b421bf72c968a818a4" kind="function"><name>uid_get_np</name></member>
+    <member refid="group__dbcpp_1gad7c6310d2669acd40978fd4662f90d53" kind="function"><name>db_get_reg_date</name></member>
+    <member refid="group__dbcpp_1ga35efc0a2ff41b4ef47c88c87f20feee4" kind="function"><name>db_get_password</name></member>
+    <member refid="group__dbcpp_1ga990cefb97ea7222649511f37334a8601" kind="function"><name>db_get_score</name></member>
+    <member refid="group__dbcpp_1ga004b212ee48936251ff24b9f70d67dd0" kind="function"><name>db_get_money</name></member>
+    <member refid="group__dbcpp_1ga7792fdc9d2dc66bfa5ba84aa9db1ee8b" kind="function"><name>db_get_level</name></member>
+    <member refid="group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28" kind="function"><name>~DB</name></member>
   </compound>
   <compound refid="structdb__player" kind="struct"><name>db_player</name>
     <member refid="structdb__player_1adae59dcd7ab22b0e66cb829f1dc5b383" kind="variable"><name>id</name></member>
@@ -239,6 +239,30 @@
   </compound>
   <compound refid="group__battleshiproyalecpp" kind="group"><name>battleshiproyalecpp</name>
     <member refid="group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="group__dbcpp" kind="group"><name>dbcpp</name>
+    <member refid="group__dbcpp_1ga29a603c52c10831cddee82518417f992" kind="function"><name>DB</name></member>
+    <member refid="group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28" kind="function"><name>~DB</name></member>
+    <member refid="group__dbcpp_1ga5e70db458c90e54a2d22d1167f7b52f7" kind="function"><name>db_open</name></member>
+    <member refid="group__dbcpp_1gaca4c951672c54766fdd039efd38e654b" kind="function"><name>db_close</name></member>
+    <member refid="group__dbcpp_1gae7d842aa9002c6f8f7d026bcc55e88af" kind="function"><name>db_create</name></member>
+    <member refid="group__dbcpp_1gaa8ad10f739676129552361075ddfc2c9" kind="function"><name>db_table_check</name></member>
+    <member refid="group__dbcpp_1ga880d6118bf0b4020049339afc7e825fd" kind="function"><name>db_all_check</name></member>
+    <member refid="group__dbcpp_1gaea6044c3fffc4c31714c732bb3789f71" kind="function"><name>db_check_player</name></member>
+    <member refid="group__dbcpp_1ga472c425f9a22c467e4acd0e800153837" kind="function"><name>db_add_player</name></member>
+    <member refid="group__dbcpp_1ga1e5d244a838c99a8753727cf0abd1f70" kind="function"><name>db_get_player</name></member>
+    <member refid="group__dbcpp_1gade41c643f9d1e57ee02c107553877d64" kind="function"><name>db_get_player_print</name></member>
+    <member refid="group__dbcpp_1ga491541bd875d5fab95aa913b970132f6" kind="function"><name>sha2</name></member>
+    <member refid="group__dbcpp_1gaa8cdb5ec4f2f269d13cff52b9e47c4cb" kind="function"><name>db_get_id</name></member>
+    <member refid="group__dbcpp_1ga5acc70d365de65365c861533a2b755c3" kind="function"><name>uid_get_np</name></member>
+    <member refid="group__dbcpp_1ga9c55abcaab4db2b421bf72c968a818a4" kind="function"><name>uid_get_np</name></member>
+    <member refid="group__dbcpp_1gad7c6310d2669acd40978fd4662f90d53" kind="function"><name>db_get_reg_date</name></member>
+    <member refid="group__dbcpp_1ga35efc0a2ff41b4ef47c88c87f20feee4" kind="function"><name>db_get_password</name></member>
+    <member refid="group__dbcpp_1ga990cefb97ea7222649511f37334a8601" kind="function"><name>db_get_score</name></member>
+    <member refid="group__dbcpp_1ga004b212ee48936251ff24b9f70d67dd0" kind="function"><name>db_get_money</name></member>
+    <member refid="group__dbcpp_1ga7792fdc9d2dc66bfa5ba84aa9db1ee8b" kind="function"><name>db_get_level</name></member>
+  </compound>
+  <compound refid="group__dbh" kind="group"><name>dbh</name>
   </compound>
   <compound refid="group__rand__ssecpp" kind="group"><name>rand_ssecpp</name>
     <member refid="group__rand__ssecpp_1ga8217292e4775144512e0e4dbc637c970" kind="variable"><name>cur_seed</name></member>

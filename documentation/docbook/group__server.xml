@@ -21,6 +21,10 @@
         <itemizedlist>
             <listitem><para><link linkend="_group__battleshiproyalecpp">BattleShiproyale.cpp</link></para>
 </listitem>
+            <listitem><para><link linkend="_group__dbcpp">DB.cpp</link></para>
+</listitem>
+            <listitem><para><link linkend="_group__dbh">DB.h</link></para>
+</listitem>
             <listitem><para><link linkend="_group__rand__ssecpp">rand_sse.cpp</link></para>
 </listitem>
             <listitem><para><link linkend="_group__rand__sseh">rand_sse.h</link></para>
