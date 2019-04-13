@@ -115,34 +115,6 @@ int main(int argc, char *argv[])
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
 
-	/*
-	std::string s = "user:[savalione]";
-	std::string s_pass = "user:[ZERO] pass:[some]";
-	std::string s_uid = "UID:[hey18sdh8shd1blfj29d8fyh] data:[1sf1sf1we1f1rsqr1]";
-
-    std::string s_pattern_reg_user = BR::REG_USER;
-    std::string s_pattern_reg_user_pass = BR::REG_USER_PASS;
-    std::string s_pattern_reg_uid = BR::REG_UID;
-
-	std::string s_param_one = "";
-	std::string s_param_two = "";
-	*/
-
-	/*
-	spdlog::error(check_pattern(&s, &s_pattern_reg_user));
-	spdlog::error(check_pattern(&s_pass, &s_pattern_reg_user_pass));
-	spdlog::error(check_pattern(&s_uid, &s_pattern_reg_uid));
-	spdlog::error("----------------------------------------------");
-	getData(&s, &s_pattern_reg_user, &s_param_one);
-	spdlog::error("{} {} {}", s, s_param_one, s_param_two);
-
-	getData(&s_pass, &s_pattern_reg_user_pass, &s_param_one, &s_param_two);
-	spdlog::error("{} {} {}", s, s_param_one, s_param_two);
-
-	getData(&s_uid, &s_pattern_reg_uid, &s_param_one, &s_param_two);
-	spdlog::error("{} {} {}", s, s_param_one, s_param_two);
-	*/
-
 	try 
 	{
 		boost::asio::io_service io_service;   
