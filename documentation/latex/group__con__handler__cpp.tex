@@ -1,0 +1,116 @@
+\hypertarget{group__con__handler__cpp}{}\section{con\+\_\+handler.\+cpp}
+\label{group__con__handler__cpp}\index{con\_handler.cpp@{con\_handler.cpp}}
+Граф связей класса con\+\_\+handler.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{group__con__handler__cpp}
+\end{center}
+\end{figure}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+boost\+::asio\+::ip\+::tcp\+::socket \& \mbox{\hyperlink{group__con__handler__cpp_gad168c799678add9fb23f3379e1d42b22}{con\+\_\+handler\+::socket}} ()
+\begin{DoxyCompactList}\small\item\em Сокет \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__con__handler__cpp_ga02d6691e226a75525a2ac83062b5c7f7}{con\+\_\+handler\+::start}} ()
+\begin{DoxyCompactList}\small\item\em Запуск handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__con__handler__cpp_ga3b8e9edfc8fed79fcba0242a58b54bc2}{con\+\_\+handler\+::handle\+\_\+read}} (const boost\+::system\+::error\+\_\+code \&err, size\+\_\+t bytes\+\_\+transferred)
+\begin{DoxyCompactList}\small\item\em Чтение сообщения от клиента \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__con__handler__cpp_ga10169d7b3588adb849d7e7c02c46375a}{con\+\_\+handler\+::handle\+\_\+write}} (const boost\+::system\+::error\+\_\+code \&err, size\+\_\+t bytes\+\_\+transferred)
+\begin{DoxyCompactList}\small\item\em Отправка сообщения клиенту \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__con__handler__cpp_gaa1bc82c764eb633355a52bd77689ed3f}{con\+\_\+handler\+::$\sim$con\+\_\+handler}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{group__con__handler__cpp_ga3b8e9edfc8fed79fcba0242a58b54bc2}\label{group__con__handler__cpp_ga3b8e9edfc8fed79fcba0242a58b54bc2}} 
+\index{con\_handler.cpp@{con\_handler.cpp}!handle\_read@{handle\_read}}
+\index{handle\_read@{handle\_read}!con\_handler.cpp@{con\_handler.cpp}}
+\subsubsection{\texorpdfstring{handle\_read()}{handle\_read()}}
+{\footnotesize\ttfamily void con\+\_\+handler\+::handle\+\_\+read (\begin{DoxyParamCaption}\item[{const boost\+::system\+::error\+\_\+code \&}]{err,  }\item[{size\+\_\+t}]{bytes\+\_\+transferred }\end{DoxyParamCaption})}
+
+
+
+Чтение сообщения от клиента 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ out}}  & {\em err} & ошибка \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+transferred} & \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле asio/server/con\+\_\+handler.\+cpp строка 19
+
+\mbox{\Hypertarget{group__con__handler__cpp_ga10169d7b3588adb849d7e7c02c46375a}\label{group__con__handler__cpp_ga10169d7b3588adb849d7e7c02c46375a}} 
+\index{con\_handler.cpp@{con\_handler.cpp}!handle\_write@{handle\_write}}
+\index{handle\_write@{handle\_write}!con\_handler.cpp@{con\_handler.cpp}}
+\subsubsection{\texorpdfstring{handle\_write()}{handle\_write()}}
+{\footnotesize\ttfamily void con\+\_\+handler\+::handle\+\_\+write (\begin{DoxyParamCaption}\item[{const boost\+::system\+::error\+\_\+code \&}]{err,  }\item[{size\+\_\+t}]{bytes\+\_\+transferred }\end{DoxyParamCaption})}
+
+
+
+Отправка сообщения клиенту 
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ out}}  & {\em err} & ошибка \\
+\hline
+\mbox{\texttt{ in}}  & {\em bytes\+\_\+transferred} & \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле asio/server/con\+\_\+handler.\+cpp строка 32
+
+\mbox{\Hypertarget{group__con__handler__cpp_gad168c799678add9fb23f3379e1d42b22}\label{group__con__handler__cpp_gad168c799678add9fb23f3379e1d42b22}} 
+\index{con\_handler.cpp@{con\_handler.cpp}!socket@{socket}}
+\index{socket@{socket}!con\_handler.cpp@{con\_handler.cpp}}
+\subsubsection{\texorpdfstring{socket()}{socket()}}
+{\footnotesize\ttfamily boost\+::asio\+::ip\+::tcp\+::socket \& con\+\_\+handler\+::socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Сокет 
+
+\begin{DoxyReturn}{Возвращает}
+Сокет 
+\end{DoxyReturn}
+
+
+См. определение в файле asio/server/con\+\_\+handler.\+cpp строка 8
+
+\mbox{\Hypertarget{group__con__handler__cpp_ga02d6691e226a75525a2ac83062b5c7f7}\label{group__con__handler__cpp_ga02d6691e226a75525a2ac83062b5c7f7}} 
+\index{con\_handler.cpp@{con\_handler.cpp}!start@{start}}
+\index{start@{start}!con\_handler.cpp@{con\_handler.cpp}}
+\subsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily void con\+\_\+handler\+::start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Запуск handler. 
+
+
+
+См. определение в файле asio/server/con\+\_\+handler.\+cpp строка 13
+
+\mbox{\Hypertarget{group__con__handler__cpp_gaa1bc82c764eb633355a52bd77689ed3f}\label{group__con__handler__cpp_gaa1bc82c764eb633355a52bd77689ed3f}} 
+\index{con\_handler.cpp@{con\_handler.cpp}!````~con\_handler@{$\sim$con\_handler}}
+\index{````~con\_handler@{$\sim$con\_handler}!con\_handler.cpp@{con\_handler.cpp}}
+\subsubsection{\texorpdfstring{$\sim$con\_handler()}{~con\_handler()}}
+{\footnotesize\ttfamily con\+\_\+handler\+::$\sim$con\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса 
+
+
+
+См. определение в файле asio/server/con\+\_\+handler.\+cpp строка 45
+

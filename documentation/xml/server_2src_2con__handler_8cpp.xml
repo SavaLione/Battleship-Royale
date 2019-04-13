@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="server_2src_2con__handler_8cpp" kind="file" language="C++">
+    <compoundname>server/src/con_handler.cpp</compoundname>
+    <includes refid="server_2src_2con__handler_8h" local="yes">con_handler.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">boost/bind.hpp</includes>
+    <includes local="no">boost/regex.hpp</includes>
+    <includes local="no">spdlog/spdlog.h</includes>
+    <includes local="no">spdlog/sinks/basic_file_sink.h</includes>
+    <includes refid="_battleship_royale_8h" local="yes">BattleshipRoyale.h</includes>
+    <includes refid="_d_b_8h" local="yes">DB.h</includes>
+    <incdepgraph>
+      <node id="62">
+        <label>con_handler.cpp</label>
+        <link refid="server_2src_2con__handler_8cpp"/>
+        <childnode refid="63" relation="include">
+        </childnode>
+        <childnode refid="66" relation="include">
+        </childnode>
+        <childnode refid="67" relation="include">
+        </childnode>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="70" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+      </node>
+      <node id="63">
+        <label>con_handler.h</label>
+        <link refid="server_2src_2con__handler_8h"/>
+        <childnode refid="64" relation="include">
+        </childnode>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>DB.h</label>
+        <link refid="_d_b_8h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>string</label>
+      </node>
+      <node id="70">
+        <label>spdlog/sinks/basic_file_sink.h</label>
+      </node>
+      <node id="71">
+        <label>BattleshipRoyale.h</label>
+        <link refid="_battleship_royale_8h"/>
+      </node>
+      <node id="73">
+        <label>sqlite3.h</label>
+      </node>
+      <node id="69">
+        <label>spdlog/spdlog.h</label>
+      </node>
+      <node id="64">
+        <label>boost/asio.hpp</label>
+      </node>
+      <node id="65">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+      <node id="67">
+        <label>boost/bind.hpp</label>
+      </node>
+      <node id="68">
+        <label>boost/regex.hpp</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>handler </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>SavaLione </para>
+</simplesect>
+<simplesect kind="date"><para>14 Apr 2019 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="server_2src_2con__handler_8h" kindref="compound">con_handler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/bind.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/regex.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/spdlog.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;spdlog/sinks/basic_file_sink.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_battleship_royale_8h" kindref="compound">BattleshipRoyale.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_d_b_8h" kindref="compound">DB.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">boost::asio::ip::tcp::socket&amp;<sp/><ref refid="group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22" kindref="member">con_handler::socket</ref>()</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sock;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7" kindref="member">con_handler::start</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>sock.async_read_some(boost::asio::buffer(data,<sp/>max_length),<sp/>boost::bind(&amp;<ref refid="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" kindref="member">con_handler::handle_read</ref>,<sp/>shared_from_this(),<sp/>boost::asio::placeholders::error,<sp/>boost::asio::placeholders::bytes_transferred));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>sock.async_write_some(boost::asio::buffer(message,<sp/>max_length),<sp/>boost::bind(&amp;<ref refid="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" kindref="member">con_handler::handle_write</ref>,<sp/>shared_from_this(),<sp/>boost::asio::placeholders::error,<sp/>boost::asio::placeholders::bytes_transferred));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" kindref="member">con_handler::handle_read</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code<sp/>&amp;err,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_transferred)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!err)</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;--------------------------&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(data);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//boost::regex<sp/>pattern_reg_user(BR::REG_USER);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//boost::regex<sp/>pattern_reg_user_pass(BR::REG_USER_PASS);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//boost::regex<sp/>pattern_reg_uid(BR::REG_UID);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//boost::smatch<sp/>result;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if(boost::regex_search(std::string(data),<sp/>result,<sp/>pattern_reg_user))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;err<sp/>(recv):<sp/><sp/>{}&quot;</highlight><highlight class="normal">,<sp/>err.message());</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sock.close();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" kindref="member">con_handler::handle_write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code<sp/>&amp;err,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_transferred)</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!err)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::info(</highlight><highlight class="stringliteral">&quot;Server<sp/>sent<sp/>Hello<sp/>message!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>spdlog::error(</highlight><highlight class="stringliteral">&quot;err<sp/>(recv):<sp/><sp/>{}&quot;</highlight><highlight class="normal">,<sp/>err.message());</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sock.close();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><ref refid="group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f" kindref="member">con_handler::~con_handler</ref>()</highlight></codeline>
+<codeline lineno="96"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/server/src/con_handler.cpp"/>
+  </compounddef>
+</doxygen>

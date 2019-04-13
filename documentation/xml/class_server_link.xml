@@ -1,0 +1,406 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_server_link" kind="class" language="C++" prot="public">
+    <compoundname>ServerLink</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">boost::enable_shared_from_this&lt; ServerLink &gt;</basecompoundref>
+    <basecompoundref prot="private" virt="non-virtual">noncopyable</basecompoundref>
+    <includes refid="_client_8h" local="no">Client.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="class_server_link_1afb05b9f4060b17ac50d2fb3b874ce236" prot="public" static="no">
+        <type>shared_ptr&lt; <ref refid="class_server_link" kindref="compound">ServerLink</ref> &gt;</type>
+        <definition>typedef shared_ptr&lt;ServerLink&gt; ServerLink::ptr</definition>
+        <argsstring></argsstring>
+        <name>ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="19" column="1" bodyfile="src/client/src/Client.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_server_link_1ab44d72d22bc44a19a2c1c7a2af9a7f3a" prot="private" static="no" mutable="no">
+        <type>tcp::socket</type>
+        <definition>tcp::socket ServerLink::sock</definition>
+        <argsstring></argsstring>
+        <name>sock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="58" column="1" bodyfile="src/client/src/Client.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1a4abbd9bacfa29b9c761454858f6250ef" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ServerLink::readBuffer[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>readBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="59" column="1" bodyfile="src/client/src/Client.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1a156357298a26924dc29f0914f1fc0ddf" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char ServerLink::sendBuffer[1024]</definition>
+        <argsstring>[1024]</argsstring>
+        <name>sendBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="60" column="1" bodyfile="src/client/src/Client.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1ac50a6b7b74cbf8aa0e95e1cacd03a3a6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ServerLink::connected</definition>
+        <argsstring></argsstring>
+        <name>connected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="61" column="1" bodyfile="src/client/src/Client.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1a1c9905db0c1aac29576f7e01518c8d6e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ServerLink::sending</definition>
+        <argsstring></argsstring>
+        <name>sending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="61" column="1" bodyfile="src/client/src/Client.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1a708932395f10d3bec59e0f70101907c5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ServerLink::reading</definition>
+        <argsstring></argsstring>
+        <name>reading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="61" column="1" bodyfile="src/client/src/Client.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_server_link_1a7099ff7be3198017ec7b8c90e77844ab" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string ServerLink::message</definition>
+        <argsstring></argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="62" column="1" bodyfile="src/client/src/Client.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_server_link_1a2f551c4fffbedab55adab3d528df0f0c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServerLink::IsConnected</definition>
+        <argsstring>()</argsstring>
+        <name>IsConnected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="21" column="1" bodyfile="src/client/src/Client.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1ab79487df49a22e5533c96032ef413e16" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServerLink::IsSending</definition>
+        <argsstring>()</argsstring>
+        <name>IsSending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="22" column="1" bodyfile="src/client/src/Client.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1a9cdc703cdda0ff80c49434d483654d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool ServerLink::IsReading</definition>
+        <argsstring>()</argsstring>
+        <name>IsReading</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="23" column="1" bodyfile="src/client/src/Client.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1a712791c09323fcf6db49ceb0a10f8d9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ServerLink::Message</definition>
+        <argsstring>()</argsstring>
+        <name>Message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="24" column="1" bodyfile="src/client/src/Client.h" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1afa570df0c508889210e9ac2ff5983306" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::Disconnect</definition>
+        <argsstring>()</argsstring>
+        <name>Disconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="33" column="1" bodyfile="src/client/src/Client.h" bodystart="33" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1accf9e304c68111f1dbb1df82e2ae3ca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::Send</definition>
+        <argsstring>(const std::string &amp;msg)</argsstring>
+        <name>Send</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="40" column="1" bodyfile="src/client/src/Client.h" bodystart="40" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1a57df20ef340ea6f42157ff40aa57427a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t ServerLink::ReadComplete</definition>
+        <argsstring>(const system::error_code &amp;error, size_t bytes)</argsstring>
+        <name>ReadComplete</name>
+        <param>
+          <type>const system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="49" column="1" bodyfile="src/client/src/Client.h" bodystart="49" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_server_link_1a72edc7fb4b20cc9bd157863b2ee4b279" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_server_link_1afb05b9f4060b17ac50d2fb3b874ce236" kindref="member">ptr</ref></type>
+        <definition>static ptr ServerLink::Start</definition>
+        <argsstring>(ip::tcp::endpoint ep)</argsstring>
+        <name>Start</name>
+        <param>
+          <type>ip::tcp::endpoint</type>
+          <declname>ep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="26" column="1" bodyfile="src/client/src/Client.h" bodystart="26" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_server_link_1a4e713142012135151d872949c5931a41" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ServerLink::ServerLink</definition>
+        <argsstring>()</argsstring>
+        <name>ServerLink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="64" column="1" bodyfile="src/client/src/Client.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1ad4c71cf9ab124f2c29ae99ca4a50f0ac" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::Connect</definition>
+        <argsstring>(tcp::endpoint ep)</argsstring>
+        <name>Connect</name>
+        <param>
+          <type>tcp::endpoint</type>
+          <declname>ep</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="66" column="1" bodyfile="src/client/src/Client.h" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1a3da0dd06361d9b2f0ca6c7467d2efdde" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::Read</definition>
+        <argsstring>()</argsstring>
+        <name>Read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="72" column="1" bodyfile="src/client/src/Client.h" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1ab9e341037ea6395e4a73aeefd1d61847" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::OnConnect</definition>
+        <argsstring>(const system::error_code &amp;error)</argsstring>
+        <name>OnConnect</name>
+        <param>
+          <type>const system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="81" column="1" bodyfile="src/client/src/Client.h" bodystart="81" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1ad9c2be6ec4e96b40892726c661e05e4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::OnRead</definition>
+        <argsstring>(const system::error_code &amp;error, size_t bytes)</argsstring>
+        <name>OnRead</name>
+        <param>
+          <type>const system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="87" column="1" bodyfile="src/client/src/Client.h" bodystart="87" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_link_1a37800b28376bd4fb1eece4d83275f010" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ServerLink::OnSend</definition>
+        <argsstring>(const system::error_code &amp;error, size_t bytes)</argsstring>
+        <name>OnSend</name>
+        <param>
+          <type>const system::error_code &amp;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/client/src/Client.h" line="99" column="1" bodyfile="src/client/src/Client.h" bodystart="99" bodyend="102"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>ServerLink</label>
+        <link refid="class_server_link"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+        <childnode refid="22" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>boost::enable_shared_from_this&lt; ServerLink &gt;</label>
+      </node>
+      <node id="22">
+        <label>noncopyable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>ServerLink</label>
+        <link refid="class_server_link"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+        <childnode refid="25" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>boost::enable_shared_from_this&lt; ServerLink &gt;</label>
+      </node>
+      <node id="25">
+        <label>noncopyable</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/client/src/Client.h" line="17" column="1" bodyfile="src/client/src/Client.h" bodystart="16" bodyend="103"/>
+    <listofallmembers>
+      <member refid="class_server_link_1ad4c71cf9ab124f2c29ae99ca4a50f0ac" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>Connect</name></member>
+      <member refid="class_server_link_1ac50a6b7b74cbf8aa0e95e1cacd03a3a6" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>connected</name></member>
+      <member refid="class_server_link_1afa570df0c508889210e9ac2ff5983306" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>Disconnect</name></member>
+      <member refid="class_server_link_1a2f551c4fffbedab55adab3d528df0f0c" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>IsConnected</name></member>
+      <member refid="class_server_link_1a9cdc703cdda0ff80c49434d483654d7e" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>IsReading</name></member>
+      <member refid="class_server_link_1ab79487df49a22e5533c96032ef413e16" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>IsSending</name></member>
+      <member refid="class_server_link_1a7099ff7be3198017ec7b8c90e77844ab" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>message</name></member>
+      <member refid="class_server_link_1a712791c09323fcf6db49ceb0a10f8d9c" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>Message</name></member>
+      <member refid="class_server_link_1ab9e341037ea6395e4a73aeefd1d61847" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>OnConnect</name></member>
+      <member refid="class_server_link_1ad9c2be6ec4e96b40892726c661e05e4e" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>OnRead</name></member>
+      <member refid="class_server_link_1a37800b28376bd4fb1eece4d83275f010" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>OnSend</name></member>
+      <member refid="class_server_link_1afb05b9f4060b17ac50d2fb3b874ce236" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>ptr</name></member>
+      <member refid="class_server_link_1a3da0dd06361d9b2f0ca6c7467d2efdde" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>Read</name></member>
+      <member refid="class_server_link_1a4abbd9bacfa29b9c761454858f6250ef" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>readBuffer</name></member>
+      <member refid="class_server_link_1a57df20ef340ea6f42157ff40aa57427a" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>ReadComplete</name></member>
+      <member refid="class_server_link_1a708932395f10d3bec59e0f70101907c5" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>reading</name></member>
+      <member refid="class_server_link_1accf9e304c68111f1dbb1df82e2ae3ca5" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>Send</name></member>
+      <member refid="class_server_link_1a156357298a26924dc29f0914f1fc0ddf" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>sendBuffer</name></member>
+      <member refid="class_server_link_1a1c9905db0c1aac29576f7e01518c8d6e" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>sending</name></member>
+      <member refid="class_server_link_1a4e713142012135151d872949c5931a41" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>ServerLink</name></member>
+      <member refid="class_server_link_1ab44d72d22bc44a19a2c1c7a2af9a7f3a" prot="private" virt="non-virtual"><scope>ServerLink</scope><name>sock</name></member>
+      <member refid="class_server_link_1a72edc7fb4b20cc9bd157863b2ee4b279" prot="public" virt="non-virtual"><scope>ServerLink</scope><name>Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

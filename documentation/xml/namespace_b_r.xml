@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_b_r" kind="namespace" language="C++">
+    <compoundname>BR</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespace_b_r_1a767d5d7fec5adfa1bf5a7c03f98beaaf" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::SERVER_VERSION_MAJOR</definition>
+        <argsstring></argsstring>
+        <name>SERVER_VERSION_MAJOR</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Сервер. Major версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="45" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1afb69faba1bc3b5d31b8514c0103b72a0" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::SERVER_VERSION_MINOR</definition>
+        <argsstring></argsstring>
+        <name>SERVER_VERSION_MINOR</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Сервер. Minor версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="48" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1ad496b6d1eb6371bb740df7c7fac12aba" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::SERVER_VERSION_PATCH</definition>
+        <argsstring></argsstring>
+        <name>SERVER_VERSION_PATCH</name>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Сервер. Path версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="51" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a99a147d6069c07f03a2baf3bb531e308" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::CLIENT_VERSION_MAJOR</definition>
+        <argsstring></argsstring>
+        <name>CLIENT_VERSION_MAJOR</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Клиент. Major версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="54" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a4182b988c7afdd13d1e00d1a558c44ab" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::CLIENT_VERSION_MINOR</definition>
+        <argsstring></argsstring>
+        <name>CLIENT_VERSION_MINOR</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Клиент. Minor версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="57" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a35ec7e796e49c1a6b87e73c07d643378" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::CLIENT_VERSION_PATCH</definition>
+        <argsstring></argsstring>
+        <name>CLIENT_VERSION_PATCH</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Клиент. Path версия </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="60" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1adfde74493201d02cbbe52fc1d83bf1ec" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::SERVER_VERSION</definition>
+        <argsstring></argsstring>
+        <name>SERVER_VERSION</name>
+        <initializer>= (<ref refid="namespace_b_r_1a767d5d7fec5adfa1bf5a7c03f98beaaf" kindref="member">SERVER_VERSION_MAJOR</ref> * 10000 + <ref refid="namespace_b_r_1afb69faba1bc3b5d31b8514c0103b72a0" kindref="member">SERVER_VERSION_MINOR</ref> * 100 + <ref refid="namespace_b_r_1ad496b6d1eb6371bb740df7c7fac12aba" kindref="member">SERVER_VERSION_PATCH</ref>)</initializer>
+        <briefdescription>
+<para>Версия Сервера </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="63" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a5efdcacd78568f72acf52924873804a3" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::CLIENT_VERSION</definition>
+        <argsstring></argsstring>
+        <name>CLIENT_VERSION</name>
+        <initializer>= (<ref refid="namespace_b_r_1a99a147d6069c07f03a2baf3bb531e308" kindref="member">CLIENT_VERSION_MAJOR</ref> * 10000 + <ref refid="namespace_b_r_1a4182b988c7afdd13d1e00d1a558c44ab" kindref="member">CLIENT_VERSION_MINOR</ref> * 100 + <ref refid="namespace_b_r_1a35ec7e796e49c1a6b87e73c07d643378" kindref="member">CLIENT_VERSION_PATCH</ref>)</initializer>
+        <briefdescription>
+<para>Версия клиента </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="66" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a30974fa6f1a17283bd60a3bb1e9501ff" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char BR::DB_NAME[]</definition>
+        <argsstring>[]</argsstring>
+        <name>DB_NAME</name>
+        <initializer>= &quot;test.db&quot;</initializer>
+        <briefdescription>
+<para>Название базы данных </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="73" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1ae2055a331ff0a0d44ecdf49d643c143b" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char BR::SERVER_IP[]</definition>
+        <argsstring>[]</argsstring>
+        <name>SERVER_IP</name>
+        <initializer>= &quot;127.0.0.1&quot;</initializer>
+        <briefdescription>
+<para>Стандартный адрес сервера </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="80" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a93dcd985876e063e59cb37eeb4f49bc8" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int BR::SERVER_PORT</definition>
+        <argsstring></argsstring>
+        <name>SERVER_PORT</name>
+        <initializer>= 1234</initializer>
+        <briefdescription>
+<para>Стандартный порт сервера </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="83" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1adf62830a86680a1b129dc6a865c8ca5f" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char BR::REG_USER[]</definition>
+        <argsstring>[]</argsstring>
+        <name>REG_USER</name>
+        <initializer>= &quot;^user:\\[([^\\[\\]]+)\\]$&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Регулярное выражение для поиска имени</para>
+<para><programlisting><codeline><highlight class="normal">user:[]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="94" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a81134999acb4e2183d0968fad32d055e" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char BR::REG_USER_PASS[]</definition>
+        <argsstring>[]</argsstring>
+        <name>REG_USER_PASS</name>
+        <initializer>= &quot;^user:\\[([^\\[\\]]+)\\] pass:\\[([^\\[\\]]+)\\]$&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Регулярное выражение для поиска имени и пароля</para>
+<para><programlisting><codeline><highlight class="normal">user:[]<sp/>pass:[]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="101" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespace_b_r_1a6b288b2197101eea180f726c9ab3195a" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char BR::REG_UID[]</definition>
+        <argsstring>[]</argsstring>
+        <name>REG_UID</name>
+        <initializer>= &quot;^UID:\\[([^\\[\\]]+)\\] data:\\[([^\\[\\]]+)\\]$&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Регулярное выражение для поиска уникального идентификатора и данных</para>
+<para><programlisting><codeline><highlight class="normal">UID:[]<sp/>data:[]</highlight></codeline>
+</programlisting> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="108" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Пространство имён с константами </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Version - Информация о версии</para>
+<para><ref refid="class_d_b" kindref="compound">DB</ref> - База данных</para>
+<para><ref refid="class_server" kindref="compound">Server</ref> - Константы сервера</para>
+<para>Regex - регулярные выражения </para>
+    </detaileddescription>
+    <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="39" column="1"/>
+  </compounddef>
+</doxygen>

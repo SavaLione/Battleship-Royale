@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_16a916fe4812f76ff8ca083dfa2c5cc7">
+<title>Содержание директории asio</title>
+<indexterm><primary>Содержание директории asio</primary></indexterm>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_22525a050dfdcab83cc3ff7d62dce0a1">client</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_c8b6e6fef5b1d9ca37c74a370526293f">regex</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_ca44e6cd34c92977c243b2139948fc00">server</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

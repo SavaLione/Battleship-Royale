@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_coockie">
+<title>Структура Coockie</title>
+<indexterm><primary>Coockie</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BattleshipRoyale.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_coockie_1af7f9283a949f25c677a061ae6a46cb76">id</link></para>
+</listitem>
+            <listitem><para>unsigned int <link linkend="_struct_coockie_1a25293cd2b76e85993318e02e9398bdfb">u_i_random</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле BattleshipRoyale.h строка 117</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_struct_coockie_1af7f9283a949f25c677a061ae6a46cb76"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>Coockie</secondary></indexterm>
+<indexterm><primary>Coockie</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int Coockie::id</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 120</para>
+    </section><anchor xml:id="_struct_coockie_1a25293cd2b76e85993318e02e9398bdfb"/>    <section>
+    <title>u_i_random</title>
+<indexterm><primary>u_i_random</primary><secondary>Coockie</secondary></indexterm>
+<indexterm><primary>Coockie</primary><secondary>u_i_random</secondary></indexterm>
+<para><computeroutput>unsigned int Coockie::u_i_random</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 123</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__battleship_royale_8h">BattleshipRoyale.h</link></section>
+</section>

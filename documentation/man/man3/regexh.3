@@ -1,0 +1,120 @@
+.TH "regexh" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+regexh
+.SH SYNOPSIS
+.br
+.PP
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcheck_pattern\fP (std::string *msg, std::string *pattern)"
+.br
+.RI "Проверка соответствия строки паттерну "
+.ti -1c
+.RI "void \fBgetData\fP (std::string *msg, std::string *pattern, std::string *ret_one)"
+.br
+.RI "Получение информации из строки "
+.ti -1c
+.RI "void \fBgetData\fP (std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)"
+.br
+.RI "Получение информации из строки "
+.in -1c
+.SH "Подробное описание"
+.PP 
+
+.SH "Функции"
+.PP 
+.SS "bool check_pattern (std::string * msg, std::string * pattern)"
+
+.PP
+Проверка соответствия строки паттерну 
+.PP
+.nf
+string s = "user:[SavaLione]";
+string s_pattern = BR::REG_USER;
+if(check_pattern(&s, &s_pattern))
+{
+    //some
+}
+
+.fi
+.PP
+ 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fImsg\fP Строка 
+.br
+\fIpattern\fP Паттерн 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+true - соответствует, false - не соответствует\&. 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/regex\&.cpp строка 34
+.SS "void getData (std::string * msg, std::string * pattern, std::string * ret_one)"
+
+.PP
+Получение информации из строки 
+.PP
+.nf
+string s = "user:[SavaLione]";
+string s_pattern = BR::REG_USER;
+string s_ret_one = "";
+getData(&s, &s_pattern, &s_ret_one);
+
+.fi
+.PP
+ 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fImsg\fP Строка 
+.br
+\fIpattern\fP Паттерн 
+.br
+\fIret_one\fP Информация с первого нахождения в строке 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/regex\&.cpp строка 53
+.SS "void getData (std::string * msg, std::string * pattern, std::string * ret_one, std::string * ret_two)"
+
+.PP
+Получение информации из строки 
+.PP
+.nf
+string s = "user:[SavaLione]";
+string s_pattern = BR::REG_USER;
+string s_ret_one = "", s_ret_two = "";
+getData(&s, &s_pattern, &s_ret_one, &s_ret_two);
+
+.fi
+.PP
+ 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fImsg\fP Строка 
+.br
+\fIpattern\fP Паттерн 
+.br
+\fIret_one\fP Информация с первого нахождения в строке 
+.br
+\fIret_two\fP Информация с второго нахождения в строке 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/regex\&.cpp строка 77
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

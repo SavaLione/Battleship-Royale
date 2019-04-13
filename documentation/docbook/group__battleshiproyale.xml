@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__battleshiproyale">
+<title>BattleShiproyale.h</title>
+<indexterm><primary>BattleShiproyale.h</primary></indexterm>
+Граф связей класса BattleShiproyale.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__battleshiproyale.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Пространства имен    </title>
+        <itemizedlist>
+            <listitem><para> <link linkend="_namespace_b_r">BR</link></para>
+
+<para>Пространство имён с константами </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Классы    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_coockie">Coockie</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_u_i_d">UID</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_pos">Pos</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_size">Size</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+</section>

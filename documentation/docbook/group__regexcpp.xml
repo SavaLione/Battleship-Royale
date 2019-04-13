@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__regexcpp">
+<title>Regex.cpp</title>
+<indexterm><primary>Regex.cpp</primary></indexterm>
+Граф связей класса Regex.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__regexcpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30">check_pattern</link> (std::string *msg, std::string *pattern)</para>
+
+<para>Проверка соответствия строки паттерну </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__regexcpp_1ga524588640ff7393a801141740202d9dc">getData</link> (std::string *msg, std::string *pattern, std::string *ret_one)</para>
+
+<para>Получение информации из строки </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__regexcpp_1ga0ac985b5fff36005eb80cda832582ca9">getData</link> (std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</para>
+
+<para>Получение информации из строки </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30"/>    <section>
+    <title>check_pattern()</title>
+<indexterm><primary>check_pattern</primary><secondary>Regex.cpp</secondary></indexterm>
+<indexterm><primary>Regex.cpp</primary><secondary>check_pattern</secondary></indexterm>
+<para><computeroutput>bool check_pattern (std::string * msg, std::string * pattern)</computeroutput></para><para>
+
+<para>Проверка соответствия строки паттерну </para>
+</para>
+
+<para><literallayout><computeroutput>string&#32;s&#32;=&#32;&quot;user:[SavaLione]&quot;;
+string&#32;s_pattern&#32;=&#32;BR::REG_USER;
+if(check_pattern(&amp;s,&#32;&amp;s_pattern))
+{
+&#32;&#32;&#32;&#32;//some
+}
+</computeroutput></literallayout> 
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>msg</entry>
+                                <entry>
+<para>Строка </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>pattern</entry>
+                                <entry>
+<para>Паттерн </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>true - соответствует, false - не соответствует. </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле server/src/regex.cpp строка 34</para>
+    </section><anchor xml:id="_group__regexcpp_1ga524588640ff7393a801141740202d9dc"/>    <section>
+    <title>getData()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>getData</primary><secondary>Regex.cpp</secondary></indexterm>
+<indexterm><primary>Regex.cpp</primary><secondary>getData</secondary></indexterm>
+<para><computeroutput>void getData (std::string * msg, std::string * pattern, std::string * ret_one)</computeroutput></para><para>
+
+<para>Получение информации из строки </para>
+</para>
+
+<para><literallayout><computeroutput>string&#32;s&#32;=&#32;&quot;user:[SavaLione]&quot;;
+string&#32;s_pattern&#32;=&#32;BR::REG_USER;
+string&#32;s_ret_one&#32;=&#32;&quot;&quot;;
+getData(&amp;s,&#32;&amp;s_pattern,&#32;&amp;s_ret_one);
+</computeroutput></literallayout> 
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>msg</entry>
+                                <entry>
+<para>Строка </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>pattern</entry>
+                                <entry>
+<para>Паттерн </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>ret_one</entry>
+                                <entry>
+<para>Информация с первого нахождения в строке </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле server/src/regex.cpp строка 53</para>
+    </section><anchor xml:id="_group__regexcpp_1ga0ac985b5fff36005eb80cda832582ca9"/>    <section>
+    <title>getData()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>getData</primary><secondary>Regex.cpp</secondary></indexterm>
+<indexterm><primary>Regex.cpp</primary><secondary>getData</secondary></indexterm>
+<para><computeroutput>void getData (std::string * msg, std::string * pattern, std::string * ret_one, std::string * ret_two)</computeroutput></para><para>
+
+<para>Получение информации из строки </para>
+</para>
+
+<para><literallayout><computeroutput>string&#32;s&#32;=&#32;&quot;user:[SavaLione]&quot;;
+string&#32;s_pattern&#32;=&#32;BR::REG_USER;
+string&#32;s_ret_one&#32;=&#32;&quot;&quot;,&#32;s_ret_two&#32;=&#32;&quot;&quot;;
+getData(&amp;s,&#32;&amp;s_pattern,&#32;&amp;s_ret_one,&#32;&amp;s_ret_two);
+</computeroutput></literallayout> 
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>msg</entry>
+                                <entry>
+<para>Строка </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>pattern</entry>
+                                <entry>
+<para>Паттерн </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>ret_one</entry>
+                                <entry>
+<para>Информация с первого нахождения в строке </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>ret_two</entry>
+                                <entry>
+<para>Информация с второго нахождения в строке </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле server/src/regex.cpp строка 77</para>
+</section>
+</section>
+</section>

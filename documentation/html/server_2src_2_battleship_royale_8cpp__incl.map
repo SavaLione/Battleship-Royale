@@ -1,0 +1,17 @@
+<map id="BattleshipRoyale.cpp" name="BattleshipRoyale.cpp">
+<area shape="rect" id="node1" title="Сервер" alt="" coords="515,5,661,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,77,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="270,169,325,196"/>
+<area shape="rect" id="node4" title=" " alt="" coords="153,87,266,114"/>
+<area shape="rect" id="node5" title=" " alt="" coords="291,80,421,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="637,169,707,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="541,87,635,114"/>
+<area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="732,169,863,196"/>
+<area shape="rect" id="node9" href="$_d_b_8h.html" title="Работа с базой данных" alt="" coords="709,87,760,114"/>
+<area shape="rect" id="node10" href="$_regex_8h.html" title="Работа с регулярными выражениями" alt="" coords="446,87,517,114"/>
+<area shape="rect" id="node11" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="835,87,904,114"/>
+<area shape="rect" id="node15" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="929,87,1015,114"/>
+<area shape="rect" id="node12" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="887,169,990,196"/>
+<area shape="rect" id="node13" title=" " alt="" coords="811,251,917,278"/>
+<area shape="rect" id="node14" title=" " alt="" coords="942,244,1085,285"/>
+</map>

@@ -7,7 +7,7 @@ project(${BR_CLIENT_NAME})
 set(BR_CLIENT_HEADERS)
 
 set(BR_CLIENT_SOURCES
-	BattleshipRoyale.cpp)
+	src/BattleshipRoyale.cpp)
 
 #find_package(Curses REQUIRED)
 #include_directories(${CURSES_INCLUDE_DIR})

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_client_8cpp">
+<title>Файл client.cpp</title>
+<indexterm><primary>client.cpp</primary></indexterm>
+<programlisting>#include &lt;string&gt;
+#include &lt;boost/asio.hpp&gt;
+#include &lt;spdlog/spdlog.h&gt;
+#include &lt;spdlog/sinks/basic_file_sink.h&gt;
+</programlisting>Граф включаемых заголовочных файлов для client.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="client_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_client_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Функции</title>
+<anchor xml:id="_client_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>client.cpp</secondary></indexterm>
+<indexterm><primary>client.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+См. определение в файле client.cpp строка 11</para>
+</section>
+</section>
+</section>

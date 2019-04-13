@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_78ce3fde11f1c50580f2f2c408f37c2f">
+<title>Содержание директории src</title>
+<indexterm><primary>Содержание директории src</primary></indexterm>
+Директория графа зависимостей src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_78ce3fde11f1c50580f2f2c408f37c2f_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="_client_2src_2_battleship_royale_8cpp">client/src/BattleshipRoyale.cpp</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="__client_8h">Client.h</link></para>
+</listitem>
+            <listitem><para>файл <link linkend="_client_2src_2_message_8h">client/src/Message.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

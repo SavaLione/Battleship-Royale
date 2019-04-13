@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_client_2src_2_battleship_royale_8cpp">
+<title>Файл BattleshipRoyale.cpp</title>
+<indexterm><primary>BattleshipRoyale.cpp</primary></indexterm>
+<programlisting>#include &lt;string&gt;
+#include &lt;boost/asio.hpp&gt;
+#include &lt;spdlog/spdlog.h&gt;
+#include &lt;spdlog/sinks/basic_file_sink.h&gt;
+#include &lt;cxxopts.hpp&gt;
+#include &quot;BattleshipRoyale.h&quot;
+</programlisting>Граф включаемых заголовочных файлов для client/src/BattleshipRoyale.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="client_2src_2_battleship_royale_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_client_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Функции</title>
+<anchor xml:id="_client_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>client/src/BattleshipRoyale.cpp</secondary></indexterm>
+<indexterm><primary>client/src/BattleshipRoyale.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+См. определение в файле client/src/BattleshipRoyale.cpp строка 15</para>
+</section>
+</section>
+</section>

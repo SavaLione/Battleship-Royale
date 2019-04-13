@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__regex_8h">
+<title>Файл Regex.h</title>
+<indexterm><primary>Regex.h</primary></indexterm>
+<para>
+
+<para>Работа с регулярными выражениями </para>
+ 
+</para>
+<programlisting>#include &lt;string&gt;
+</programlisting>Граф включаемых заголовочных файлов для Regex.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_regex_8h__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Граф файлов, в которые включается этот файл:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_regex_8h__dep__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_group__regexh_1gac4882c93b963bd53fd60978a9661fa30">check_pattern</link> (std::string *msg, std::string *pattern)</para>
+
+<para>Проверка соответствия строки паттерну </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__regexh_1ga524588640ff7393a801141740202d9dc">getData</link> (std::string *msg, std::string *pattern, std::string *ret_one)</para>
+
+<para>Получение информации из строки </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__regexh_1ga0ac985b5fff36005eb80cda832582ca9">getData</link> (std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</para>
+
+<para>Получение информации из строки </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Работа с регулярными выражениями </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>13 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
+</section>

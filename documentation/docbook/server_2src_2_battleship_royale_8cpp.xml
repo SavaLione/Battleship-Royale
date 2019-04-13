@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2_battleship_royale_8cpp">
+<title>Файл BattleshipRoyale.cpp</title>
+<indexterm><primary>BattleshipRoyale.cpp</primary></indexterm>
+<para>
+
+<para>Сервер </para>
+ 
+</para>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;spdlog/spdlog.h&gt;
+#include &lt;spdlog/sinks/basic_file_sink.h&gt;
+#include &lt;sqlite3.h&gt;
+#include &lt;cxxopts.hpp&gt;
+#include &quot;BattleshipRoyale.h&quot;
+#include &quot;DB.h&quot;
+#include &quot;Regex.h&quot;
+#include &quot;Server.h&quot;
+#include &quot;rand_sse.h&quot;
+</programlisting>Граф включаемых заголовочных файлов для server/src/BattleshipRoyale.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="server_2src_2_battleship_royale_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Точка входа в программу </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Сервер </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>13 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
+</section>

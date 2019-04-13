@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__servercpp">
+<title>Server.cpp</title>
+<indexterm><primary>Server.cpp</primary></indexterm>
+Граф связей класса Server.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__servercpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c">Server::handle_accept</link> (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp;err)</para>
+
+<para>handle </para>
+</listitem>
+            <listitem><para><link linkend="_group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6">Server::~Server</link> ()</para>
+
+<para>Деструктор класса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c"/>    <section>
+    <title>handle_accept()</title>
+<indexterm><primary>handle_accept</primary><secondary>Server.cpp</secondary></indexterm>
+<indexterm><primary>Server.cpp</primary><secondary>handle_accept</secondary></indexterm>
+<para><computeroutput>void Server::handle_accept (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp; err)</computeroutput></para><para>
+
+<para>handle </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>connection</entry>
+                                <entry>
+<para>указатель на подключение </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>err</entry>
+                                <entry>
+<para>сервера ссылка на ошибку </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле asio/server/Server.cpp строка 19</para>
+    </section><anchor xml:id="_group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6"/>    <section>
+    <title>~Server()</title>
+<indexterm><primary>~Server</primary><secondary>Server.cpp</secondary></indexterm>
+<indexterm><primary>Server.cpp</primary><secondary>~Server</secondary></indexterm>
+<para><computeroutput>Server::~Server ( )</computeroutput></para><para>
+
+<para>Деструктор класса </para>
+</para>
+<para>
+См. определение в файле asio/server/Server.cpp строка 5</para>
+</section>
+</section>
+</section>

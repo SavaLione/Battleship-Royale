@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_ca44e6cd34c92977c243b2139948fc00" kind="dir">
+    <compoundname>server</compoundname>
+    <innerfile refid="async_8cpp">async.cpp</innerfile>
+    <innerfile refid="asio_2server_2con__handler_8cpp">asio/server/con_handler.cpp</innerfile>
+    <innerfile refid="asio_2server_2con__handler_8h">asio/server/con_handler.h</innerfile>
+    <innerfile refid="asio_2server_2_server_8cpp">asio/server/Server.cpp</innerfile>
+    <innerfile refid="asio_2server_2_server_8h">asio/server/Server.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/asio/server/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+.TH "rand_ssecpp" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rand_ssecpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Макросы"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_ALIGN\fP(N)   __declspec(align(N))"
+.br
+.in -1c
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "void \fBsrand_sse\fP (unsigned int seed)"
+.br
+.RI "Задать seed\&. "
+.ti -1c
+.RI "void \fBrand_sse\fP (unsigned int *result)"
+.br
+.RI "Получение вектора с случайными числами "
+.in -1c
+.SH "Подробное описание"
+.PP 
+
+.SH "Макросы"
+.PP 
+.SS "#define _ALIGN(N)   __declspec(align(N))"
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 44
+.SH "Функции"
+.PP 
+.SS "void rand_sse (unsigned int * result)"
+
+.PP
+Получение вектора с случайными числами 
+.PP
+.nf
+unsigned int u_i_random[4];
+rand_sse(u_i_random);
+
+.fi
+.PP
+ 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIresult\fP вектор с случайными числами 
+.RE
+.PP
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 70
+.SS "void srand_sse (unsigned int seed)"
+
+.PP
+Задать seed\&. 
+.PP
+.nf
+srand_sse(time(NULL));
+
+.fi
+.PP
+ 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIseed\fP Seed 
+.RE
+.PP
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 57
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

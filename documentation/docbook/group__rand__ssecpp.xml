@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__rand__ssecpp">
+<title>rand_sse.cpp</title>
+<indexterm><primary>rand_sse.cpp</primary></indexterm>
+Граф связей класса rand_sse.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__rand__ssecpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Макросы    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group__rand__ssecpp_1gae2c66d1d7db5adf0c1853960e2be1119">_ALIGN</link>(N)   __declspec(align(N))</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f">srand_sse</link> (unsigned int seed)</para>
+
+<para>Задать seed. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d">rand_sse</link> (unsigned int *result)</para>
+
+<para>Получение вектора с случайными числами </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Макросы</title>
+<anchor xml:id="_group__rand__ssecpp_1gae2c66d1d7db5adf0c1853960e2be1119"/>    <section>
+    <title>_ALIGN</title>
+<indexterm><primary>_ALIGN</primary><secondary>rand_sse.cpp</secondary></indexterm>
+<indexterm><primary>rand_sse.cpp</primary><secondary>_ALIGN</secondary></indexterm>
+<para><computeroutput>#define _ALIGN( N)   __declspec(align(N))</computeroutput></para><para>
+См. определение в файле rand_sse.cpp строка 44</para>
+</section>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d"/>    <section>
+    <title>rand_sse()</title>
+<indexterm><primary>rand_sse</primary><secondary>rand_sse.cpp</secondary></indexterm>
+<indexterm><primary>rand_sse.cpp</primary><secondary>rand_sse</secondary></indexterm>
+<para><computeroutput>void rand_sse (unsigned int * result)</computeroutput></para><para>
+
+<para>Получение вектора с случайными числами </para>
+</para>
+
+<para><literallayout><computeroutput>unsigned&#32;int&#32;u_i_random[4];
+rand_sse(u_i_random);
+</computeroutput></literallayout> 
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>result</entry>
+                                <entry>
+<para>вектор с случайными числами </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле rand_sse.cpp строка 70</para>
+    </section><anchor xml:id="_group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f"/>    <section>
+    <title>srand_sse()</title>
+<indexterm><primary>srand_sse</primary><secondary>rand_sse.cpp</secondary></indexterm>
+<indexterm><primary>rand_sse.cpp</primary><secondary>srand_sse</secondary></indexterm>
+<para><computeroutput>void srand_sse (unsigned int seed)</computeroutput></para><para>
+
+<para>Задать seed. </para>
+</para>
+
+<para><literallayout><computeroutput>srand_sse(time(NULL));
+</computeroutput></literallayout> 
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>seed</entry>
+                                <entry>
+<para>Seed </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле rand_sse.cpp строка 57</para>
+</section>
+</section>
+</section>

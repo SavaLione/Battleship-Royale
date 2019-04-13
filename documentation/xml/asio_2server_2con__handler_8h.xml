@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="asio_2server_2con__handler_8h" kind="file" language="C++">
+    <compoundname>asio/server/con_handler.h</compoundname>
+    <includes local="no">boost/asio.hpp</includes>
+    <includes local="no">boost/enable_shared_from_this.hpp</includes>
+    <includedby refid="asio_2server_2_server_8h" local="yes">Server.h</includedby>
+    <includedby refid="asio_2server_2con__handler_8cpp" local="yes">con_handler.cpp</includedby>
+    <incdepgraph>
+      <node id="75">
+        <label>con_handler.h</label>
+        <link refid="asio_2server_2con__handler_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>boost/asio.hpp</label>
+      </node>
+      <node id="77">
+        <label>boost/enable_shared_from_this.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="78">
+        <label>con_handler.h</label>
+        <link refid="asio_2server_2con__handler_8h"/>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>async.cpp</label>
+        <link refid="async_8cpp"/>
+      </node>
+      <node id="79">
+        <label>Server.h</label>
+        <link refid="asio_2server_2_server_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+      <node id="82">
+        <label>con_handler.cpp</label>
+        <link refid="asio_2server_2con__handler_8cpp"/>
+      </node>
+      <node id="81">
+        <label>Server.cpp</label>
+        <link refid="asio_2server_2_server_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcon__handler" prot="public">con_handler</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CON_HANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CON_HANDLER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/asio.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/enable_shared_from_this.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classcon__handler" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcon__handler" kindref="compound">con_handler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>boost::enable_shared_from_this&lt;con_handler&gt;</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::ip::tcp::socket<sp/>sock;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>message=</highlight><highlight class="stringliteral">&quot;Hello<sp/>From<sp/>Server!&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{<sp/>max_length<sp/>=<sp/>1024<sp/>};</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data[max_length];</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16" refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;con_handler&gt;<sp/><ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">pointer</ref>;</highlight></codeline>
+<codeline lineno="17" refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kindref="member">con_handler</ref>(boost::asio::io_service&amp;<sp/>io_service)<sp/>:<sp/>sock(io_service)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="classcon__handler_1ab3cec40540ef3ff484ef0b639545eb17" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">pointer</ref><sp/><ref refid="classcon__handler_1ab3cec40540ef3ff484ef0b639545eb17" kindref="member">create</ref>(boost::asio::io_service&amp;<sp/>io_service)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">pointer</ref>(</highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kindref="member">con_handler</ref>(io_service));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::ip::tcp::socket&amp;<sp/><ref refid="group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22" kindref="member">socket</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7" kindref="member">start</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" kindref="member">handle_read</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code&amp;<sp/>err,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_transferred);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" kindref="member">handle_write</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code&amp;<sp/>err,<sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>bytes_transferred);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>des<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f" kindref="member">~con_handler</ref>();</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>CON_HANDLER_H</highlight></codeline>
+    </programlisting>
+    <location file="src/asio/server/con_handler.h"/>
+  </compounddef>
+</doxygen>

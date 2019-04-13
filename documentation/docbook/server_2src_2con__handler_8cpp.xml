@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2con__handler_8cpp">
+<title>Файл con_handler.cpp</title>
+<indexterm><primary>con_handler.cpp</primary></indexterm>
+<para>
+
+<para>handler </para>
+ 
+</para>
+<programlisting>#include &quot;con_handler.h&quot;
+#include &lt;string&gt;
+#include &lt;boost/bind.hpp&gt;
+#include &lt;boost/regex.hpp&gt;
+#include &lt;spdlog/spdlog.h&gt;
+#include &lt;spdlog/sinks/basic_file_sink.h&gt;
+#include &quot;BattleshipRoyale.h&quot;
+#include &quot;DB.h&quot;
+</programlisting>Граф включаемых заголовочных файлов для server/src/con_handler.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="server_2src_2con__handler_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Подробное описание</title>
+
+<para>handler </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>14 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
+</section>

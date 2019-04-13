@@ -1,0 +1,195 @@
+.TH "con_handler" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+con_handler \- Класс для общения  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <con_handler\&.h>\fP
+.PP
+Базовые классы:enable_shared_from_this< con_handler > и enable_shared_from_this< con_handler >\&.
+.SS "Открытые типы"
+
+.in +1c
+.ti -1c
+.RI "typedef boost::shared_ptr< \fBcon_handler\fP > \fBpointer\fP"
+.br
+.ti -1c
+.RI "typedef boost::shared_ptr< \fBcon_handler\fP > \fBpointer\fP"
+.br
+.RI "Указатель но handler\&. "
+.in -1c
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBcon_handler\fP (boost::asio::io_service &io_service)"
+.br
+.ti -1c
+.RI "boost::asio::ip::tcp::socket & \fBsocket\fP ()"
+.br
+.RI "Сокет "
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.RI "Запуск handler\&. "
+.ti -1c
+.RI "void \fBhandle_read\fP (const boost::system::error_code &err, size_t bytes_transferred)"
+.br
+.RI "Чтение сообщения от клиента "
+.ti -1c
+.RI "void \fBhandle_write\fP (const boost::system::error_code &err, size_t bytes_transferred)"
+.br
+.RI "Отправка сообщения клиенту "
+.ti -1c
+.RI "\fB~con_handler\fP ()"
+.br
+.RI "Деструктор класса "
+.ti -1c
+.RI "\fBcon_handler\fP (boost::asio::io_service &io_service)"
+.br
+.RI "Конструктор класса "
+.ti -1c
+.RI "boost::asio::ip::tcp::socket & \fBsocket\fP ()"
+.br
+.RI "Сокет "
+.ti -1c
+.RI "void \fBstart\fP ()"
+.br
+.RI "Запуск handler\&. "
+.ti -1c
+.RI "void \fBhandle_read\fP (const boost::system::error_code &err, size_t bytes_transferred)"
+.br
+.RI "Чтение сообщения от клиента "
+.ti -1c
+.RI "void \fBhandle_write\fP (const boost::system::error_code &err, size_t bytes_transferred)"
+.br
+.RI "Отправка сообщения клиенту "
+.ti -1c
+.RI "\fB~con_handler\fP ()"
+.br
+.RI "Деструктор класса "
+.in -1c
+.SS "Открытые статические члены"
+
+.in +1c
+.ti -1c
+.RI "static \fBpointer\fP \fBcreate\fP (boost::asio::io_service &io_service)"
+.br
+.ti -1c
+.RI "static \fBpointer\fP \fBcreate\fP (boost::asio::io_service &io_service)"
+.br
+.RI "Указатель на созданный сервис "
+.in -1c
+.SH "Подробное описание"
+.PP 
+Класс для общения 
+.PP
+См\&. определение в файле asio/server/con_handler\&.h строка 7
+.SH "Определения типов"
+.PP 
+.SS "typedef boost::shared_ptr<\fBcon_handler\fP> \fBcon_handler::pointer\fP"
+
+.PP
+См\&. определение в файле asio/server/con_handler\&.h строка 16
+.SS "typedef boost::shared_ptr<\fBcon_handler\fP> \fBcon_handler::pointer\fP"
+
+.PP
+Указатель но handler\&. 
+.PP
+См\&. определение в файле server/src/con_handler\&.h строка 41
+.SH "Конструктор(ы)"
+.PP 
+.SS "con_handler::con_handler (boost::asio::io_service & io_service)\fC [inline]\fP"
+
+.PP
+См\&. определение в файле asio/server/con_handler\&.h строка 17
+.SS "con_handler::con_handler (boost::asio::io_service & io_service)\fC [inline]\fP"
+
+.PP
+Конструктор класса С списком инициализации
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIio_service\fP сервис 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/con_handler\&.h строка 50
+.SS "con_handler::~con_handler ()"
+
+.PP
+Деструктор класса 
+.SH "Методы"
+.PP 
+.SS "static \fBpointer\fP con_handler::create (boost::asio::io_service & io_service)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+См\&. определение в файле asio/server/con_handler\&.h строка 21
+.SS "static \fBpointer\fP con_handler::create (boost::asio::io_service & io_service)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Указатель на созданный сервис 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIio_service\fP сервис 
+.RE
+.PP
+\fBВозвращает:\fP
+.RS 4
+указатель 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/con_handler\&.h строка 59
+.SS "void con_handler::handle_read (const boost::system::error_code & err, size_t bytes_transferred)"
+
+.PP
+Чтение сообщения от клиента 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIerr\fP ошибка 
+.br
+\fIbytes_transferred\fP 
+.RE
+.PP
+
+.SS "void con_handler::handle_write (const boost::system::error_code & err, size_t bytes_transferred)"
+
+.PP
+Отправка сообщения клиенту 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIerr\fP ошибка 
+.br
+\fIbytes_transferred\fP 
+.RE
+.PP
+
+.SS "boost::asio::ip::tcp::socket& con_handler::socket ()"
+
+.PP
+Сокет 
+.PP
+\fBВозвращает:\fP
+.RS 4
+Сокет 
+.RE
+.PP
+
+.SS "void con_handler::start ()"
+
+.PP
+Запуск handler\&. 
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

@@ -1,0 +1,88 @@
+\hypertarget{group__rand__ssecpp}{}\section{rand\+\_\+sse.\+cpp}
+\label{group__rand__ssecpp}\index{rand\_sse.cpp@{rand\_sse.cpp}}
+Граф связей класса rand\+\_\+sse.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{group__rand__ssecpp}
+\end{center}
+\end{figure}
+\subsection*{Макросы}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group__rand__ssecpp_gae2c66d1d7db5adf0c1853960e2be1119}{\+\_\+\+A\+L\+I\+GN}}(N)~\+\_\+\+\_\+declspec(align(N))
+\end{DoxyCompactItemize}
+\subsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__rand__ssecpp_ga80db1a2aa7de7edf52b9c60e101d556f}{srand\+\_\+sse}} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em Задать seed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__rand__ssecpp_gab7ae3ab6c8fb3e31548413dd0154db7d}{rand\+\_\+sse}} (unsigned int $\ast$result)
+\begin{DoxyCompactList}\small\item\em Получение вектора с случайными числами \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+
+
+\subsection{Макросы}
+\mbox{\Hypertarget{group__rand__ssecpp_gae2c66d1d7db5adf0c1853960e2be1119}\label{group__rand__ssecpp_gae2c66d1d7db5adf0c1853960e2be1119}} 
+\index{rand\_sse.cpp@{rand\_sse.cpp}!\_ALIGN@{\_ALIGN}}
+\index{\_ALIGN@{\_ALIGN}!rand\_sse.cpp@{rand\_sse.cpp}}
+\subsubsection{\texorpdfstring{\_ALIGN}{\_ALIGN}}
+{\footnotesize\ttfamily \#define \+\_\+\+A\+L\+I\+GN(\begin{DoxyParamCaption}\item[{}]{N }\end{DoxyParamCaption})~\+\_\+\+\_\+declspec(align(N))}
+
+
+
+См. определение в файле rand\+\_\+sse.\+cpp строка 44
+
+
+
+\subsection{Функции}
+\mbox{\Hypertarget{group__rand__ssecpp_gab7ae3ab6c8fb3e31548413dd0154db7d}\label{group__rand__ssecpp_gab7ae3ab6c8fb3e31548413dd0154db7d}} 
+\index{rand\_sse.cpp@{rand\_sse.cpp}!rand\_sse@{rand\_sse}}
+\index{rand\_sse@{rand\_sse}!rand\_sse.cpp@{rand\_sse.cpp}}
+\subsubsection{\texorpdfstring{rand\_sse()}{rand\_sse()}}
+{\footnotesize\ttfamily void rand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{result }\end{DoxyParamCaption})}
+
+
+
+Получение вектора с случайными числами 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} u\_i\_random[4];}
+\DoxyCodeLine{\mbox{\hyperlink{group__rand__ssecpp_gab7ae3ab6c8fb3e31548413dd0154db7d}{rand\_sse}}(u\_i\_random);}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ out}}  & {\em result} & вектор с случайными числами \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле rand\+\_\+sse.\+cpp строка 70
+
+\mbox{\Hypertarget{group__rand__ssecpp_ga80db1a2aa7de7edf52b9c60e101d556f}\label{group__rand__ssecpp_ga80db1a2aa7de7edf52b9c60e101d556f}} 
+\index{rand\_sse.cpp@{rand\_sse.cpp}!srand\_sse@{srand\_sse}}
+\index{srand\_sse@{srand\_sse}!rand\_sse.cpp@{rand\_sse.cpp}}
+\subsubsection{\texorpdfstring{srand\_sse()}{srand\_sse()}}
+{\footnotesize\ttfamily void srand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
+
+
+
+Задать seed. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{group__rand__ssecpp_ga80db1a2aa7de7edf52b9c60e101d556f}{srand\_sse}}(time(NULL));}
+\end{DoxyCode}
+ 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em seed} & Seed \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле rand\+\_\+sse.\+cpp строка 57
+

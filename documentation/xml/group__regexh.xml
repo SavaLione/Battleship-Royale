@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__regexh" kind="group">
+    <compoundname>regexh</compoundname>
+    <title>Regex.h</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__regexh_1gac4882c93b963bd53fd60978a9661fa30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool check_pattern</definition>
+        <argsstring>(std::string *msg, std::string *pattern)</argsstring>
+        <name>check_pattern</name>
+        <param>
+          <type>std::string *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>pattern</declname>
+        </param>
+        <briefdescription>
+<para>Проверка соответствия строки паттерну </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">string<sp/>s<sp/>=<sp/>&quot;user:[SavaLione]&quot;;</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>s_pattern<sp/>=<sp/>BR::REG_USER;</highlight></codeline>
+<codeline><highlight class="normal">if(check_pattern(&amp;s,<sp/>&amp;s_pattern))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//some</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Строка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Паттерн </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true - соответствует, false - не соответствует. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Regex.h" line="31" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="34" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="group__regexh_1ga524588640ff7393a801141740202d9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getData</definition>
+        <argsstring>(std::string *msg, std::string *pattern, std::string *ret_one)</argsstring>
+        <name>getData</name>
+        <param>
+          <type>std::string *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>ret_one</declname>
+        </param>
+        <briefdescription>
+<para>Получение информации из строки </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">string<sp/>s<sp/>=<sp/>&quot;user:[SavaLione]&quot;;</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>s_pattern<sp/>=<sp/>BR::REG_USER;</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>s_ret_one<sp/>=<sp/>&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal">getData(&amp;s,<sp/>&amp;s_pattern,<sp/>&amp;s_ret_one);</highlight></codeline>
+</programlisting> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Строка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Паттерн </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_one</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Информация с первого нахождения в строке </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Regex.h" line="45" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="53" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="group__regexh_1ga0ac985b5fff36005eb80cda832582ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void getData</definition>
+        <argsstring>(std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</argsstring>
+        <name>getData</name>
+        <param>
+          <type>std::string *</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>pattern</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>ret_one</declname>
+        </param>
+        <param>
+          <type>std::string *</type>
+          <declname>ret_two</declname>
+        </param>
+        <briefdescription>
+<para>Получение информации из строки </para>
+        </briefdescription>
+        <detaileddescription>
+<para><programlisting><codeline><highlight class="normal">string<sp/>s<sp/>=<sp/>&quot;user:[SavaLione]&quot;;</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>s_pattern<sp/>=<sp/>BR::REG_USER;</highlight></codeline>
+<codeline><highlight class="normal">string<sp/>s_ret_one<sp/>=<sp/>&quot;&quot;,<sp/>s_ret_two<sp/>=<sp/>&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal">getData(&amp;s,<sp/>&amp;s_pattern,<sp/>&amp;s_ret_one,<sp/>&amp;s_ret_two);</highlight></codeline>
+</programlisting> <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Строка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">pattern</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Паттерн </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_one</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Информация с первого нахождения в строке </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">ret_two</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Информация с второго нахождения в строке </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Regex.h" line="60" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="77" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

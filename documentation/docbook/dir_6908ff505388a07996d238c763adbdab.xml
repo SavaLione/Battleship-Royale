@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6908ff505388a07996d238c763adbdab">
+<title>Содержание директории client</title>
+<indexterm><primary>Содержание директории client</primary></indexterm>
+Директория графа зависимостей client:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6908ff505388a07996d238c763adbdab_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_78ce3fde11f1c50580f2f2c408f37c2f">src</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

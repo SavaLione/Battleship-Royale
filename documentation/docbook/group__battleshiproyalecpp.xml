@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__battleshiproyalecpp">
+<title>BattleShiproyale.cpp</title>
+<indexterm><primary>BattleShiproyale.cpp</primary></indexterm>
+Граф связей класса BattleShiproyale.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__battleshiproyalecpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Точка входа в программу </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97"/>    <section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>BattleShiproyale.cpp</secondary></indexterm>
+<indexterm><primary>BattleShiproyale.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
+
+<para>Точка входа в программу </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>argc</entry>
+                                <entry>
+<para>количество аргументов для парсера </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>argv[]</entry>
+                                <entry>
+<para>аргументы для парсера </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Возвращает: </title>
+
+<para>0 - успешное выполнение программы, 1 - выполнение программы с ошибкой. </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле server/src/BattleshipRoyale.cpp строка 38</para>
+</section>
+</section>
+</section>
