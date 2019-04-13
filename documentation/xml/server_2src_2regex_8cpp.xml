@@ -37,7 +37,7 @@
       </node>
     </incdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="server_2src_2regex_8cpp_1ac4882c93b963bd53fd60978a9661fa30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
         <definition>bool check_pattern</definition>
         <argsstring>(std::string *msg, std::string *pattern)</argsstring>
@@ -83,9 +83,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/Regex.cpp" line="9" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="9" bodyend="14"/>
+        <location file="src/server/src/Regex.cpp" line="34" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="34" bodyend="39"/>
       </memberdef>
-      <memberdef kind="function" id="server_2src_2regex_8cpp_1a524588640ff7393a801141740202d9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__regexcpp_1ga524588640ff7393a801141740202d9dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void getData</definition>
         <argsstring>(std::string *msg, std::string *pattern, std::string *ret_one)</argsstring>
@@ -139,9 +139,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/Regex.cpp" line="16" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="16" bodyend="25"/>
+        <location file="src/server/src/Regex.cpp" line="53" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="53" bodyend="62"/>
       </memberdef>
-      <memberdef kind="function" id="server_2src_2regex_8cpp_1a0ac985b5fff36005eb80cda832582ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="group__regexcpp_1ga0ac985b5fff36005eb80cda832582ca9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void getData</definition>
         <argsstring>(std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</argsstring>
@@ -207,52 +207,59 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/server/src/Regex.cpp" line="27" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="27" bodyend="38"/>
+        <location file="src/server/src/Regex.cpp" line="77" column="1" bodyfile="src/server/src/Regex.cpp" bodystart="77" bodyend="88"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Работа с регулярными выражениями </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>SavaLione </para>
+</simplesect>
+<simplesect kind="date"><para>13 Apr 2019 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_regex_8h" kindref="compound">Regex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/regex.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_battleship_royale_8h" kindref="compound">BattleshipRoyale.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="_regex_8h_1ac4882c93b963bd53fd60978a9661fa30" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="server_2src_2regex_8cpp_1ac4882c93b963bd53fd60978a9661fa30" kindref="member">check_pattern</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern)</highlight></codeline>
-<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>boost::regex_search(*msg,<sp/>result,<sp/>pat);</highlight></codeline>
-<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_regex_8h" kindref="compound">Regex.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight></codeline>
-<codeline lineno="16" refid="_regex_8h_1a524588640ff7393a801141740202d9dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_2src_2regex_8cpp_1a524588640ff7393a801141740202d9dc" kindref="member">getData</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern,<sp/>std::string<sp/>*ret_one)</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boost::regex_search(*msg,<sp/>result,<sp/>pat))</highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_one(result[1].first,<sp/>result[1].second);</highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_one<sp/>=<sp/>submatch_one;</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27" refid="_regex_8h_1a0ac985b5fff36005eb80cda832582ca9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="server_2src_2regex_8cpp_1a524588640ff7393a801141740202d9dc" kindref="member">getData</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern,<sp/>std::string<sp/>*ret_one,<sp/>std::string<sp/>*ret_two)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boost::regex_search(*msg,<sp/>result,<sp/>pat))</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_one(result[1].first,<sp/>result[1].second);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_two(result[2].first,<sp/>result[2].second);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_one<sp/>=<sp/>submatch_one;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_two<sp/>=<sp/>submatch_two;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/regex.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_battleship_royale_8h" kindref="compound">BattleshipRoyale.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="group__regexh_1gac4882c93b963bd53fd60978a9661fa30" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30" kindref="member">check_pattern</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>boost::regex_search(*msg,<sp/>result,<sp/>pat);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="group__regexh_1ga524588640ff7393a801141740202d9dc" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__regexcpp_1ga524588640ff7393a801141740202d9dc" kindref="member">getData</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern,<sp/>std::string<sp/>*ret_one)</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boost::regex_search(*msg,<sp/>result,<sp/>pat))</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_one(result[1].first,<sp/>result[1].second);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_one<sp/>=<sp/>submatch_one;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="group__regexh_1ga0ac985b5fff36005eb80cda832582ca9" refkind="member"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__regexcpp_1ga524588640ff7393a801141740202d9dc" kindref="member">getData</ref>(std::string<sp/>*msg,<sp/>std::string<sp/>*pattern,<sp/>std::string<sp/>*ret_one,<sp/>std::string<sp/>*ret_two)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::regex<sp/>pat(*pattern);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::smatch<sp/>result;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(boost::regex_search(*msg,<sp/>result,<sp/>pat))</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_one(result[1].first,<sp/>result[1].second);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>submatch_two(result[2].first,<sp/>result[2].second);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_one<sp/>=<sp/>submatch_one;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*ret_two<sp/>=<sp/>submatch_two;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="src/server/src/Regex.cpp"/>
   </compounddef>

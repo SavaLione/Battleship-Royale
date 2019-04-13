@@ -3,6 +3,9 @@
   <compounddef id="group__server" kind="group">
     <compoundname>server</compoundname>
     <title>Server</title>
+    <innergroup refid="group__battleshiproyalecpp">BattleShiproyale.cpp</innergroup>
+    <innergroup refid="group__regexcpp">Regex.cpp</innergroup>
+    <innergroup refid="group__regexh">Regex.h</innergroup>
     <briefdescription>
 <para>Сервер </para>
     </briefdescription>

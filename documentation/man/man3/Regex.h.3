@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-Regex.h
+Regex.h \- Работа с регулярными выражениями  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -25,96 +26,25 @@ Regex.h
 .br
 .RI "Получение информации из строки "
 .in -1c
-.SH "Функции"
+.SH "Подробное описание"
 .PP 
-.SS "bool check_pattern (std::string * msg, std::string * pattern)"
+Работа с регулярными выражениями 
+
 
 .PP
-Проверка соответствия строки паттерну 
-.PP
-.nf
-string s = "user:[SavaLione]";
-string s_pattern = BR::REG_USER;
-if(check_pattern(&s, &s_pattern))
-{
-    //some
-}
-
-.fi
-.PP
- 
-.PP
-\fBАргументы:\fP
+\fBАвтор:\fP
 .RS 4
-\fImsg\fP Строка 
-.br
-\fIpattern\fP Паттерн 
+SavaLione 
 .RE
 .PP
-\fBВозвращает:\fP
+\fBДата:\fP
 .RS 4
-true - соответствует, false - не соответствует\&. 
+13 Apr 2019 
 .RE
 .PP
 
 .PP
-См\&. определение в файле server/src/regex\&.cpp строка 9
-.SS "void getData (std::string * msg, std::string * pattern, std::string * ret_one)"
-
-.PP
-Получение информации из строки 
-.PP
-.nf
-string s = "user:[SavaLione]";
-string s_pattern = BR::REG_USER;
-string s_ret_one = "";
-getData(&s, &s_pattern, &s_ret_one);
-
-.fi
-.PP
- 
-.PP
-\fBАргументы:\fP
-.RS 4
-\fImsg\fP Строка 
-.br
-\fIpattern\fP Паттерн 
-.br
-\fIret_one\fP Информация с первого нахождения в строке 
-.RE
-.PP
-
-.PP
-См\&. определение в файле server/src/regex\&.cpp строка 16
-.SS "void getData (std::string * msg, std::string * pattern, std::string * ret_one, std::string * ret_two)"
-
-.PP
-Получение информации из строки 
-.PP
-.nf
-string s = "user:[SavaLione]";
-string s_pattern = BR::REG_USER;
-string s_ret_one = "", s_ret_two = "";
-getData(&s, &s_pattern, &s_ret_one, &s_ret_two);
-
-.fi
-.PP
- 
-.PP
-\fBАргументы:\fP
-.RS 4
-\fImsg\fP Строка 
-.br
-\fIpattern\fP Паттерн 
-.br
-\fIret_one\fP Информация с первого нахождения в строке 
-.br
-\fIret_two\fP Информация с второго нахождения в строке 
-.RE
-.PP
-
-.PP
-См\&. определение в файле server/src/regex\&.cpp строка 27
+См\&. определение в файле \fBRegex\&.h\fP
 .SH "Автор"
 .PP 
 Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

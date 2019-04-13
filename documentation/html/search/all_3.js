@@ -1,7 +1,7 @@
 var searchData=
 [
   ['battleshiproyale_2ecpp',['BattleshipRoyale.cpp',['../client_2src_2_battleship_royale_8cpp.html',1,'']]],
-  ['check_5fpattern',['check_pattern',['../server_2src_2regex_8cpp.html#ac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp'],['../_regex_8h.html#ac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp']]],
+  ['check_5fpattern',['check_pattern',['../group__regexcpp.html#gac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp'],['../group__regexh.html#gac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp']]],
   ['client',['Client',['../group__client.html',1,'']]],
   ['client_2ecpp',['client.cpp',['../client_8cpp.html',1,'']]],
   ['client_2eh',['Client.h',['../_client_8h.html',1,'']]],

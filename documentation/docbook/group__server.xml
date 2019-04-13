@@ -7,6 +7,29 @@
 <para>Сервер </para>
  
 </para>
+Граф связей класса Server:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__server.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__battleshiproyalecpp">BattleShiproyale.cpp</link></para>
+</listitem>
+            <listitem><para><link linkend="_group__regexcpp">Regex.cpp</link></para>
+</listitem>
+            <listitem><para><link linkend="_group__regexh">Regex.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
 
 <para>Сервер </para>
+</section>
 </section>

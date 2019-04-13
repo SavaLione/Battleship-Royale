@@ -32,7 +32,7 @@
 </g>
 <!-- Node3 -->
 <g id="node3" class="node"><title>Node3</title>
-<g id="a_node3"><a xlink:href="$server_2src_2_battleship_royale_8cpp.html" xlink:title=" ">
+<g id="a_node3"><a xlink:href="$server_2src_2_battleship_royale_8cpp.html" xlink:title="Сервер">
 <polygon fill="white" stroke="black" points="37,-0.5 37,-19.5 146,-19.5 146,-0.5 37,-0.5"/>
 <text text-anchor="middle" x="91.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleshipRoyale.cpp</text>
 </a>
@@ -84,7 +84,7 @@
 </g>
 <!-- Node7 -->
 <g id="node7" class="node"><title>Node7</title>
-<g id="a_node7"><a xlink:href="$server_2src_2regex_8cpp.html" xlink:title=" ">
+<g id="a_node7"><a xlink:href="$server_2src_2regex_8cpp.html" xlink:title="Работа с регулярными выражениями">
 <polygon fill="white" stroke="black" points="298,-56.5 298,-75.5 361,-75.5 361,-56.5 298,-56.5"/>
 <text text-anchor="middle" x="329.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.cpp</text>
 </a>

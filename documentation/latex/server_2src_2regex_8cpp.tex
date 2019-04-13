@@ -1,5 +1,10 @@
 \hypertarget{server_2src_2regex_8cpp}{}\section{Файл Regex.\+cpp}
 \label{server_2src_2regex_8cpp}\index{Regex.cpp@{Regex.cpp}}
+
+
+Работа с регулярными выражениями  
+
+
 {\ttfamily \#include \char`\"{}Regex.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$string$>$}\newline
 {\ttfamily \#include $<$boost/regex.\+hpp$>$}\newline
@@ -15,107 +20,20 @@
 \subsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-bool \mbox{\hyperlink{server_2src_2regex_8cpp_ac4882c93b963bd53fd60978a9661fa30}{check\+\_\+pattern}} (std\+::string $\ast$msg, std\+::string $\ast$pattern)
+bool \mbox{\hyperlink{group__regexcpp_gac4882c93b963bd53fd60978a9661fa30}{check\+\_\+pattern}} (std\+::string $\ast$msg, std\+::string $\ast$pattern)
 \begin{DoxyCompactList}\small\item\em Проверка соответствия строки паттерну \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{server_2src_2regex_8cpp_a524588640ff7393a801141740202d9dc}{get\+Data}} (std\+::string $\ast$msg, std\+::string $\ast$pattern, std\+::string $\ast$ret\+\_\+one)
+void \mbox{\hyperlink{group__regexcpp_ga524588640ff7393a801141740202d9dc}{get\+Data}} (std\+::string $\ast$msg, std\+::string $\ast$pattern, std\+::string $\ast$ret\+\_\+one)
 \begin{DoxyCompactList}\small\item\em Получение информации из строки \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{server_2src_2regex_8cpp_a0ac985b5fff36005eb80cda832582ca9}{get\+Data}} (std\+::string $\ast$msg, std\+::string $\ast$pattern, std\+::string $\ast$ret\+\_\+one, std\+::string $\ast$ret\+\_\+two)
+void \mbox{\hyperlink{group__regexcpp_ga0ac985b5fff36005eb80cda832582ca9}{get\+Data}} (std\+::string $\ast$msg, std\+::string $\ast$pattern, std\+::string $\ast$ret\+\_\+one, std\+::string $\ast$ret\+\_\+two)
 \begin{DoxyCompactList}\small\item\em Получение информации из строки \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Функции}
-\mbox{\Hypertarget{server_2src_2regex_8cpp_ac4882c93b963bd53fd60978a9661fa30}\label{server_2src_2regex_8cpp_ac4882c93b963bd53fd60978a9661fa30}} 
-\index{server/src/regex.cpp@{server/src/regex.cpp}!check\_pattern@{check\_pattern}}
-\index{check\_pattern@{check\_pattern}!server/src/regex.cpp@{server/src/regex.cpp}}
-\subsubsection{\texorpdfstring{check\_pattern()}{check\_pattern()}}
-{\footnotesize\ttfamily bool check\+\_\+pattern (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{msg,  }\item[{std\+::string $\ast$}]{pattern }\end{DoxyParamCaption})}
+\subsection{Подробное описание}
+Работа с регулярными выражениями 
 
-
-
-Проверка соответствия строки паттерну 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"user:[SavaLione]"};}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s\_pattern = \mbox{\hyperlink{namespace_b_r_adf62830a86680a1b129dc6a865c8ca5f}{BR::REG\_USER}};}
-\DoxyCodeLine{\textcolor{keywordflow}{if}(\mbox{\hyperlink{server_2src_2regex_8cpp_ac4882c93b963bd53fd60978a9661fa30}{check\_pattern}}(\&s, \&s\_pattern))}
-\DoxyCodeLine{\{}
-\DoxyCodeLine{    \textcolor{comment}{//some}}
-\DoxyCodeLine{\}}
-\end{DoxyCode}
- 
-\begin{DoxyParams}[1]{Аргументы}
-\mbox{\texttt{ in}}  & {\em msg} & Строка \\
-\hline
-\mbox{\texttt{ in}}  & {\em pattern} & Паттерн \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Возвращает}
-true -\/ соответствует, false -\/ не соответствует. 
-\end{DoxyReturn}
-
-
-См. определение в файле server/src/regex.\+cpp строка 9
-
-\mbox{\Hypertarget{server_2src_2regex_8cpp_a524588640ff7393a801141740202d9dc}\label{server_2src_2regex_8cpp_a524588640ff7393a801141740202d9dc}} 
-\index{server/src/regex.cpp@{server/src/regex.cpp}!getData@{getData}}
-\index{getData@{getData}!server/src/regex.cpp@{server/src/regex.cpp}}
-\subsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily void get\+Data (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{msg,  }\item[{std\+::string $\ast$}]{pattern,  }\item[{std\+::string $\ast$}]{ret\+\_\+one }\end{DoxyParamCaption})}
-
-
-
-Получение информации из строки 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"user:[SavaLione]"};}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s\_pattern = \mbox{\hyperlink{namespace_b_r_adf62830a86680a1b129dc6a865c8ca5f}{BR::REG\_USER}};}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s\_ret\_one = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{\mbox{\hyperlink{server_2src_2regex_8cpp_a524588640ff7393a801141740202d9dc}{getData}}(\&s, \&s\_pattern, \&s\_ret\_one);}
-\end{DoxyCode}
- 
-\begin{DoxyParams}[1]{Аргументы}
-\mbox{\texttt{ in}}  & {\em msg} & Строка \\
-\hline
-\mbox{\texttt{ in}}  & {\em pattern} & Паттерн \\
-\hline
-\mbox{\texttt{ out}}  & {\em ret\+\_\+one} & Информация с первого нахождения в строке \\
-\hline
-\end{DoxyParams}
-
-
-См. определение в файле server/src/regex.\+cpp строка 16
-
-\mbox{\Hypertarget{server_2src_2regex_8cpp_a0ac985b5fff36005eb80cda832582ca9}\label{server_2src_2regex_8cpp_a0ac985b5fff36005eb80cda832582ca9}} 
-\index{server/src/regex.cpp@{server/src/regex.cpp}!getData@{getData}}
-\index{getData@{getData}!server/src/regex.cpp@{server/src/regex.cpp}}
-\subsubsection{\texorpdfstring{getData()}{getData()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void get\+Data (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{msg,  }\item[{std\+::string $\ast$}]{pattern,  }\item[{std\+::string $\ast$}]{ret\+\_\+one,  }\item[{std\+::string $\ast$}]{ret\+\_\+two }\end{DoxyParamCaption})}
-
-
-
-Получение информации из строки 
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s = \textcolor{stringliteral}{"user:[SavaLione]"};}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s\_pattern = \mbox{\hyperlink{namespace_b_r_adf62830a86680a1b129dc6a865c8ca5f}{BR::REG\_USER}};}
-\DoxyCodeLine{\textcolor{keywordtype}{string} s\_ret\_one = \textcolor{stringliteral}{""}, s\_ret\_two = \textcolor{stringliteral}{""};}
-\DoxyCodeLine{\mbox{\hyperlink{server_2src_2regex_8cpp_a524588640ff7393a801141740202d9dc}{getData}}(\&s, \&s\_pattern, \&s\_ret\_one, \&s\_ret\_two);}
-\end{DoxyCode}
- 
-\begin{DoxyParams}[1]{Аргументы}
-\mbox{\texttt{ in}}  & {\em msg} & Строка \\
-\hline
-\mbox{\texttt{ in}}  & {\em pattern} & Паттерн \\
-\hline
-\mbox{\texttt{ out}}  & {\em ret\+\_\+one} & Информация с первого нахождения в строке \\
-\hline
-\mbox{\texttt{ out}}  & {\em ret\+\_\+two} & Информация с второго нахождения в строке \\
-\hline
-\end{DoxyParams}
-
-
-См. определение в файле server/src/regex.\+cpp строка 27
-
+\begin{DoxyAuthor}{Автор}
+Sava\+Lione 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+13 Apr 2019 
+\end{DoxyDate}

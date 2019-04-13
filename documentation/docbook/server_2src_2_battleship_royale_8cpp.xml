@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2_battleship_royale_8cpp">
 <title>Файл BattleshipRoyale.cpp</title>
 <indexterm><primary>BattleshipRoyale.cpp</primary></indexterm>
+<para>
+
+<para>Сервер </para>
+ 
+</para>
 <programlisting>#include &lt;iostream&gt;
 #include &lt;string&gt;
 #include &lt;spdlog/spdlog.h&gt;
@@ -25,18 +30,25 @@
 <simplesect>
     <title>Функции    </title>
         <itemizedlist>
-            <listitem><para>int <link linkend="_server_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+            <listitem><para>int <link linkend="_group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97">main</link> (int argc, char *argv[])</para>
+
+<para>Точка входа в программу </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
-<title>Функции</title>
-<anchor xml:id="_server_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97"/>    <section>
-    <title>main()</title>
-<indexterm><primary>main</primary><secondary>server/src/BattleshipRoyale.cpp</secondary></indexterm>
-<indexterm><primary>server/src/BattleshipRoyale.cpp</primary><secondary>main</secondary></indexterm>
-<para><computeroutput>int main (int argc, char * argv[])</computeroutput></para><para>
-См. определение в файле server/src/BattleshipRoyale.cpp строка 21</para>
-</section>
+<title>Подробное описание</title>
+
+<para>Сервер </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>13 Apr 2019 </para>
+</formalpara>
+</para>
 </section>
 </section>

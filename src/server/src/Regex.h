@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Работа с регулярными выражениями
+ * @author SavaLione
+ * @date 13 Apr 2019
+*/
+/**
+ * @defgroup regexh Regex.h
+ * @ingroup server
+ * @{
+*/
 #ifndef REGEX_H
 #define REGEX_H
 
@@ -49,3 +60,4 @@ void getData(std::string *msg, std::string *pattern, std::string *ret_one);
 void getData(std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two);
 
 #endif // REGEX_H
+/** @} */

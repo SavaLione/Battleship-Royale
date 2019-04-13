@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-80 194,-80 194,4 -4,4"/>
 <!-- Node2 -->
 <g id="node1" class="node"><title>Node2</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Работа с регулярными выражениями">
 <polygon fill="#bfbfbf" stroke="black" points="80,-56.5 80,-75.5 133,-75.5 133,-56.5 80,-56.5"/>
 <text text-anchor="middle" x="106.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.h</text>
 </a>
@@ -19,7 +19,7 @@
 </g>
 <!-- Node3 -->
 <g id="node2" class="node"><title>Node3</title>
-<g id="a_node2"><a xlink:href="server_2src_2_battleship_royale_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="server_2src_2_battleship_royale_8cpp.html" target="_top" xlink:title="Сервер">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 109,-19.5 109,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="54.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleshipRoyale.cpp</text>
 </a>
@@ -32,7 +32,7 @@
 </g>
 <!-- Node4 -->
 <g id="node3" class="node"><title>Node4</title>
-<g id="a_node3"><a xlink:href="server_2src_2regex_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="server_2src_2regex_8cpp.html" target="_top" xlink:title="Работа с регулярными выражениями">
 <polygon fill="white" stroke="black" points="127,-0.5 127,-19.5 190,-19.5 190,-0.5 127,-0.5"/>
 <text text-anchor="middle" x="158.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.cpp</text>
 </a>

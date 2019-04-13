@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-136 315.5,-136 315.5,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Работа с регулярными выражениями">
 <polygon fill="#bfbfbf" stroke="black" points="85,-112.5 85,-131.5 148,-131.5 148,-112.5 85,-112.5"/>
 <text text-anchor="middle" x="116.5" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.cpp</text>
 </a>
@@ -19,7 +19,7 @@
 </g>
 <!-- Node1 -->
 <g id="node2" class="node"><title>Node1</title>
-<g id="a_node2"><a xlink:href="_regex_8h.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:href="_regex_8h.html" target="_top" xlink:title="Работа с регулярными выражениями">
 <polygon fill="white" stroke="black" points="0,-56.5 0,-75.5 53,-75.5 53,-56.5 0,-56.5"/>
 <text text-anchor="middle" x="26.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.h</text>
 </a>

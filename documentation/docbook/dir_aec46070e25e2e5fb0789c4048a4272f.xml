@@ -15,6 +15,8 @@
     <title>Файлы    </title>
         <itemizedlist>
             <listitem><para>файл <link linkend="_server_2src_2_battleship_royale_8cpp">server/src/BattleshipRoyale.cpp</link></para>
+
+<para>Сервер </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2con__handler_8cpp">server/src/con_handler.cpp</link></para>
 </listitem>
@@ -31,8 +33,12 @@
             <listitem><para>файл <link linkend="_rand__sse_8h">rand_sse.h</link></para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2regex_8cpp">server/src/regex.cpp</link></para>
+
+<para>Работа с регулярными выражениями </para>
 </listitem>
             <listitem><para>файл <link linkend="__regex_8h">Regex.h</link></para>
+
+<para>Работа с регулярными выражениями </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2_server_8cpp">server/src/Server.cpp</link></para>
 </listitem>

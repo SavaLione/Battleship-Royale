@@ -72,6 +72,9 @@ $(function() {
 <div class="title">Файл server/src/regex.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Работа с регулярными выражениями  
+<a href="#details">Подробнее...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="_regex_8h_source.html">Regex.h</a>&quot;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;boost/regex.hpp&gt;</code><br />
@@ -87,157 +90,23 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:ac4882c93b963bd53fd60978a9661fa30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2src_2regex_8cpp.html#ac4882c93b963bd53fd60978a9661fa30">check_pattern</a> (std::string *msg, std::string *pattern)</td></tr>
-<tr class="memdesc:ac4882c93b963bd53fd60978a9661fa30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка соответствия строки паттерну  <a href="#ac4882c93b963bd53fd60978a9661fa30">Подробнее...</a><br /></td></tr>
-<tr class="separator:ac4882c93b963bd53fd60978a9661fa30"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a524588640ff7393a801141740202d9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2src_2regex_8cpp.html#a524588640ff7393a801141740202d9dc">getData</a> (std::string *msg, std::string *pattern, std::string *ret_one)</td></tr>
-<tr class="memdesc:a524588640ff7393a801141740202d9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение информации из строки  <a href="#a524588640ff7393a801141740202d9dc">Подробнее...</a><br /></td></tr>
-<tr class="separator:a524588640ff7393a801141740202d9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ac985b5fff36005eb80cda832582ca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="server_2src_2regex_8cpp.html#a0ac985b5fff36005eb80cda832582ca9">getData</a> (std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</td></tr>
-<tr class="memdesc:a0ac985b5fff36005eb80cda832582ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение информации из строки  <a href="#a0ac985b5fff36005eb80cda832582ca9">Подробнее...</a><br /></td></tr>
-<tr class="separator:a0ac985b5fff36005eb80cda832582ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac4882c93b963bd53fd60978a9661fa30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__regexcpp.html#gac4882c93b963bd53fd60978a9661fa30">check_pattern</a> (std::string *msg, std::string *pattern)</td></tr>
+<tr class="memdesc:gac4882c93b963bd53fd60978a9661fa30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка соответствия строки паттерну  <a href="group__regexcpp.html#gac4882c93b963bd53fd60978a9661fa30">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac4882c93b963bd53fd60978a9661fa30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga524588640ff7393a801141740202d9dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__regexcpp.html#ga524588640ff7393a801141740202d9dc">getData</a> (std::string *msg, std::string *pattern, std::string *ret_one)</td></tr>
+<tr class="memdesc:ga524588640ff7393a801141740202d9dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение информации из строки  <a href="group__regexcpp.html#ga524588640ff7393a801141740202d9dc">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga524588640ff7393a801141740202d9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ac985b5fff36005eb80cda832582ca9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__regexcpp.html#ga0ac985b5fff36005eb80cda832582ca9">getData</a> (std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two)</td></tr>
+<tr class="memdesc:ga0ac985b5fff36005eb80cda832582ca9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение информации из строки  <a href="group__regexcpp.html#ga0ac985b5fff36005eb80cda832582ca9">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga0ac985b5fff36005eb80cda832582ca9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Функции</h2>
-<a id="ac4882c93b963bd53fd60978a9661fa30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4882c93b963bd53fd60978a9661fa30">&#9670;&nbsp;</a></span>check_pattern()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Работа с регулярными выражениями </p>
+<dl class="section author"><dt>Автор</dt><dd>SavaLione </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>13 Apr 2019 </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool check_pattern </td>
-          <td>(</td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>pattern</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Проверка соответствия строки паттерну </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordflow">if</span>(<a class="code" href="server_2src_2regex_8cpp.html#ac4882c93b963bd53fd60978a9661fa30">check_pattern</a>(&amp;s, &amp;s_pattern))</div><div class="line">{</div><div class="line">    <span class="comment">//some</span></div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Возвращает</dt><dd>true - соответствует, false - не соответствует. </dd></dl>
-
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2regex_8cpp_source.html">server/src/regex.cpp</a> строка <a class="el" href="server_2src_2regex_8cpp_source.html#l00009">9</a></p>
-
-</div>
-</div>
-<a id="a524588640ff7393a801141740202d9dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a524588640ff7393a801141740202d9dc">&#9670;&nbsp;</a></span>getData() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void getData </td>
-          <td>(</td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>pattern</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>ret_one</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Получение информации из строки </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="server_2src_2regex_8cpp.html#a524588640ff7393a801141740202d9dc">getData</a>(&amp;s, &amp;s_pattern, &amp;s_ret_one);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">ret_one</td><td>Информация с первого нахождения в строке </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2regex_8cpp_source.html">server/src/regex.cpp</a> строка <a class="el" href="server_2src_2regex_8cpp_source.html#l00016">16</a></p>
-
-</div>
-</div>
-<a id="a0ac985b5fff36005eb80cda832582ca9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ac985b5fff36005eb80cda832582ca9">&#9670;&nbsp;</a></span>getData() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void getData </td>
-          <td>(</td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>msg</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>pattern</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>ret_one</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::string *&#160;</td>
-          <td class="paramname"><em>ret_two</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Получение информации из строки </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>, s_ret_two = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="server_2src_2regex_8cpp.html#a524588640ff7393a801141740202d9dc">getData</a>(&amp;s, &amp;s_pattern, &amp;s_ret_one, &amp;s_ret_two);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">ret_one</td><td>Информация с первого нахождения в строке </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">ret_two</td><td>Информация с второго нахождения в строке </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2regex_8cpp_source.html">server/src/regex.cpp</a> строка <a class="el" href="server_2src_2regex_8cpp_source.html#l00027">27</a></p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2regex_8cpp_source.html">server/src/regex.cpp</a></p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">

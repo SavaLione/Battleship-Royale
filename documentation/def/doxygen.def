@@ -2824,7 +2824,7 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'server_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97';
+      func-mem-id   = 'group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -2845,22 +2845,25 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-array = '[]';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/BattleshipRoyale.cpp';
-      func-mem-desc-line = '21';
+      func-mem-desc-line = '38';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Точка входа в программу
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] argc количество аргументов для парсера
+@param [in] argv[] аргументы для парсера
+@return 0 - успешное выполнение программы, 1 - выполнение программы с ошибкой.
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/BattleshipRoyale.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Сервер
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -3676,7 +3679,7 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'server_2src_2regex_8cpp_1ac4882c93b963bd53fd60978a9661fa30';
+      func-mem-id   = 'group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3696,7 +3699,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'pattern';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.cpp';
-      func-mem-desc-line = '9';
+      func-mem-desc-line = '34';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Проверка соответствия строки паттерну
 _EnD_oF_dEf_TeXt_;
@@ -3716,7 +3719,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'server_2src_2regex_8cpp_1a524588640ff7393a801141740202d9dc';
+      func-mem-id   = 'group__regexcpp_1ga524588640ff7393a801141740202d9dc';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3742,7 +3745,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'ret_one';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.cpp';
-      func-mem-desc-line = '16';
+      func-mem-desc-line = '53';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Получение информации из строки
 _EnD_oF_dEf_TeXt_;
@@ -3760,7 +3763,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'server_2src_2regex_8cpp_1a0ac985b5fff36005eb80cda832582ca9';
+      func-mem-id   = 'group__regexcpp_1ga0ac985b5fff36005eb80cda832582ca9';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3792,7 +3795,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'ret_two';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.cpp';
-      func-mem-desc-line = '27';
+      func-mem-desc-line = '77';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Получение информации из строки
 _EnD_oF_dEf_TeXt_;
@@ -3813,10 +3816,11 @@ _EnD_oF_dEf_TeXt_;
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/Regex.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Работа с регулярными выражениями
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -3825,7 +3829,7 @@ file = {
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = '_regex_8h_1ac4882c93b963bd53fd60978a9661fa30';
+      func-mem-id   = 'group__regexh_1gac4882c93b963bd53fd60978a9661fa30';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3845,7 +3849,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'pattern';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.h';
-      func-mem-desc-line = '20';
+      func-mem-desc-line = '31';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Проверка соответствия строки паттерну
 _EnD_oF_dEf_TeXt_;
@@ -3865,7 +3869,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = '_regex_8h_1a524588640ff7393a801141740202d9dc';
+      func-mem-id   = 'group__regexh_1ga524588640ff7393a801141740202d9dc';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3891,7 +3895,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'ret_one';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.h';
-      func-mem-desc-line = '34';
+      func-mem-desc-line = '45';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Получение информации из строки
 _EnD_oF_dEf_TeXt_;
@@ -3909,7 +3913,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = '_regex_8h_1a0ac985b5fff36005eb80cda832582ca9';
+      func-mem-id   = 'group__regexh_1ga0ac985b5fff36005eb80cda832582ca9';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3941,7 +3945,7 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'ret_two';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Regex.h';
-      func-mem-desc-line = '49';
+      func-mem-desc-line = '60';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 Получение информации из строки
 _EnD_oF_dEf_TeXt_;
@@ -3962,10 +3966,11 @@ _EnD_oF_dEf_TeXt_;
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/Regex.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Работа с регулярными выражениями
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {

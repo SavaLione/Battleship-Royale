@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-214 813.5,-214 813.5,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Сервер">
 <polygon fill="#bfbfbf" stroke="black" points="382.5,-190.5 382.5,-209.5 491.5,-209.5 491.5,-190.5 382.5,-190.5"/>
 <text text-anchor="middle" x="437" y="-197.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleshipRoyale.cpp</text>
 </a>
@@ -124,7 +124,7 @@
 </g>
 <!-- Node9 -->
 <g id="node10" class="node"><title>Node9</title>
-<g id="a_node10"><a xlink:href="$_regex_8h.html" xlink:title=" ">
+<g id="a_node10"><a xlink:href="$_regex_8h.html" xlink:title="Работа с регулярными выражениями">
 <polygon fill="white" stroke="black" points="330.5,-129 330.5,-148 383.5,-148 383.5,-129 330.5,-129"/>
 <text text-anchor="middle" x="357" y="-136" font-family="Helvetica,sans-Serif" font-size="10.00">Regex.h</text>
 </a>

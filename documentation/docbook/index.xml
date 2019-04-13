@@ -9,6 +9,9 @@
     <xi:include href="group__server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__battleshiproyale.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__battleshiproyalecpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__regexcpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__regexh.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>Пространства имен</title>
