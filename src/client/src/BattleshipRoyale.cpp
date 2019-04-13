@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Клиент
+ * @author SavaLione
+ * @date 14 Apr 2019
+*/
+/**
+ * @defgroup battleshiproyale_cpp BattleShiproyale.cpp
+ * @ingroup client
+ * @{
+ */
 #include <string>
 
 #include <boost/asio.hpp>
@@ -12,6 +23,12 @@
 using namespace boost::asio;
 using ip::tcp;
 
+/**
+ * @brief Точка входа в программу
+ * @param [in] argc количество аргументов для парсера
+ * @param [in] argv[] аргументы для парсера
+ * @return 0 - успешное выполнение программы, 1 - выполнение программы с ошибкой.
+ */
 int main(int argc, char *argv[])
 {
 	/*
@@ -123,3 +140,4 @@ int main(int argc, char *argv[])
     
     return 0;
 }
+/** @} */
