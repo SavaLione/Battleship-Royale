@@ -39,8 +39,6 @@ DB::DB(/* args */)
         db_create();
         spdlog::warn("Creating the initial data in the database");
     }
-
-    db_close();
 }
 
 /**
@@ -51,6 +49,7 @@ DB::~DB()
     delete zErrMsg;
     delete rc;
     delete id;
+    db_close();
 }
 
 /**
@@ -161,17 +160,15 @@ void DB::db_all_check()
  */
 bool DB::db_check_player(std::string *s_name)
 {
-    std::string sql = "SELECT ID, NAME FROM PLAYER WHERE NAME = \"";
+    std::string sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
     sql += *s_name;
-    sql += "\"";
-
+    sql += "\";";
     const char *tail;
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
 
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        spdlog::warn("DB name: {} found. ID: {}", sqlite3_column_text(stmt, 1), sqlite3_column_int(stmt, 0));
         return true;
     }
 
