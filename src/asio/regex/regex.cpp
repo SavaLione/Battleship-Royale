@@ -23,5 +23,19 @@ int main()
               << xResults[3] << "+"
               << xResults[4] << std::endl;
 
+    string user = "[asd]";
+    string user_pass = "name:[asdasdasd] pass:[asdasdqweasdwq]";
+    string uid = "uid:[sdqweascxzdfqew] data:[asdwq aszxccda awqesd 143dsdasd rfqcv.df.e.]";
+    //boost::regex regx_user("\\[([^\\[\\]]+)\\]");
+    boost::regex regx_user("\\[.*?\\]");
+    boost::smatch smatch_user;
+    cout << user        << endl
+         << user_pass   << endl
+         << uid         << endl;
+    cout << "Ok? " << boost::regex_match(user, smatch_user, regx_user) << endl;
+    cout << smatch_user[0] << " " << smatch_user[1] << endl;
+
+
+
     return 0;
 }
