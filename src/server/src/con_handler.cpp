@@ -62,24 +62,22 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         std::string s_pattern_reg_user_pass = BR::REG_USER_PASS;
         std::string s_pattern_reg_uid = BR::REG_UID;
 
-        spdlog::warn(s_data);
-
         if(check_pattern(&s_data, &s_pattern_reg_user))
         {
             getData(&s_data, &s_pattern_reg_user, &s_param_one);
-            spdlog::error("{} {}", s_data, s_param_one);
+            //spdlog::error("{} {}", s_data, s_param_one);
         }
 
         if(check_pattern(&s_data, &s_pattern_reg_user_pass))
         {
             getData(&s_data, &s_pattern_reg_user_pass, &s_param_one, &s_param_two);
-            spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
+            //spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
         }
 
         if(check_pattern(&s_data, &s_pattern_reg_uid))
         {
             getData(&s_data, &s_pattern_reg_uid, &s_param_one, &s_param_two);
-            spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
+            //spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
         }
         memset(data, 0, sizeof data);
     }
