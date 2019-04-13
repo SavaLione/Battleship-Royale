@@ -29,17 +29,6 @@ DB::DB(/* args */)
 {
     db_open();
     db_PRAGMA();
-
-    if (db_table_check())
-    {
-        spdlog::info("Table found");
-    }
-    else
-    {
-        spdlog::warn("Table not found. Create table");
-        db_create();
-        spdlog::warn("Creating the initial data in the database");
-    }
 }
 
 /**
@@ -107,8 +96,9 @@ void DB::db_create()
 /**
  * @brief Проверка существования таблицы Player
  */
-bool DB::db_table_check()
+void DB::db_table_check()
 {
+
     std::string sql =
         "CREATE TABLE PLAYER("
         "ID INT PRIMARY KEY     NOT NULL, "
@@ -122,12 +112,16 @@ bool DB::db_table_check()
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
-    if (*rc == 0)
+    if (*rc != 0)
     {
-        return false;
+        spdlog::info("Table found");
     }
-
-    return true;
+    else
+    {
+        spdlog::warn("Table not found. Create table");
+        db_create();
+        spdlog::warn("Creating the initial data in the database");
+    }
 }
 
 /**

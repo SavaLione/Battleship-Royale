@@ -102,11 +102,6 @@ private:
     void db_create();
 
     /**
-     * @brief Проверка существования таблицы Player
-     */
-    bool db_table_check();
-
-    /**
      * @brief Вывод всех пользователей с информацией в консоль
      */
     void db_all_check();
@@ -131,6 +126,11 @@ public:
      * @brief Конструктор класса
      */
     DB();
+
+    /**
+     * @brief Проверка существования таблицы Player
+     */
+    void db_table_check();
 
     /**
      * @brief Создать пользователя l

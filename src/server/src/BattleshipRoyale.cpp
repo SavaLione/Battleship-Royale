@@ -110,6 +110,13 @@ int main(int argc, char *argv[])
 	spdlog::info("Welcome to Battleship Royale Server!");
 
 	/*
+		DB initialization
+	*/
+	DB *db_init = new DB;
+	(*db_init).db_table_check();
+	delete db_init;
+
+	/*
 		Start server
 	*/
 	spdlog::info("Start Battleship Royale Server!");
