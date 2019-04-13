@@ -10,12 +10,28 @@ void test1();
 void test2();
 void test3();
 void test4();
+void test5();
 
 int main()
 {
-    test3();
-    test4();
+    test5();
     return 0;
+}
+
+void test5()
+{
+    string msg = "user:[savalione] pass:[mypass]";
+    boost::regex pattern("^user:\\[([^\\[\\]]+)\\] pass:\\[([^\\[\\]]+)\\]$");
+    
+    boost::smatch result;
+    if (boost::regex_search(msg, result, pattern))
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            string submatch(result[i].first, result[i].second);
+            cout << submatch << endl;
+        }
+    }
 }
 
 void test4()
