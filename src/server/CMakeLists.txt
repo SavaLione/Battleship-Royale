@@ -8,6 +8,7 @@ set(BR_SERVER_HEADERS
 	con_handler.h
 	DB.h
 	rand_sse.h
+	Regex.h
 	Server.h)
 
 set(BR_SERVER_SOURCES
@@ -15,6 +16,7 @@ set(BR_SERVER_SOURCES
 	con_handler.cpp
 	DB.cpp
 	rand_sse.cpp
+	Regex.cpp
 	Server.cpp)
 
 ################################

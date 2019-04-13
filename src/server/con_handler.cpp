@@ -29,16 +29,16 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         spdlog::info("--------------------------");
         spdlog::info(data);
 
-        boost::regex pattern_reg_user(BR::REG_USER);
+        //boost::regex pattern_reg_user(BR::REG_USER);
         //boost::regex pattern_reg_user_pass(BR::REG_USER_PASS);
         //boost::regex pattern_reg_uid(BR::REG_UID);
 
-        boost::smatch result;
+        //boost::smatch result;
 
-        if(boost::regex_search(std::string(data), result, pattern_reg_user))
-        {
+        //if(boost::regex_search(std::string(data), result, pattern_reg_user))
+        //{
 
-        }
+        //}
 
     }
     else
