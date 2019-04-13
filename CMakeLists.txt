@@ -18,11 +18,13 @@ set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
 set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT_CURSES"   )
 set(    BR_SERVER_TEST 1    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_TEST 1    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
+set(    BR_REGEX_TEST  1    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
 set(    BR_SERVER_NAME_TEST     BattleshipRoyale_Server_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_NAME_TEST     BattleshipRoyale_CLIENT_TEST    )       # <--- DELETE THIS ON STABLE
+set(    BR_REGEX_NAME_TEST      BattleshipRoyale_REGEX_TEST     )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -67,7 +69,8 @@ if(BR_UNIX)
 endif()
 
 #
-set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY})
+set(USE_LIB_EXP Boost::regex)
+set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY} ${USE_LIB_EXP})
 
 ################################
 # Build
@@ -102,4 +105,8 @@ endif()                                         # <--- DELETE THIS ON STABLE
 
 if(BR_CLIENT_TEST)                              # <--- DELETE THIS ON STABLE
 	add_subdirectory(src/asio/client)           # <--- DELETE THIS ON STABLE
+endif()                                         # <--- DELETE THIS ON STABLE
+
+if(BR_REGEX_TEST)                               # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/asio/regex)            # <--- DELETE THIS ON STABLE
 endif()                                         # <--- DELETE THIS ON STABLE
