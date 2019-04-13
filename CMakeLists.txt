@@ -69,7 +69,8 @@ if(BR_UNIX)
 endif()
 
 #
-set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY})
+set(USE_LIB_EXP Boost::regex)
+set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY} ${USE_LIB_EXP})
 
 ################################
 # Build
