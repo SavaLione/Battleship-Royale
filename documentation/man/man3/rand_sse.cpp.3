@@ -1,0 +1,54 @@
+.TH "rand_sse.cpp" 3 "Сб 13 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+rand_sse.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'emmintrin\&.h'\fP
+.br
+\fC#include 'rand_sse\&.h'\fP
+.br
+
+.SS "Макросы"
+
+.in +1c
+.ti -1c
+.RI "#define \fB_ALIGN\fP(N)   __declspec(align(N))"
+.br
+.in -1c
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "\fB_ALIGN\fP (16) static __m128i cur_seed"
+.br
+.ti -1c
+.RI "void \fBsrand_sse\fP (unsigned int seed)"
+.br
+.ti -1c
+.RI "void \fBrand_sse\fP (unsigned int *result)"
+.br
+.in -1c
+.SH "Макросы"
+.PP 
+.SS "#define _ALIGN(N)   __declspec(align(N))"
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 8
+.SH "Функции"
+.PP 
+.SS "_ALIGN (16)"
+
+.SS "void rand_sse (unsigned int * result)"
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 19
+.SS "void srand_sse (unsigned int seed)"
+
+.PP
+См\&. определение в файле rand_sse\&.cpp строка 14
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

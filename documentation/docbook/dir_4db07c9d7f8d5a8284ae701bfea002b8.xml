@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_4db07c9d7f8d5a8284ae701bfea002b8">
+<title>Содержание директории BattleshipRoyale</title>
+<indexterm><primary>Содержание директории BattleshipRoyale</primary></indexterm>
+<simplesect>
+    <title>Файлы    </title>
+        <itemizedlist>
+            <listitem><para>файл <link linkend="__battleship_royale_8h">BattleshipRoyale.h</link></para>
+
+<para>Заголовочный файл с пространством имён, которое хранит в себе константы. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

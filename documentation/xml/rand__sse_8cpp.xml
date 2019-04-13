@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="rand__sse_8cpp" kind="file" language="C++">
+    <compoundname>rand_sse.cpp</compoundname>
+    <includes local="yes">emmintrin.h</includes>
+    <includes refid="rand__sse_8h" local="yes">rand_sse.h</includes>
+    <incdepgraph>
+      <node id="117">
+        <label>rand_sse.h</label>
+        <link refid="rand__sse_8h"/>
+      </node>
+      <node id="116">
+        <label>emmintrin.h</label>
+      </node>
+      <node id="115">
+        <label>rand_sse.cpp</label>
+        <link refid="rand__sse_8cpp"/>
+        <childnode refid="116" relation="include">
+        </childnode>
+        <childnode refid="117" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" prot="public" static="no">
+        <name>_ALIGN</name>
+        <param><defname>N</defname></param>
+        <initializer>__declspec(align(N))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.cpp" line="8" column="10" bodyfile="src/server/src/rand_sse.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rand__sse_8cpp_1a9ee2a8dd6d9ca58a791ccb2dc6f9a26c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>_ALIGN</definition>
+        <argsstring>(16) static __m128i cur_seed</argsstring>
+        <name>_ALIGN</name>
+        <param>
+          <type>16</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.cpp" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void srand_sse</definition>
+        <argsstring>(unsigned int seed)</argsstring>
+        <name>srand_sse</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.cpp" line="14" column="1" bodyfile="src/server/src/rand_sse.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rand_sse</definition>
+        <argsstring>(unsigned int *result)</argsstring>
+        <name>rand_sse</name>
+        <param>
+          <type>unsigned int *</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.cpp" line="19" column="1" bodyfile="src/server/src/rand_sse.cpp" bodystart="19" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;emmintrin.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rand__sse_8h" kindref="compound">rand_sse.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>__GNUC__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ALIGN(N)<sp/><sp/>__attribute__((aligned(N)))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_ALIGN(N)<sp/><sp/>__declspec(align(N))</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>static<sp/>__m128i<sp/>cur_seed;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f" kindref="member">srand_sse</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed<sp/>)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">cur_seed<sp/>=<sp/>_mm_set_epi32(<sp/>seed,<sp/>seed+1,<sp/>seed,<sp/>seed+1<sp/>);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d" kindref="member">rand_sse</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>result<sp/>)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>cur_seed_split;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>multiplier;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>adder;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>mod_mask;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>sra_mask;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/>__m128i<sp/>sseresult;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mult[4]<sp/>=<sp/>{<sp/>214013,<sp/>17405,<sp/>214013,<sp/>69069<sp/>};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>gadd[4]<sp/>=<sp/>{<sp/>2531011,<sp/>10395331,<sp/>13737667,<sp/>1<sp/>};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mask[4]<sp/>=<sp/>{<sp/>0xFFFFFFFF,<sp/>0,<sp/>0xFFFFFFFF,<sp/>0<sp/>};</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><ref refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kindref="member">_ALIGN</ref>(16)<sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>masklo[4]<sp/>=<sp/>{<sp/>0x00007FFF,<sp/>0x00007FFF,<sp/>0x00007FFF,<sp/>0x00007FFF<sp/>};</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">adder<sp/>=<sp/>_mm_load_si128(<sp/>(__m128i*)<sp/>gadd);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">multiplier<sp/>=<sp/>_mm_load_si128(<sp/>(__m128i*)<sp/>mult);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">mod_mask<sp/>=<sp/>_mm_load_si128(<sp/>(__m128i*)<sp/>mask);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">sra_mask<sp/>=<sp/>_mm_load_si128(<sp/>(__m128i*)<sp/>masklo);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">cur_seed_split<sp/>=<sp/>_mm_shuffle_epi32(<sp/>cur_seed,<sp/>_MM_SHUFFLE(<sp/>2,<sp/>3,<sp/>0,<sp/>1<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">cur_seed<sp/>=<sp/>_mm_mul_epu32(<sp/>cur_seed,<sp/>multiplier<sp/>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">multiplier<sp/>=<sp/>_mm_shuffle_epi32(<sp/>multiplier,<sp/>_MM_SHUFFLE(<sp/>2,<sp/>3,<sp/>0,<sp/>1<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal">cur_seed_split<sp/>=<sp/>_mm_mul_epu32(<sp/>cur_seed_split,<sp/>multiplier<sp/>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal">cur_seed<sp/>=<sp/>_mm_and_si128(<sp/>cur_seed,<sp/>mod_mask);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">cur_seed_split<sp/>=<sp/>_mm_and_si128(<sp/>cur_seed_split,<sp/>mod_mask<sp/>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">cur_seed_split<sp/>=<sp/>_mm_shuffle_epi32(<sp/>cur_seed_split,<sp/>_MM_SHUFFLE(<sp/>2,<sp/>3,<sp/>0,<sp/>1<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">cur_seed<sp/>=<sp/>_mm_or_si128(<sp/>cur_seed,<sp/>cur_seed_split<sp/>);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal">cur_seed<sp/>=<sp/>_mm_add_epi32(<sp/>cur_seed,<sp/>adder);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>COMPATABILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>lines<sp/>below<sp/>if<sp/>you<sp/>wish<sp/>to<sp/>reduce<sp/>your<sp/>results<sp/>to<sp/>16-bit<sp/>vals...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal">sseresult<sp/>=<sp/>_mm_srai_epi32(<sp/>cur_seed,<sp/>16);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">sseresult<sp/>=<sp/>_mm_and_si128(<sp/>sseresult,<sp/>sra_mask<sp/>);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">_mm_storeu_si128(<sp/>(__m128i*)<sp/>result,<sp/>sseresult<sp/>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">_mm_storeu_si128(<sp/>(__m128i*)<sp/>result,<sp/>cur_seed);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/server/src/rand_sse.cpp"/>
+  </compounddef>
+</doxygen>

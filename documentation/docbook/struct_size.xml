@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_size">
+<title>Структура Size</title>
+<indexterm><primary>Size</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BattleshipRoyale.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_size_1a59a3e96c2fc93d7fb98d8f4b0b0fd2e0">i_x</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_size_1a97bc50af533709613a47adc977d26f03">i_y</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле BattleshipRoyale.h строка 148</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_struct_size_1a59a3e96c2fc93d7fb98d8f4b0b0fd2e0"/>    <section>
+    <title>i_x</title>
+<indexterm><primary>i_x</primary><secondary>Size</secondary></indexterm>
+<indexterm><primary>Size</primary><secondary>i_x</secondary></indexterm>
+<para><computeroutput>int Size::i_x</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 150</para>
+    </section><anchor xml:id="_struct_size_1a97bc50af533709613a47adc977d26f03"/>    <section>
+    <title>i_y</title>
+<indexterm><primary>i_y</primary><secondary>Size</secondary></indexterm>
+<indexterm><primary>Size</primary><secondary>i_y</secondary></indexterm>
+<para><computeroutput>int Size::i_y</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 151</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__battleship_royale_8h">BattleshipRoyale.h</link></section>
+</section>

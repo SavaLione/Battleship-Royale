@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__battleship-royale">
+<title>Battleship-Royale</title>
+<indexterm><primary>Battleship-Royale</primary></indexterm>
+<para>
+
+<para>Общие файлы </para>
+ 
+</para>
+Граф связей класса Battleship-Royale:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__battleship-royale.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Группы    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group__battleshiproyale">BattleShiproyale.h</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+
+<para>Общие файлы </para>
+</section>
+</section>

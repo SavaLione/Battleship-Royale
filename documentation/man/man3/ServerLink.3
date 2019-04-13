@@ -1,0 +1,98 @@
+.TH "ServerLink" 3 "Сб 13 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ServerLink
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Client\&.h>\fP
+.PP
+Базовые классы:enable_shared_from_this< ServerLink > и noncopyable\&.
+.SS "Открытые типы"
+
+.in +1c
+.ti -1c
+.RI "typedef shared_ptr< \fBServerLink\fP > \fBptr\fP"
+.br
+.in -1c
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsConnected\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsSending\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsReading\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBMessage\fP ()"
+.br
+.ti -1c
+.RI "void \fBDisconnect\fP ()"
+.br
+.ti -1c
+.RI "void \fBSend\fP (const std::string &msg)"
+.br
+.ti -1c
+.RI "size_t \fBReadComplete\fP (const system::error_code &error, size_t bytes)"
+.br
+.in -1c
+.SS "Открытые статические члены"
+
+.in +1c
+.ti -1c
+.RI "static \fBptr\fP \fBStart\fP (ip::tcp::endpoint ep)"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+См\&. определение в файле Client\&.h строка 16
+.SH "Определения типов"
+.PP 
+.SS "typedef shared_ptr<\fBServerLink\fP> \fBServerLink::ptr\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 19
+.SH "Методы"
+.PP 
+.SS "void ServerLink::Disconnect ()\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 33
+.SS "bool ServerLink::IsConnected ()\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 21
+.SS "bool ServerLink::IsReading ()\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 23
+.SS "bool ServerLink::IsSending ()\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 22
+.SS "std::string ServerLink::Message ()\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 24
+.SS "size_t ServerLink::ReadComplete (const system::error_code & error, size_t bytes)\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 49
+.SS "void ServerLink::Send (const std::string & msg)\fC [inline]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 40
+.SS "static \fBptr\fP ServerLink::Start (ip::tcp::endpoint ep)\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+См\&. определение в файле Client\&.h строка 26
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

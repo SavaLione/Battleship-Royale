@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="client_2src_2_message_8h" kind="file" language="C++">
+    <compoundname>client/src/Message.h</compoundname>
+    <includes local="no">string</includes>
+    <incdepgraph>
+      <node id="110">
+        <label>string</label>
+      </node>
+      <node id="109">
+        <label>Message.h</label>
+        <link refid="client_2src_2_message_8h"/>
+        <childnode refid="110" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="class_message" prot="public">Message</innerclass>
+    <innerclass refid="class_message_object" prot="public">MessageObject</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="class_message" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_message" kindref="compound">Message</ref></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_message_object" kindref="compound">MessageObject</ref><sp/>object;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11" refid="class_message_1a23a66db51f9ec75f727b0838c5d65a55" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_message_1a23a66db51f9ec75f727b0838c5d65a55" kindref="member">code</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;00|&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14" refid="class_message_1ab24cdb2c9890d77e46a333f157e4f66d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_message_1ab24cdb2c9890d77e46a333f157e4f66d" kindref="member">Message</ref>(<ref refid="class_message_object" kindref="compound">MessageObject</ref><sp/>obj)<sp/>:<sp/>object(obj)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="class_message_1a04d7d7a2d696dc3183a76fcde39ebd73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="class_message_1a04d7d7a2d696dc3183a76fcde39ebd73" kindref="member">ToSend</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_message_1a23a66db51f9ec75f727b0838c5d65a55" kindref="member">code</ref><sp/>+<sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal">.ToMessage();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="class_message_1a5e0807f65e54b9db9a9144d96c23c859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_message_object" kindref="compound">MessageObject</ref><sp/><ref refid="class_message_1a5e0807f65e54b9db9a9144d96c23c859" kindref="member">GetObject</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_message_object_1a492e505739b933025fe9e7b0f8ee7aec" kindref="member">MessageObject::FromMessage</ref>(std::string(msg,<sp/>3,<sp/>msg.length<sp/>-<sp/>3));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="class_message_object" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_message_object" kindref="compound">MessageObject</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30" refid="class_message_object_1ae123b0190cfd5623d0846593bf36de72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>std::string<sp/><ref refid="class_message_object_1ae123b0190cfd5623d0846593bf36de72" kindref="member">ToMessage</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_message_object_1a492e505739b933025fe9e7b0f8ee7aec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_message_object" kindref="compound">MessageObject</ref><sp/><ref refid="class_message_object_1a492e505739b933025fe9e7b0f8ee7aec" kindref="member">FromMessage</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>msg)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_message_object" kindref="compound">MessageObject</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+    </programlisting>
+    <location file="src/client/src/Message.h"/>
+  </compounddef>
+</doxygen>

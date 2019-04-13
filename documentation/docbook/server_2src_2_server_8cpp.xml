@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2_server_8cpp">
+<title>Файл Server.cpp</title>
+<indexterm><primary>Server.cpp</primary></indexterm>
+<programlisting>#include &quot;Server.h&quot;
+#include &lt;boost/bind.hpp&gt;
+</programlisting>Граф включаемых заголовочных файлов для server/src/Server.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="server_2src_2_server_8cpp__incl.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>

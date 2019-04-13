@@ -1,0 +1,63 @@
+.TH "Server" 3 "Сб 13 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Server
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Server\&.h>\fP
+.SS "Открытые члены"
+
+.in +1c
+.ti -1c
+.RI "\fBServer\fP (boost::asio::io_service &io_service)"
+.br
+.ti -1c
+.RI "void \fBhandle_accept\fP (\fBcon_handler::pointer\fP connection, const boost::system::error_code &err)"
+.br
+.ti -1c
+.RI "\fB~Server\fP ()"
+.br
+.ti -1c
+.RI "\fBServer\fP (boost::asio::io_service &io_service, int i_port)"
+.br
+.ti -1c
+.RI "void \fBhandle_accept\fP (\fBcon_handler::pointer\fP connection, const boost::system::error_code &err)"
+.br
+.ti -1c
+.RI "\fB~Server\fP ()"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+См\&. определение в файле asio/server/Server\&.h строка 6
+.SH "Конструктор(ы)"
+.PP 
+.SS "Server::Server (boost::asio::io_service & io_service)\fC [inline]\fP"
+
+.PP
+См\&. определение в файле asio/server/Server\&.h строка 12
+.SS "Server::~Server ()"
+
+.PP
+См\&. определение в файле asio/server/Server\&.cpp строка 5
+.SS "Server::Server (boost::asio::io_service & io_service, int i_port)\fC [inline]\fP"
+
+.PP
+См\&. определение в файле server/src/Server\&.h строка 12
+.SS "Server::~Server ()"
+
+.SH "Методы"
+.PP 
+.SS "void Server::handle_accept (\fBcon_handler::pointer\fP connection, const boost::system::error_code & err)"
+
+.PP
+См\&. определение в файле asio/server/Server\&.cpp строка 19
+.SS "void Server::handle_accept (\fBcon_handler::pointer\fP connection, const boost::system::error_code & err)"
+
+
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

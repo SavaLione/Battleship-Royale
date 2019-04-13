@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Battleship-Royale: Исходный файл Server.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Battleship-Royale
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_16a916fe4812f76ff8ca083dfa2c5cc7.html">asio</a></li><li class="navelem"><a class="el" href="dir_ca44e6cd34c92977c243b2139948fc00.html">server</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">asio/server/Server.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="asio_2server_2_server_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SERVER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SERVER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="asio_2server_2con__handler_8h.html">con_handler.h</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_server.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_server.html">Server</a> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    boost::asio::ip::tcp::acceptor acceptor_;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> start_accept();</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_server.html#ac9ad7c8bb7fe2f5da5101da1297c9ae1">   12</a></span>&#160;    <a class="code" href="class_server.html#ac9ad7c8bb7fe2f5da5101da1297c9ae1">Server</a>(boost::asio::io_service&amp; io_service): acceptor_(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), 1234))</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    { </div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        start_accept();</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_server.html#adb53e5d1b7c0ad8a79ce236c8ca5d50c">handle_accept</a>(<a class="code" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</a> connection, <span class="keyword">const</span> boost::system::error_code&amp; err);</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="comment">/* des */</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif // SERVER_H</span></div><div class="ttc" id="class_server_html"><div class="ttname"><a href="class_server.html">Server</a></div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2_server_8h_source.html#l00006">asio/server/Server.h:6</a></div></div>
+<div class="ttc" id="class_server_html_adb53e5d1b7c0ad8a79ce236c8ca5d50c"><div class="ttname"><a href="class_server.html#adb53e5d1b7c0ad8a79ce236c8ca5d50c">Server::handle_accept</a></div><div class="ttdeci">void handle_accept(con_handler::pointer connection, const boost::system::error_code &amp;err)</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2_server_8cpp_source.html#l00019">asio/server/Server.cpp:19</a></div></div>
+<div class="ttc" id="class_server_html_ac9ad7c8bb7fe2f5da5101da1297c9ae1"><div class="ttname"><a href="class_server.html#ac9ad7c8bb7fe2f5da5101da1297c9ae1">Server::Server</a></div><div class="ttdeci">Server(boost::asio::io_service &amp;io_service)</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2_server_8h_source.html#l00012">asio/server/Server.h:12</a></div></div>
+<div class="ttc" id="classcon__handler_html_ada4a1b970f9fd8e55460a58cf7f7ce2c"><div class="ttname"><a href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</a></div><div class="ttdeci">boost::shared_ptr&lt; con_handler &gt; pointer</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8h_source.html#l00016">asio/server/con_handler.h:16</a></div></div>
+<div class="ttc" id="class_server_html_a4b3aa2579cb1c8cd1d069582c14d0fa6"><div class="ttname"><a href="class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6">Server::~Server</a></div><div class="ttdeci">~Server()</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2_server_8cpp_source.html#l00005">asio/server/Server.cpp:5</a></div></div>
+<div class="ttc" id="asio_2server_2con__handler_8h_html"><div class="ttname"><a href="asio_2server_2con__handler_8h.html">con_handler.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

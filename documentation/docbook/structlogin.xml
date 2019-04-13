@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structlogin">
+<title>Структура login</title>
+<indexterm><primary>login</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DB.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_structlogin_1acf93d411362f367b1fb7c35337d0606d">s_name</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structlogin_1a9c4b7efff9382117bd288f9cc42a4e28">s_password</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле DB.h строка 38</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_structlogin_1acf93d411362f367b1fb7c35337d0606d"/>    <section>
+    <title>s_name</title>
+<indexterm><primary>s_name</primary><secondary>login</secondary></indexterm>
+<indexterm><primary>login</primary><secondary>s_name</secondary></indexterm>
+<para><computeroutput>std::string login::s_name</computeroutput></para><para>
+См. определение в файле DB.h строка 40</para>
+    </section><anchor xml:id="_structlogin_1a9c4b7efff9382117bd288f9cc42a4e28"/>    <section>
+    <title>s_password</title>
+<indexterm><primary>s_password</primary><secondary>login</secondary></indexterm>
+<indexterm><primary>login</primary><secondary>s_password</secondary></indexterm>
+<para><computeroutput>std::string login::s_password</computeroutput></para><para>
+См. определение в файле DB.h строка 41</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__d_b_8h">DB.h</link></section>
+</section>

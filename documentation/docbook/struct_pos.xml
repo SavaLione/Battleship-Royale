@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_pos">
+<title>Структура Pos</title>
+<indexterm><primary>Pos</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BattleshipRoyale.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_struct_pos_1af3b15cd413e7dfc28b96cd6f87d280c3">i_x</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_struct_pos_1a6896c1bbe42f37baddb4d6fb906fa880">i_y</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле BattleshipRoyale.h строка 142</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_struct_pos_1af3b15cd413e7dfc28b96cd6f87d280c3"/>    <section>
+    <title>i_x</title>
+<indexterm><primary>i_x</primary><secondary>Pos</secondary></indexterm>
+<indexterm><primary>Pos</primary><secondary>i_x</secondary></indexterm>
+<para><computeroutput>int Pos::i_x</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 144</para>
+    </section><anchor xml:id="_struct_pos_1a6896c1bbe42f37baddb4d6fb906fa880"/>    <section>
+    <title>i_y</title>
+<indexterm><primary>i_y</primary><secondary>Pos</secondary></indexterm>
+<indexterm><primary>Pos</primary><secondary>i_y</secondary></indexterm>
+<para><computeroutput>int Pos::i_y</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 145</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__battleship_royale_8h">BattleshipRoyale.h</link></section>
+</section>

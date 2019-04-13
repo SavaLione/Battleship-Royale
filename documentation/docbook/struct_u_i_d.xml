@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_u_i_d">
+<title>Структура UID</title>
+<indexterm><primary>UID</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BattleshipRoyale.h&gt;</computeroutput>
+</para>
+Граф связей класса UID:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="struct_u_i_d__coll__graph.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_u_i_d_1ad126ab7d56812c322727617b427068ad">s_name</link></para>
+</listitem>
+            <listitem><para><link linkend="_struct_coockie">Coockie</link> <link linkend="_struct_u_i_d_1acf7ef2a71d9a80e890f911425e46d7f0">co_uid</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле BattleshipRoyale.h строка 127</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_struct_u_i_d_1acf7ef2a71d9a80e890f911425e46d7f0"/>    <section>
+    <title>co_uid</title>
+<indexterm><primary>co_uid</primary><secondary>UID</secondary></indexterm>
+<indexterm><primary>UID</primary><secondary>co_uid</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_coockie">Coockie</link> UID::co_uid</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 133</para>
+    </section><anchor xml:id="_struct_u_i_d_1ad126ab7d56812c322727617b427068ad"/>    <section>
+    <title>s_name</title>
+<indexterm><primary>s_name</primary><secondary>UID</secondary></indexterm>
+<indexterm><primary>UID</primary><secondary>s_name</secondary></indexterm>
+<para><computeroutput>std::string UID::s_name</computeroutput></para><para>
+См. определение в файле BattleshipRoyale.h строка 130</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__battleship_royale_8h">BattleshipRoyale.h</link></section>
+</section>

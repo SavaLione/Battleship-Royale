@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Battleship-Royale: Исходный файл con_handler.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Battleship-Royale
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_075bb3ff235063c77951cd176d15a741.html">server</a></li><li class="navelem"><a class="el" href="dir_aec46070e25e2e5fb0789c4048a4272f.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">server/src/con_handler.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="server_2src_2con__handler_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CON_HANDLER_H</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CON_HANDLER_H</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;boost/asio.hpp&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;boost/enable_shared_from_this.hpp&gt;</span></div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">class </span><a class="code" href="classcon__handler.html">con_handler</a> : <span class="keyword">public</span> boost::enable_shared_from_this&lt;con_handler&gt;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    boost::asio::ip::tcp::socket sock;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string message=<span class="stringliteral">&quot;Hello From Server!&quot;</span>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">enum</span> { max_length = 1024 };</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">char</span> data[max_length];</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">   16</a></span>&#160;    <span class="keyword">typedef</span> boost::shared_ptr&lt;con_handler&gt; <a class="code" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a>;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">   17</a></span>&#160;    <a class="code" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a>(boost::asio::io_service&amp; io_service) : sock(io_service)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">   21</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a> <a class="code" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">create</a>(boost::asio::io_service&amp; io_service)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a>(<span class="keyword">new</span> <a class="code" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a>(io_service));</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    boost::asio::ip::tcp::socket&amp; <a class="code" href="classcon__handler.html#ad168c799678add9fb23f3379e1d42b22">socket</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7">start</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2">handle_read</a>(<span class="keyword">const</span> boost::system::error_code&amp; err, <span class="keywordtype">size_t</span> bytes_transferred);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a">handle_write</a>(<span class="keyword">const</span> boost::system::error_code&amp; err, <span class="keywordtype">size_t</span> bytes_transferred);</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">/* des */</span></div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f">~con_handler</a>();</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#endif // CON_HANDLER_H</span></div><div class="ttc" id="classcon__handler_html_a18e7e450430ebe71687a0fd0c79507aa"><div class="ttname"><a href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler::con_handler</a></div><div class="ttdeci">con_handler(boost::asio::io_service &amp;io_service)</div><div class="ttdef"><b>Definition:</b> <a href="server_2src_2con__handler_8h_source.html#l00017">server/src/con_handler.h:17</a></div></div>
+<div class="ttc" id="classcon__handler_html_a3b8e9edfc8fed79fcba0242a58b54bc2"><div class="ttname"><a href="classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2">con_handler::handle_read</a></div><div class="ttdeci">void handle_read(const boost::system::error_code &amp;err, size_t bytes_transferred)</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8cpp_source.html#l00019">asio/server/con_handler.cpp:19</a></div></div>
+<div class="ttc" id="classcon__handler_html"><div class="ttname"><a href="classcon__handler.html">con_handler</a></div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8h_source.html#l00007">asio/server/con_handler.h:7</a></div></div>
+<div class="ttc" id="classcon__handler_html_ad168c799678add9fb23f3379e1d42b22"><div class="ttname"><a href="classcon__handler.html#ad168c799678add9fb23f3379e1d42b22">con_handler::socket</a></div><div class="ttdeci">boost::asio::ip::tcp::socket &amp; socket()</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8cpp_source.html#l00008">asio/server/con_handler.cpp:8</a></div></div>
+<div class="ttc" id="classcon__handler_html_a02d6691e226a75525a2ac83062b5c7f7"><div class="ttname"><a href="classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7">con_handler::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8cpp_source.html#l00013">asio/server/con_handler.cpp:13</a></div></div>
+<div class="ttc" id="classcon__handler_html_ada4a1b970f9fd8e55460a58cf7f7ce2c"><div class="ttname"><a href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</a></div><div class="ttdeci">boost::shared_ptr&lt; con_handler &gt; pointer</div><div class="ttdef"><b>Definition:</b> <a href="server_2src_2con__handler_8h_source.html#l00016">server/src/con_handler.h:16</a></div></div>
+<div class="ttc" id="classcon__handler_html_a10169d7b3588adb849d7e7c02c46375a"><div class="ttname"><a href="classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a">con_handler::handle_write</a></div><div class="ttdeci">void handle_write(const boost::system::error_code &amp;err, size_t bytes_transferred)</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8cpp_source.html#l00032">asio/server/con_handler.cpp:32</a></div></div>
+<div class="ttc" id="classcon__handler_html_aa1bc82c764eb633355a52bd77689ed3f"><div class="ttname"><a href="classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f">con_handler::~con_handler</a></div><div class="ttdeci">~con_handler()</div><div class="ttdef"><b>Definition:</b> <a href="asio_2server_2con__handler_8cpp_source.html#l00045">asio/server/con_handler.cpp:45</a></div></div>
+<div class="ttc" id="classcon__handler_html_ab3cec40540ef3ff484ef0b639545eb17"><div class="ttname"><a href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">con_handler::create</a></div><div class="ttdeci">static pointer create(boost::asio::io_service &amp;io_service)</div><div class="ttdef"><b>Definition:</b> <a href="server_2src_2con__handler_8h_source.html#l00021">server/src/con_handler.h:21</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>

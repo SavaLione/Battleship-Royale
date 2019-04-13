@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="rand__sse_8h" kind="file" language="C++">
+    <compoundname>rand_sse.h</compoundname>
+    <includedby refid="server_2src_2_battleship_royale_8cpp" local="yes">BattleshipRoyale.cpp</includedby>
+    <includedby refid="_d_b_8cpp" local="yes">DB.cpp</includedby>
+    <includedby refid="rand__sse_8cpp" local="yes">rand_sse.cpp</includedby>
+    <invincdepgraph>
+      <node id="121">
+        <label>BattleshipRoyale.cpp</label>
+        <link refid="server_2src_2_battleship_royale_8cpp"/>
+      </node>
+      <node id="120">
+        <label>rand_sse.h</label>
+        <link refid="rand__sse_8h"/>
+        <childnode refid="121" relation="include">
+        </childnode>
+        <childnode refid="122" relation="include">
+        </childnode>
+        <childnode refid="123" relation="include">
+        </childnode>
+      </node>
+      <node id="123">
+        <label>rand_sse.cpp</label>
+        <link refid="rand__sse_8cpp"/>
+      </node>
+      <node id="122">
+        <label>DB.cpp</label>
+        <link refid="_d_b_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768" prot="public" static="no">
+        <name>COMPATABILITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.h" line="30" column="9" bodyfile="src/server/src/rand_sse.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void srand_sse</definition>
+        <argsstring>(unsigned int seed)</argsstring>
+        <name>srand_sse</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>seed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.h" line="32" column="1" bodyfile="src/server/src/rand_sse.cpp" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void rand_sse</definition>
+        <argsstring>(unsigned int *)</argsstring>
+        <name>rand_sse</name>
+        <param>
+          <type>unsigned int *</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/rand_sse.h" line="33" column="1" bodyfile="src/server/src/rand_sse.cpp" bodystart="19" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>The<sp/>Software<sp/>is<sp/>provided<sp/>&quot;AS<sp/>IS&quot;<sp/>and<sp/>possibly<sp/>with<sp/>faults.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Intel<sp/>disclaims<sp/>any<sp/>and<sp/>all<sp/>warranties<sp/>and<sp/>guarantees,<sp/>express,<sp/>implied<sp/>or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>otherwise,<sp/>arising,<sp/>with<sp/>respect<sp/>to<sp/>the<sp/>software<sp/>delivered<sp/>hereunder,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>but<sp/>not<sp/>limited<sp/>to<sp/>the<sp/>warranty<sp/>of<sp/>merchantability,<sp/>the<sp/>warranty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>fitness<sp/>for<sp/>a<sp/>particular<sp/>purpose,<sp/>and<sp/>any<sp/>warranty<sp/>of<sp/>non-infringement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>of<sp/>the<sp/>intellectual<sp/>property<sp/>rights<sp/>of<sp/>any<sp/>third<sp/>party.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Intel<sp/>neither<sp/>assumes<sp/>nor<sp/>authorizes<sp/>any<sp/>person<sp/>to<sp/>assume<sp/>for<sp/>it<sp/>any<sp/>other</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>liability.<sp/>Customer<sp/>will<sp/>use<sp/>the<sp/>software<sp/>at<sp/>its<sp/>own<sp/>risk.<sp/>Intel<sp/>will<sp/>not</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>be<sp/>liable<sp/>to<sp/>customer<sp/>for<sp/>any<sp/>direct<sp/>or<sp/>indirect<sp/>damages<sp/>incurred<sp/>in<sp/>using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>software.<sp/>In<sp/>no<sp/>event<sp/>will<sp/>Intel<sp/>be<sp/>liable<sp/>for<sp/>loss<sp/>of<sp/>profits,<sp/>loss<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>use,<sp/>loss<sp/>of<sp/>data,<sp/>business<sp/>interruption,<sp/>nor<sp/>for<sp/>punitive,<sp/>incidental,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>consequential,<sp/>or<sp/>special<sp/>damages<sp/>of<sp/>any<sp/>kind,<sp/>even<sp/>if<sp/>advised<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>possibility<sp/>of<sp/>such<sp/>damages.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2003<sp/>Intel<sp/>Corporation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Third-party<sp/>brands<sp/>and<sp/>names<sp/>are<sp/>the<sp/>property<sp/>of<sp/>their<sp/>respective<sp/>owners</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight><highlight class="comment">//<sp/>Random<sp/>Number<sp/>Generation<sp/>for<sp/>SSE<sp/>/<sp/>SSE2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Source<sp/>File</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Version<sp/>0.1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Author<sp/>Kipp<sp/>Owens,<sp/>Rajiv<sp/>Parikh</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>RAND_SSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RAND_SSE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>COMPATABILITY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="comment">//define<sp/>this<sp/>if<sp/>you<sp/>wish<sp/>to<sp/>return<sp/>values<sp/>similar<sp/>to<sp/>the<sp/>standard<sp/>rand();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f" kindref="member">srand_sse</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>seed<sp/>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43" kindref="member">rand_sse</ref>(<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">*<sp/>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>RAND_SSE_H</highlight></codeline>
+    </programlisting>
+    <location file="src/server/src/rand_sse.h"/>
+  </compounddef>
+</doxygen>

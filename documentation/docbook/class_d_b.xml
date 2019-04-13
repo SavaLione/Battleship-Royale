@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_d_b">
+<title>Класс DB</title>
+<indexterm><primary>DB</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DB.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые члены    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_d_b_1a29a603c52c10831cddee82518417f992">DB</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_d_b_1a472c425f9a22c467e4acd0e800153837">db_add_player</link> (<link linkend="_structlogin">login</link> *l)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_d_b_1aea6044c3fffc4c31714c732bb3789f71">db_check_player</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>void <link linkend="_class_d_b_1a1e5d244a838c99a8753727cf0abd1f70">db_get_player</link> (std::string *name, <link linkend="_structdb__player">db_player</link> *pl)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb">db_get_id</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_d_b_1a0608c5cb7f815d143a54bda2e318de84">db_check_pass</link> (<link linkend="_structlogin">login</link> *l)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_u_i_d">UID</link> <link linkend="_class_d_b_1a5acc70d365de65365c861533a2b755c3">uid_get_np</link> (<link linkend="_structlogin">login</link> *l)</para>
+</listitem>
+            <listitem><para><link linkend="_struct_u_i_d">UID</link> <link linkend="_class_d_b_1a9c55abcaab4db2b421bf72c968a818a4">uid_get_np</link> (<link linkend="_structlogin">login</link> *l, int *id)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_d_b_1ad7c6310d2669acd40978fd4662f90d53">db_get_reg_date</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4">db_get_password</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_d_b_1a990cefb97ea7222649511f37334a8601">db_get_score</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_d_b_1a004b212ee48936251ff24b9f70d67dd0">db_get_money</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para>int <link linkend="_class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b">db_get_level</link> (std::string *s_name)</para>
+</listitem>
+            <listitem><para><link linkend="_class_d_b_1a7bd1418f67b11d0f752537123e7e6d28">~DB</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле DB.h строка 44</para>
+</section>
+<section>
+<title>Конструктор(ы)</title>
+<anchor xml:id="_class_d_b_1a29a603c52c10831cddee82518417f992"/>    <section>
+    <title>DB()</title>
+<indexterm><primary>DB</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>DB</secondary></indexterm>
+<para><computeroutput>DB::DB ( )</computeroutput></para><para>
+См. определение в файле DB.cpp строка 14</para>
+    </section><anchor xml:id="_class_d_b_1a7bd1418f67b11d0f752537123e7e6d28"/>    <section>
+    <title>~DB()</title>
+<indexterm><primary>~DB</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>~DB</secondary></indexterm>
+<para><computeroutput>DB::~DB ( )</computeroutput></para><para>
+См. определение в файле DB.cpp строка 32</para>
+</section>
+</section>
+<section>
+<title>Методы</title>
+<anchor xml:id="_class_d_b_1a472c425f9a22c467e4acd0e800153837"/>    <section>
+    <title>db_add_player()</title>
+<indexterm><primary>db_add_player</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_add_player</secondary></indexterm>
+<para><computeroutput>void DB::db_add_player (<link linkend="_structlogin">login</link> * l)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 141</para>
+    </section><anchor xml:id="_class_d_b_1a0608c5cb7f815d143a54bda2e318de84"/>    <section>
+    <title>db_check_pass()</title>
+<indexterm><primary>db_check_pass</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_check_pass</secondary></indexterm>
+<para><computeroutput>bool DB::db_check_pass (<link linkend="_structlogin">login</link> * l)</computeroutput></para>    </section><anchor xml:id="_class_d_b_1aea6044c3fffc4c31714c732bb3789f71"/>    <section>
+    <title>db_check_player()</title>
+<indexterm><primary>db_check_player</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_check_player</secondary></indexterm>
+<para><computeroutput>bool DB::db_check_player (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 122</para>
+    </section><anchor xml:id="_class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb"/>    <section>
+    <title>db_get_id()</title>
+<indexterm><primary>db_get_id</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_id</secondary></indexterm>
+<para><computeroutput>int DB::db_get_id (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 223</para>
+    </section><anchor xml:id="_class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b"/>    <section>
+    <title>db_get_level()</title>
+<indexterm><primary>db_get_level</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_level</secondary></indexterm>
+<para><computeroutput>int DB::db_get_level (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 335</para>
+    </section><anchor xml:id="_class_d_b_1a004b212ee48936251ff24b9f70d67dd0"/>    <section>
+    <title>db_get_money()</title>
+<indexterm><primary>db_get_money</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_money</secondary></indexterm>
+<para><computeroutput>int DB::db_get_money (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 317</para>
+    </section><anchor xml:id="_class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4"/>    <section>
+    <title>db_get_password()</title>
+<indexterm><primary>db_get_password</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_password</secondary></indexterm>
+<para><computeroutput>std::string DB::db_get_password (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 281</para>
+    </section><anchor xml:id="_class_d_b_1a1e5d244a838c99a8753727cf0abd1f70"/>    <section>
+    <title>db_get_player()</title>
+<indexterm><primary>db_get_player</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_player</secondary></indexterm>
+<para><computeroutput>void DB::db_get_player (std::string * name, <link linkend="_structdb__player">db_player</link> * pl)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 182</para>
+    </section><anchor xml:id="_class_d_b_1ad7c6310d2669acd40978fd4662f90d53"/>    <section>
+    <title>db_get_reg_date()</title>
+<indexterm><primary>db_get_reg_date</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_reg_date</secondary></indexterm>
+<para><computeroutput>std::string DB::db_get_reg_date (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 263</para>
+    </section><anchor xml:id="_class_d_b_1a990cefb97ea7222649511f37334a8601"/>    <section>
+    <title>db_get_score()</title>
+<indexterm><primary>db_get_score</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>db_get_score</secondary></indexterm>
+<para><computeroutput>int DB::db_get_score (std::string * s_name)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 299</para>
+    </section><anchor xml:id="_class_d_b_1a5acc70d365de65365c861533a2b755c3"/>    <section>
+    <title>uid_get_np()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>uid_get_np</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>uid_get_np</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_u_i_d">UID</link> DB::uid_get_np (<link linkend="_structlogin">login</link> * l)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 241</para>
+    </section><anchor xml:id="_class_d_b_1a9c55abcaab4db2b421bf72c968a818a4"/>    <section>
+    <title>uid_get_np()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>uid_get_np</primary><secondary>DB</secondary></indexterm>
+<indexterm><primary>DB</primary><secondary>uid_get_np</secondary></indexterm>
+<para><computeroutput><link linkend="_struct_u_i_d">UID</link> DB::uid_get_np (<link linkend="_structlogin">login</link> * l, int * id)</computeroutput></para><para>
+См. определение в файле DB.cpp строка 253</para>
+</section>
+<para>
+Объявления и описания членов классов находятся в файлах:</para>
+<link linkend="__d_b_8h">DB.h</link><link linkend="__d_b_8cpp">DB.cpp</link></section>
+</section>

@@ -3,5 +3,57 @@
     <info>
     <title>Battleship-Royale</title>
     </info>
+<chapter>
+    <title>Группы</title>
+    <xi:include href="group__battleship-royale.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__battleshiproyale.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Пространства имен</title>
+<xi:include href="namespace_b_r.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Классы</title>
+    <xi:include href="classcon__handler.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_coockie.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_d_b.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structdb__player.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structlogin.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_message.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_message_object.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_pos.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_server.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="class_server_link.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_size.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="struct_u_i_d.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>Файлы</title>
+    <xi:include href="async_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="client_2src_2_battleship_royale_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2_battleship_royale_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_battleship_royale_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="client_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_client_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asio_2server_2con__handler_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2con__handler_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asio_2server_2con__handler_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2con__handler_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_d_b_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_d_b_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="client_2src_2_message_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2_message_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="rand__sse_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="rand__sse_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asio_2regex_2regex_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2regex_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_regex_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asio_2server_2_server_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2_server_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="asio_2server_2_server_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="server_2src_2_server_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
 <index/>
 </book>

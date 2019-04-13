@@ -1,3 +1,260 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.15">
+  <compound refid="classcon__handler" kind="class"><name>con_handler</name>
+    <member refid="classcon__handler_1a5ca06bca666b92187b4b01fe26ff07e8" kind="enum"><name>@0</name></member>
+    <member refid="classcon__handler_1a6e8d2bba7b12a16472e69994294de369a69e7a0a8326fd1326088bd7ffc0d18d7" kind="enumvalue"><name>max_length</name></member>
+    <member refid="classcon__handler_1a6e8d2bba7b12a16472e69994294de369" kind="enum"><name>@1</name></member>
+    <member refid="classcon__handler_1a6e8d2bba7b12a16472e69994294de369a69e7a0a8326fd1326088bd7ffc0d18d7" kind="enumvalue"><name>max_length</name></member>
+    <member refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kind="typedef"><name>pointer</name></member>
+    <member refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kind="typedef"><name>pointer</name></member>
+    <member refid="classcon__handler_1ad23f2e7bef296da53cd171335affd300" kind="variable"><name>sock</name></member>
+    <member refid="classcon__handler_1a047b0bd7c03bacb579ecced6c317f3cb" kind="variable"><name>message</name></member>
+    <member refid="classcon__handler_1af6feec8ca98e8b25ca1b7bedcda5b3e9" kind="variable"><name>data</name></member>
+    <member refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kind="function"><name>con_handler</name></member>
+    <member refid="classcon__handler_1ad168c799678add9fb23f3379e1d42b22" kind="function"><name>socket</name></member>
+    <member refid="classcon__handler_1a02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
+    <member refid="classcon__handler_1a3b8e9edfc8fed79fcba0242a58b54bc2" kind="function"><name>handle_read</name></member>
+    <member refid="classcon__handler_1a10169d7b3588adb849d7e7c02c46375a" kind="function"><name>handle_write</name></member>
+    <member refid="classcon__handler_1aa1bc82c764eb633355a52bd77689ed3f" kind="function"><name>~con_handler</name></member>
+    <member refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kind="function"><name>con_handler</name></member>
+    <member refid="classcon__handler_1ad1cbd939db0c1c543425d7cd53702a06" kind="function"><name>socket</name></member>
+    <member refid="classcon__handler_1a02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
+    <member refid="classcon__handler_1a3b8e9edfc8fed79fcba0242a58b54bc2" kind="function"><name>handle_read</name></member>
+    <member refid="classcon__handler_1a10169d7b3588adb849d7e7c02c46375a" kind="function"><name>handle_write</name></member>
+    <member refid="classcon__handler_1aa1bc82c764eb633355a52bd77689ed3f" kind="function"><name>~con_handler</name></member>
+    <member refid="classcon__handler_1ab3cec40540ef3ff484ef0b639545eb17" kind="function"><name>create</name></member>
+    <member refid="classcon__handler_1ab3cec40540ef3ff484ef0b639545eb17" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="struct_coockie" kind="struct"><name>Coockie</name>
+    <member refid="struct_coockie_1af7f9283a949f25c677a061ae6a46cb76" kind="variable"><name>id</name></member>
+    <member refid="struct_coockie_1a25293cd2b76e85993318e02e9398bdfb" kind="variable"><name>u_i_random</name></member>
+  </compound>
+  <compound refid="class_d_b" kind="class"><name>DB</name>
+    <member refid="class_d_b_1af006c980ee986ac5c39610c9afd62087" kind="variable"><name>db</name></member>
+    <member refid="class_d_b_1a98c52263921eab7802f7e7ef3bb9ff1f" kind="variable"><name>stmt</name></member>
+    <member refid="class_d_b_1acd42cf1722f8e515ca708dcdff84bc33" kind="variable"><name>zErrMsg</name></member>
+    <member refid="class_d_b_1a8296a092faf547c071ed07e151f1e4d0" kind="variable"><name>rc</name></member>
+    <member refid="class_d_b_1a09ea7b9c2e26a2754a5fb64db3836cdb" kind="variable"><name>id</name></member>
+    <member refid="class_d_b_1a5f143c4e687a890164e95683113205d5" kind="variable"><name>messageError</name></member>
+    <member refid="class_d_b_1a5e70db458c90e54a2d22d1167f7b52f7" kind="function"><name>db_open</name></member>
+    <member refid="class_d_b_1aca4c951672c54766fdd039efd38e654b" kind="function"><name>db_close</name></member>
+    <member refid="class_d_b_1ae7d842aa9002c6f8f7d026bcc55e88af" kind="function"><name>db_create</name></member>
+    <member refid="class_d_b_1aa8ad10f739676129552361075ddfc2c9" kind="function"><name>db_table_check</name></member>
+    <member refid="class_d_b_1a880d6118bf0b4020049339afc7e825fd" kind="function"><name>db_all_check</name></member>
+    <member refid="class_d_b_1ade41c643f9d1e57ee02c107553877d64" kind="function"><name>db_get_player_print</name></member>
+    <member refid="class_d_b_1a491541bd875d5fab95aa913b970132f6" kind="function"><name>sha2</name></member>
+    <member refid="class_d_b_1a29a603c52c10831cddee82518417f992" kind="function"><name>DB</name></member>
+    <member refid="class_d_b_1a472c425f9a22c467e4acd0e800153837" kind="function"><name>db_add_player</name></member>
+    <member refid="class_d_b_1aea6044c3fffc4c31714c732bb3789f71" kind="function"><name>db_check_player</name></member>
+    <member refid="class_d_b_1a1e5d244a838c99a8753727cf0abd1f70" kind="function"><name>db_get_player</name></member>
+    <member refid="class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb" kind="function"><name>db_get_id</name></member>
+    <member refid="class_d_b_1a0608c5cb7f815d143a54bda2e318de84" kind="function"><name>db_check_pass</name></member>
+    <member refid="class_d_b_1a5acc70d365de65365c861533a2b755c3" kind="function"><name>uid_get_np</name></member>
+    <member refid="class_d_b_1a9c55abcaab4db2b421bf72c968a818a4" kind="function"><name>uid_get_np</name></member>
+    <member refid="class_d_b_1ad7c6310d2669acd40978fd4662f90d53" kind="function"><name>db_get_reg_date</name></member>
+    <member refid="class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4" kind="function"><name>db_get_password</name></member>
+    <member refid="class_d_b_1a990cefb97ea7222649511f37334a8601" kind="function"><name>db_get_score</name></member>
+    <member refid="class_d_b_1a004b212ee48936251ff24b9f70d67dd0" kind="function"><name>db_get_money</name></member>
+    <member refid="class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b" kind="function"><name>db_get_level</name></member>
+    <member refid="class_d_b_1a7bd1418f67b11d0f752537123e7e6d28" kind="function"><name>~DB</name></member>
+  </compound>
+  <compound refid="structdb__player" kind="struct"><name>db_player</name>
+    <member refid="structdb__player_1adae59dcd7ab22b0e66cb829f1dc5b383" kind="variable"><name>id</name></member>
+    <member refid="structdb__player_1a182fb42d16b91d5dccc9c640bc649521" kind="variable"><name>name</name></member>
+    <member refid="structdb__player_1a44fb2105fb4d116447eee76a5494821d" kind="variable"><name>password</name></member>
+    <member refid="structdb__player_1abef0de717f781b401effd7d3c35550c2" kind="variable"><name>reg_date</name></member>
+    <member refid="structdb__player_1a49a7074936df50c10ce3573663e902bc" kind="variable"><name>score</name></member>
+    <member refid="structdb__player_1a11f7c74a3d7b7f6c91f5ac6823c848af" kind="variable"><name>money</name></member>
+    <member refid="structdb__player_1a87ec3fa495482d1018974f2694430156" kind="variable"><name>level</name></member>
+  </compound>
+  <compound refid="structlogin" kind="struct"><name>login</name>
+    <member refid="structlogin_1acf93d411362f367b1fb7c35337d0606d" kind="variable"><name>s_name</name></member>
+    <member refid="structlogin_1a9c4b7efff9382117bd288f9cc42a4e28" kind="variable"><name>s_password</name></member>
+  </compound>
+  <compound refid="class_message" kind="class"><name>Message</name>
+    <member refid="class_message_1a4c807a96e51ea82146f5bf44a3e2a24a" kind="variable"><name>object</name></member>
+    <member refid="class_message_1a23a66db51f9ec75f727b0838c5d65a55" kind="variable"><name>code</name></member>
+    <member refid="class_message_1ab24cdb2c9890d77e46a333f157e4f66d" kind="function"><name>Message</name></member>
+    <member refid="class_message_1a04d7d7a2d696dc3183a76fcde39ebd73" kind="function"><name>ToSend</name></member>
+    <member refid="class_message_1a5e0807f65e54b9db9a9144d96c23c859" kind="function"><name>GetObject</name></member>
+    <member refid="class_message_1ab24cdb2c9890d77e46a333f157e4f66d" kind="function"><name>Message</name></member>
+    <member refid="class_message_1a04d7d7a2d696dc3183a76fcde39ebd73" kind="function"><name>ToSend</name></member>
+    <member refid="class_message_1a5e0807f65e54b9db9a9144d96c23c859" kind="function"><name>GetObject</name></member>
+  </compound>
+  <compound refid="class_message_object" kind="class"><name>MessageObject</name>
+    <member refid="class_message_object_1ae123b0190cfd5623d0846593bf36de72" kind="function"><name>ToMessage</name></member>
+    <member refid="class_message_object_1ae123b0190cfd5623d0846593bf36de72" kind="function"><name>ToMessage</name></member>
+    <member refid="class_message_object_1a492e505739b933025fe9e7b0f8ee7aec" kind="function"><name>FromMessage</name></member>
+    <member refid="class_message_object_1a492e505739b933025fe9e7b0f8ee7aec" kind="function"><name>FromMessage</name></member>
+  </compound>
+  <compound refid="struct_pos" kind="struct"><name>Pos</name>
+    <member refid="struct_pos_1af3b15cd413e7dfc28b96cd6f87d280c3" kind="variable"><name>i_x</name></member>
+    <member refid="struct_pos_1a6896c1bbe42f37baddb4d6fb906fa880" kind="variable"><name>i_y</name></member>
+  </compound>
+  <compound refid="class_server" kind="class"><name>Server</name>
+    <member refid="class_server_1a4e29f2fb9ced4b2c1bacc80a8d00e049" kind="variable"><name>acceptor_</name></member>
+    <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
+    <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
+    <member refid="class_server_1ac9ad7c8bb7fe2f5da5101da1297c9ae1" kind="function"><name>Server</name></member>
+    <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
+    <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
+    <member refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" kind="function"><name>Server</name></member>
+    <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
+    <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
+  </compound>
+  <compound refid="class_server_link" kind="class"><name>ServerLink</name>
+    <member refid="class_server_link_1afb05b9f4060b17ac50d2fb3b874ce236" kind="typedef"><name>ptr</name></member>
+    <member refid="class_server_link_1ab44d72d22bc44a19a2c1c7a2af9a7f3a" kind="variable"><name>sock</name></member>
+    <member refid="class_server_link_1a4abbd9bacfa29b9c761454858f6250ef" kind="variable"><name>readBuffer</name></member>
+    <member refid="class_server_link_1a156357298a26924dc29f0914f1fc0ddf" kind="variable"><name>sendBuffer</name></member>
+    <member refid="class_server_link_1ac50a6b7b74cbf8aa0e95e1cacd03a3a6" kind="variable"><name>connected</name></member>
+    <member refid="class_server_link_1a1c9905db0c1aac29576f7e01518c8d6e" kind="variable"><name>sending</name></member>
+    <member refid="class_server_link_1a708932395f10d3bec59e0f70101907c5" kind="variable"><name>reading</name></member>
+    <member refid="class_server_link_1a7099ff7be3198017ec7b8c90e77844ab" kind="variable"><name>message</name></member>
+    <member refid="class_server_link_1a2f551c4fffbedab55adab3d528df0f0c" kind="function"><name>IsConnected</name></member>
+    <member refid="class_server_link_1ab79487df49a22e5533c96032ef413e16" kind="function"><name>IsSending</name></member>
+    <member refid="class_server_link_1a9cdc703cdda0ff80c49434d483654d7e" kind="function"><name>IsReading</name></member>
+    <member refid="class_server_link_1a712791c09323fcf6db49ceb0a10f8d9c" kind="function"><name>Message</name></member>
+    <member refid="class_server_link_1afa570df0c508889210e9ac2ff5983306" kind="function"><name>Disconnect</name></member>
+    <member refid="class_server_link_1accf9e304c68111f1dbb1df82e2ae3ca5" kind="function"><name>Send</name></member>
+    <member refid="class_server_link_1a57df20ef340ea6f42157ff40aa57427a" kind="function"><name>ReadComplete</name></member>
+    <member refid="class_server_link_1a72edc7fb4b20cc9bd157863b2ee4b279" kind="function"><name>Start</name></member>
+    <member refid="class_server_link_1a4e713142012135151d872949c5931a41" kind="function"><name>ServerLink</name></member>
+    <member refid="class_server_link_1ad4c71cf9ab124f2c29ae99ca4a50f0ac" kind="function"><name>Connect</name></member>
+    <member refid="class_server_link_1a3da0dd06361d9b2f0ca6c7467d2efdde" kind="function"><name>Read</name></member>
+    <member refid="class_server_link_1ab9e341037ea6395e4a73aeefd1d61847" kind="function"><name>OnConnect</name></member>
+    <member refid="class_server_link_1ad9c2be6ec4e96b40892726c661e05e4e" kind="function"><name>OnRead</name></member>
+    <member refid="class_server_link_1a37800b28376bd4fb1eece4d83275f010" kind="function"><name>OnSend</name></member>
+  </compound>
+  <compound refid="struct_size" kind="struct"><name>Size</name>
+    <member refid="struct_size_1a59a3e96c2fc93d7fb98d8f4b0b0fd2e0" kind="variable"><name>i_x</name></member>
+    <member refid="struct_size_1a97bc50af533709613a47adc977d26f03" kind="variable"><name>i_y</name></member>
+  </compound>
+  <compound refid="struct_u_i_d" kind="struct"><name>UID</name>
+    <member refid="struct_u_i_d_1ad126ab7d56812c322727617b427068ad" kind="variable"><name>s_name</name></member>
+    <member refid="struct_u_i_d_1acf7ef2a71d9a80e890f911425e46d7f0" kind="variable"><name>co_uid</name></member>
+  </compound>
+  <compound refid="namespaceboost" kind="namespace"><name>boost</name>
+  </compound>
+  <compound refid="namespaceboost_1_1asio" kind="namespace"><name>boost::asio</name>
+  </compound>
+  <compound refid="namespace_b_r" kind="namespace"><name>BR</name>
+    <member refid="namespace_b_r_1a767d5d7fec5adfa1bf5a7c03f98beaaf" kind="variable"><name>SERVER_VERSION_MAJOR</name></member>
+    <member refid="namespace_b_r_1afb69faba1bc3b5d31b8514c0103b72a0" kind="variable"><name>SERVER_VERSION_MINOR</name></member>
+    <member refid="namespace_b_r_1ad496b6d1eb6371bb740df7c7fac12aba" kind="variable"><name>SERVER_VERSION_PATCH</name></member>
+    <member refid="namespace_b_r_1a99a147d6069c07f03a2baf3bb531e308" kind="variable"><name>CLIENT_VERSION_MAJOR</name></member>
+    <member refid="namespace_b_r_1a4182b988c7afdd13d1e00d1a558c44ab" kind="variable"><name>CLIENT_VERSION_MINOR</name></member>
+    <member refid="namespace_b_r_1a35ec7e796e49c1a6b87e73c07d643378" kind="variable"><name>CLIENT_VERSION_PATCH</name></member>
+    <member refid="namespace_b_r_1adfde74493201d02cbbe52fc1d83bf1ec" kind="variable"><name>SERVER_VERSION</name></member>
+    <member refid="namespace_b_r_1a5efdcacd78568f72acf52924873804a3" kind="variable"><name>CLIENT_VERSION</name></member>
+    <member refid="namespace_b_r_1a30974fa6f1a17283bd60a3bb1e9501ff" kind="variable"><name>DB_NAME</name></member>
+    <member refid="namespace_b_r_1ae2055a331ff0a0d44ecdf49d643c143b" kind="variable"><name>SERVER_IP</name></member>
+    <member refid="namespace_b_r_1a93dcd985876e063e59cb37eeb4f49bc8" kind="variable"><name>SERVER_PORT</name></member>
+    <member refid="namespace_b_r_1adf62830a86680a1b129dc6a865c8ca5f" kind="variable"><name>REG_USER</name></member>
+    <member refid="namespace_b_r_1a81134999acb4e2183d0968fad32d055e" kind="variable"><name>REG_USER_PASS</name></member>
+    <member refid="namespace_b_r_1a6b288b2197101eea180f726c9ab3195a" kind="variable"><name>REG_UID</name></member>
+  </compound>
+  <compound refid="namespaceip" kind="namespace"><name>ip</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="async_8cpp" kind="file"><name>async.cpp</name>
+    <member refid="async_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="client_2src_2_battleship_royale_8cpp" kind="file"><name>client/src/BattleshipRoyale.cpp</name>
+    <member refid="client_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="server_2src_2_battleship_royale_8cpp" kind="file"><name>server/src/BattleshipRoyale.cpp</name>
+    <member refid="server_2src_2_battleship_royale_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_battleship_royale_8h" kind="file"><name>BattleshipRoyale.h</name>
+  </compound>
+  <compound refid="client_8cpp" kind="file"><name>client.cpp</name>
+    <member refid="client_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_client_8h" kind="file"><name>Client.h</name>
+    <member refid="_client_8h_1a632571e5ad0b35ab596dc375b3ce45b5" kind="variable"><name>service</name></member>
+  </compound>
+  <compound refid="asio_2server_2con__handler_8cpp" kind="file"><name>asio/server/con_handler.cpp</name>
+  </compound>
+  <compound refid="server_2src_2con__handler_8cpp" kind="file"><name>server/src/con_handler.cpp</name>
+  </compound>
+  <compound refid="asio_2server_2con__handler_8h" kind="file"><name>asio/server/con_handler.h</name>
+  </compound>
+  <compound refid="server_2src_2con__handler_8h" kind="file"><name>server/src/con_handler.h</name>
+  </compound>
+  <compound refid="_d_b_8cpp" kind="file"><name>DB.cpp</name>
+  </compound>
+  <compound refid="_d_b_8h" kind="file"><name>DB.h</name>
+  </compound>
+  <compound refid="client_2src_2_message_8h" kind="file"><name>client/src/Message.h</name>
+  </compound>
+  <compound refid="server_2src_2_message_8h" kind="file"><name>server/src/Message.h</name>
+  </compound>
+  <compound refid="rand__sse_8cpp" kind="file"><name>rand_sse.cpp</name>
+    <member refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kind="define"><name>_ALIGN</name></member>
+    <member refid="rand__sse_8cpp_1a9ee2a8dd6d9ca58a791ccb2dc6f9a26c" kind="function"><name>_ALIGN</name></member>
+    <member refid="rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
+  </compound>
+  <compound refid="rand__sse_8h" kind="file"><name>rand_sse.h</name>
+    <member refid="rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768" kind="define"><name>COMPATABILITY</name></member>
+    <member refid="rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43" kind="function"><name>rand_sse</name></member>
+  </compound>
+  <compound refid="asio_2regex_2regex_8cpp" kind="file"><name>asio/regex/regex.cpp</name>
+    <member refid="asio_2regex_2regex_8cpp_1ae1a3968e7947464bee7714f6d43b7002" kind="function"><name>test</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1a1440a7779ac56f47a3f355ce4a8c7da0" kind="function"><name>test1</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1a0283886819c7c140a023582b7269e2d0" kind="function"><name>test2</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1a6d0455dd5c30adda100e95f0423c786e" kind="function"><name>test3</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1a327d8cef466a7560ead5eb3995c0cbae" kind="function"><name>test4</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1a8e1be3038bbc558f32a409f076126c33" kind="function"><name>test5</name></member>
+    <member refid="asio_2regex_2regex_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="server_2src_2regex_8cpp" kind="file"><name>server/src/regex.cpp</name>
+    <member refid="server_2src_2regex_8cpp_1ac4882c93b963bd53fd60978a9661fa30" kind="function"><name>check_pattern</name></member>
+    <member refid="server_2src_2regex_8cpp_1a524588640ff7393a801141740202d9dc" kind="function"><name>getData</name></member>
+    <member refid="server_2src_2regex_8cpp_1a0ac985b5fff36005eb80cda832582ca9" kind="function"><name>getData</name></member>
+  </compound>
+  <compound refid="_regex_8h" kind="file"><name>Regex.h</name>
+    <member refid="_regex_8h_1ac4882c93b963bd53fd60978a9661fa30" kind="function"><name>check_pattern</name></member>
+    <member refid="_regex_8h_1a524588640ff7393a801141740202d9dc" kind="function"><name>getData</name></member>
+    <member refid="_regex_8h_1a0ac985b5fff36005eb80cda832582ca9" kind="function"><name>getData</name></member>
+  </compound>
+  <compound refid="asio_2server_2_server_8cpp" kind="file"><name>asio/server/Server.cpp</name>
+  </compound>
+  <compound refid="server_2src_2_server_8cpp" kind="file"><name>server/src/Server.cpp</name>
+  </compound>
+  <compound refid="asio_2server_2_server_8h" kind="file"><name>asio/server/Server.h</name>
+  </compound>
+  <compound refid="server_2src_2_server_8h" kind="file"><name>server/src/Server.h</name>
+  </compound>
+  <compound refid="group__battleship-royale" kind="group"><name>battleship-royale</name>
+  </compound>
+  <compound refid="group__server" kind="group"><name>server</name>
+  </compound>
+  <compound refid="group__client" kind="group"><name>client</name>
+  </compound>
+  <compound refid="group__battleshiproyale" kind="group"><name>battleshiproyale</name>
+  </compound>
+  <compound refid="dir_16a916fe4812f76ff8ca083dfa2c5cc7" kind="dir"><name>asio</name>
+  </compound>
+  <compound refid="dir_4db07c9d7f8d5a8284ae701bfea002b8" kind="dir"><name>BattleshipRoyale</name>
+  </compound>
+  <compound refid="dir_6908ff505388a07996d238c763adbdab" kind="dir"><name>client</name>
+  </compound>
+  <compound refid="dir_22525a050dfdcab83cc3ff7d62dce0a1" kind="dir"><name>client</name>
+  </compound>
+  <compound refid="dir_c8b6e6fef5b1d9ca37c74a370526293f" kind="dir"><name>regex</name>
+  </compound>
+  <compound refid="dir_075bb3ff235063c77951cd176d15a741" kind="dir"><name>server</name>
+  </compound>
+  <compound refid="dir_ca44e6cd34c92977c243b2139948fc00" kind="dir"><name>server</name>
+  </compound>
+  <compound refid="dir_78ce3fde11f1c50580f2f2c408f37c2f" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_aec46070e25e2e5fb0789c4048a4272f" kind="dir"><name>src</name>
+  </compound>
 </doxygenindex>

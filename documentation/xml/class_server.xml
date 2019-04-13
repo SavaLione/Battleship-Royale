@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_server" kind="class" language="C++" prot="public">
+    <compoundname>Server</compoundname>
+    <includes refid="asio_2server_2_server_8h" local="no">Server.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_server_1a4e29f2fb9ced4b2c1bacc80a8d00e049" prot="private" static="no" mutable="no">
+        <type>boost::asio::ip::tcp::acceptor</type>
+        <definition>boost::asio::ip::tcp::acceptor Server::acceptor_</definition>
+        <argsstring></argsstring>
+        <name>acceptor_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/Server.h" line="8" column="1" bodyfile="src/asio/server/Server.h" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Server::start_accept</definition>
+        <argsstring>()</argsstring>
+        <name>start_accept</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/Server.h" line="9" column="1" bodyfile="src/asio/server/Server.cpp" bodystart="10" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Server::start_accept</definition>
+        <argsstring>()</argsstring>
+        <name>start_accept</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Server.h" line="9" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_server_1ac9ad7c8bb7fe2f5da5101da1297c9ae1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Server::Server</definition>
+        <argsstring>(boost::asio::io_service &amp;io_service)</argsstring>
+        <name>Server</name>
+        <param>
+          <type>boost::asio::io_service &amp;</type>
+          <declname>io_service</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/Server.h" line="12" column="1" bodyfile="src/asio/server/Server.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Server::handle_accept</definition>
+        <argsstring>(con_handler::pointer connection, const boost::system::error_code &amp;err)</argsstring>
+        <name>handle_accept</name>
+        <param>
+          <type><ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">con_handler::pointer</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/Server.h" line="17" column="1" bodyfile="src/asio/server/Server.cpp" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Server::~Server</definition>
+        <argsstring>()</argsstring>
+        <name>~Server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/Server.h" line="20" column="1" bodyfile="src/asio/server/Server.cpp" bodystart="5" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1a64e726d6d9e85b00ba86488badb330d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Server::Server</definition>
+        <argsstring>(boost::asio::io_service &amp;io_service, int i_port)</argsstring>
+        <name>Server</name>
+        <param>
+          <type>boost::asio::io_service &amp;</type>
+          <declname>io_service</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>i_port</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Server.h" line="12" column="1" bodyfile="src/server/src/Server.h" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Server::handle_accept</definition>
+        <argsstring>(con_handler::pointer connection, const boost::system::error_code &amp;err)</argsstring>
+        <name>handle_accept</name>
+        <param>
+          <type><ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">con_handler::pointer</ref></type>
+          <declname>connection</declname>
+        </param>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>err</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Server.h" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Server::~Server</definition>
+        <argsstring>()</argsstring>
+        <name>~Server</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/Server.h" line="20" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/asio/server/Server.h" line="6" column="1" bodyfile="src/asio/server/Server.h" bodystart="6" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_server_1a4e29f2fb9ced4b2c1bacc80a8d00e049" prot="private" virt="non-virtual"><scope>Server</scope><name>acceptor_</name></member>
+      <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" prot="public" virt="non-virtual"><scope>Server</scope><name>handle_accept</name></member>
+      <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" prot="public" virt="non-virtual"><scope>Server</scope><name>handle_accept</name></member>
+      <member refid="class_server_1ac9ad7c8bb7fe2f5da5101da1297c9ae1" prot="public" virt="non-virtual"><scope>Server</scope><name>Server</name></member>
+      <member refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" prot="public" virt="non-virtual"><scope>Server</scope><name>Server</name></member>
+      <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" prot="private" virt="non-virtual"><scope>Server</scope><name>start_accept</name></member>
+      <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" prot="private" virt="non-virtual"><scope>Server</scope><name>start_accept</name></member>
+      <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" prot="public" virt="non-virtual"><scope>Server</scope><name>~Server</name></member>
+      <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" prot="public" virt="non-virtual"><scope>Server</scope><name>~Server</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

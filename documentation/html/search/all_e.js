@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['battleshiproyale_2ecpp',['BattleshipRoyale.cpp',['../server_2src_2_battleship_royale_8cpp.html',1,'']]],
+  ['con_5fhandler_2ecpp',['con_handler.cpp',['../server_2src_2con__handler_8cpp.html',1,'']]],
+  ['con_5fhandler_2eh',['con_handler.h',['../server_2src_2con__handler_8h.html',1,'']]],
+  ['message_2eh',['Message.h',['../server_2src_2_message_8h.html',1,'']]],
+  ['regex_2ecpp',['Regex.cpp',['../server_2src_2regex_8cpp.html',1,'']]],
+  ['s_5fname',['s_name',['../struct_u_i_d.html#ad126ab7d56812c322727617b427068ad',1,'UID::s_name()'],['../structlogin.html#acf93d411362f367b1fb7c35337d0606d',1,'login::s_name()']]],
+  ['s_5fpassword',['s_password',['../structlogin.html#a9c4b7efff9382117bd288f9cc42a4e28',1,'login']]],
+  ['score',['score',['../structdb__player.html#a49a7074936df50c10ce3573663e902bc',1,'db_player']]],
+  ['send',['Send',['../class_server_link.html#accf9e304c68111f1dbb1df82e2ae3ca5',1,'ServerLink']]],
+  ['server',['Server',['../class_server.html',1,'Server'],['../class_server.html#ac9ad7c8bb7fe2f5da5101da1297c9ae1',1,'Server::Server(boost::asio::io_service &amp;io_service)'],['../class_server.html#a64e726d6d9e85b00ba86488badb330d4',1,'Server::Server(boost::asio::io_service &amp;io_service, int i_port)'],['../group__server.html',1,'(Глобальное пространство имён)']]],
+  ['server_2ecpp',['Server.cpp',['../server_2src_2_server_8cpp.html',1,'']]],
+  ['server_2eh',['Server.h',['../server_2src_2_server_8h.html',1,'']]],
+  ['server_5fip',['SERVER_IP',['../namespace_b_r.html#ae2055a331ff0a0d44ecdf49d643c143b',1,'BR']]],
+  ['server_5fport',['SERVER_PORT',['../namespace_b_r.html#a93dcd985876e063e59cb37eeb4f49bc8',1,'BR']]],
+  ['server_5fversion',['SERVER_VERSION',['../namespace_b_r.html#adfde74493201d02cbbe52fc1d83bf1ec',1,'BR']]],
+  ['server_5fversion_5fmajor',['SERVER_VERSION_MAJOR',['../namespace_b_r.html#a767d5d7fec5adfa1bf5a7c03f98beaaf',1,'BR']]],
+  ['server_5fversion_5fminor',['SERVER_VERSION_MINOR',['../namespace_b_r.html#afb69faba1bc3b5d31b8514c0103b72a0',1,'BR']]],
+  ['server_5fversion_5fpatch',['SERVER_VERSION_PATCH',['../namespace_b_r.html#ad496b6d1eb6371bb740df7c7fac12aba',1,'BR']]],
+  ['serverlink',['ServerLink',['../class_server_link.html',1,'']]],
+  ['service',['service',['../_client_8h.html#a632571e5ad0b35ab596dc375b3ce45b5',1,'Client.h']]],
+  ['size',['Size',['../struct_size.html',1,'']]],
+  ['socket',['socket',['../classcon__handler.html#ad168c799678add9fb23f3379e1d42b22',1,'con_handler::socket()'],['../classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06',1,'con_handler::socket()']]],
+  ['srand_5fsse',['srand_sse',['../rand__sse_8cpp.html#a80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp'],['../rand__sse_8h.html#a80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp']]],
+  ['start',['start',['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()']]]
+];

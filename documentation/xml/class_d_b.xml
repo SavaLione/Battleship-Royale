@@ -1,0 +1,465 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_d_b" kind="class" language="C++" prot="public">
+    <compoundname>DB</compoundname>
+    <includes refid="_d_b_8h" local="no">DB.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_d_b_1af006c980ee986ac5c39610c9afd62087" prot="private" static="no" mutable="no">
+        <type>sqlite3 *</type>
+        <definition>sqlite3* DB::db</definition>
+        <argsstring></argsstring>
+        <name>db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="48" column="1" bodyfile="src/server/src/DB.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_1a98c52263921eab7802f7e7ef3bb9ff1f" prot="private" static="no" mutable="no">
+        <type>sqlite3_stmt *</type>
+        <definition>sqlite3_stmt* DB::stmt</definition>
+        <argsstring></argsstring>
+        <name>stmt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="49" column="1" bodyfile="src/server/src/DB.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_1acd42cf1722f8e515ca708dcdff84bc33" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* DB::zErrMsg</definition>
+        <argsstring></argsstring>
+        <name>zErrMsg</name>
+        <initializer>= new char</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="50" column="1" bodyfile="src/server/src/DB.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_1a8296a092faf547c071ed07e151f1e4d0" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* DB::rc</definition>
+        <argsstring></argsstring>
+        <name>rc</name>
+        <initializer>= new int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="51" column="1" bodyfile="src/server/src/DB.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_1a09ea7b9c2e26a2754a5fb64db3836cdb" prot="private" static="no" mutable="no">
+        <type>int *</type>
+        <definition>int* DB::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <initializer>= new int</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="52" column="1" bodyfile="src/server/src/DB.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_d_b_1a5f143c4e687a890164e95683113205d5" prot="private" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* DB::messageError</definition>
+        <argsstring></argsstring>
+        <name>messageError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="53" column="1" bodyfile="src/server/src/DB.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_d_b_1a5e70db458c90e54a2d22d1167f7b52f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_open</definition>
+        <argsstring>()</argsstring>
+        <name>db_open</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="58" column="1" bodyfile="src/server/src/DB.cpp" bodystart="39" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1aca4c951672c54766fdd039efd38e654b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_close</definition>
+        <argsstring>()</argsstring>
+        <name>db_close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="61" column="1" bodyfile="src/server/src/DB.cpp" bodystart="50" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1ae7d842aa9002c6f8f7d026bcc55e88af" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_create</definition>
+        <argsstring>()</argsstring>
+        <name>db_create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="64" column="1" bodyfile="src/server/src/DB.cpp" bodystart="56" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1aa8ad10f739676129552361075ddfc2c9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DB::db_table_check</definition>
+        <argsstring>()</argsstring>
+        <name>db_table_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="67" column="1" bodyfile="src/server/src/DB.cpp" bodystart="78" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a880d6118bf0b4020049339afc7e825fd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_all_check</definition>
+        <argsstring>()</argsstring>
+        <name>db_all_check</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="70" column="1" bodyfile="src/server/src/DB.cpp" bodystart="101" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1ade41c643f9d1e57ee02c107553877d64" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_get_player_print</definition>
+        <argsstring>(db_player *pl)</argsstring>
+        <name>db_get_player_print</name>
+        <param>
+          <type><ref refid="structdb__player" kindref="compound">db_player</ref> *</type>
+          <declname>pl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="73" column="1" bodyfile="src/server/src/DB.cpp" bodystart="205" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a491541bd875d5fab95aa913b970132f6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string DB::sha2</definition>
+        <argsstring>(std::string *s)</argsstring>
+        <name>sha2</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="76" column="1" bodyfile="src/server/src/DB.cpp" bodystart="216" bodyend="221"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_d_b_1a29a603c52c10831cddee82518417f992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DB::DB</definition>
+        <argsstring>()</argsstring>
+        <name>DB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="80" column="1" bodyfile="src/server/src/DB.cpp" bodystart="14" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a472c425f9a22c467e4acd0e800153837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_add_player</definition>
+        <argsstring>(login *l)</argsstring>
+        <name>db_add_player</name>
+        <param>
+          <type><ref refid="structlogin" kindref="compound">login</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="83" column="1" bodyfile="src/server/src/DB.cpp" bodystart="141" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1aea6044c3fffc4c31714c732bb3789f71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DB::db_check_player</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_check_player</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="86" column="1" bodyfile="src/server/src/DB.cpp" bodystart="122" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a1e5d244a838c99a8753727cf0abd1f70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DB::db_get_player</definition>
+        <argsstring>(std::string *name, db_player *pl)</argsstring>
+        <name>db_get_player</name>
+        <param>
+          <type>std::string *</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type><ref refid="structdb__player" kindref="compound">db_player</ref> *</type>
+          <declname>pl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="89" column="1" bodyfile="src/server/src/DB.cpp" bodystart="182" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DB::db_get_id</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_id</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="92" column="1" bodyfile="src/server/src/DB.cpp" bodystart="223" bodyend="239"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a0608c5cb7f815d143a54bda2e318de84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DB::db_check_pass</definition>
+        <argsstring>(login *l)</argsstring>
+        <name>db_check_pass</name>
+        <param>
+          <type><ref refid="structlogin" kindref="compound">login</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="95" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a5acc70d365de65365c861533a2b755c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_u_i_d" kindref="compound">UID</ref></type>
+        <definition>UID DB::uid_get_np</definition>
+        <argsstring>(login *l)</argsstring>
+        <name>uid_get_np</name>
+        <param>
+          <type><ref refid="structlogin" kindref="compound">login</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="98" column="1" bodyfile="src/server/src/DB.cpp" bodystart="241" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a9c55abcaab4db2b421bf72c968a818a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_u_i_d" kindref="compound">UID</ref></type>
+        <definition>UID DB::uid_get_np</definition>
+        <argsstring>(login *l, int *id)</argsstring>
+        <name>uid_get_np</name>
+        <param>
+          <type><ref refid="structlogin" kindref="compound">login</ref> *</type>
+          <declname>l</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="99" column="1" bodyfile="src/server/src/DB.cpp" bodystart="253" bodyend="261"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1ad7c6310d2669acd40978fd4662f90d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string DB::db_get_reg_date</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_reg_date</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="102" column="1" bodyfile="src/server/src/DB.cpp" bodystart="263" bodyend="279"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string DB::db_get_password</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_password</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="105" column="1" bodyfile="src/server/src/DB.cpp" bodystart="281" bodyend="297"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a990cefb97ea7222649511f37334a8601" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DB::db_get_score</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_score</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="108" column="1" bodyfile="src/server/src/DB.cpp" bodystart="299" bodyend="315"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a004b212ee48936251ff24b9f70d67dd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DB::db_get_money</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_money</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="111" column="1" bodyfile="src/server/src/DB.cpp" bodystart="317" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int DB::db_get_level</definition>
+        <argsstring>(std::string *s_name)</argsstring>
+        <name>db_get_level</name>
+        <param>
+          <type>std::string *</type>
+          <declname>s_name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="114" column="1" bodyfile="src/server/src/DB.cpp" bodystart="335" bodyend="351"/>
+      </memberdef>
+      <memberdef kind="function" id="class_d_b_1a7bd1418f67b11d0f752537123e7e6d28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DB::~DB</definition>
+        <argsstring>()</argsstring>
+        <name>~DB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/server/src/DB.h" line="118" column="1" bodyfile="src/server/src/DB.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/server/src/DB.h" line="45" column="1" bodyfile="src/server/src/DB.h" bodystart="44" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_d_b_1af006c980ee986ac5c39610c9afd62087" prot="private" virt="non-virtual"><scope>DB</scope><name>db</name></member>
+      <member refid="class_d_b_1a29a603c52c10831cddee82518417f992" prot="public" virt="non-virtual"><scope>DB</scope><name>DB</name></member>
+      <member refid="class_d_b_1a472c425f9a22c467e4acd0e800153837" prot="public" virt="non-virtual"><scope>DB</scope><name>db_add_player</name></member>
+      <member refid="class_d_b_1a880d6118bf0b4020049339afc7e825fd" prot="private" virt="non-virtual"><scope>DB</scope><name>db_all_check</name></member>
+      <member refid="class_d_b_1a0608c5cb7f815d143a54bda2e318de84" prot="public" virt="non-virtual"><scope>DB</scope><name>db_check_pass</name></member>
+      <member refid="class_d_b_1aea6044c3fffc4c31714c732bb3789f71" prot="public" virt="non-virtual"><scope>DB</scope><name>db_check_player</name></member>
+      <member refid="class_d_b_1aca4c951672c54766fdd039efd38e654b" prot="private" virt="non-virtual"><scope>DB</scope><name>db_close</name></member>
+      <member refid="class_d_b_1ae7d842aa9002c6f8f7d026bcc55e88af" prot="private" virt="non-virtual"><scope>DB</scope><name>db_create</name></member>
+      <member refid="class_d_b_1aa8cdb5ec4f2f269d13cff52b9e47c4cb" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_id</name></member>
+      <member refid="class_d_b_1a7792fdc9d2dc66bfa5ba84aa9db1ee8b" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_level</name></member>
+      <member refid="class_d_b_1a004b212ee48936251ff24b9f70d67dd0" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_money</name></member>
+      <member refid="class_d_b_1a35efc0a2ff41b4ef47c88c87f20feee4" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_password</name></member>
+      <member refid="class_d_b_1a1e5d244a838c99a8753727cf0abd1f70" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_player</name></member>
+      <member refid="class_d_b_1ade41c643f9d1e57ee02c107553877d64" prot="private" virt="non-virtual"><scope>DB</scope><name>db_get_player_print</name></member>
+      <member refid="class_d_b_1ad7c6310d2669acd40978fd4662f90d53" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_reg_date</name></member>
+      <member refid="class_d_b_1a990cefb97ea7222649511f37334a8601" prot="public" virt="non-virtual"><scope>DB</scope><name>db_get_score</name></member>
+      <member refid="class_d_b_1a5e70db458c90e54a2d22d1167f7b52f7" prot="private" virt="non-virtual"><scope>DB</scope><name>db_open</name></member>
+      <member refid="class_d_b_1aa8ad10f739676129552361075ddfc2c9" prot="private" virt="non-virtual"><scope>DB</scope><name>db_table_check</name></member>
+      <member refid="class_d_b_1a09ea7b9c2e26a2754a5fb64db3836cdb" prot="private" virt="non-virtual"><scope>DB</scope><name>id</name></member>
+      <member refid="class_d_b_1a5f143c4e687a890164e95683113205d5" prot="private" virt="non-virtual"><scope>DB</scope><name>messageError</name></member>
+      <member refid="class_d_b_1a8296a092faf547c071ed07e151f1e4d0" prot="private" virt="non-virtual"><scope>DB</scope><name>rc</name></member>
+      <member refid="class_d_b_1a491541bd875d5fab95aa913b970132f6" prot="private" virt="non-virtual"><scope>DB</scope><name>sha2</name></member>
+      <member refid="class_d_b_1a98c52263921eab7802f7e7ef3bb9ff1f" prot="private" virt="non-virtual"><scope>DB</scope><name>stmt</name></member>
+      <member refid="class_d_b_1a5acc70d365de65365c861533a2b755c3" prot="public" virt="non-virtual"><scope>DB</scope><name>uid_get_np</name></member>
+      <member refid="class_d_b_1a9c55abcaab4db2b421bf72c968a818a4" prot="public" virt="non-virtual"><scope>DB</scope><name>uid_get_np</name></member>
+      <member refid="class_d_b_1acd42cf1722f8e515ca708dcdff84bc33" prot="private" virt="non-virtual"><scope>DB</scope><name>zErrMsg</name></member>
+      <member refid="class_d_b_1a7bd1418f67b11d0f752537123e7e6d28" prot="public" virt="non-virtual"><scope>DB</scope><name>~DB</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_78ce3fde11f1c50580f2f2c408f37c2f" kind="dir">
+    <compoundname>src</compoundname>
+    <innerfile refid="client_2src_2_battleship_royale_8cpp">client/src/BattleshipRoyale.cpp</innerfile>
+    <innerfile refid="_client_8h">Client.h</innerfile>
+    <innerfile refid="client_2src_2_message_8h">client/src/Message.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/client/src/"/>
+  </compounddef>
+</doxygen>

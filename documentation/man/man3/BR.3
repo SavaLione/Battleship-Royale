@@ -1,0 +1,181 @@
+.TH "BR" 3 "Сб 13 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BR \- Пространство имён с константами  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Переменные"
+
+.in +1c
+.ti -1c
+.RI "const int \fBSERVER_VERSION_MAJOR\fP = 0"
+.br
+.RI "Сервер\&. Major версия "
+.ti -1c
+.RI "const int \fBSERVER_VERSION_MINOR\fP = 2"
+.br
+.RI "Сервер\&. Minor версия "
+.ti -1c
+.RI "const int \fBSERVER_VERSION_PATCH\fP = 5"
+.br
+.RI "Сервер\&. Path версия "
+.ti -1c
+.RI "const int \fBCLIENT_VERSION_MAJOR\fP = 0"
+.br
+.RI "Клиент\&. Major версия "
+.ti -1c
+.RI "const int \fBCLIENT_VERSION_MINOR\fP = 1"
+.br
+.RI "Клиент\&. Minor версия "
+.ti -1c
+.RI "const int \fBCLIENT_VERSION_PATCH\fP = 3"
+.br
+.RI "Клиент\&. Path версия "
+.ti -1c
+.RI "const int \fBSERVER_VERSION\fP = (\fBSERVER_VERSION_MAJOR\fP * 10000 + \fBSERVER_VERSION_MINOR\fP * 100 + \fBSERVER_VERSION_PATCH\fP)"
+.br
+.RI "Версия Сервера "
+.ti -1c
+.RI "const int \fBCLIENT_VERSION\fP = (\fBCLIENT_VERSION_MAJOR\fP * 10000 + \fBCLIENT_VERSION_MINOR\fP * 100 + \fBCLIENT_VERSION_PATCH\fP)"
+.br
+.RI "Версия клиента "
+.ti -1c
+.RI "const char \fBDB_NAME\fP [] = 'test\&.db'"
+.br
+.RI "Название базы данных "
+.ti -1c
+.RI "const char \fBSERVER_IP\fP [] = '127\&.0\&.0\&.1'"
+.br
+.RI "Стандартный адрес сервера "
+.ti -1c
+.RI "const int \fBSERVER_PORT\fP = 1234"
+.br
+.RI "Стандартный порт сервера "
+.ti -1c
+.RI "const char \fBREG_USER\fP [] = '^user:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+.br
+.ti -1c
+.RI "const char \fBREG_USER_PASS\fP [] = '^user:\\\\[([^\\\\[\\\\]]+)\\\\] pass:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+.br
+.ti -1c
+.RI "const char \fBREG_UID\fP [] = '^UID:\\\\[([^\\\\[\\\\]]+)\\\\] data:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+.br
+.in -1c
+.SH "Подробное описание"
+.PP 
+Пространство имён с константами 
+
+Version - Информация о версии
+.PP
+\fBDB\fP - База данных
+.PP
+\fBServer\fP - Константы сервера
+.PP
+Regex - регулярные выражения 
+.SH "Переменные"
+.PP 
+.SS "const int BR::CLIENT_VERSION = (\fBCLIENT_VERSION_MAJOR\fP * 10000 + \fBCLIENT_VERSION_MINOR\fP * 100 + \fBCLIENT_VERSION_PATCH\fP)"
+
+.PP
+Версия клиента 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 66
+.SS "const int BR::CLIENT_VERSION_MAJOR = 0"
+
+.PP
+Клиент\&. Major версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 54
+.SS "const int BR::CLIENT_VERSION_MINOR = 1"
+
+.PP
+Клиент\&. Minor версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 57
+.SS "const int BR::CLIENT_VERSION_PATCH = 3"
+
+.PP
+Клиент\&. Path версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 60
+.SS "const char BR::DB_NAME[] = 'test\&.db'"
+
+.PP
+Название базы данных 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 73
+.SS "const char BR::REG_UID[] = '^UID:\\\\[([^\\\\[\\\\]]+)\\\\] data:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+Регулярное выражение для поиска уникального идентификатора и данных
+.PP
+.PP
+.nf
+UID:[] data:[]
+.fi
+.PP
+ 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 108
+.SS "const char BR::REG_USER[] = '^user:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+Регулярное выражение для поиска имени
+.PP
+.PP
+.nf
+user:[]
+.fi
+.PP
+ 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 94
+.SS "const char BR::REG_USER_PASS[] = '^user:\\\\[([^\\\\[\\\\]]+)\\\\] pass:\\\\[([^\\\\[\\\\]]+)\\\\]$'"
+Регулярное выражение для поиска имени и пароля
+.PP
+.PP
+.nf
+user:[] pass:[]
+.fi
+.PP
+ 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 101
+.SS "const char BR::SERVER_IP[] = '127\&.0\&.0\&.1'"
+
+.PP
+Стандартный адрес сервера 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 80
+.SS "const int BR::SERVER_PORT = 1234"
+
+.PP
+Стандартный порт сервера 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 83
+.SS "const int BR::SERVER_VERSION = (\fBSERVER_VERSION_MAJOR\fP * 10000 + \fBSERVER_VERSION_MINOR\fP * 100 + \fBSERVER_VERSION_PATCH\fP)"
+
+.PP
+Версия Сервера 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 63
+.SS "const int BR::SERVER_VERSION_MAJOR = 0"
+
+.PP
+Сервер\&. Major версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 45
+.SS "const int BR::SERVER_VERSION_MINOR = 2"
+
+.PP
+Сервер\&. Minor версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 48
+.SS "const int BR::SERVER_VERSION_PATCH = 5"
+
+.PP
+Сервер\&. Path версия 
+.PP
+См\&. определение в файле BattleshipRoyale\&.h строка 51
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

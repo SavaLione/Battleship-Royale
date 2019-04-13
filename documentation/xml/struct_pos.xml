@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="struct_pos" kind="struct" language="C++" prot="public">
+    <compoundname>Pos</compoundname>
+    <includes refid="_battleship_royale_8h" local="no">BattleshipRoyale.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_pos_1af3b15cd413e7dfc28b96cd6f87d280c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pos::i_x</definition>
+        <argsstring></argsstring>
+        <name>i_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="144" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_pos_1a6896c1bbe42f37baddb4d6fb906fa880" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Pos::i_y</definition>
+        <argsstring></argsstring>
+        <name>i_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="145" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/BattleshipRoyale/BattleshipRoyale.h" line="143" column="1" bodyfile="src/BattleshipRoyale/BattleshipRoyale.h" bodystart="142" bodyend="146"/>
+    <listofallmembers>
+      <member refid="struct_pos_1af3b15cd413e7dfc28b96cd6f87d280c3" prot="public" virt="non-virtual"><scope>Pos</scope><name>i_x</name></member>
+      <member refid="struct_pos_1a6896c1bbe42f37baddb4d6fb906fa880" prot="public" virt="non-virtual"><scope>Pos</scope><name>i_y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

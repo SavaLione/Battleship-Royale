@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_68267d1309a1af8e8297ef4c3efbcdba">
+<title>Содержание директории src</title>
+<indexterm><primary>Содержание директории src</primary></indexterm>
+Директория графа зависимостей src:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_68267d1309a1af8e8297ef4c3efbcdba_dep.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Директории    </title>
+        <itemizedlist>
+            <listitem><para>директория <link linkend="_dir_16a916fe4812f76ff8ca083dfa2c5cc7">asio</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_4db07c9d7f8d5a8284ae701bfea002b8">BattleshipRoyale</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_6908ff505388a07996d238c763adbdab">client</link></para>
+</listitem>
+            <listitem><para>директория <link linkend="_dir_075bb3ff235063c77951cd176d15a741">server</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

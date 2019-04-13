@@ -1,0 +1,161 @@
+\hypertarget{class_server_link}{}\section{Класс Server\+Link}
+\label{class_server_link}\index{ServerLink@{ServerLink}}
+
+
+{\ttfamily \#include $<$Client.\+h$>$}
+
+
+
+Граф наследования\+:Server\+Link\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_server_link__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Server\+Link\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_server_link__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Открытые типы}
+\begin{DoxyCompactItemize}
+\item 
+typedef shared\+\_\+ptr$<$ \mbox{\hyperlink{class_server_link}{Server\+Link}} $>$ \mbox{\hyperlink{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}{ptr}}
+\end{DoxyCompactItemize}
+\subsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_server_link_a2f551c4fffbedab55adab3d528df0f0c}{Is\+Connected}} ()
+\item 
+bool \mbox{\hyperlink{class_server_link_ab79487df49a22e5533c96032ef413e16}{Is\+Sending}} ()
+\item 
+bool \mbox{\hyperlink{class_server_link_a9cdc703cdda0ff80c49434d483654d7e}{Is\+Reading}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_server_link_a712791c09323fcf6db49ceb0a10f8d9c}{Message}} ()
+\item 
+void \mbox{\hyperlink{class_server_link_afa570df0c508889210e9ac2ff5983306}{Disconnect}} ()
+\item 
+void \mbox{\hyperlink{class_server_link_accf9e304c68111f1dbb1df82e2ae3ca5}{Send}} (const std\+::string \&msg)
+\item 
+size\+\_\+t \mbox{\hyperlink{class_server_link_a57df20ef340ea6f42157ff40aa57427a}{Read\+Complete}} (const system\+::error\+\_\+code \&error, size\+\_\+t bytes)
+\end{DoxyCompactItemize}
+\subsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}{ptr}} \mbox{\hyperlink{class_server_link_a72edc7fb4b20cc9bd157863b2ee4b279}{Start}} (ip\+::tcp\+::endpoint ep)
+\end{DoxyCompactItemize}
+
+
+\subsection{Подробное описание}
+
+
+См. определение в файле Client.\+h строка 16
+
+
+
+\subsection{Определения типов}
+\mbox{\Hypertarget{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}\label{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}} 
+\index{ServerLink@{ServerLink}!ptr@{ptr}}
+\index{ptr@{ptr}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{ptr}{ptr}}
+{\footnotesize\ttfamily typedef shared\+\_\+ptr$<$\mbox{\hyperlink{class_server_link}{Server\+Link}}$>$ \mbox{\hyperlink{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}{Server\+Link\+::ptr}}}
+
+
+
+См. определение в файле Client.\+h строка 19
+
+
+
+\subsection{Методы}
+\mbox{\Hypertarget{class_server_link_afa570df0c508889210e9ac2ff5983306}\label{class_server_link_afa570df0c508889210e9ac2ff5983306}} 
+\index{ServerLink@{ServerLink}!Disconnect@{Disconnect}}
+\index{Disconnect@{Disconnect}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{Disconnect()}{Disconnect()}}
+{\footnotesize\ttfamily void Server\+Link\+::\+Disconnect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 33
+
+\mbox{\Hypertarget{class_server_link_a2f551c4fffbedab55adab3d528df0f0c}\label{class_server_link_a2f551c4fffbedab55adab3d528df0f0c}} 
+\index{ServerLink@{ServerLink}!IsConnected@{IsConnected}}
+\index{IsConnected@{IsConnected}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{IsConnected()}{IsConnected()}}
+{\footnotesize\ttfamily bool Server\+Link\+::\+Is\+Connected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 21
+
+\mbox{\Hypertarget{class_server_link_a9cdc703cdda0ff80c49434d483654d7e}\label{class_server_link_a9cdc703cdda0ff80c49434d483654d7e}} 
+\index{ServerLink@{ServerLink}!IsReading@{IsReading}}
+\index{IsReading@{IsReading}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{IsReading()}{IsReading()}}
+{\footnotesize\ttfamily bool Server\+Link\+::\+Is\+Reading (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 23
+
+\mbox{\Hypertarget{class_server_link_ab79487df49a22e5533c96032ef413e16}\label{class_server_link_ab79487df49a22e5533c96032ef413e16}} 
+\index{ServerLink@{ServerLink}!IsSending@{IsSending}}
+\index{IsSending@{IsSending}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{IsSending()}{IsSending()}}
+{\footnotesize\ttfamily bool Server\+Link\+::\+Is\+Sending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 22
+
+\mbox{\Hypertarget{class_server_link_a712791c09323fcf6db49ceb0a10f8d9c}\label{class_server_link_a712791c09323fcf6db49ceb0a10f8d9c}} 
+\index{ServerLink@{ServerLink}!Message@{Message}}
+\index{Message@{Message}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{Message()}{Message()}}
+{\footnotesize\ttfamily std\+::string Server\+Link\+::\+Message (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 24
+
+\mbox{\Hypertarget{class_server_link_a57df20ef340ea6f42157ff40aa57427a}\label{class_server_link_a57df20ef340ea6f42157ff40aa57427a}} 
+\index{ServerLink@{ServerLink}!ReadComplete@{ReadComplete}}
+\index{ReadComplete@{ReadComplete}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{ReadComplete()}{ReadComplete()}}
+{\footnotesize\ttfamily size\+\_\+t Server\+Link\+::\+Read\+Complete (\begin{DoxyParamCaption}\item[{const system\+::error\+\_\+code \&}]{error,  }\item[{size\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 49
+
+\mbox{\Hypertarget{class_server_link_accf9e304c68111f1dbb1df82e2ae3ca5}\label{class_server_link_accf9e304c68111f1dbb1df82e2ae3ca5}} 
+\index{ServerLink@{ServerLink}!Send@{Send}}
+\index{Send@{Send}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{Send()}{Send()}}
+{\footnotesize\ttfamily void Server\+Link\+::\+Send (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{msg }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+См. определение в файле Client.\+h строка 40
+
+\mbox{\Hypertarget{class_server_link_a72edc7fb4b20cc9bd157863b2ee4b279}\label{class_server_link_a72edc7fb4b20cc9bd157863b2ee4b279}} 
+\index{ServerLink@{ServerLink}!Start@{Start}}
+\index{Start@{Start}!ServerLink@{ServerLink}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_server_link_afb05b9f4060b17ac50d2fb3b874ce236}{ptr}} Server\+Link\+::\+Start (\begin{DoxyParamCaption}\item[{ip\+::tcp\+::endpoint}]{ep }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+См. определение в файле Client.\+h строка 26
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_client_8h}{Client.\+h}}\end{DoxyCompactItemize}

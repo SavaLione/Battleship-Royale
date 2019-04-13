@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_message_object">
+<title>Класс MessageObject</title>
+<indexterm><primary>MessageObject</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Message.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые члены    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::string <link linkend="_class_message_object_1ae123b0190cfd5623d0846593bf36de72">ToMessage</link> ()</para>
+</listitem>
+            <listitem><para>virtual std::string <link linkend="_class_message_object_1ae123b0190cfd5623d0846593bf36de72">ToMessage</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Открытые статические члены    </title>
+        <itemizedlist>
+            <listitem><para>static virtual <link linkend="_class_message_object">MessageObject</link> <link linkend="_class_message_object_1a492e505739b933025fe9e7b0f8ee7aec">FromMessage</link> (const std::string &amp;msg)</para>
+</listitem>
+            <listitem><para>static virtual <link linkend="_class_message_object">MessageObject</link> <link linkend="_class_message_object_1a492e505739b933025fe9e7b0f8ee7aec">FromMessage</link> (const std::string &amp;msg)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле client/src/Message.h строка 27</para>
+</section>
+<section>
+<title>Методы</title>
+<anchor xml:id="_class_message_object_1a492e505739b933025fe9e7b0f8ee7aec"/>    <section>
+    <title>FromMessage()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>FromMessage</primary><secondary>MessageObject</secondary></indexterm>
+<indexterm><primary>MessageObject</primary><secondary>FromMessage</secondary></indexterm>
+<para><computeroutput>static virtual <link linkend="_class_message_object">MessageObject</link> MessageObject::FromMessage (const std::string &amp; msg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+См. определение в файле client/src/Message.h строка 35</para>
+    </section><anchor xml:id="_class_message_object_1a492e505739b933025fe9e7b0f8ee7aec"/>    <section>
+    <title>FromMessage()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>FromMessage</primary><secondary>MessageObject</secondary></indexterm>
+<indexterm><primary>MessageObject</primary><secondary>FromMessage</secondary></indexterm>
+<para><computeroutput>static virtual <link linkend="_class_message_object">MessageObject</link> MessageObject::FromMessage (const std::string &amp; msg)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+См. определение в файле server/src/Message.h строка 35</para>
+    </section><anchor xml:id="_class_message_object_1ae123b0190cfd5623d0846593bf36de72"/>    <section>
+    <title>ToMessage()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>ToMessage</primary><secondary>MessageObject</secondary></indexterm>
+<indexterm><primary>MessageObject</primary><secondary>ToMessage</secondary></indexterm>
+<para><computeroutput>virtual std::string MessageObject::ToMessage ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+См. определение в файле server/src/Message.h строка 30</para>
+    </section><anchor xml:id="_class_message_object_1ae123b0190cfd5623d0846593bf36de72"/>    <section>
+    <title>ToMessage()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>ToMessage</primary><secondary>MessageObject</secondary></indexterm>
+<indexterm><primary>MessageObject</primary><secondary>ToMessage</secondary></indexterm>
+<para><computeroutput>virtual std::string MessageObject::ToMessage ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+См. определение в файле client/src/Message.h строка 30</para>
+</section>
+<para>
+Объявления и описания членов класса находятся в файле:</para>
+<link linkend="_client_2src_2_message_8h">client/src/Message.h</link></section>
+</section>

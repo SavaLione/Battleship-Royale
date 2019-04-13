@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structdb__player">
+<title>Структура db_player</title>
+<indexterm><primary>db_player</primary></indexterm>
+<para>
+<computeroutput>#include &lt;DB.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Открытые атрибуты    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structdb__player_1adae59dcd7ab22b0e66cb829f1dc5b383">id</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structdb__player_1a182fb42d16b91d5dccc9c640bc649521">name</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structdb__player_1a44fb2105fb4d116447eee76a5494821d">password</link></para>
+</listitem>
+            <listitem><para>std::string <link linkend="_structdb__player_1abef0de717f781b401effd7d3c35550c2">reg_date</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structdb__player_1a49a7074936df50c10ce3573663e902bc">score</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structdb__player_1a11f7c74a3d7b7f6c91f5ac6823c848af">money</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structdb__player_1a87ec3fa495482d1018974f2694430156">level</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+<para>
+См. определение в файле DB.h строка 9</para>
+</section>
+<section>
+<title>Данные класса</title>
+<anchor xml:id="_structdb__player_1adae59dcd7ab22b0e66cb829f1dc5b383"/>    <section>
+    <title>id</title>
+<indexterm><primary>id</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>id</secondary></indexterm>
+<para><computeroutput>int db_player::id</computeroutput></para><para>
+См. определение в файле DB.h строка 12</para>
+    </section><anchor xml:id="_structdb__player_1a87ec3fa495482d1018974f2694430156"/>    <section>
+    <title>level</title>
+<indexterm><primary>level</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>level</secondary></indexterm>
+<para><computeroutput>int db_player::level</computeroutput></para><para>
+См. определение в файле DB.h строка 35</para>
+    </section><anchor xml:id="_structdb__player_1a11f7c74a3d7b7f6c91f5ac6823c848af"/>    <section>
+    <title>money</title>
+<indexterm><primary>money</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>money</secondary></indexterm>
+<para><computeroutput>int db_player::money</computeroutput></para><para>
+См. определение в файле DB.h строка 27</para>
+    </section><anchor xml:id="_structdb__player_1a182fb42d16b91d5dccc9c640bc649521"/>    <section>
+    <title>name</title>
+<indexterm><primary>name</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>name</secondary></indexterm>
+<para><computeroutput>std::string db_player::name</computeroutput></para><para>
+См. определение в файле DB.h строка 15</para>
+    </section><anchor xml:id="_structdb__player_1a44fb2105fb4d116447eee76a5494821d"/>    <section>
+    <title>password</title>
+<indexterm><primary>password</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>password</secondary></indexterm>
+<para><computeroutput>std::string db_player::password</computeroutput></para><para>
+См. определение в файле DB.h строка 18</para>
+    </section><anchor xml:id="_structdb__player_1abef0de717f781b401effd7d3c35550c2"/>    <section>
+    <title>reg_date</title>
+<indexterm><primary>reg_date</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>reg_date</secondary></indexterm>
+<para><computeroutput>std::string db_player::reg_date</computeroutput></para><para>
+См. определение в файле DB.h строка 21</para>
+    </section><anchor xml:id="_structdb__player_1a49a7074936df50c10ce3573663e902bc"/>    <section>
+    <title>score</title>
+<indexterm><primary>score</primary><secondary>db_player</secondary></indexterm>
+<indexterm><primary>db_player</primary><secondary>score</secondary></indexterm>
+<para><computeroutput>int db_player::score</computeroutput></para><para>
+См. определение в файле DB.h строка 24</para>
+</section>
+<para>
+Объявления и описания членов структуры находятся в файле:</para>
+<link linkend="__d_b_8h">DB.h</link></section>
+</section>
