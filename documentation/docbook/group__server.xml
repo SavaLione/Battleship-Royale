@@ -21,6 +21,10 @@
         <itemizedlist>
             <listitem><para><link linkend="_group__battleshiproyalecpp">BattleShiproyale.cpp</link></para>
 </listitem>
+            <listitem><para><link linkend="_group__rand__ssecpp">rand_sse.cpp</link></para>
+</listitem>
+            <listitem><para><link linkend="_group__rand__sseh">rand_sse.h</link></para>
+</listitem>
             <listitem><para><link linkend="_group__regexcpp">Regex.cpp</link></para>
 </listitem>
             <listitem><para><link linkend="_group__regexh">Regex.h</link></para>

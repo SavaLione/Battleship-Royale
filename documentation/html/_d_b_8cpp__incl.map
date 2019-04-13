@@ -7,6 +7,6 @@
 <area shape="rect" id="node6" title=" " alt="" coords="455,87,541,114"/>
 <area shape="rect" id="node7" href="$_d_b_8h.html" title=" " alt="" coords="565,87,615,114"/>
 <area shape="rect" id="node9" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="587,169,718,196"/>
-<area shape="rect" id="node10" href="$rand__sse_8h.html" title=" " alt="" coords="691,87,777,114"/>
+<area shape="rect" id="node10" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="691,87,777,114"/>
 <area shape="rect" id="node8" title=" " alt="" coords="492,169,563,196"/>
 </map>

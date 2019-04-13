@@ -228,7 +228,7 @@
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"></highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>RandSSE<sp/>Seed<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f" kindref="member">srand_sse</ref>(time(NULL));</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f" kindref="member">srand_sse</ref>(time(NULL));</highlight></codeline>
 <codeline lineno="89"><highlight class="normal"></highlight></codeline>
 <codeline lineno="90"><highlight class="normal"></highlight><highlight class="preprocessor">#ifdef<sp/>_OPENMP</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>

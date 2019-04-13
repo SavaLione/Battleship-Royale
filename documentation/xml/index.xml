@@ -192,15 +192,15 @@
   <compound refid="server_2src_2_message_8h" kind="file"><name>server/src/Message.h</name>
   </compound>
   <compound refid="rand__sse_8cpp" kind="file"><name>rand_sse.cpp</name>
-    <member refid="rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119" kind="define"><name>_ALIGN</name></member>
-    <member refid="rand__sse_8cpp_1a9ee2a8dd6d9ca58a791ccb2dc6f9a26c" kind="function"><name>_ALIGN</name></member>
-    <member refid="rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
-    <member refid="rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
+    <member refid="group__rand__ssecpp_1gae2c66d1d7db5adf0c1853960e2be1119" kind="define"><name>_ALIGN</name></member>
+    <member refid="group__rand__ssecpp_1ga8217292e4775144512e0e4dbc637c970" kind="variable"><name>cur_seed</name></member>
+    <member refid="group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
   </compound>
   <compound refid="rand__sse_8h" kind="file"><name>rand_sse.h</name>
-    <member refid="rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768" kind="define"><name>COMPATABILITY</name></member>
-    <member refid="rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
-    <member refid="rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43" kind="function"><name>rand_sse</name></member>
+    <member refid="group__rand__sseh_1ga63986cff5b50815b213aa8d6a9ab8768" kind="define"><name>COMPATABILITY</name></member>
+    <member refid="group__rand__sseh_1ga80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="group__rand__sseh_1gab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
   </compound>
   <compound refid="asio_2regex_2regex_8cpp" kind="file"><name>asio/regex/regex.cpp</name>
     <member refid="asio_2regex_2regex_8cpp_1ae1a3968e7947464bee7714f6d43b7002" kind="function"><name>test</name></member>
@@ -239,6 +239,17 @@
   </compound>
   <compound refid="group__battleshiproyalecpp" kind="group"><name>battleshiproyalecpp</name>
     <member refid="group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="group__rand__ssecpp" kind="group"><name>rand_ssecpp</name>
+    <member refid="group__rand__ssecpp_1ga8217292e4775144512e0e4dbc637c970" kind="variable"><name>cur_seed</name></member>
+    <member refid="group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
+    <member refid="group__rand__ssecpp_1gae2c66d1d7db5adf0c1853960e2be1119" kind="define"><name>_ALIGN</name></member>
+  </compound>
+  <compound refid="group__rand__sseh" kind="group"><name>rand_sseh</name>
+    <member refid="group__rand__sseh_1ga80db1a2aa7de7edf52b9c60e101d556f" kind="function"><name>srand_sse</name></member>
+    <member refid="group__rand__sseh_1gab7ae3ab6c8fb3e31548413dd0154db7d" kind="function"><name>rand_sse</name></member>
+    <member refid="group__rand__sseh_1ga63986cff5b50815b213aa8d6a9ab8768" kind="define"><name>COMPATABILITY</name></member>
   </compound>
   <compound refid="group__regexcpp" kind="group"><name>regexcpp</name>
     <member refid="group__regexcpp_1gac4882c93b963bd53fd60978a9661fa30" kind="function"><name>check_pattern</name></member>

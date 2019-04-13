@@ -4,11 +4,10 @@ var indexSectionsWithContent =
   1: "cdlmpsu",
   2: "b",
   3: "abcdrs",
-  4: "_cdfghimrstu~",
+  4: "cdfghimrstu~",
   5: "cdilmnprsu",
   6: "p",
-  7: "_c",
-  8: "bcrs"
+  7: "bcrs"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "defines",
-  8: "groups"
+  7: "groups"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "Функции",
   5: "Переменные",
   6: "Определения типов",
-  7: "Макросы",
-  8: "Группы"
+  7: "Группы"
 };
 

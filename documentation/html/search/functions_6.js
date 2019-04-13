@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['isconnected',['IsConnected',['../class_server_link.html#a2f551c4fffbedab55adab3d528df0f0c',1,'ServerLink']]],
-  ['isreading',['IsReading',['../class_server_link.html#a9cdc703cdda0ff80c49434d483654d7e',1,'ServerLink']]],
-  ['issending',['IsSending',['../class_server_link.html#ab79487df49a22e5533c96032ef413e16',1,'ServerLink']]]
+  ['main',['main',['../client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;client.cpp'],['../asio_2regex_2regex_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;regex.cpp'],['../async_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;async.cpp'],['../client_2src_2_battleship_royale_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;BattleshipRoyale.cpp'],['../group__battleshiproyalecpp.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;BattleshipRoyale.cpp']]],
+  ['message',['Message',['../class_server_link.html#a712791c09323fcf6db49ceb0a10f8d9c',1,'ServerLink::Message()'],['../class_message.html#ab24cdb2c9890d77e46a333f157e4f66d',1,'Message::Message(MessageObject obj)'],['../class_message.html#ab24cdb2c9890d77e46a333f157e4f66d',1,'Message::Message(MessageObject obj)']]]
 ];

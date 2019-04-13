@@ -11,7 +11,7 @@ var searchData=
   ['client_5fversion_5fpatch',['CLIENT_VERSION_PATCH',['../namespace_b_r.html#a35ec7e796e49c1a6b87e73c07d643378',1,'BR']]],
   ['co_5fuid',['co_uid',['../struct_u_i_d.html#acf7ef2a71d9a80e890f911425e46d7f0',1,'UID']]],
   ['code',['code',['../class_message.html#a23a66db51f9ec75f727b0838c5d65a55',1,'Message']]],
-  ['compatability',['COMPATABILITY',['../rand__sse_8h.html#a63986cff5b50815b213aa8d6a9ab8768',1,'rand_sse.h']]],
+  ['compatability',['COMPATABILITY',['../group__rand__sseh.html#ga63986cff5b50815b213aa8d6a9ab8768',1,'rand_sse.h']]],
   ['con_5fhandler',['con_handler',['../classcon__handler.html',1,'con_handler'],['../classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa',1,'con_handler::con_handler(boost::asio::io_service &amp;io_service)'],['../classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa',1,'con_handler::con_handler(boost::asio::io_service &amp;io_service)']]],
   ['coockie',['Coockie',['../struct_coockie.html',1,'']]],
   ['create',['create',['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create(boost::asio::io_service &amp;io_service)'],['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create(boost::asio::io_service &amp;io_service)']]],

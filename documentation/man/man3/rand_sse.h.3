@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-rand_sse.h
+rand_sse.h \- Генерация рандомных чисел через SSE\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -19,26 +20,31 @@ rand_sse.h
 .ti -1c
 .RI "void \fBsrand_sse\fP (unsigned int seed)"
 .br
+.RI "Задать seed\&. "
 .ti -1c
-.RI "void \fBrand_sse\fP (unsigned int *)"
+.RI "void \fBrand_sse\fP (unsigned int *result)"
 .br
+.RI "Получение вектора с случайными числами "
 .in -1c
-.SH "Макросы"
+.SH "Подробное описание"
 .PP 
-.SS "#define COMPATABILITY"
+Генерация рандомных чисел через SSE\&. 
+
 
 .PP
-См\&. определение в файле rand_sse\&.h строка 30
-.SH "Функции"
-.PP 
-.SS "void rand_sse (unsigned int *)"
+\fBАвтор:\fP
+.RS 4
+Kipp Owens, Rajiv Parikh, SavaLione 
+.RE
+.PP
+\fBДата:\fP
+.RS 4
+13 Apr 2019 
+.RE
+.PP
 
 .PP
-См\&. определение в файле rand_sse\&.cpp строка 19
-.SS "void srand_sse (unsigned int seed)"
-
-.PP
-См\&. определение в файле rand_sse\&.cpp строка 14
+См\&. определение в файле \fBrand_sse\&.h\fP
 .SH "Автор"
 .PP 
 Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

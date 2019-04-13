@@ -1,6 +1,8 @@
 <map id="Server" name="Server">
-<area shape="rect" id="node1" title="Сервер" alt="" coords="5,55,64,80"/>
-<area shape="rect" id="node2" href="$group__regexh.html" title=" " alt="" coords="148,5,219,31"/>
-<area shape="rect" id="node3" href="$group__battleshiproyalecpp.html" title=" " alt="" coords="112,55,255,80"/>
-<area shape="rect" id="node4" href="$group__regexcpp.html" title=" " alt="" coords="141,104,225,129"/>
+<area shape="rect" id="node1" title="Сервер" alt="" coords="5,104,64,129"/>
+<area shape="rect" id="node2" href="$group__rand__ssecpp.html" title=" " alt="" coords="133,5,233,31"/>
+<area shape="rect" id="node3" href="$group__regexh.html" title=" " alt="" coords="148,55,219,80"/>
+<area shape="rect" id="node4" href="$group__rand__sseh.html" title=" " alt="" coords="140,104,227,129"/>
+<area shape="rect" id="node5" href="$group__battleshiproyalecpp.html" title=" " alt="" coords="112,153,255,179"/>
+<area shape="rect" id="node6" href="$group__regexcpp.html" title=" " alt="" coords="141,203,225,228"/>
 </map>

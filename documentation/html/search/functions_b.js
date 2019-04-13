@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['uid_5fget_5fnp',['uid_get_np',['../class_d_b.html#a5acc70d365de65365c861533a2b755c3',1,'DB::uid_get_np(login *l)'],['../class_d_b.html#a9c55abcaab4db2b421bf72c968a818a4',1,'DB::uid_get_np(login *l, int *id)']]]
+  ['_7econ_5fhandler',['~con_handler',['../classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f',1,'con_handler::~con_handler()'],['../classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f',1,'con_handler::~con_handler()']]],
+  ['_7edb',['~DB',['../class_d_b.html#a7bd1418f67b11d0f752537123e7e6d28',1,'DB']]],
+  ['_7eserver',['~Server',['../class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server::~Server()'],['../class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server::~Server()']]]
 ];

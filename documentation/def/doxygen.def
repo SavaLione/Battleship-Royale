@@ -3353,7 +3353,7 @@ file = {
     define = {
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'rand__sse_8cpp_1ae2c66d1d7db5adf0c1853960e2be1119';
+      define-mem-id   = 'group__rand__ssecpp_1gae2c66d1d7db5adf0c1853960e2be1119';
       define-mem-virt = normal;
       define-mem-prot = public;
       define-mem-name = '_ALIGN';
@@ -3364,7 +3364,7 @@ file = {
 __declspec(align(N))
 _EnD_oF_dEf_TeXt_;
       define-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
-      define-mem-desc-line = '8';
+      define-mem-desc-line = '44';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -3376,30 +3376,7 @@ _EnD_oF_dEf_TeXt_;
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'rand__sse_8cpp_1a9ee2a8dd6d9ca58a791ccb2dc6f9a26c';
-      func-mem-virt = normal;
-      func-mem-prot = public;
-      func-mem-type = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      func-mem-name = '_ALIGN';
-      func-mem-param = {
-        func-mem-param-type = <<_EnD_oF_dEf_TeXt_
-16
-_EnD_oF_dEf_TeXt_;
-      }; /*        func-mem-param--param */
-      func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
-      func-mem-desc-line = '12';
-      func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-      func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
-_EnD_oF_dEf_TeXt_;
-    }; /* func-member */
-    func-member = {
-      func-mem-kind = 'function';
-      func-mem-id   = 'rand__sse_8cpp_1a80db1a2aa7de7edf52b9c60e101d556f';
+      func-mem-id   = 'group__rand__ssecpp_1ga80db1a2aa7de7edf52b9c60e101d556f';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3413,17 +3390,20 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'seed';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
-      func-mem-desc-line = '14';
+      func-mem-desc-line = '57';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Задать seed.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@code 
+     srand_sse(time(NULL));
+@endcode
+@param [in] seed Seed
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d';
+      func-mem-id   = 'group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3437,22 +3417,47 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'result';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
-      func-mem-desc-line = '19';
+      func-mem-desc-line = '70';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение вектора с случайными числами
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@code 
+     unsigned int u_i_random[4];
+     rand_sse(u_i_random);
+@endcode
+@param [out] result вектор с случайными числами
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
+    };
+    var = {
+    var-member = {
+      var-mem-kind = 'variable';
+      var-mem-id   = 'group__rand__ssecpp_1ga8217292e4775144512e0e4dbc637c970';
+      var-mem-virt = normal;
+      var-mem-prot = public;
+      var-mem-type = <<_EnD_oF_dEf_TeXt_
+static __m128i
+_EnD_oF_dEf_TeXt_;
+      var-mem-name = 'cur_seed';
+      var-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
+      var-mem-desc-line = '48';
+      var-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+      var-mem-documentation = <<_EnD_oF_dEf_TeXt_
+
+_EnD_oF_dEf_TeXt_;
+    }; /* var-member */
     };
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Генерация рандомных чисел через SSE.
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author Kipp Owens, Rajiv Parikh, SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -3461,12 +3466,12 @@ file = {
     define = {
     define-member = {
       define-mem-kind = 'define';
-      define-mem-id   = 'rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768';
+      define-mem-id   = 'group__rand__sseh_1ga63986cff5b50815b213aa8d6a9ab8768';
       define-mem-virt = normal;
       define-mem-prot = public;
       define-mem-name = 'COMPATABILITY';
       define-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.h';
-      define-mem-desc-line = '30';
+      define-mem-desc-line = '40';
       define-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -3478,7 +3483,7 @@ _EnD_oF_dEf_TeXt_;
     func = {
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f';
+      func-mem-id   = 'group__rand__sseh_1ga80db1a2aa7de7edf52b9c60e101d556f';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3492,17 +3497,20 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-declname = 'seed';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.h';
-      func-mem-desc-line = '32';
+      func-mem-desc-line = '49';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Задать seed.
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@code 
+     srand_sse(time(NULL));
+@endcode
+@param [in] seed Seed
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     func-member = {
       func-mem-kind = 'function';
-      func-mem-id   = 'rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43';
+      func-mem-id   = 'group__rand__sseh_1gab7ae3ab6c8fb3e31548413dd0154db7d';
       func-mem-virt = normal;
       func-mem-prot = public;
       func-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -3513,24 +3521,30 @@ _EnD_oF_dEf_TeXt_;
         func-mem-param-type = <<_EnD_oF_dEf_TeXt_
 unsigned int *
 _EnD_oF_dEf_TeXt_;
+        func-mem-param-declname = 'result';
       }; /*        func-mem-param--param */
       func-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.h';
-      func-mem-desc-line = '33';
+      func-mem-desc-line = '59';
       func-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Получение вектора с случайными числами
 _EnD_oF_dEf_TeXt_;
       func-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@code 
+     unsigned int u_i_random[4];
+     rand_sse(u_i_random);
+@endcode
+@param [out] result вектор с случайными числами
 _EnD_oF_dEf_TeXt_;
     }; /* func-member */
     };
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/rand_sse.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Генерация рандомных чисел через SSE.
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author Kipp Owens, Rajiv Parikh, SavaLione
+@date 13 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {

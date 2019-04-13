@@ -23,13 +23,40 @@
 // Version 0.1
 // Author Kipp Owens, Rajiv Parikh
 ////////////////////////////////////////////////////////////////////////
-
+/**
+ * @file
+ * @brief Генерация рандомных чисел через SSE
+ * @author Kipp Owens, Rajiv Parikh, SavaLione
+ * @date 13 Apr 2019
+*/
+/**
+ * @defgroup rand_sseh rand_sse.h
+ * @ingroup server
+ * @{
+*/
 #ifndef RAND_SSE_H
 #define RAND_SSE_H
 
 #define COMPATABILITY
-//define this if you wish to return values similar to the standard rand();
+
+/**
+ * @brief Задать seed
+ * @code
+ *      srand_sse(time(NULL));
+ * @endcode
+ * @param [in] seed Seed
+*/
 void srand_sse( unsigned int seed );
-void rand_sse( unsigned int* );
+
+/**
+ * @brief Получение вектора с случайными числами
+ * @code
+ *      unsigned int u_i_random[4];
+ *      rand_sse(u_i_random);
+ * @endcode
+ * @param [out] result вектор с случайными числами
+*/
+void rand_sse( unsigned int* result);
 
 #endif // RAND_SSE_H
+/** @} */

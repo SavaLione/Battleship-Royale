@@ -73,86 +73,38 @@ $(function() {
 <div class="title">Файл rand_sse.h</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Генерация рандомных чисел через SSE.  
+<a href="#details">Подробнее...</a></p>
 <div class="textblock"><div class="dynheader">
 Граф файлов, в которые включается этот файл:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="rand__sse_8h__dep__incl.svg" width="370" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="rand__sse_8h__dep__incl.svg" width="370" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="rand__sse_8h_source.html">См. исходные тексты.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Макросы</h2></td></tr>
-<tr class="memitem:a63986cff5b50815b213aa8d6a9ab8768"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rand__sse_8h.html#a63986cff5b50815b213aa8d6a9ab8768">COMPATABILITY</a></td></tr>
-<tr class="separator:a63986cff5b50815b213aa8d6a9ab8768"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga63986cff5b50815b213aa8d6a9ab8768"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rand__sseh.html#ga63986cff5b50815b213aa8d6a9ab8768">COMPATABILITY</a></td></tr>
+<tr class="separator:ga63986cff5b50815b213aa8d6a9ab8768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
-<tr class="memitem:a80db1a2aa7de7edf52b9c60e101d556f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rand__sse_8h.html#a80db1a2aa7de7edf52b9c60e101d556f">srand_sse</a> (unsigned int seed)</td></tr>
-<tr class="separator:a80db1a2aa7de7edf52b9c60e101d556f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f3734d5a427fe327ece2674dca9ec43"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="rand__sse_8h.html#a4f3734d5a427fe327ece2674dca9ec43">rand_sse</a> (unsigned int *)</td></tr>
-<tr class="separator:a4f3734d5a427fe327ece2674dca9ec43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga80db1a2aa7de7edf52b9c60e101d556f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rand__sseh.html#ga80db1a2aa7de7edf52b9c60e101d556f">srand_sse</a> (unsigned int seed)</td></tr>
+<tr class="memdesc:ga80db1a2aa7de7edf52b9c60e101d556f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Задать seed.  <a href="group__rand__sseh.html#ga80db1a2aa7de7edf52b9c60e101d556f">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga80db1a2aa7de7edf52b9c60e101d556f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7ae3ab6c8fb3e31548413dd0154db7d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__rand__sseh.html#gab7ae3ab6c8fb3e31548413dd0154db7d">rand_sse</a> (unsigned int *result)</td></tr>
+<tr class="memdesc:gab7ae3ab6c8fb3e31548413dd0154db7d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение вектора с случайными числами  <a href="group__rand__sseh.html#gab7ae3ab6c8fb3e31548413dd0154db7d">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab7ae3ab6c8fb3e31548413dd0154db7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Макросы</h2>
-<a id="a63986cff5b50815b213aa8d6a9ab8768"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a63986cff5b50815b213aa8d6a9ab8768">&#9670;&nbsp;</a></span>COMPATABILITY</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Генерация рандомных чисел через SSE. </p>
+<dl class="section author"><dt>Автор</dt><dd>Kipp Owens, Rajiv Parikh, SavaLione </dd></dl>
+<dl class="section date"><dt>Дата</dt><dd>13 Apr 2019 </dd></dl>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define COMPATABILITY</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">См. определение в файле <a class="el" href="rand__sse_8h_source.html">rand_sse.h</a> строка <a class="el" href="rand__sse_8h_source.html#l00030">30</a></p>
-
-</div>
-</div>
-<h2 class="groupheader">Функции</h2>
-<a id="a4f3734d5a427fe327ece2674dca9ec43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f3734d5a427fe327ece2674dca9ec43">&#9670;&nbsp;</a></span>rand_sse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rand_sse </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int *&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">См. определение в файле <a class="el" href="rand__sse_8cpp_source.html">rand_sse.cpp</a> строка <a class="el" href="rand__sse_8cpp_source.html#l00019">19</a></p>
-
-</div>
-</div>
-<a id="a80db1a2aa7de7edf52b9c60e101d556f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a80db1a2aa7de7edf52b9c60e101d556f">&#9670;&nbsp;</a></span>srand_sse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void srand_sse </td>
-          <td>(</td>
-          <td class="paramtype">unsigned int&#160;</td>
-          <td class="paramname"><em>seed</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">См. определение в файле <a class="el" href="rand__sse_8cpp_source.html">rand_sse.cpp</a> строка <a class="el" href="rand__sse_8cpp_source.html#l00014">14</a></p>
-
-</div>
-</div>
-</div><!-- contents -->
+<p class="definition">См. определение в файле <a class="el" href="rand__sse_8h_source.html">rand_sse.h</a></p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Создано системой &#160;<a href="http://www.doxygen.org/index.html">

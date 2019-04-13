@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-rand_sse.cpp
+rand_sse.cpp \- Генерация рандомных чисел через SSE\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -22,33 +23,33 @@ rand_sse.cpp
 
 .in +1c
 .ti -1c
-.RI "\fB_ALIGN\fP (16) static __m128i cur_seed"
-.br
-.ti -1c
 .RI "void \fBsrand_sse\fP (unsigned int seed)"
 .br
+.RI "Задать seed\&. "
 .ti -1c
 .RI "void \fBrand_sse\fP (unsigned int *result)"
 .br
+.RI "Получение вектора с случайными числами "
 .in -1c
-.SH "Макросы"
+.SH "Подробное описание"
 .PP 
-.SS "#define _ALIGN(N)   __declspec(align(N))"
+Генерация рандомных чисел через SSE\&. 
+
 
 .PP
-См\&. определение в файле rand_sse\&.cpp строка 8
-.SH "Функции"
-.PP 
-.SS "_ALIGN (16)"
-
-.SS "void rand_sse (unsigned int * result)"
+\fBАвтор:\fP
+.RS 4
+Kipp Owens, Rajiv Parikh, SavaLione 
+.RE
+.PP
+\fBДата:\fP
+.RS 4
+13 Apr 2019 
+.RE
+.PP
 
 .PP
-См\&. определение в файле rand_sse\&.cpp строка 19
-.SS "void srand_sse (unsigned int seed)"
-
-.PP
-См\&. определение в файле rand_sse\&.cpp строка 14
+См\&. определение в файле \fBrand_sse\&.cpp\fP
 .SH "Автор"
 .PP 
 Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

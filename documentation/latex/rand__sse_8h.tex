@@ -1,7 +1,11 @@
 \hypertarget{rand__sse_8h}{}\section{Файл rand\+\_\+sse.\+h}
 \label{rand__sse_8h}\index{rand\_sse.h@{rand\_sse.h}}
-Граф файлов, в которые включается этот файл\+:
-\nopagebreak
+
+
+Генерация рандомных чисел через S\+SE.  
+
+
+Граф файлов, в которые включается этот файл\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,48 +15,23 @@
 \subsection*{Макросы}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{rand__sse_8h_a63986cff5b50815b213aa8d6a9ab8768}{C\+O\+M\+P\+A\+T\+A\+B\+I\+L\+I\+TY}}
+\#define \mbox{\hyperlink{group__rand__sseh_ga63986cff5b50815b213aa8d6a9ab8768}{C\+O\+M\+P\+A\+T\+A\+B\+I\+L\+I\+TY}}
 \end{DoxyCompactItemize}
 \subsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{rand__sse_8h_a80db1a2aa7de7edf52b9c60e101d556f}{srand\+\_\+sse}} (unsigned int seed)
-\item 
-void \mbox{\hyperlink{rand__sse_8h_a4f3734d5a427fe327ece2674dca9ec43}{rand\+\_\+sse}} (unsigned int $\ast$)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{group__rand__sseh_ga80db1a2aa7de7edf52b9c60e101d556f}{srand\+\_\+sse}} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em Задать seed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__rand__sseh_gab7ae3ab6c8fb3e31548413dd0154db7d}{rand\+\_\+sse}} (unsigned int $\ast$result)
+\begin{DoxyCompactList}\small\item\em Получение вектора с случайными числами \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Макросы}
-\mbox{\Hypertarget{rand__sse_8h_a63986cff5b50815b213aa8d6a9ab8768}\label{rand__sse_8h_a63986cff5b50815b213aa8d6a9ab8768}} 
-\index{rand\_sse.h@{rand\_sse.h}!COMPATABILITY@{COMPATABILITY}}
-\index{COMPATABILITY@{COMPATABILITY}!rand\_sse.h@{rand\_sse.h}}
-\subsubsection{\texorpdfstring{COMPATABILITY}{COMPATABILITY}}
-{\footnotesize\ttfamily \#define C\+O\+M\+P\+A\+T\+A\+B\+I\+L\+I\+TY}
+\subsection{Подробное описание}
+Генерация рандомных чисел через S\+SE. 
 
-
-
-См. определение в файле rand\+\_\+sse.\+h строка 30
-
-
-
-\subsection{Функции}
-\mbox{\Hypertarget{rand__sse_8h_a4f3734d5a427fe327ece2674dca9ec43}\label{rand__sse_8h_a4f3734d5a427fe327ece2674dca9ec43}} 
-\index{rand\_sse.h@{rand\_sse.h}!rand\_sse@{rand\_sse}}
-\index{rand\_sse@{rand\_sse}!rand\_sse.h@{rand\_sse.h}}
-\subsubsection{\texorpdfstring{rand\_sse()}{rand\_sse()}}
-{\footnotesize\ttfamily void rand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{ }\end{DoxyParamCaption})}
-
-
-
-См. определение в файле rand\+\_\+sse.\+cpp строка 19
-
-\mbox{\Hypertarget{rand__sse_8h_a80db1a2aa7de7edf52b9c60e101d556f}\label{rand__sse_8h_a80db1a2aa7de7edf52b9c60e101d556f}} 
-\index{rand\_sse.h@{rand\_sse.h}!srand\_sse@{srand\_sse}}
-\index{srand\_sse@{srand\_sse}!rand\_sse.h@{rand\_sse.h}}
-\subsubsection{\texorpdfstring{srand\_sse()}{srand\_sse()}}
-{\footnotesize\ttfamily void srand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
-
-
-
-См. определение в файле rand\+\_\+sse.\+cpp строка 14
-
+\begin{DoxyAuthor}{Автор}
+Kipp Owens, Rajiv Parikh, Sava\+Lione 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+13 Apr 2019 
+\end{DoxyDate}

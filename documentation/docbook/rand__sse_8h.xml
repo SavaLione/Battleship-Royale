@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rand__sse_8h">
 <title>Файл rand_sse.h</title>
 <indexterm><primary>rand_sse.h</primary></indexterm>
+<para>
+
+<para>Генерация рандомных чисел через SSE. </para>
+ 
+</para>
 Граф файлов, в которые включается этот файл:<para>
     <informalfigure>
         <mediaobject>
@@ -14,43 +19,36 @@
 <simplesect>
     <title>Макросы    </title>
         <itemizedlist>
-            <listitem><para>#define <link linkend="_rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768">COMPATABILITY</link></para>
+            <listitem><para>#define <link linkend="_group__rand__sseh_1ga63986cff5b50815b213aa8d6a9ab8768">COMPATABILITY</link></para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <simplesect>
     <title>Функции    </title>
         <itemizedlist>
-            <listitem><para>void <link linkend="_rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f">srand_sse</link> (unsigned int seed)</para>
+            <listitem><para>void <link linkend="_group__rand__sseh_1ga80db1a2aa7de7edf52b9c60e101d556f">srand_sse</link> (unsigned int seed)</para>
+
+<para>Задать seed. </para>
 </listitem>
-            <listitem><para>void <link linkend="_rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43">rand_sse</link> (unsigned int *)</para>
+            <listitem><para>void <link linkend="_group__rand__sseh_1gab7ae3ab6c8fb3e31548413dd0154db7d">rand_sse</link> (unsigned int *result)</para>
+
+<para>Получение вектора с случайными числами </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
-<title>Макросы</title>
-<anchor xml:id="_rand__sse_8h_1a63986cff5b50815b213aa8d6a9ab8768"/>    <section>
-    <title>COMPATABILITY</title>
-<indexterm><primary>COMPATABILITY</primary><secondary>rand_sse.h</secondary></indexterm>
-<indexterm><primary>rand_sse.h</primary><secondary>COMPATABILITY</secondary></indexterm>
-<para><computeroutput>#define COMPATABILITY</computeroutput></para><para>
-См. определение в файле rand_sse.h строка 30</para>
-</section>
-</section>
-<section>
-<title>Функции</title>
-<anchor xml:id="_rand__sse_8h_1a4f3734d5a427fe327ece2674dca9ec43"/>    <section>
-    <title>rand_sse()</title>
-<indexterm><primary>rand_sse</primary><secondary>rand_sse.h</secondary></indexterm>
-<indexterm><primary>rand_sse.h</primary><secondary>rand_sse</secondary></indexterm>
-<para><computeroutput>void rand_sse (unsigned int * )</computeroutput></para><para>
-См. определение в файле rand_sse.cpp строка 19</para>
-    </section><anchor xml:id="_rand__sse_8h_1a80db1a2aa7de7edf52b9c60e101d556f"/>    <section>
-    <title>srand_sse()</title>
-<indexterm><primary>srand_sse</primary><secondary>rand_sse.h</secondary></indexterm>
-<indexterm><primary>rand_sse.h</primary><secondary>srand_sse</secondary></indexterm>
-<para><computeroutput>void srand_sse (unsigned int seed)</computeroutput></para><para>
-См. определение в файле rand_sse.cpp строка 14</para>
-</section>
+<title>Подробное описание</title>
+
+<para>Генерация рандомных чисел через SSE. </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>Kipp Owens, Rajiv Parikh, SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>13 Apr 2019 </para>
+</formalpara>
+</para>
 </section>
 </section>

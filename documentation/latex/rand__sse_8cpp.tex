@@ -1,5 +1,10 @@
 \hypertarget{rand__sse_8cpp}{}\section{Файл rand\+\_\+sse.\+cpp}
 \label{rand__sse_8cpp}\index{rand\_sse.cpp@{rand\_sse.cpp}}
+
+
+Генерация рандомных чисел через S\+SE.  
+
+
 {\ttfamily \#include \char`\"{}emmintrin.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}rand\+\_\+sse.\+h\char`\"{}}\newline
 Граф включаемых заголовочных файлов для rand\+\_\+sse.\+cpp\+:\nopagebreak
@@ -12,56 +17,23 @@
 \subsection*{Макросы}
 \begin{DoxyCompactItemize}
 \item 
-\#define \mbox{\hyperlink{rand__sse_8cpp_ae2c66d1d7db5adf0c1853960e2be1119}{\+\_\+\+A\+L\+I\+GN}}(N)~\+\_\+\+\_\+declspec(align(N))
+\#define \mbox{\hyperlink{group__rand__ssecpp_gae2c66d1d7db5adf0c1853960e2be1119}{\+\_\+\+A\+L\+I\+GN}}(N)~\+\_\+\+\_\+declspec(align(N))
 \end{DoxyCompactItemize}
 \subsection*{Функции}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{rand__sse_8cpp_a9ee2a8dd6d9ca58a791ccb2dc6f9a26c}{\+\_\+\+A\+L\+I\+GN}} (16) static \+\_\+\+\_\+m128i cur\+\_\+seed
-\item 
-void \mbox{\hyperlink{rand__sse_8cpp_a80db1a2aa7de7edf52b9c60e101d556f}{srand\+\_\+sse}} (unsigned int seed)
-\item 
-void \mbox{\hyperlink{rand__sse_8cpp_ab7ae3ab6c8fb3e31548413dd0154db7d}{rand\+\_\+sse}} (unsigned int $\ast$result)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{group__rand__ssecpp_ga80db1a2aa7de7edf52b9c60e101d556f}{srand\+\_\+sse}} (unsigned int seed)
+\begin{DoxyCompactList}\small\item\em Задать seed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__rand__ssecpp_gab7ae3ab6c8fb3e31548413dd0154db7d}{rand\+\_\+sse}} (unsigned int $\ast$result)
+\begin{DoxyCompactList}\small\item\em Получение вектора с случайными числами \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-\subsection{Макросы}
-\mbox{\Hypertarget{rand__sse_8cpp_ae2c66d1d7db5adf0c1853960e2be1119}\label{rand__sse_8cpp_ae2c66d1d7db5adf0c1853960e2be1119}} 
-\index{rand\_sse.cpp@{rand\_sse.cpp}!\_ALIGN@{\_ALIGN}}
-\index{\_ALIGN@{\_ALIGN}!rand\_sse.cpp@{rand\_sse.cpp}}
-\subsubsection{\texorpdfstring{\_ALIGN}{\_ALIGN}}
-{\footnotesize\ttfamily \#define \+\_\+\+A\+L\+I\+GN(\begin{DoxyParamCaption}\item[{}]{N }\end{DoxyParamCaption})~\+\_\+\+\_\+declspec(align(N))}
+\subsection{Подробное описание}
+Генерация рандомных чисел через S\+SE. 
 
-
-
-См. определение в файле rand\+\_\+sse.\+cpp строка 8
-
-
-
-\subsection{Функции}
-\mbox{\Hypertarget{rand__sse_8cpp_a9ee2a8dd6d9ca58a791ccb2dc6f9a26c}\label{rand__sse_8cpp_a9ee2a8dd6d9ca58a791ccb2dc6f9a26c}} 
-\index{rand\_sse.cpp@{rand\_sse.cpp}!\_ALIGN@{\_ALIGN}}
-\index{\_ALIGN@{\_ALIGN}!rand\_sse.cpp@{rand\_sse.cpp}}
-\subsubsection{\texorpdfstring{\_ALIGN()}{\_ALIGN()}}
-{\footnotesize\ttfamily \+\_\+\+A\+L\+I\+GN (\begin{DoxyParamCaption}\item[{16}]{ }\end{DoxyParamCaption})}
-
-\mbox{\Hypertarget{rand__sse_8cpp_ab7ae3ab6c8fb3e31548413dd0154db7d}\label{rand__sse_8cpp_ab7ae3ab6c8fb3e31548413dd0154db7d}} 
-\index{rand\_sse.cpp@{rand\_sse.cpp}!rand\_sse@{rand\_sse}}
-\index{rand\_sse@{rand\_sse}!rand\_sse.cpp@{rand\_sse.cpp}}
-\subsubsection{\texorpdfstring{rand\_sse()}{rand\_sse()}}
-{\footnotesize\ttfamily void rand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{result }\end{DoxyParamCaption})}
-
-
-
-См. определение в файле rand\+\_\+sse.\+cpp строка 19
-
-\mbox{\Hypertarget{rand__sse_8cpp_a80db1a2aa7de7edf52b9c60e101d556f}\label{rand__sse_8cpp_a80db1a2aa7de7edf52b9c60e101d556f}} 
-\index{rand\_sse.cpp@{rand\_sse.cpp}!srand\_sse@{srand\_sse}}
-\index{srand\_sse@{srand\_sse}!rand\_sse.cpp@{rand\_sse.cpp}}
-\subsubsection{\texorpdfstring{srand\_sse()}{srand\_sse()}}
-{\footnotesize\ttfamily void srand\+\_\+sse (\begin{DoxyParamCaption}\item[{unsigned int}]{seed }\end{DoxyParamCaption})}
-
-
-
-См. определение в файле rand\+\_\+sse.\+cpp строка 14
-
+\begin{DoxyAuthor}{Автор}
+Kipp Owens, Rajiv Parikh, Sava\+Lione 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Дата}
+13 Apr 2019 
+\end{DoxyDate}

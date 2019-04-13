@@ -111,7 +111,7 @@
 </g>
 <!-- Node9 -->
 <g id="node10" class="node"><title>Node9</title>
-<g id="a_node10"><a xlink:href="$rand__sse_8h.html" xlink:title=" ">
+<g id="a_node10"><a xlink:href="$rand__sse_8h.html" xlink:title="Генерация рандомных чисел через SSE.">
 <polygon fill="white" stroke="black" points="514,-62 514,-81 579,-81 579,-62 514,-62"/>
 <text text-anchor="middle" x="546.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">rand_sse.h</text>
 </a>

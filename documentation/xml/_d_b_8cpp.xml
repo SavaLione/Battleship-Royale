@@ -314,7 +314,7 @@
 <codeline lineno="241" refid="class_d_b_1a5acc70d365de65365c861533a2b755c3" refkind="member"><highlight class="normal"><ref refid="struct_u_i_d" kindref="compound">UID</ref><sp/><ref refid="class_d_b_1a5acc70d365de65365c861533a2b755c3" kindref="member">DB::uid_get_np</ref>(<ref refid="structlogin" kindref="compound">login</ref><sp/>*l)</highlight></codeline>
 <codeline lineno="242"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>u_i_random[4];</highlight></codeline>
-<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rand__sse_8cpp_1ab7ae3ab6c8fb3e31548413dd0154db7d" kindref="member">rand_sse</ref>(u_i_random);</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__rand__ssecpp_1gab7ae3ab6c8fb3e31548413dd0154db7d" kindref="member">rand_sse</ref>(u_i_random);</highlight></codeline>
 <codeline lineno="245"><highlight class="normal"></highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_u_i_d" kindref="compound">UID</ref><sp/>uid_ret;</highlight></codeline>
 <codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/>uid_ret.<ref refid="struct_u_i_d_1ad126ab7d56812c322727617b427068ad" kindref="member">s_name</ref><sp/>=<sp/>l-&gt;<ref refid="structlogin_1acf93d411362f367b1fb7c35337d0606d" kindref="member">s_name</ref>;</highlight></codeline>
