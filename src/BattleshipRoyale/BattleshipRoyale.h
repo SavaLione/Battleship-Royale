@@ -72,6 +72,20 @@ namespace BR
     /// Название базы данных
     const char DB_NAME[] = "test.db";
 
+    /**
+     * @brief Флаги sqlite3
+     * 
+     * PRAGMA synchronous = OFF; - Отключение синхронизации
+     * 
+     * PRAGMA encoding = "UTF-8"; - Использовать UTF-8
+     * 
+     * PRAGMA journal_mode = OFF; - Отключение журнала
+     * 
+     * Данные потеряются при аварийном завершении программы, при отключении питания и тд
+     */
+    const char SQLITE3_PRAGMA[] = "PRAGMA synchronous = OFF;"
+                                  "PRAGMA encoding = \"UTF-8\";"
+                                  "PRAGMA journal_mode = OFF;";
     ///////////////////////////////////////////////////////////////////////////////
     //      Server
     ///////////////////////////////////////////////////////////////////////////////

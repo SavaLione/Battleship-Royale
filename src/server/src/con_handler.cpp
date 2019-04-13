@@ -64,20 +64,29 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 
         if(check_pattern(&s_data, &s_pattern_reg_user))
         {
-            getData(&s_data, &s_pattern_reg_user, &s_param_one);
-            //spdlog::error("{} {}", s_data, s_param_one);
+            try
+            {
+                getData(&s_data, &s_pattern_reg_user, &s_param_one);
+                DB *db = new DB;
+                spdlog::error("|{}|", s_param_one);
+                spdlog::warn("User: {} Found? {}", s_param_one, (*db).db_check_player(&s_param_one));
+
+                delete db;
+            }
+            catch (std::exception& e)
+            {
+                spdlog::error(e.what());
+            }
         }
 
         if(check_pattern(&s_data, &s_pattern_reg_user_pass))
         {
             getData(&s_data, &s_pattern_reg_user_pass, &s_param_one, &s_param_two);
-            //spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
         }
 
         if(check_pattern(&s_data, &s_pattern_reg_uid))
         {
             getData(&s_data, &s_pattern_reg_uid, &s_param_one, &s_param_two);
-            //spdlog::error("{} {} {}", s_data, s_param_one, s_param_two);
         }
         memset(data, 0, sizeof data);
     }

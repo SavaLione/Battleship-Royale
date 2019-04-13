@@ -124,6 +124,8 @@ private:
      */
     std::string sha2(std::string *s);
 
+    void db_PRAGMA();
+
 public:
     /**
      * @brief Конструктор класса

@@ -28,6 +28,7 @@
 DB::DB(/* args */)
 {
     db_open();
+    db_PRAGMA();
 
     if (db_table_check())
     {
@@ -444,5 +445,18 @@ int DB::db_get_level(std::string *s_name)
     }
 
     return i_ret;
+}
+
+void DB::db_PRAGMA()
+{
+    //std::string sql = "PRAGMA synchronous = OFF;PRAGMA encoding = \"UTF-8\";PRAGMA journal_mode = OFF;";
+    std::string sql = BR::SQLITE3_PRAGMA;
+    spdlog::warn("sql {}", sql);
+    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
+
+    if (*rc != SQLITE_OK)
+    {
+        spdlog::error("Failed to use PRAGMA: {}", sqlite3_errmsg(db));
+    }
 }
 /** @} */
