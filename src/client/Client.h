@@ -19,7 +19,6 @@ public:
 	typedef shared_ptr<ServerLink> ptr;
 
 	bool IsConnected() { return connected; }
-	bool IsConnecting() { return connecting; }
 	bool IsSending() { return sending; }
 	bool IsReading() { return reading; }
 	std::string Message() { return message; }
@@ -59,15 +58,15 @@ private:
 	tcp::socket sock;
 	char readBuffer[1024];
 	char sendBuffer[1024];
-	bool connecting, connected, sending, reading;
+	bool connected, sending, reading;
 	std::string message;
 
 	ServerLink() : sock(service), connected(false) { }
 
 	void Connect(tcp::endpoint ep)
 	{
-		connecting = true;
-		sock.async_connect(ep, bind(&ServerLink::OnConnect, shared_from_this(), _1));
+		sock.connect(ep);
+		connected = true;
 	}
 
 	void Read()
@@ -81,7 +80,6 @@ private:
 
 	void OnConnect(const system::error_code & error)
 	{
-		connecting = false;
 		connected = true;
 		Read();
 	}
