@@ -9,12 +9,22 @@ void test();
 void test1();
 void test2();
 void test3();
+void test4();
 
 int main()
 {
-
     test3();
+    test4();
     return 0;
+}
+
+void test4()
+{
+    string msg = "user:[savalione] pass:[mypass]";
+    string s_regx = "^user:\\[([^\\[\\]]+)\\] pass:\\[([^\\[\\]]+)\\]$";
+    cout << "s_regx: " << s_regx << endl;
+    boost::regex reg_ex(s_regx);
+    cout << "regex_match(msg, reg_ex): " << boost::regex_match(msg, reg_ex) << std::endl;
 }
 
 void test3()
