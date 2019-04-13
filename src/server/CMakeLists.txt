@@ -5,19 +5,19 @@ project(${BR_SERVER_NAME})
 ################################
 
 set(BR_SERVER_HEADERS
-	con_handler.h
-	DB.h
-	rand_sse.h
-	Regex.h
-	Server.h)
+	src/con_handler.h
+	src/DB.h
+	src/rand_sse.h
+	src/Regex.h
+	src/Server.h)
 
 set(BR_SERVER_SOURCES
-	BattleshipRoyale.cpp
-	con_handler.cpp
-	DB.cpp
-	rand_sse.cpp
-	Regex.cpp
-	Server.cpp)
+	src/BattleshipRoyale.cpp
+	src/con_handler.cpp
+	src/DB.cpp
+	src/rand_sse.cpp
+	src/Regex.cpp
+	src/Server.cpp)
 
 ################################
 # Executable
