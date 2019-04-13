@@ -46,6 +46,19 @@ namespace BR
     const char SERVER_IP[] = "127.0.0.1";
     const int  SERVER_PORT = 1234;
 
+    /*
+        regex
+    */
+
+    /* user:[] */
+    const char REG_USER[] = "^user:\\[([^\\[\\]]+)\\]$";
+
+    /* user:[] pass:[] */
+    const char REG_USER_PASS[] = "^user:\\[([^\\[\\]]+)\\] pass:\\[([^\\[\\]]+)\\]$";
+
+    /* UID:[] data:[] */
+    const char REG_UID[] = "^UID:\\[([^\\[\\]]+)\\] data:\\[([^\\[\\]]+)\\]$";
+
 } // BR
 
 /*
