@@ -44,9 +44,9 @@ boost::shared_ptr< con_handler >
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'pointer';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '16';
+      sec-mem-desc-line = '41';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Указатель но handler.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -81,7 +81,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'classcon__handler_1ad168c799678add9fb23f3379e1d42b22';
+      sec-mem-id   = 'group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -91,15 +91,15 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '26';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сокет
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@return Сокет
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'classcon__handler_1a02d6691e226a75525a2ac83062b5c7f7';
+      sec-mem-id   = 'group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -109,7 +109,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '28';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Запуск handler.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -117,7 +117,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'classcon__handler_1a3b8e9edfc8fed79fcba0242a58b54bc2';
+      sec-mem-id   = 'group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -139,15 +139,16 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '30';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Чтение сообщения от клиента
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [out] err ошибка
+@param [in] bytes_transferred 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'classcon__handler_1a10169d7b3588adb849d7e7c02c46375a';
+      sec-mem-id   = 'group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -169,15 +170,16 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '32';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Отправка сообщения клиенту
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [out] err ошибка
+@param [in] bytes_transferred 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'classcon__handler_1aa1bc82c764eb633355a52bd77689ed3f';
+      sec-mem-id   = 'group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -187,7 +189,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '35';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Деструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -209,12 +211,14 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'io_service';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '17';
+      sec-mem-desc-line = '50';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Конструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+С списком инициализации
 
+@param [in] io_service сервис
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -227,12 +231,12 @@ boost::asio::ip::tcp::socket &
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'socket';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '26';
+      sec-mem-desc-line = '68';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сокет
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@return Сокет
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -245,9 +249,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'start';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '28';
+      sec-mem-desc-line = '73';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Запуск handler.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -275,12 +279,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'bytes_transferred';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '30';
+      sec-mem-desc-line = '80';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Чтение сообщения от клиента
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [out] err ошибка
+@param [in] bytes_transferred 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -305,12 +310,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'bytes_transferred';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '32';
+      sec-mem-desc-line = '87';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Отправка сообщения клиенту
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [out] err ошибка
+@param [in] bytes_transferred 
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -323,9 +329,9 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~con_handler';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '35';
+      sec-mem-desc-line = '92';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Деструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -374,12 +380,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'io_service';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '21';
+      sec-mem-desc-line = '59';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Указатель на созданный сервис
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] io_service сервис
+@return указатель
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
   }; /* cp-section */
@@ -409,9 +416,9 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-name = '@1';
       sec-mem-enum = { enum-name = max_length; enum-value = '= 1024'; };
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-      sec-mem-desc-line = '12';
+      sec-mem-desc-line = '34';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Максимальная длина сообщения
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -432,7 +439,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '10';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сокет
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -453,10 +460,10 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '11';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Сообщение, которое будет отправлено клиенту
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@warning Необходимо изменить структуру. Сообщение должно быть произвольным
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -471,7 +478,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
       sec-mem-desc-line = '13';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Данные, полученные от клиента
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -481,7 +488,7 @@ _EnD_oF_dEf_TeXt_;
   cp-filename  = 'C:/Git/Battleship-Royale/src/asio/server/con_handler.h';
   cp-fileline  = '8';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
-
+Класс для общения
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1370,7 +1377,7 @@ class = {
     ref-virt = non-virtual;
   };
   cp-filename  = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
-  cp-fileline  = '8';
+  cp-fileline  = '22';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
 
 _EnD_oF_dEf_TeXt_;
@@ -1874,7 +1881,7 @@ _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c';
+      sec-mem-id   = 'group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1896,15 +1903,16 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/Server.h';
       sec-mem-desc-line = '17';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+handle
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] connection указатель на подключение
+@param [out] err сервера ссылка на ошибку
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6';
+      sec-mem-id   = 'group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6';
       sec-mem-virt = normal;
       sec-mem-prot = public;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -1914,7 +1922,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/Server.h';
       sec-mem-desc-line = '20';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Деструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -1942,12 +1950,15 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'i_port';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Server.h';
-      sec-mem-desc-line = '12';
+      sec-mem-desc-line = '41';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Конструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
+С списком инициализации
 
+@param [in] io_service сервис
+@param [in] i_port порт сервера
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -1972,12 +1983,13 @@ _EnD_oF_dEf_TeXt_;
         sec-mem-param-declname = 'err';
       }; /*        sec-mem-param--param */
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Server.h';
-      sec-mem-desc-line = '17';
+      sec-mem-desc-line = '51';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+handle
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
-
+@param [in] connection указатель на подключение
+@param [out] err сервера ссылка на ошибку
 _EnD_oF_dEf_TeXt_;
     }; /* sec-member */
     sec-member = {
@@ -1990,9 +2002,9 @@ _EnD_oF_dEf_TeXt_;
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = '~Server';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Server.h';
-      sec-mem-desc-line = '20';
+      sec-mem-desc-line = '56';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Деструктор класса
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -2003,7 +2015,7 @@ _EnD_oF_dEf_TeXt_;
     sec-kind = 'private-func';
     sec-member = {
       sec-mem-kind = 'function';
-      sec-mem-id   = 'class_server_1ab19cf3e5b775cd1b4eeb6d936340e712';
+      sec-mem-id   = 'group__servercpp_1gab19cf3e5b775cd1b4eeb6d936340e712';
       sec-mem-virt = normal;
       sec-mem-prot = private;
       sec-mem-type = <<_EnD_oF_dEf_TeXt_
@@ -2013,7 +2025,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/Server.h';
       sec-mem-desc-line = '9';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Запуск acceptor_.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -2029,9 +2041,9 @@ void
 _EnD_oF_dEf_TeXt_;
       sec-mem-name = 'start_accept';
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/server/src/Server.h';
-      sec-mem-desc-line = '9';
+      sec-mem-desc-line = '30';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+Запуск acceptor_.
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -2052,7 +2064,7 @@ _EnD_oF_dEf_TeXt_;
       sec-mem-desc-file = 'C:/Git/Battleship-Royale/src/asio/server/Server.h';
       sec-mem-desc-line = '8';
       sec-mem-briefdesc =    <<_EnD_oF_dEf_TeXt_
-
+acceptor_
 _EnD_oF_dEf_TeXt_;
       sec-mem-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -2062,7 +2074,7 @@ _EnD_oF_dEf_TeXt_;
   cp-filename  = 'C:/Git/Battleship-Royale/src/asio/server/Server.h';
   cp-fileline  = '6';
   cp-briefdesc = <<_EnD_oF_dEf_TeXt_
-
+Асинхронный сервер написанный на boost asio.
 _EnD_oF_dEf_TeXt_;
   cp-documentation = <<_EnD_oF_dEf_TeXt_
 
@@ -3282,10 +3294,11 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/con_handler.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+handler
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 14 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -3306,10 +3319,11 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/con_handler.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+handler
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 14 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -4020,10 +4034,11 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/Server.cpp';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Асинхронный сервер написанный на boost asio.
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 14 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */
 file = {
@@ -4044,9 +4059,10 @@ file = {
   file-full-name  = 'C:/Git/Battleship-Royale/src/server/src/Server.h';
   file-first-line = '1';
   file-briefdesc  = <<_EnD_oF_dEf_TeXt_
-
+Асинхронный сервер написанный на boost asio.
 _EnD_oF_dEf_TeXt_;
   file-documentation = <<_EnD_oF_dEf_TeXt_
-
+@author SavaLione
+@date 14 Apr 2019
 _EnD_oF_dEf_TeXt_;
 }; /* file */

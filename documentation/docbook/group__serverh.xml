@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__serverh">
+<title>Server.h</title>
+<indexterm><primary>Server.h</primary></indexterm>
+Граф связей класса Server.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__serverh.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Классы    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_server">Server</link></para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+</section>

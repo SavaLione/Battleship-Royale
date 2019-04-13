@@ -19,8 +19,12 @@
 <para>Сервер </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2con__handler_8cpp">server/src/con_handler.cpp</link></para>
+
+<para>handler </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2con__handler_8h">server/src/con_handler.h</link></para>
+
+<para>handler </para>
 </listitem>
             <listitem><para>файл <link linkend="__d_b_8cpp">DB.cpp</link></para>
 
@@ -49,8 +53,12 @@
 <para>Работа с регулярными выражениями </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2_server_8cpp">server/src/Server.cpp</link></para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
 </listitem>
             <listitem><para>файл <link linkend="_server_2src_2_server_8h">server/src/Server.h</link></para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

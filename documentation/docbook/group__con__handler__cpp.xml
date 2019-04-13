@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__con__handler__cpp">
+<title>con_handler.cpp</title>
+<indexterm><primary>con_handler.cpp</primary></indexterm>
+Граф связей класса con_handler.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="group__con__handler__cpp.svg"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Функции    </title>
+        <itemizedlist>
+            <listitem><para>boost::asio::ip::tcp::socket &amp; <link linkend="_group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22">con_handler::socket</link> ()</para>
+
+<para>Сокет </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7">con_handler::start</link> ()</para>
+
+<para>Запуск handler. </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2">con_handler::handle_read</link> (const boost::system::error_code &amp;err, size_t bytes_transferred)</para>
+
+<para>Чтение сообщения от клиента </para>
+</listitem>
+            <listitem><para>void <link linkend="_group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a">con_handler::handle_write</link> (const boost::system::error_code &amp;err, size_t bytes_transferred)</para>
+
+<para>Отправка сообщения клиенту </para>
+</listitem>
+            <listitem><para><link linkend="_group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f">con_handler::~con_handler</link> ()</para>
+
+<para>Деструктор класса </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Подробное описание</title>
+</section>
+<section>
+<title>Функции</title>
+<anchor xml:id="_group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2"/>    <section>
+    <title>handle_read()</title>
+<indexterm><primary>handle_read</primary><secondary>con_handler.cpp</secondary></indexterm>
+<indexterm><primary>con_handler.cpp</primary><secondary>handle_read</secondary></indexterm>
+<para><computeroutput>void con_handler::handle_read (const boost::system::error_code &amp; err, size_t bytes_transferred)</computeroutput></para><para>
+
+<para>Чтение сообщения от клиента </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>err</entry>
+                                <entry>
+<para>ошибка </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>bytes_transferred</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле asio/server/con_handler.cpp строка 19</para>
+    </section><anchor xml:id="_group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a"/>    <section>
+    <title>handle_write()</title>
+<indexterm><primary>handle_write</primary><secondary>con_handler.cpp</secondary></indexterm>
+<indexterm><primary>con_handler.cpp</primary><secondary>handle_write</secondary></indexterm>
+<para><computeroutput>void con_handler::handle_write (const boost::system::error_code &amp; err, size_t bytes_transferred)</computeroutput></para><para>
+
+<para>Отправка сообщения клиенту </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>out                                </entry>                                <entry>err</entry>
+                                <entry>
+<para>ошибка </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>bytes_transferred</entry>
+                                <entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле asio/server/con_handler.cpp строка 32</para>
+    </section><anchor xml:id="_group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22"/>    <section>
+    <title>socket()</title>
+<indexterm><primary>socket</primary><secondary>con_handler.cpp</secondary></indexterm>
+<indexterm><primary>con_handler.cpp</primary><secondary>socket</secondary></indexterm>
+<para><computeroutput>boost::asio::ip::tcp::socket &amp; con_handler::socket ( )</computeroutput></para><para>
+
+<para>Сокет </para>
+</para>
+
+<para><formalpara><title>Возвращает: </title>
+
+<para>Сокет </para>
+</formalpara>
+</para>
+<para>
+См. определение в файле asio/server/con_handler.cpp строка 8</para>
+    </section><anchor xml:id="_group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7"/>    <section>
+    <title>start()</title>
+<indexterm><primary>start</primary><secondary>con_handler.cpp</secondary></indexterm>
+<indexterm><primary>con_handler.cpp</primary><secondary>start</secondary></indexterm>
+<para><computeroutput>void con_handler::start ( )</computeroutput></para><para>
+
+<para>Запуск handler. </para>
+</para>
+<para>
+См. определение в файле asio/server/con_handler.cpp строка 13</para>
+    </section><anchor xml:id="_group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f"/>    <section>
+    <title>~con_handler()</title>
+<indexterm><primary>~con_handler</primary><secondary>con_handler.cpp</secondary></indexterm>
+<indexterm><primary>con_handler.cpp</primary><secondary>~con_handler</secondary></indexterm>
+<para><computeroutput>con_handler::~con_handler ( )</computeroutput></para><para>
+
+<para>Деструктор класса </para>
+</para>
+<para>
+См. определение в файле asio/server/con_handler.cpp строка 45</para>
+</section>
+</section>
+</section>

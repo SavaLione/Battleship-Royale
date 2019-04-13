@@ -14,12 +14,7 @@
 #include <boost/bind.hpp>
 
 /**
- * @brief Конструктор класса
- * 
- * С списком инициализации
- * 
- * @param [in] io_service сервис
- * @param [in] i_port порт сервера
+ * @brief Запуск acceptor_
  */
 void Server::start_accept()
 {
@@ -33,7 +28,7 @@ void Server::start_accept()
 /**
  * @brief handle
  * @param [in] connection указатель на подключение
- * @param [out] i_port err сервера ссылка на ошибку
+ * @param [out] err сервера ссылка на ошибку
  */
 void Server::handle_accept(con_handler::pointer connection, const boost::system::error_code& err)
 {

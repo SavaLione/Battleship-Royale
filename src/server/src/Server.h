@@ -19,10 +19,14 @@
  */
 class Server {
 private:
-	/// acceptor_
+	/**
+	 * @brief acceptor_
+	 */
 	boost::asio::ip::tcp::acceptor acceptor_;
 
-	/// Запуск acceptor_
+	/**
+	 * @brief Запуск acceptor_
+	 */
 	void start_accept();
 
 public:
@@ -42,7 +46,7 @@ public:
     /**
      * @brief handle
 	 * @param [in] connection указатель на подключение
-	 * @param [out] i_port err сервера ссылка на ошибку
+	 * @param [out] err сервера ссылка на ошибку
      */
 	void handle_accept(con_handler::pointer connection, const boost::system::error_code& err);
 

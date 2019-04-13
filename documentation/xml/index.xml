@@ -11,11 +11,11 @@
     <member refid="classcon__handler_1a047b0bd7c03bacb579ecced6c317f3cb" kind="variable"><name>message</name></member>
     <member refid="classcon__handler_1af6feec8ca98e8b25ca1b7bedcda5b3e9" kind="variable"><name>data</name></member>
     <member refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kind="function"><name>con_handler</name></member>
-    <member refid="classcon__handler_1ad168c799678add9fb23f3379e1d42b22" kind="function"><name>socket</name></member>
-    <member refid="classcon__handler_1a02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
-    <member refid="classcon__handler_1a3b8e9edfc8fed79fcba0242a58b54bc2" kind="function"><name>handle_read</name></member>
-    <member refid="classcon__handler_1a10169d7b3588adb849d7e7c02c46375a" kind="function"><name>handle_write</name></member>
-    <member refid="classcon__handler_1aa1bc82c764eb633355a52bd77689ed3f" kind="function"><name>~con_handler</name></member>
+    <member refid="group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22" kind="function"><name>socket</name></member>
+    <member refid="group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
+    <member refid="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" kind="function"><name>handle_read</name></member>
+    <member refid="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" kind="function"><name>handle_write</name></member>
+    <member refid="group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f" kind="function"><name>~con_handler</name></member>
     <member refid="classcon__handler_1a18e7e450430ebe71687a0fd0c79507aa" kind="function"><name>con_handler</name></member>
     <member refid="classcon__handler_1ad1cbd939db0c1c543425d7cd53702a06" kind="function"><name>socket</name></member>
     <member refid="classcon__handler_1a02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
@@ -93,11 +93,11 @@
   </compound>
   <compound refid="class_server" kind="class"><name>Server</name>
     <member refid="class_server_1a4e29f2fb9ced4b2c1bacc80a8d00e049" kind="variable"><name>acceptor_</name></member>
-    <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
+    <member refid="group__servercpp_1gab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
     <member refid="class_server_1ab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
     <member refid="class_server_1ac9ad7c8bb7fe2f5da5101da1297c9ae1" kind="function"><name>Server</name></member>
-    <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
-    <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
+    <member refid="group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
+    <member refid="group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
     <member refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" kind="function"><name>Server</name></member>
     <member refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
     <member refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
@@ -240,6 +240,15 @@
   <compound refid="group__battleshiproyalecpp" kind="group"><name>battleshiproyalecpp</name>
     <member refid="group__battleshiproyalecpp_1ga0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="group__con__handler__cpp" kind="group"><name>con_handler_cpp</name>
+    <member refid="group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22" kind="function"><name>socket</name></member>
+    <member refid="group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7" kind="function"><name>start</name></member>
+    <member refid="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" kind="function"><name>handle_read</name></member>
+    <member refid="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" kind="function"><name>handle_write</name></member>
+    <member refid="group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f" kind="function"><name>~con_handler</name></member>
+  </compound>
+  <compound refid="group__con__handler__h" kind="group"><name>con_handler_h</name>
+  </compound>
   <compound refid="group__dbcpp" kind="group"><name>dbcpp</name>
     <member refid="group__dbcpp_1ga29a603c52c10831cddee82518417f992" kind="function"><name>DB</name></member>
     <member refid="group__dbcpp_1ga7bd1418f67b11d0f752537123e7e6d28" kind="function"><name>~DB</name></member>
@@ -284,6 +293,13 @@
     <member refid="group__regexh_1gac4882c93b963bd53fd60978a9661fa30" kind="function"><name>check_pattern</name></member>
     <member refid="group__regexh_1ga524588640ff7393a801141740202d9dc" kind="function"><name>getData</name></member>
     <member refid="group__regexh_1ga0ac985b5fff36005eb80cda832582ca9" kind="function"><name>getData</name></member>
+  </compound>
+  <compound refid="group__servercpp" kind="group"><name>servercpp</name>
+    <member refid="group__servercpp_1gab19cf3e5b775cd1b4eeb6d936340e712" kind="function"><name>start_accept</name></member>
+    <member refid="group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c" kind="function"><name>handle_accept</name></member>
+    <member refid="group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6" kind="function"><name>~Server</name></member>
+  </compound>
+  <compound refid="group__serverh" kind="group"><name>serverh</name>
   </compound>
   <compound refid="dir_16a916fe4812f76ff8ca083dfa2c5cc7" kind="dir"><name>asio</name>
   </compound>

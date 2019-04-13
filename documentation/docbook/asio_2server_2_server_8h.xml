@@ -25,6 +25,8 @@
     <title>Классы    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_class_server">Server</link></para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
 </listitem>
         </itemizedlist>
 </simplesect>

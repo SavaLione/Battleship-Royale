@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2con__handler_8cpp">
 <title>Файл con_handler.cpp</title>
 <indexterm><primary>con_handler.cpp</primary></indexterm>
+<para>
+
+<para>handler </para>
+ 
+</para>
 <programlisting>#include &quot;con_handler.h&quot;
 #include &lt;string&gt;
 #include &lt;boost/bind.hpp&gt;
@@ -19,4 +24,19 @@
         </mediaobject>
     </informalfigure>
 </para>
+<section>
+<title>Подробное описание</title>
+
+<para>handler </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>14 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
 </section>

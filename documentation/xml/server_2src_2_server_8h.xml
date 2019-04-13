@@ -47,33 +47,40 @@
     </invincdepgraph>
     <innerclass refid="class_server" prot="public">Server</innerclass>
     <briefdescription>
+<para>Асинхронный сервер написанный на boost asio. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>SavaLione </para>
+</simplesect>
+<simplesect kind="date"><para>14 Apr 2019 </para>
+</simplesect>
+</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>SERVER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVER_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="server_2src_2con__handler_8h" kindref="compound">con_handler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server" kindref="compound">Server</ref><sp/>{</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::ip::tcp::acceptor<sp/>acceptor_;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_accept();</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="12" refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" kindref="member">Server</ref>(boost::asio::io_service&amp;<sp/>io_service,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_port)<sp/>:<sp/>acceptor_(io_service,<sp/>boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(),<sp/>i_port))</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start_accept();</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>SERVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="server_2src_2con__handler_8h" kindref="compound">con_handler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c" kindref="member">handle_accept</ref>(<ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">con_handler::pointer</ref><sp/>connection,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code&amp;<sp/>err);</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*<sp/>des<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6" kindref="member">~Server</ref>();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SERVER_H</highlight></codeline>
+<codeline lineno="20"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_server" kindref="compound">Server</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>boost::asio::ip::tcp::acceptor<sp/>acceptor_;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>start_accept();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="41" refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_server_1a64e726d6d9e85b00ba86488badb330d4" kindref="member">Server</ref>(boost::asio::io_service&amp;<sp/>io_service,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i_port)<sp/>:<sp/>acceptor_(io_service,<sp/>boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(),<sp/>i_port))</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>start_accept();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c" kindref="member">handle_accept</ref>(<ref refid="classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c" kindref="member">con_handler::pointer</ref><sp/>connection,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>boost::system::error_code&amp;<sp/>err);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6" kindref="member">~Server</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SERVER_H</highlight></codeline>
     </programlisting>
     <location file="src/server/src/Server.h"/>
   </compounddef>

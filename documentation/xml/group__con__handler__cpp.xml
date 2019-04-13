@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="group__con__handler__cpp" kind="group">
+    <compoundname>con_handler_cpp</compoundname>
+    <title>con_handler.cpp</title>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__con__handler__cpp_1gad168c799678add9fb23f3379e1d42b22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>boost::asio::ip::tcp::socket &amp;</type>
+        <definition>boost::asio::ip::tcp::socket &amp; con_handler::socket</definition>
+        <argsstring>()</argsstring>
+        <name>socket</name>
+        <briefdescription>
+<para>Сокет </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Сокет </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/con_handler.h" line="26" column="1" bodyfile="src/asio/server/con_handler.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="group__con__handler__cpp_1ga02d6691e226a75525a2ac83062b5c7f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void con_handler::start</definition>
+        <argsstring>()</argsstring>
+        <name>start</name>
+        <briefdescription>
+<para>Запуск handler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/con_handler.h" line="28" column="1" bodyfile="src/asio/server/con_handler.cpp" bodystart="13" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="group__con__handler__cpp_1ga3b8e9edfc8fed79fcba0242a58b54bc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void con_handler::handle_read</definition>
+        <argsstring>(const boost::system::error_code &amp;err, size_t bytes_transferred)</argsstring>
+        <name>handle_read</name>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes_transferred</declname>
+        </param>
+        <briefdescription>
+<para>Чтение сообщения от клиента </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ошибка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bytes_transferred</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/con_handler.h" line="30" column="1" bodyfile="src/asio/server/con_handler.cpp" bodystart="19" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="group__con__handler__cpp_1ga10169d7b3588adb849d7e7c02c46375a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void con_handler::handle_write</definition>
+        <argsstring>(const boost::system::error_code &amp;err, size_t bytes_transferred)</argsstring>
+        <name>handle_write</name>
+        <param>
+          <type>const boost::system::error_code &amp;</type>
+          <declname>err</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>bytes_transferred</declname>
+        </param>
+        <briefdescription>
+<para>Отправка сообщения клиенту </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="out">err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ошибка </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">bytes_transferred</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/con_handler.h" line="32" column="1" bodyfile="src/asio/server/con_handler.cpp" bodystart="32" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="group__con__handler__cpp_1gaa1bc82c764eb633355a52bd77689ed3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>con_handler::~con_handler</definition>
+        <argsstring>()</argsstring>
+        <name>~con_handler</name>
+        <briefdescription>
+<para>Деструктор класса </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/asio/server/con_handler.h" line="35" column="1" bodyfile="src/asio/server/con_handler.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

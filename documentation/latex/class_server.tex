@@ -2,6 +2,11 @@
 \label{class_server}\index{Server@{Server}}
 
 
+Асинхронный сервер написанный на boost asio.  
+
+
+
+
 {\ttfamily \#include $<$Server.\+h$>$}
 
 \subsection*{Открытые члены}
@@ -9,20 +14,20 @@
 \item 
 \mbox{\hyperlink{class_server_ac9ad7c8bb7fe2f5da5101da1297c9ae1}{Server}} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service)
 \item 
-void \mbox{\hyperlink{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_\+accept}} (\mbox{\hyperlink{classcon__handler_ada4a1b970f9fd8e55460a58cf7f7ce2c}{con\+\_\+handler\+::pointer}} connection, const boost\+::system\+::error\+\_\+code \&err)
-\item 
-\mbox{\hyperlink{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
-\item 
+void \mbox{\hyperlink{group__servercpp_gadb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_\+accept}} (\mbox{\hyperlink{classcon__handler_ada4a1b970f9fd8e55460a58cf7f7ce2c}{con\+\_\+handler\+::pointer}} connection, const boost\+::system\+::error\+\_\+code \&err)
+\begin{DoxyCompactList}\small\item\em handle \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group__servercpp_ga4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор класса \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_server_a64e726d6d9e85b00ba86488badb330d4}{Server}} (boost\+::asio\+::io\+\_\+service \&io\+\_\+service, int i\+\_\+port)
-\item 
+\begin{DoxyCompactList}\small\item\em Конструктор класса \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_\+accept}} (\mbox{\hyperlink{classcon__handler_ada4a1b970f9fd8e55460a58cf7f7ce2c}{con\+\_\+handler\+::pointer}} connection, const boost\+::system\+::error\+\_\+code \&err)
-\item 
+\begin{DoxyCompactList}\small\item\em handle \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}{$\sim$\+Server}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Деструктор класса \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Подробное описание}
-
+Асинхронный сервер написанный на boost asio. 
 
 См. определение в файле asio/server/\+Server.\+h строка 6
 
@@ -39,16 +44,6 @@ void \mbox{\hyperlink{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_
 
 См. определение в файле asio/server/\+Server.\+h строка 12
 
-\mbox{\Hypertarget{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
-\index{Server@{Server}!````~Server@{$\sim$Server}}
-\index{````~Server@{$\sim$Server}!Server@{Server}}
-\subsubsection{\texorpdfstring{$\sim$Server()}{~Server()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-См. определение в файле asio/server/\+Server.\+cpp строка 5
-
 \mbox{\Hypertarget{class_server_a64e726d6d9e85b00ba86488badb330d4}\label{class_server_a64e726d6d9e85b00ba86488badb330d4}} 
 \index{Server@{Server}!Server@{Server}}
 \index{Server@{Server}!Server@{Server}}
@@ -57,13 +52,30 @@ void \mbox{\hyperlink{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_
 
 
 
-См. определение в файле server/src/\+Server.\+h строка 12
+Конструктор класса 
+
+С списком инициализации
+
+
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em io\+\_\+service} & сервис \\
+\hline
+\mbox{\texttt{ in}}  & {\em i\+\_\+port} & порт сервера \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле server/src/\+Server.\+h строка 41
 
 \mbox{\Hypertarget{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}\label{class_server_a4b3aa2579cb1c8cd1d069582c14d0fa6}} 
 \index{Server@{Server}!````~Server@{$\sim$Server}}
 \index{````~Server@{$\sim$Server}!Server@{Server}}
-\subsubsection{\texorpdfstring{$\sim$Server()}{~Server()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+\subsubsection{\texorpdfstring{$\sim$Server()}{~Server()}}
 {\footnotesize\ttfamily Server\+::$\sim$\+Server (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Деструктор класса 
 
 
 
@@ -71,19 +83,20 @@ void \mbox{\hyperlink{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}{handle\+\_
 \mbox{\Hypertarget{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}\label{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}} 
 \index{Server@{Server}!handle\_accept@{handle\_accept}}
 \index{handle\_accept@{handle\_accept}!Server@{Server}}
-\subsubsection{\texorpdfstring{handle\_accept()}{handle\_accept()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+\subsubsection{\texorpdfstring{handle\_accept()}{handle\_accept()}}
 {\footnotesize\ttfamily void Server\+::handle\+\_\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcon__handler_ada4a1b970f9fd8e55460a58cf7f7ce2c}{con\+\_\+handler\+::pointer}}}]{connection,  }\item[{const boost\+::system\+::error\+\_\+code \&}]{err }\end{DoxyParamCaption})}
 
 
 
-См. определение в файле asio/server/\+Server.\+cpp строка 19
+handle 
 
-\mbox{\Hypertarget{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}\label{class_server_adb53e5d1b7c0ad8a79ce236c8ca5d50c}} 
-\index{Server@{Server}!handle\_accept@{handle\_accept}}
-\index{handle\_accept@{handle\_accept}!Server@{Server}}
-\subsubsection{\texorpdfstring{handle\_accept()}{handle\_accept()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily void Server\+::handle\+\_\+accept (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcon__handler_ada4a1b970f9fd8e55460a58cf7f7ce2c}{con\+\_\+handler\+::pointer}}}]{connection,  }\item[{const boost\+::system\+::error\+\_\+code \&}]{err }\end{DoxyParamCaption})}
 
+\begin{DoxyParams}[1]{Аргументы}
+\mbox{\texttt{ in}}  & {\em connection} & указатель на подключение \\
+\hline
+\mbox{\texttt{ out}}  & {\em err} & сервера ссылка на ошибку \\
+\hline
+\end{DoxyParams}
 
 
 Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}

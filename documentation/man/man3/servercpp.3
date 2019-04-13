@@ -1,0 +1,49 @@
+.TH "servercpp" 3 "Вс 14 Апр 2019" "Battleship-Royale" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+servercpp
+.SH SYNOPSIS
+.br
+.PP
+.SS "Функции"
+
+.in +1c
+.ti -1c
+.RI "void \fBServer::handle_accept\fP (\fBcon_handler::pointer\fP connection, const boost::system::error_code &err)"
+.br
+.RI "handle "
+.ti -1c
+.RI "\fBServer::~Server\fP ()"
+.br
+.RI "Деструктор класса "
+.in -1c
+.SH "Подробное описание"
+.PP 
+
+.SH "Функции"
+.PP 
+.SS "void Server::handle_accept (\fBcon_handler::pointer\fP connection, const boost::system::error_code & err)"
+
+.PP
+handle 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIconnection\fP указатель на подключение 
+.br
+\fIerr\fP сервера ссылка на ошибку 
+.RE
+.PP
+
+.PP
+См\&. определение в файле asio/server/Server\&.cpp строка 19
+.SS "Server::~Server ()"
+
+.PP
+Деструктор класса 
+.PP
+См\&. определение в файле asio/server/Server\&.cpp строка 5
+.SH "Автор"
+.PP 
+Автоматически создано Doxygen для Battleship-Royale из исходного текста\&.

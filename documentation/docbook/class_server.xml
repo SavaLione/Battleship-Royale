@@ -3,6 +3,11 @@
 <title>Класс Server</title>
 <indexterm><primary>Server</primary></indexterm>
 <para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
+ 
+</para>
+<para>
 <computeroutput>#include &lt;Server.h&gt;</computeroutput>
 </para>
 <simplesect>
@@ -10,20 +15,32 @@
         <itemizedlist>
             <listitem><para><link linkend="_class_server_1ac9ad7c8bb7fe2f5da5101da1297c9ae1">Server</link> (boost::asio::io_service &amp;io_service)</para>
 </listitem>
-            <listitem><para>void <link linkend="_class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c">handle_accept</link> (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp;err)</para>
+            <listitem><para>void <link linkend="_group__servercpp_1gadb53e5d1b7c0ad8a79ce236c8ca5d50c">handle_accept</link> (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp;err)</para>
+
+<para>handle </para>
 </listitem>
-            <listitem><para><link linkend="_class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</link> ()</para>
+            <listitem><para><link linkend="_group__servercpp_1ga4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</link> ()</para>
+
+<para>Деструктор класса </para>
 </listitem>
             <listitem><para><link linkend="_class_server_1a64e726d6d9e85b00ba86488badb330d4">Server</link> (boost::asio::io_service &amp;io_service, int i_port)</para>
+
+<para>Конструктор класса </para>
 </listitem>
             <listitem><para>void <link linkend="_class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c">handle_accept</link> (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp;err)</para>
+
+<para>handle </para>
 </listitem>
             <listitem><para><link linkend="_class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6">~Server</link> ()</para>
+
+<para>Деструктор класса </para>
 </listitem>
         </itemizedlist>
 </simplesect>
 <section>
 <title>Подробное описание</title>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
 <para>
 См. определение в файле asio/server/Server.h строка 6</para>
 </section>
@@ -35,37 +52,99 @@
 <indexterm><primary>Server</primary><secondary>Server</secondary></indexterm>
 <para><computeroutput>Server::Server (boost::asio::io_service &amp; io_service)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
 См. определение в файле asio/server/Server.h строка 12</para>
-    </section><anchor xml:id="_class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6"/>    <section>
-    <title>~Server()<computeroutput>[1/2]</computeroutput></title>
-<indexterm><primary>~Server</primary><secondary>Server</secondary></indexterm>
-<indexterm><primary>Server</primary><secondary>~Server</secondary></indexterm>
-<para><computeroutput>Server::~Server ( )</computeroutput></para><para>
-См. определение в файле asio/server/Server.cpp строка 5</para>
     </section><anchor xml:id="_class_server_1a64e726d6d9e85b00ba86488badb330d4"/>    <section>
     <title>Server()<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>Server</primary><secondary>Server</secondary></indexterm>
 <indexterm><primary>Server</primary><secondary>Server</secondary></indexterm>
 <para><computeroutput>Server::Server (boost::asio::io_service &amp; io_service, int i_port)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
-См. определение в файле server/src/Server.h строка 12</para>
+
+<para>Конструктор класса </para>
+</para>
+
+<para>С списком инициализации</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>io_service</entry>
+                                <entry>
+<para>сервис </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>in                                </entry>                                <entry>i_port</entry>
+                                <entry>
+<para>порт сервера </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+См. определение в файле server/src/Server.h строка 41</para>
     </section><anchor xml:id="_class_server_1a4b3aa2579cb1c8cd1d069582c14d0fa6"/>    <section>
-    <title>~Server()<computeroutput>[2/2]</computeroutput></title>
+    <title>~Server()</title>
 <indexterm><primary>~Server</primary><secondary>Server</secondary></indexterm>
 <indexterm><primary>Server</primary><secondary>~Server</secondary></indexterm>
-<para><computeroutput>Server::~Server ( )</computeroutput></para></section>
+<para><computeroutput>Server::~Server ( )</computeroutput></para><para>
+
+<para>Деструктор класса </para>
+</para>
+</section>
 </section>
 <section>
 <title>Методы</title>
 <anchor xml:id="_class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c"/>    <section>
-    <title>handle_accept()<computeroutput>[1/2]</computeroutput></title>
+    <title>handle_accept()</title>
 <indexterm><primary>handle_accept</primary><secondary>Server</secondary></indexterm>
 <indexterm><primary>Server</primary><secondary>handle_accept</secondary></indexterm>
 <para><computeroutput>void Server::handle_accept (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp; err)</computeroutput></para><para>
-См. определение в файле asio/server/Server.cpp строка 19</para>
-    </section><anchor xml:id="_class_server_1adb53e5d1b7c0ad8a79ce236c8ca5d50c"/>    <section>
-    <title>handle_accept()<computeroutput>[2/2]</computeroutput></title>
-<indexterm><primary>handle_accept</primary><secondary>Server</secondary></indexterm>
-<indexterm><primary>Server</primary><secondary>handle_accept</secondary></indexterm>
-<para><computeroutput>void Server::handle_accept (<link linkend="_classcon__handler_1ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</link> connection, const boost::system::error_code &amp; err)</computeroutput></para></section>
+
+<para>handle </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Аргументы                    </title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+                                <entry>in                                </entry>                                <entry>connection</entry>
+                                <entry>
+<para>указатель на подключение </para>
+</entry>
+                            </row>
+                            <row>
+                                <entry>out                                </entry>                                <entry>err</entry>
+                                <entry>
+<para>сервера ссылка на ошибку </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <para>
 Объявления и описания членов классов находятся в файлах:</para>
 <link linkend="_asio_2server_2_server_8h">asio/server/Server.h</link><link linkend="_asio_2server_2_server_8cpp">asio/server/Server.cpp</link></section>

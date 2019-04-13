@@ -18,10 +18,12 @@ var searchData=
   ['server_5fversion_5fmajor',['SERVER_VERSION_MAJOR',['../namespace_b_r.html#a767d5d7fec5adfa1bf5a7c03f98beaaf',1,'BR']]],
   ['server_5fversion_5fminor',['SERVER_VERSION_MINOR',['../namespace_b_r.html#afb69faba1bc3b5d31b8514c0103b72a0',1,'BR']]],
   ['server_5fversion_5fpatch',['SERVER_VERSION_PATCH',['../namespace_b_r.html#ad496b6d1eb6371bb740df7c7fac12aba',1,'BR']]],
+  ['server_2ecpp',['Server.cpp',['../group__servercpp.html',1,'']]],
+  ['server_2eh',['Server.h',['../group__serverh.html',1,'']]],
   ['serverlink',['ServerLink',['../class_server_link.html',1,'']]],
   ['service',['service',['../_client_8h.html#a632571e5ad0b35ab596dc375b3ce45b5',1,'Client.h']]],
   ['size',['Size',['../struct_size.html',1,'']]],
-  ['socket',['socket',['../classcon__handler.html#ad168c799678add9fb23f3379e1d42b22',1,'con_handler::socket()'],['../classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06',1,'con_handler::socket()']]],
+  ['socket',['socket',['../group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22',1,'con_handler::socket()'],['../classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06',1,'con_handler::socket()']]],
   ['srand_5fsse',['srand_sse',['../group__rand__ssecpp.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp'],['../group__rand__sseh.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp']]],
-  ['start',['start',['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()']]]
+  ['start',['start',['../group__con__handler__cpp.html#ga02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()']]]
 ];

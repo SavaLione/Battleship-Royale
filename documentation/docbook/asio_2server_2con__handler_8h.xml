@@ -26,6 +26,8 @@
     <title>Классы    </title>
         <itemizedlist>
             <listitem><para>class <link linkend="_classcon__handler">con_handler</link></para>
+
+<para>Класс для общения </para>
 </listitem>
         </itemizedlist>
 </simplesect>

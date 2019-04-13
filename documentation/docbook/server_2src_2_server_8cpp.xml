@@ -2,6 +2,11 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_server_2src_2_server_8cpp">
 <title>Файл Server.cpp</title>
 <indexterm><primary>Server.cpp</primary></indexterm>
+<para>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
+ 
+</para>
 <programlisting>#include &quot;Server.h&quot;
 #include &lt;boost/bind.hpp&gt;
 </programlisting>Граф включаемых заголовочных файлов для server/src/Server.cpp:<para>
@@ -13,4 +18,19 @@
         </mediaobject>
     </informalfigure>
 </para>
+<section>
+<title>Подробное описание</title>
+
+<para>Асинхронный сервер написанный на boost asio. </para>
+
+<para><formalpara><title>Автор: </title>
+
+<para>SavaLione </para>
+</formalpara>
+<formalpara><title>Дата: </title>
+
+<para>14 Apr 2019 </para>
+</formalpara>
+</para>
+</section>
 </section>

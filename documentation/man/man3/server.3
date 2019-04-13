@@ -2,7 +2,8 @@
 .ad l
 .nh
 .SH NAME
-Server
+Server \- Асинхронный сервер написанный на boost asio\&.  
+
 .SH SYNOPSIS
 .br
 .PP
@@ -17,21 +18,28 @@ Server
 .ti -1c
 .RI "void \fBhandle_accept\fP (\fBcon_handler::pointer\fP connection, const boost::system::error_code &err)"
 .br
+.RI "handle "
 .ti -1c
 .RI "\fB~Server\fP ()"
 .br
+.RI "Деструктор класса "
 .ti -1c
 .RI "\fBServer\fP (boost::asio::io_service &io_service, int i_port)"
 .br
+.RI "Конструктор класса "
 .ti -1c
 .RI "void \fBhandle_accept\fP (\fBcon_handler::pointer\fP connection, const boost::system::error_code &err)"
 .br
+.RI "handle "
 .ti -1c
 .RI "\fB~Server\fP ()"
 .br
+.RI "Деструктор класса "
 .in -1c
 .SH "Подробное описание"
 .PP 
+Асинхронный сервер написанный на boost asio\&. 
+.PP
 См\&. определение в файле asio/server/Server\&.h строка 6
 .SH "Конструктор(ы)"
 .PP 
@@ -39,23 +47,39 @@ Server
 
 .PP
 См\&. определение в файле asio/server/Server\&.h строка 12
-.SS "Server::~Server ()"
-
-.PP
-См\&. определение в файле asio/server/Server\&.cpp строка 5
 .SS "Server::Server (boost::asio::io_service & io_service, int i_port)\fC [inline]\fP"
 
 .PP
-См\&. определение в файле server/src/Server\&.h строка 12
+Конструктор класса С списком инициализации
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIio_service\fP сервис 
+.br
+\fIi_port\fP порт сервера 
+.RE
+.PP
+
+.PP
+См\&. определение в файле server/src/Server\&.h строка 41
 .SS "Server::~Server ()"
 
+.PP
+Деструктор класса 
 .SH "Методы"
 .PP 
 .SS "void Server::handle_accept (\fBcon_handler::pointer\fP connection, const boost::system::error_code & err)"
 
 .PP
-См\&. определение в файле asio/server/Server\&.cpp строка 19
-.SS "void Server::handle_accept (\fBcon_handler::pointer\fP connection, const boost::system::error_code & err)"
+handle 
+.PP
+\fBАргументы:\fP
+.RS 4
+\fIconnection\fP указатель на подключение 
+.br
+\fIerr\fP сервера ссылка на ошибку 
+.RE
+.PP
 
 
 .SH "Автор"

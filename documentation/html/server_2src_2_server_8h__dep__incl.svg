@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-80 193.5,-80 193.5,4 -4,4"/>
 <!-- Node4 -->
 <g id="node1" class="node"><title>Node4</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Асинхронный сервер написанный на boost asio.">
 <polygon fill="#bfbfbf" stroke="black" points="80.5,-56.5 80.5,-75.5 132.5,-75.5 132.5,-56.5 80.5,-56.5"/>
 <text text-anchor="middle" x="106.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Server.h</text>
 </a>
@@ -32,7 +32,7 @@
 </g>
 <!-- Node6 -->
 <g id="node3" class="node"><title>Node6</title>
-<g id="a_node3"><a xlink:href="server_2src_2_server_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node3"><a xlink:href="server_2src_2_server_8cpp.html" target="_top" xlink:title="Асинхронный сервер написанный на boost asio.">
 <polygon fill="white" stroke="black" points="127.5,-0.5 127.5,-19.5 189.5,-19.5 189.5,-0.5 127.5,-0.5"/>
 <text text-anchor="middle" x="158.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Server.cpp</text>
 </a>

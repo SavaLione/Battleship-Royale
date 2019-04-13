@@ -10,12 +10,16 @@
     <xi:include href="group__client.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__battleshiproyale.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__battleshiproyalecpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__con__handler__cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__con__handler__h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__dbcpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__dbh.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__rand__ssecpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__rand__sseh.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__regexcpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="group__regexh.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__servercpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group__serverh.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <chapter>
     <title>Пространства имен</title>
