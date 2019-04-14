@@ -37,16 +37,7 @@ boost::asio::ip::tcp::socket &con_handler::socket()
  */
 void con_handler::start()
 {
-    spdlog::warn("1 {}", answer);
-    spdlog::warn("1 fl {}", fl);
     sock.async_read_some(boost::asio::buffer(data, max_length), boost::bind(&con_handler::handle_read, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-    //sock.async_write_some(boost::asio::buffer(*message, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-    spdlog::warn("2 {}", answer);
-    spdlog::warn("2 fl {}", fl);
-
-    //sock.async_write_some(boost::asio::buffer(answer, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-    spdlog::warn("3 {}", answer);
-    spdlog::warn("3 fl {}", fl);
 }
 
 /**
@@ -56,25 +47,20 @@ void con_handler::start()
  */
 void con_handler::handle_read(const boost::system::error_code &err, size_t bytes_transferred)
 {
-    spdlog::warn("4 {}", answer);
-    spdlog::warn("4 fl {}", fl);
     if (!err)
     {
         std::string s_data = data;
         if(processing_user_check(&s_data))
         {
-            spdlog::warn("processing_user_check");
-            spdlog::warn(s_data);
-            spdlog::error("answer {}", answer);
+
         }
         else if(processing_user_pass_check(&s_data))
         {
-            spdlog::warn("processing_user_pass_check");
-            spdlog::warn(s_data);
+
         }
         else
         {
-            spdlog::warn("Nothing");
+
         }
     }
     else
@@ -82,12 +68,7 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
-    fl = true;
-    spdlog::warn("5 {}", answer);
-    spdlog::warn("5 fl {}", fl);
-    
     sock.async_write_some(boost::asio::buffer(answer, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-
 }
 
 /**
@@ -162,15 +143,6 @@ bool con_handler::processing_user_pass_check(std::string *request)
  */
 void con_handler::handle_write(const boost::system::error_code &err, size_t bytes_transferred)
 {
-    spdlog::warn("6 {}", answer);
-    spdlog::warn("6 fl {}", fl);
-    while(!fl)
-    {
-
-    }
-    spdlog::warn("7 {}", answer);
-    spdlog::warn("7 fl {}", fl);
-
     if (!err)
     {
 
@@ -180,10 +152,8 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
         spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
-    spdlog::warn("8 {}", answer);
     memset(data, 0, max_length);
     memset(answer, 0, max_length);
-    spdlog::warn("9 {}", answer);
 }
 
 /**
