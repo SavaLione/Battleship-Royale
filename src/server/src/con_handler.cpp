@@ -89,14 +89,10 @@ bool con_handler::processing_user_check(std::string *request)
 
         if ((*db).db_check_player(&s_param_one))
         {
-            //std::string s = BR::ANSWER_TRUE;
-            //strncpy(answer, s.c_str(), max_length);
             *answ = BR::ANSWER_TRUE;
         }
         else
         {
-            //std::string s = BR::ANSWER_FALSE;
-            //strncpy(answer, s.c_str(), max_length);
             *answ = BR::ANSWER_FALSE;
         }
 
@@ -129,7 +125,11 @@ bool con_handler::processing_user_pass_check(std::string *request)
 
         if((*db).db_check_pass(&l_user))
         {
-            spdlog::warn("PASS OK");
+            *answ = BR::ANSWER_TRUE;
+        }
+        else
+        {
+            *answ = BR::ANSWER_FALSE;
         }
 
         delete db;
@@ -155,7 +155,6 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
         sock.close();
     }
     memset(data, 0, max_length);
-    //memset(answer, 0, max_length);
     *answ = "";
 }
 
@@ -164,7 +163,6 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
  */
 con_handler::~con_handler()
 {
-    delete[] answer;
     delete answ;
 }
 /** @} */

@@ -28,7 +28,7 @@ private:
 	 * @brief Сообщение, которое будет отправлено клиенту
 	 * @warning Необходимо изменить структуру. Сообщение должно быть произвольным
 	 */
-	std::string message = "";
+	std::string *answ = new std::string;
 
 	/// Максимальная длина сообщения
 	enum
@@ -38,10 +38,6 @@ private:
 
 	/// Данные, полученные от клиента
 	char data[max_length];
-
-	char *answer = new char[max_length];
-
-	std::string *answ = new std::string;
 
 public:
 	/// Указатель но handler
