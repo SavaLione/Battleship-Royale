@@ -39,6 +39,8 @@ private:
 	/// Данные, полученные от клиента
 	char data[max_length];
 
+	char answer[max_length];
+
 public:
 	/// Указатель но handler
 	typedef boost::shared_ptr<con_handler> pointer;

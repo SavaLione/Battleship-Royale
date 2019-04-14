@@ -39,9 +39,12 @@ void con_handler::start()
 {
     sock.async_read_some(boost::asio::buffer(data, max_length), boost::bind(&con_handler::handle_read, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
     //sock.async_write_some(boost::asio::buffer(*message, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
+    
+    sock.async_write_some(boost::asio::buffer(answer, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
 
     //char test[max_length];
 
+    /*
     auto self(shared_from_this());
     boost::asio::async_write(
         sock,
@@ -61,6 +64,7 @@ void con_handler::start()
             }
             }
     );
+    */
 
     /*
     sock.async_read_some(
@@ -194,6 +198,7 @@ bool con_handler::processing_user_check(std::string *request)
         if ((*db).db_check_player(&s_param_one))
         {
             *message = BR::ANSWER_TRUE;
+            strcpy(answer, message->c_str());
         }
         else
         {
@@ -204,6 +209,7 @@ bool con_handler::processing_user_check(std::string *request)
         ret = true;
         spdlog::warn(*message);
     }
+
     return ret;
 }
 
