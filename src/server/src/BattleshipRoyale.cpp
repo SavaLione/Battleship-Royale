@@ -15,13 +15,11 @@
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
-#include <sqlite3.h>
-
 #include <cxxopts.hpp>
 
 #include "BattleshipRoyale.h"
-#include "DB.h"
 #include "Regex.h"
+#include "MiniDB.h"
 
 #include "Server.h"
 
@@ -112,11 +110,9 @@ int main(int argc, char *argv[])
 	/*
 		DB initialization
 	*/
-	DB *db_init = new DB;
-	(*db_init).db_table_check();
-	(*db_init).db_open_log();
-	(*db_init).db_PRAGMA_log();
-	delete db_init;
+	MiniDB *mdb = new MiniDB;
+	mdb->setTable();
+	delete mdb;
 
 	/*
 		Start server

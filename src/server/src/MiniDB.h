@@ -49,6 +49,8 @@ public:
      * @param [out] пароль (из бд. в sha2)
      */
     void getPassword(std::string *name, std::string *sha2_ret);
+
+    void setTable();
 };
 
 #endif // MINIDB_H

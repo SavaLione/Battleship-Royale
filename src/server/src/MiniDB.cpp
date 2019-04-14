@@ -58,3 +58,23 @@ void MiniDB::getPassword(std::string *name, std::string *sha2_ret)
         *sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
 }
+
+void MiniDB::setTable()
+{
+    *sql =
+        "CREATE TABLE PLAYER("
+        "ID INT PRIMARY KEY     NOT NULL, "
+        "NAME           TEXT    NOT NULL, "
+        "PASSWORD       TEXT    NOT NULL, "
+        "REG_DATE       TEXT    NOT NULL, "
+        "SCORE INT      KEY     NOT NULL, "
+        "MONEY INT      KEY     NOT NULL, "
+        "LEVEL INT      KEY     NOT NULL  "
+        ");";
+    *rc = sqlite3_exec(db, sql->c_str(), NULL, 0, NULL);
+    if (*rc == 0)
+    {
+        *sql = BR::SQLITE3_TEST_DATA;
+        request(sql);
+    }
+}
