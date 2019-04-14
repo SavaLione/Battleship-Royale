@@ -178,6 +178,22 @@ bool DB::db_check_player(std::string *s_name)
 }
 
 /**
+ * @brief Проверка пароля
+ * @param [in] l пользователь
+ * @return true - пароль правильный, false - пароль не правильный.
+ */
+bool DB::db_check_pass(login *l)
+{
+    bool ret = false;
+    std::string pass = db_get_password(&l->s_name);
+    if(pass == l->s_name)
+    {
+        ret = true;
+    }
+    return ret;
+}
+
+/**
  * @brief Создать пользователя l
  * @param [in] l пользователь
  */
