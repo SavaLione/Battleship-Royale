@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['u_5fi_5frandom',['u_i_random',['../struct_coockie.html#a25293cd2b76e85993318e02e9398bdfb',1,'Coockie']]],
-  ['uid',['UID',['../struct_u_i_d.html',1,'']]],
-  ['uid_5fget_5fnp',['uid_get_np',['../group__dbcpp.html#ga5acc70d365de65365c861533a2b755c3',1,'DB::uid_get_np(login *l)'],['../group__dbcpp.html#ga9c55abcaab4db2b421bf72c968a818a4',1,'DB::uid_get_np(login *l, int *id)']]]
+  ['_7econ_5fhandler',['~con_handler',['../group__con__handler__cpp.html#gaa1bc82c764eb633355a52bd77689ed3f',1,'con_handler::~con_handler()'],['../classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f',1,'con_handler::~con_handler()']]],
+  ['_7edb',['~DB',['../group__dbcpp.html#ga7bd1418f67b11d0f752537123e7e6d28',1,'DB']]],
+  ['_7eminidb',['~MiniDB',['../group__minidb__cpp.html#gab0ff056823088f612fb13d2aaea168cb',1,'MiniDB']]],
+  ['_7eserver',['~Server',['../group__servercpp.html#ga4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server::~Server()'],['../class_server.html#a4b3aa2579cb1c8cd1d069582c14d0fa6',1,'Server::~Server()']]]
 ];

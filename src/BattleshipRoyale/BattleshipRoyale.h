@@ -87,6 +87,12 @@ namespace BR
                                   "PRAGMA encoding = \"UTF-8\";"
                                   "PRAGMA journal_mode = DELETE;";
     
+    /**
+     * @brief Тестовые данные
+     * @code
+     *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
+     * @endcode
+     */
     const char SQLITE3_TEST_DATA[] =
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES(1,                                'ZERO',      'ZEROZERO',       'ZERO',  1,    1,    1);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'SavaLione', 'MyOwOpass',      'now',   0,    0,    7);"
@@ -150,48 +156,6 @@ namespace BR
     const char ANSWER_FALSE[] = "answer:[false]";
 
 } // BR
-
-/*
-    Куки пользователя
-    id всегда одинаков
-    Так как задан id, Coockie всегда уникалько и меняется после реконекта
-*/
-struct Coockie
-{
-    /* id пользователя */
-    int id;
-
-    /* Случайное число */
-    unsigned int u_i_random;
-};
-
-/* Идентификатор пользователя */
-struct UID
-{
-    /* Имя пользователя */
-    std::string s_name;
-
-    /* Куки пользователя */
-    Coockie co_uid;
-};
-
-/*
-    ################################
-    # Some
-    ################################
-*/
-
-struct Pos
-{
-    int i_x;
-    int i_y;
-};
-
-struct Size
-{
-    int i_x;
-    int i_y;
-};
 
 #endif // BATTLESHIPROYALE_H
 /** @} */

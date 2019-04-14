@@ -1,11 +1,9 @@
 var searchData=
 [
-  ['test',['test',['../asio_2regex_2regex_8cpp.html#ae1a3968e7947464bee7714f6d43b7002',1,'regex.cpp']]],
-  ['test1',['test1',['../asio_2regex_2regex_8cpp.html#a1440a7779ac56f47a3f355ce4a8c7da0',1,'regex.cpp']]],
-  ['test2',['test2',['../asio_2regex_2regex_8cpp.html#a0283886819c7c140a023582b7269e2d0',1,'regex.cpp']]],
-  ['test3',['test3',['../asio_2regex_2regex_8cpp.html#a6d0455dd5c30adda100e95f0423c786e',1,'regex.cpp']]],
-  ['test4',['test4',['../asio_2regex_2regex_8cpp.html#a327d8cef466a7560ead5eb3995c0cbae',1,'regex.cpp']]],
-  ['test5',['test5',['../asio_2regex_2regex_8cpp.html#a8e1be3038bbc558f32a409f076126c33',1,'regex.cpp']]],
-  ['tomessage',['ToMessage',['../class_message_object.html#ae123b0190cfd5623d0846593bf36de72',1,'MessageObject::ToMessage()'],['../class_message_object.html#ae123b0190cfd5623d0846593bf36de72',1,'MessageObject::ToMessage()']]],
-  ['tosend',['ToSend',['../class_message.html#a04d7d7a2d696dc3183a76fcde39ebd73',1,'Message::ToSend()'],['../class_message.html#a04d7d7a2d696dc3183a76fcde39ebd73',1,'Message::ToSend()']]]
+  ['send',['Send',['../class_server_link.html#accf9e304c68111f1dbb1df82e2ae3ca5',1,'ServerLink']]],
+  ['server',['Server',['../class_server.html#ac9ad7c8bb7fe2f5da5101da1297c9ae1',1,'Server::Server(boost::asio::io_service &amp;io_service)'],['../class_server.html#a1de8ff546624394fae030c6434b22816',1,'Server::Server(boost::asio::io_service &amp;io_service, int *i_port)']]],
+  ['settable',['setTable',['../group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4',1,'MiniDB']]],
+  ['socket',['socket',['../group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22',1,'con_handler::socket()'],['../classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06',1,'con_handler::socket()']]],
+  ['srand_5fsse',['srand_sse',['../group__rand__ssecpp.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp'],['../group__rand__sseh.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp']]],
+  ['start',['start',['../group__con__handler__cpp.html#ga02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()']]]
 ];

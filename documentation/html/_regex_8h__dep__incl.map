@@ -1,5 +1,6 @@
 <map id="Regex.h" name="Regex.h">
-<area shape="rect" id="node1" title="Работа с регулярными выражениями" alt="" coords="112,5,183,32"/>
+<area shape="rect" id="node1" title="Работа с регулярными выражениями" alt="" coords="199,5,269,32"/>
 <area shape="rect" id="node2" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="5,80,151,107"/>
-<area shape="rect" id="node3" href="$server_2src_2regex_8cpp.html" title="Работа с регулярными выражениями" alt="" coords="175,80,259,107"/>
+<area shape="rect" id="node3" href="$server_2src_2con__handler_8cpp.html" title="handler" alt="" coords="175,80,293,107"/>
+<area shape="rect" id="node4" href="$server_2src_2regex_8cpp.html" title="Работа с регулярными выражениями" alt="" coords="317,80,401,107"/>
 </map>

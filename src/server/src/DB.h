@@ -139,12 +139,6 @@ public:
     void db_open_log();
 
     /**
-     * @brief Создать пользователя l
-     * @param [in] l пользователь
-     */
-    //void db_add_player(login *l);
-
-    /**
      * @brief Проверка существования пользователя
      * @param [in] s_name имя пользователя
      * @return true - пользователь существует, false - пользователь не существует.
@@ -172,21 +166,6 @@ public:
      * @return true - пароль правильный, false - пароль не правильный.
      */
     bool db_check_pass(std::string *name, std::string *pass);
-
-    /**
-     * @brief Получение UID пользователя
-     * @param [in] l пользователь
-     * @return UID
-     */
-    //UID uid_get_np(login *l);
-
-    /**
-     * @brief Получение UID пользователя
-     * @param [in] l пользователь
-     * @param [in] id id
-     * @return UID
-     */
-    //UID uid_get_np(login *l, int *id);
 
     /**
      * @brief Получение даты регистрации по имени

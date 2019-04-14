@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['message',['Message',['../class_message.html',1,'']]],
-  ['messageobject',['MessageObject',['../class_message_object.html',1,'']]]
+  ['server',['Server',['../class_server.html',1,'']]],
+  ['serverlink',['ServerLink',['../class_server_link.html',1,'']]]
 ];

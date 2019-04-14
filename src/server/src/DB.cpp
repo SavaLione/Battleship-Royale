@@ -44,19 +44,8 @@ DB::~DB()
     delete rc;
     delete id;
     delete s_sql;
-    //delete cc_tale;
     db_close();
 }
-
-/**
- * @brief Открытие базы данных
- */
-/*
-void DB::db_open()
-{
-    *rc = sqlite3_open(BR::DB_NAME, &db);
-}
-*/
 
 /**
  * @brief Проверка бд(получается открыть?)
@@ -203,42 +192,6 @@ bool DB::db_check_pass(std::string *name, std::string *pass)
 }
 
 /**
- * @brief Создать пользователя l
- * @param [in] l пользователь
- */
-/*
-void DB::db_add_player(login *l)
-{
-    std::string sql =
-        "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1,";
-
-    sql += "'";
-    sql += l->s_name;
-    sql += "'";
-    sql += ",";
-
-    sql += "'";
-    sql += sha2(&l->s_password);
-    sql += "'";
-    sql += ",";
-
-    sql += "'";
-    time_t now = time(0);
-    struct tm tstruct;
-    char buf[80];
-    tstruct = *localtime(&now);
-    strftime(buf, sizeof(buf), "%Y-%m-%d.%X", &tstruct);
-    sql += buf;
-    sql += "'";
-    sql += ",";
-
-    sql += "0, 0, 0);";
-
-    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-}
-*/
-
-/**
  * @brief Получить карточку пользователя db_player по ссылке
  * @param [in] name имя пользователя
  * @param [out] pl карточка пользователя
@@ -315,44 +268,6 @@ int DB::db_get_id(std::string *s_name)
 
     return i_ret;
 }
-
-/**
- * @brief Получение UID пользователя
- * @param [in] l пользователь
- * @return UID
- */
-/*
-UID DB::uid_get_np(login *l)
-{
-    unsigned int u_i_random[4];
-    rand_sse(u_i_random);
-
-    UID uid_ret;
-    uid_ret.s_name = l->s_name;
-    uid_ret.co_uid.id = db_get_id(&l->s_name);
-    uid_ret.co_uid.u_i_random = u_i_random[0];
-
-    return uid_ret;
-}
-*/
-
-/**
- * @brief Получение UID пользователя
- * @param [in] l пользователь
- * @param [in] id id
- * @return UID
- */
-/*
-UID DB::uid_get_np(login *l, int *id)
-{
-    UID uid_ret;
-    uid_ret.s_name = l->s_name;
-    uid_ret.co_uid.id = db_get_id(&l->s_name);
-    uid_ret.co_uid.u_i_random = *id;
-
-    return uid_ret;
-}
-*/
 
 /**
  * @brief Получение даты регистрации по имени
@@ -468,17 +383,6 @@ int DB::db_get_level(std::string *s_name)
 
     return i_ret;
 }
-
-/**
- * @brief Задать флаги sqlite3
- */
-/*
-void DB::db_PRAGMA()
-{
-    std::string sql = BR::SQLITE3_PRAGMA;
-    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-}
-*/
 
 /**
  * @brief Задать флаги sqlite3. Проверка возможности

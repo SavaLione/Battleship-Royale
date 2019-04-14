@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Облегчённый класс для работы с бд
+ * @author SavaLione
+ * @date 14 Apr 2019
+ */
+/**
+ * @defgroup minidb_h MiniDB.h
+ * @ingroup server
+ * @{
+ */
 #ifndef MINIDB_H
 #define MINIDB_H
 
@@ -25,15 +36,33 @@ private:
      */
     sqlite3_stmt *stmt;
 
+    /**
+     * @brief Запрос
+     */
     std::string *sql = new std::string;
 
+    /**
+     * @brief Запрос
+     * @code
+     *      *sql = "SELECT NAME FROM PLAYER;"
+     *      request(sql);
+     * @endcode
+     * @param [in] request запрос
+     */
     inline void request(std::string *request)
     {
         sqlite3_exec(db, request->c_str(), NULL, 0, NULL);
     }
 
 public:
+    /**
+     * @brief Конструктор класса
+     */
     MiniDB();
+
+    /**
+     * @brief Деструктор класса
+     */
     ~MiniDB();
 
     /**
@@ -46,11 +75,15 @@ public:
     /**
      * @brief Получение пароля по имени
      * @param [in] name имя пользователя
-     * @param [out] пароль (из бд. в sha2)
+     * @param [out] sha2_ret пароль (из бд. в sha2)
      */
     void getPassword(std::string *name, std::string *sha2_ret);
 
+    /**
+     * @brief Инициализация базы данных
+     */
     void setTable();
 };
 
 #endif // MINIDB_H
+/** @} */

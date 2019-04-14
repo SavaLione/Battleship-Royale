@@ -11,7 +11,7 @@
 <polygon fill="white" stroke="none" points="-4,4 -4,-91 567.5,-91 567.5,4 -4,4"/>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<g id="a_node1"><a xlink:title=" ">
+<g id="a_node1"><a xlink:title="Клиент">
 <polygon fill="#bfbfbf" stroke="black" points="201,-67.5 201,-86.5 310,-86.5 310,-67.5 201,-67.5"/>
 <text text-anchor="middle" x="255.5" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleshipRoyale.cpp</text>
 </a>

@@ -44,8 +44,8 @@ private:
 	};
 
 	/// Данные, полученные от клиента
-	//char data[max_length];
 	char *data = new char[max_length];
+	
 	std::string *data_check = new std::string;
 
 	MiniDB *mdb = new MiniDB;

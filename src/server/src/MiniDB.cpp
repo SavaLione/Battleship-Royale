@@ -1,5 +1,19 @@
+/**
+ * @file
+ * @brief Облегчённый класс для работы с бд
+ * @author SavaLione
+ * @date 14 Apr 2019
+ */
+/**
+ * @defgroup minidb_cpp MiniDB.cpp
+ * @ingroup server
+ * @{
+ */
 #include "MiniDB.h"
 
+/**
+ * @brief Конструктор класса
+ */
 MiniDB::MiniDB()
 {
     sqlite3_open(BR::DB_NAME, &db);
@@ -8,6 +22,9 @@ MiniDB::MiniDB()
     request(sql);
 }
 
+/**
+ * @brief Деструктор класса
+ */
 MiniDB::~MiniDB()
 {
     sqlite3_close(db);
@@ -42,7 +59,7 @@ bool MiniDB::checkPlayer(std::string *name)
 /**
  * @brief Получение пароля по имени
  * @param [in] name имя пользователя
- * @param [out] пароль (из бд. в sha2)
+ * @param [out] sha2_ret пароль (из бд. в sha2)
  */
 void MiniDB::getPassword(std::string *name, std::string *sha2_ret)
 {
@@ -59,8 +76,14 @@ void MiniDB::getPassword(std::string *name, std::string *sha2_ret)
     }
 }
 
+/**
+ * @brief Инициализация базы данных
+ */
 void MiniDB::setTable()
 {
+    *sql = BR::SQLITE3_PRAGMA;
+    request(sql);
+
     *sql =
         "CREATE TABLE PLAYER("
         "ID INT PRIMARY KEY     NOT NULL, "
@@ -78,3 +101,4 @@ void MiniDB::setTable()
         request(sql);
     }
 }
+/** @} */

@@ -145,7 +145,6 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
         sock.close();
     }
     memset(data, 0, max_length);
-    //*data = "";
     *answ = "";
 	*s_param_one = "";
 	*s_param_two = "";
