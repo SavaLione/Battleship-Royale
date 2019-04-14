@@ -28,10 +28,13 @@ private:
 	 * @brief Сообщение, которое будет отправлено клиенту
 	 * @warning Необходимо изменить структуру. Сообщение должно быть произвольным
 	 */
-	std::string message="Hello From Server!";
+	std::string message = "Hello From Server!";
 
 	/// Максимальная длина сообщения
-	enum { max_length = 1024 };
+	enum
+	{
+		max_length = 1024
+	};
 
 	/// Данные, полученные от клиента
 	char data[max_length];
@@ -40,57 +43,71 @@ public:
 	/// Указатель но handler
 	typedef boost::shared_ptr<con_handler> pointer;
 
-    /**
+	/**
      * @brief Конструктор класса
 	 * 
 	 * С списком инициализации
 	 * 
 	 * @param [in] io_service сервис
      */
-	con_handler(boost::asio::io_service& io_service) : sock(io_service)
+	con_handler(boost::asio::io_service &io_service) : sock(io_service)
 	{
 	}
 
-    /**
+	/**
      * @brief Указатель на созданный сервис
      * @param [in] io_service сервис
      * @return указатель
      */
-	static pointer create(boost::asio::io_service& io_service)
+	static pointer create(boost::asio::io_service &io_service)
 	{
-    	return pointer(new con_handler(io_service));
+		return pointer(new con_handler(io_service));
 	}
 
 	/**
 	 * @brief Сокет
 	 * @return Сокет
 	 */
-	boost::asio::ip::tcp::socket& socket();
+	boost::asio::ip::tcp::socket &socket();
 
 	/**
 	 * @brief Запуск handler
 	 */
 	void start();
 
-    /**
+	/**
      * @brief Чтение сообщения от клиента
      * @param [out] err ошибка
 	 * @param [in] bytes_transferred 
      */
-	void handle_read(const boost::system::error_code& err, size_t bytes_transferred);
+	void handle_read(const boost::system::error_code &err, size_t bytes_transferred);
 
-    /**
+	/**
      * @brief Отправка сообщения клиенту
      * @param [out] err ошибка
 	 * @param [in] bytes_transferred 
      */
-	void handle_write(const boost::system::error_code& err, size_t bytes_transferred);
+	void handle_write(const boost::system::error_code &err, size_t bytes_transferred);
 
-    /**
+	/**
+	 * @brief обработка запроса. Поиск имени пользователя
+	 * @param [in] request запрос
+	 * @return true - запрос подходит(обработан), false - запрос не подходит(не обработан)
+	 */
+	bool processing_user_check(std::string *request);
+
+	/**
+	 * @brief обработка запроса. Поиск имени и пароля
+	 * @param [in] request запрос
+	 * @return true - имя и пароль верны, false - имя и пароль не верны.
+	 */
+	bool processing_user_pass_check(std::string *request);
+
+	/**
      * @brief Деструктор класса
      */
-	~con_handler();
+		~con_handler();
 };
 
 #endif // CON_HANDLER_H
-/** @} */
+	   /** @} */

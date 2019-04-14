@@ -29,17 +29,6 @@ DB::DB(/* args */)
 {
     db_open();
     db_PRAGMA();
-
-    if (db_table_check())
-    {
-        spdlog::info("Table found");
-    }
-    else
-    {
-        spdlog::warn("Table not found. Create table");
-        db_create();
-        spdlog::warn("Creating the initial data in the database");
-    }
 }
 
 /**
@@ -59,6 +48,14 @@ DB::~DB()
 void DB::db_open()
 {
     *rc = sqlite3_open(BR::DB_NAME, &db);
+}
+
+/**
+ * @brief Проверка бд(получается открыть?)
+ */
+void DB::db_open_log()
+{
+    *rc = sqlite3_open(BR::DB_NAME, &db);
 
     if (*rc)
     {
@@ -76,7 +73,6 @@ void DB::db_open()
 void DB::db_close()
 {
     sqlite3_close(db);
-    spdlog::info("DataBase close");
 }
 
 /**
@@ -107,8 +103,9 @@ void DB::db_create()
 /**
  * @brief Проверка существования таблицы Player
  */
-bool DB::db_table_check()
+void DB::db_table_check()
 {
+
     std::string sql =
         "CREATE TABLE PLAYER("
         "ID INT PRIMARY KEY     NOT NULL, "
@@ -122,12 +119,16 @@ bool DB::db_table_check()
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
-    if (*rc == 0)
+    if (*rc != 0)
     {
-        return false;
+        spdlog::info("Table found");
     }
-
-    return true;
+    else
+    {
+        spdlog::warn("Table not found. Create table");
+        db_create();
+        spdlog::warn("Creating the initial data in the database");
+    }
 }
 
 /**
@@ -177,6 +178,22 @@ bool DB::db_check_player(std::string *s_name)
 }
 
 /**
+ * @brief Проверка пароля
+ * @param [in] l пользователь
+ * @return true - пароль правильный, false - пароль не правильный.
+ */
+bool DB::db_check_pass(login *l)
+{
+    bool ret = false;
+    std::string pass = db_get_password(&l->s_name);
+    if(pass == l->s_name)
+    {
+        ret = true;
+    }
+    return ret;
+}
+
+/**
  * @brief Создать пользователя l
  * @param [in] l пользователь
  */
@@ -208,7 +225,7 @@ void DB::db_add_player(login *l)
     sql += "0, 0, 0);";
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-
+    /*
     if (*rc != SQLITE_OK)
     {
         spdlog::error("Failed to create player: {}", l->s_name);
@@ -218,6 +235,7 @@ void DB::db_add_player(login *l)
     {
         spdlog::info("Player {} successfully created.", l->s_name);
     }
+    */
 }
 
 /**
@@ -287,7 +305,7 @@ int DB::db_get_id(std::string *s_name)
 
     std::string sql = "SELECT ID FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -344,7 +362,7 @@ std::string DB::db_get_reg_date(std::string *s_name)
 
     std::string sql = "SELECT REG_DATE FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -367,7 +385,7 @@ std::string DB::db_get_password(std::string *s_name)
 
     std::string sql = "SELECT PASSWORD FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -390,7 +408,7 @@ int DB::db_get_score(std::string *s_name)
 
     std::string sql = "SELECT SCORE FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -413,7 +431,7 @@ int DB::db_get_money(std::string *s_name)
 
     std::string sql = "SELECT MONEY FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -436,7 +454,7 @@ int DB::db_get_level(std::string *s_name)
 
     std::string sql = "SELECT LEVEL FROM PLAYER WHERE NAME =\"";
     sql += *s_name;
-    sql += "\"";
+    sql += "\";";
 
     *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
@@ -447,11 +465,21 @@ int DB::db_get_level(std::string *s_name)
     return i_ret;
 }
 
+/**
+ * @brief Задать флаги sqlite3
+ */
 void DB::db_PRAGMA()
 {
-    //std::string sql = "PRAGMA synchronous = OFF;PRAGMA encoding = \"UTF-8\";PRAGMA journal_mode = OFF;";
     std::string sql = BR::SQLITE3_PRAGMA;
-    spdlog::warn("sql {}", sql);
+    *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
+}
+
+/**
+ * @brief Задать флаги sqlite3. Проверка возможности
+ */
+void DB::db_PRAGMA_log()
+{
+    std::string sql = BR::SQLITE3_PRAGMA;
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 
     if (*rc != SQLITE_OK)

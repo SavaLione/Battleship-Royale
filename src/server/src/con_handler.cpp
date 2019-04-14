@@ -27,7 +27,7 @@
  * @brief Сокет
  * @return Сокет
  */
-boost::asio::ip::tcp::socket& con_handler::socket()
+boost::asio::ip::tcp::socket &con_handler::socket()
 {
     return sock;
 }
@@ -50,9 +50,23 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 {
     if (!err)
     {
-        spdlog::info("--------------------------");
-        spdlog::info(data);
+        std::string s_data = data;
+        if(processing_user_check(&s_data))
+        {
+            spdlog::warn("processing_user_check");
+            spdlog::warn(s_data);
+        }
+        else if(processing_user_pass_check(&s_data))
+        {
+            spdlog::warn("processing_user_pass_check");
+            spdlog::warn(s_data);
+        }
+        else
+        {
+            spdlog::warn("Nothing");
+        }
 
+        /*
         std::string s_data = data;
 
         std::string s_param_one = "";
@@ -62,32 +76,29 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         std::string s_pattern_reg_user_pass = BR::REG_USER_PASS;
         std::string s_pattern_reg_uid = BR::REG_UID;
 
-        if(check_pattern(&s_data, &s_pattern_reg_user))
+        if (check_pattern(&s_data, &s_pattern_reg_user))
         {
-            try
-            {
-                getData(&s_data, &s_pattern_reg_user, &s_param_one);
-                DB *db = new DB;
-                spdlog::error("|{}|", s_param_one);
-                spdlog::warn("User: {} Found? {}", s_param_one, (*db).db_check_player(&s_param_one));
+            getData(&s_data, &s_pattern_reg_user, &s_param_one);
+            DB *db = new DB;
 
-                delete db;
-            }
-            catch (std::exception& e)
+            if ((*db).db_check_player(&s_param_one))
             {
-                spdlog::error(e.what());
+                // Found
             }
+
+            delete db;
         }
 
-        if(check_pattern(&s_data, &s_pattern_reg_user_pass))
+        if (check_pattern(&s_data, &s_pattern_reg_user_pass))
         {
             getData(&s_data, &s_pattern_reg_user_pass, &s_param_one, &s_param_two);
         }
 
-        if(check_pattern(&s_data, &s_pattern_reg_uid))
+        if (check_pattern(&s_data, &s_pattern_reg_uid))
         {
             getData(&s_data, &s_pattern_reg_uid, &s_param_one, &s_param_two);
         }
+        */
         memset(data, 0, sizeof data);
     }
     else
@@ -95,6 +106,65 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         spdlog::error("err (recv):  {}", err.message());
         sock.close();
     }
+}
+
+/**
+ * @brief обработка запроса. Поиск имени пользователя
+ * @param [in] request запрос
+ * @return true - запрос подходит(обработан), false - запрос не подходит(не обработан)
+ */
+bool con_handler::processing_user_check(std::string *request)
+{
+    std::string s_param_one = "";
+    std::string s_pattern_reg_user = BR::REG_USER;
+    bool ret = false;
+
+    if (check_pattern(request, &s_pattern_reg_user))
+    {
+        getData(request, &s_pattern_reg_user, &s_param_one);
+        DB *db = new DB;
+
+        if ((*db).db_check_player(&s_param_one))
+        {
+            // Found
+        }
+
+        delete db;
+        ret = true;
+    }
+    return ret;
+}
+
+/**
+ * @brief обработка запроса. Поиск имени и пароля
+ * @param [in] request запрос
+ * @return true - имя и пароль верны, false - имя и пароль не верны.
+ */
+bool con_handler::processing_user_pass_check(std::string *request)
+{
+    std::string s_param_one = "";
+    std::string s_param_two = "";
+    std::string s_pattern_reg_user = BR::REG_USER_PASS;
+    bool ret = false;
+
+    if (check_pattern(request, &s_pattern_reg_user))
+    {
+        getData(request, &s_pattern_reg_user, &s_param_one, &s_param_two);
+        DB *db = new DB;
+
+        login l_user;
+        l_user.s_name = s_param_one;
+        l_user.s_password = s_param_two;
+
+        if((*db).db_check_pass(&l_user))
+        {
+            spdlog::warn("PASS OK");
+        }
+
+        delete db;
+        ret = true;
+    }
+    return ret;
 }
 
 /**
