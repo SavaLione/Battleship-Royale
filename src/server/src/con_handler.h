@@ -41,6 +41,8 @@ private:
 
 	char *answer = new char[max_length];
 
+	std::string *answ = new std::string;
+
 public:
 	/// Указатель но handler
 	typedef boost::shared_ptr<con_handler> pointer;
