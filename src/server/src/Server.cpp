@@ -44,7 +44,7 @@ void Server::handle_accept(con_handler::pointer connection, const boost::system:
  */
 Server::~Server()
 {
-
+	acceptor_.close();
 }
 
 /** @} */
