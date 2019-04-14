@@ -15,7 +15,7 @@
 #include <boost/asio.hpp>
 #include <boost/enable_shared_from_this.hpp>
 
-#include "DB.h"
+#include "MiniDB.h"
 
 /**
  * @brief Класс для общения
@@ -35,6 +35,7 @@ private:
 	std::string *s_param_one = new std::string;
 	std::string *s_param_two = new std::string;
 	std::string *s_pattern_reg = new std::string;
+	std::string *s_sha2 = new std::string;
 
 	/// Максимальная длина сообщения
 	enum
@@ -47,7 +48,7 @@ private:
 	char *data = new char[max_length];
 	std::string *data_check = new std::string;
 
-	DB *database = new DB;
+	MiniDB *mdb = new MiniDB;
 
 public:
 	/// Указатель но handler

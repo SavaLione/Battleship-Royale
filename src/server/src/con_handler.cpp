@@ -84,7 +84,7 @@ bool con_handler::processing_user_check(std::string *request)
     {
         getData(request, s_pattern_reg, s_param_one);
 
-        if (database->db_check_player(s_param_one))
+        if (mdb->checkPlayer(s_param_one))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -112,8 +112,9 @@ bool con_handler::processing_user_pass_check(std::string *request)
     if (check_pattern(request, s_pattern_reg))
     {
         getData(request, s_pattern_reg, s_param_one, s_param_two);
-        
-        if(database->db_check_pass(s_param_one, s_param_two))
+        //void getPassword(std::string *name, std::string *sha2_ret);
+        mdb->getPassword(s_param_one, s_sha2);
+        if(*s_param_two == *s_sha2)
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -146,6 +147,10 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
     memset(data, 0, max_length);
     //*data = "";
     *answ = "";
+	*s_param_one = "";
+	*s_param_two = "";
+	*s_pattern_reg = "";
+	*s_sha2 = "";
 }
 
 /**
@@ -153,13 +158,14 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
  */
 con_handler::~con_handler()
 {
+    sock.close();
     delete[] data;
     delete answ;
-    delete database;
+    delete mdb;
     delete data_check;
     delete s_param_one;
     delete s_param_two;
     delete s_pattern_reg;
-    sock.close();
+    delete s_sha2;
 }
 /** @} */
