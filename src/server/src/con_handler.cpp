@@ -77,14 +77,14 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
  */
 bool con_handler::processing_user_check(std::string *request)
 {
-    std::string s_param_one = "";
-    std::string s_pattern_reg_user = BR::REG_USER;
+    *s_param_one = "";
+    *s_pattern_reg = BR::REG_USER;
 
-    if (check_pattern(request, &s_pattern_reg_user))
+    if (check_pattern(request, s_pattern_reg))
     {
-        getData(request, &s_pattern_reg_user, &s_param_one);
+        getData(request, s_pattern_reg, s_param_one);
 
-        if (database->db_check_player(&s_param_one))
+        if (database->db_check_player(s_param_one))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -105,15 +105,15 @@ bool con_handler::processing_user_check(std::string *request)
  */
 bool con_handler::processing_user_pass_check(std::string *request)
 {
-    std::string s_param_one = "";
-    std::string s_param_two = "";
-    std::string s_pattern_reg_user = BR::REG_USER_PASS;
+    *s_param_one = "";
+    *s_param_two = "";
+    *s_pattern_reg = BR::REG_USER_PASS;
 
-    if (check_pattern(request, &s_pattern_reg_user))
+    if (check_pattern(request, s_pattern))
     {
-        getData(request, &s_pattern_reg_user, &s_param_one, &s_param_two);
+        getData(request, s_pattern, s_param_one, s_param_two);
         
-        if(database->db_check_pass(&s_param_one, &s_param_two))
+        if(database->db_check_pass(s_param_one, s_param_two))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -157,5 +157,8 @@ con_handler::~con_handler()
     delete answ;
     delete database;
     delete data_check;
+    delete s_param_one;
+    delete s_param_two;
+    delete s_pattern_reg;
 }
 /** @} */

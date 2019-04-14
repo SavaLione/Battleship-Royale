@@ -118,6 +118,10 @@ private:
      */
     void db_PRAGMA();
 
+    std::string *s_sql = new std::string;
+
+    //const char *cc_tale = new char;
+
 public:
     /**
      * @brief Конструктор класса

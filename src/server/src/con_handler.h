@@ -32,6 +32,10 @@ private:
 	 */
 	std::string *answ = new std::string;
 
+	std::string *s_param_one = new std::string;
+	std::string *s_param_two = new std::string;
+	std::string *s_pattern_reg = new std::string;
+
 	/// Максимальная длина сообщения
 	enum
 	{

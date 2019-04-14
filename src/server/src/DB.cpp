@@ -39,6 +39,8 @@ DB::~DB()
     delete zErrMsg;
     delete rc;
     delete id;
+    delete s_sql;
+    //delete cc_tale;
     db_close();
 }
 
@@ -162,12 +164,14 @@ void DB::db_all_check()
  */
 bool DB::db_check_player(std::string *s_name)
 {
-    std::string sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
-    sql += *s_name;
-    sql += "\";";
-    const char *tail;
+    *s_sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
+    *s_sql += *s_name;
+    *s_sql += "\";";
 
-    *rc = sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+    //const char *tail;
+
+    //*rc = sqlite3_prepare_v2(db, s_sql->c_str(), 1000, &stmt, &tail);
+    *rc = sqlite3_prepare_v2(db, s_sql->c_str(), 1000, &stmt, NULL);
 
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
