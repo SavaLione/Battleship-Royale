@@ -109,9 +109,9 @@ bool con_handler::processing_user_pass_check(std::string *request)
     *s_param_two = "";
     *s_pattern_reg = BR::REG_USER_PASS;
 
-    if (check_pattern(request, s_pattern))
+    if (check_pattern(request, s_pattern_reg))
     {
-        getData(request, s_pattern, s_param_one, s_param_two);
+        getData(request, s_pattern_reg, s_param_one, s_param_two);
         
         if(database->db_check_pass(s_param_one, s_param_two))
         {
@@ -160,5 +160,6 @@ con_handler::~con_handler()
     delete s_param_one;
     delete s_param_two;
     delete s_pattern_reg;
+    sock.close();
 }
 /** @} */

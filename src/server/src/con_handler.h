@@ -62,6 +62,7 @@ public:
      */
 	con_handler(boost::asio::io_service &io_service) : sock(io_service)
 	{
+		
 	}
 
 	/**
@@ -73,6 +74,12 @@ public:
 	{
 		return pointer(new con_handler(io_service));
 	}
+	/*
+	static pointer create(boost::asio::io_service &io_service)
+	{
+		return pointer(new con_handler(io_service));
+	}
+	*/
 
 	/**
 	 * @brief Сокет

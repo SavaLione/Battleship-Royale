@@ -38,7 +38,7 @@ public:
 	 * @param [in] io_service сервис
 	 * @param [in] i_port порт сервера
      */
-	Server(boost::asio::io_service& io_service, int i_port) : acceptor_(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), i_port))
+	Server(boost::asio::io_service& io_service, int *i_port) : acceptor_(io_service, boost::asio::ip::tcp::endpoint(boost::asio::ip::tcp::v4(), *i_port))
 	{
 		start_accept();
 	}

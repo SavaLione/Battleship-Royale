@@ -27,8 +27,12 @@
  */
 DB::DB(/* args */)
 {
-    db_open();
-    db_PRAGMA();
+    // OPEN
+    *rc = sqlite3_open(BR::DB_NAME, &db);
+
+    // PRAGMA
+    *s_sql = BR::SQLITE3_PRAGMA;
+    *rc = sqlite3_exec(db, s_sql->c_str(), NULL, 0, &messageError);
 }
 
 /**
@@ -47,10 +51,12 @@ DB::~DB()
 /**
  * @brief Открытие базы данных
  */
+/*
 void DB::db_open()
 {
     *rc = sqlite3_open(BR::DB_NAME, &db);
 }
+*/
 
 /**
  * @brief Проверка бд(получается открыть?)
@@ -466,11 +472,13 @@ int DB::db_get_level(std::string *s_name)
 /**
  * @brief Задать флаги sqlite3
  */
+/*
 void DB::db_PRAGMA()
 {
     std::string sql = BR::SQLITE3_PRAGMA;
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
 }
+*/
 
 /**
  * @brief Задать флаги sqlite3. Проверка возможности

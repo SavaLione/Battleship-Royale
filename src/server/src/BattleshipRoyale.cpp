@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
 	try 
 	{
 		boost::asio::io_service io_service;   
-		Server server(io_service, PORT);
+		Server server(io_service, &PORT);
 		io_service.run();
 	} 
 	catch(std::exception& e) 
