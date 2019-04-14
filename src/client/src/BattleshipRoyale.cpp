@@ -104,9 +104,6 @@ int main(int argc, char *argv[])
     spdlog::info("IP: {}", s_ip);
     spdlog::info("PORT: {}", PORT);
 	
-	int test_connection = 0;
-	while(true)
-	{
     boost::asio::io_service io_service;
     tcp::socket socket(io_service);
 
@@ -139,10 +136,6 @@ int main(int argc, char *argv[])
         spdlog::info("-----------------");
         spdlog::info(data);
     }
-
-	test_connection++;
-	spdlog::info(test_connection);
-	}
 
     return 0;
 }
