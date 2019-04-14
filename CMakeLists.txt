@@ -19,12 +19,16 @@ set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT_CURSES"   )
 set(    BR_SERVER_TEST 1    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_TEST 1    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_REGEX_TEST  1    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
+set(    BR_NEWSERVER   1    CACHE BOOL "BR_NEWSERVER"       )           # <--- DELETE THIS ON STABLE
+set(    BR_NEWCLIENT   1    CACHE BOOL "BR_NEWCLIENT"       )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
 set(    BR_SERVER_NAME_TEST     BattleshipRoyale_Server_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_NAME_TEST     BattleshipRoyale_CLIENT_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_REGEX_NAME_TEST      BattleshipRoyale_REGEX_TEST     )       # <--- DELETE THIS ON STABLE
+set(    BR_NEWSERVER_NAME       BattleshipRoyale_BR_NEWSERVER   )       # <--- DELETE THIS ON STABLE
+set(    BR_NEWCLIENT_NAME       BattleshipRoyale_BR_NEWCLIENT   )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -109,4 +113,12 @@ endif()                                         # <--- DELETE THIS ON STABLE
 
 if(BR_REGEX_TEST)                               # <--- DELETE THIS ON STABLE
 	add_subdirectory(src/asio/regex)            # <--- DELETE THIS ON STABLE
+endif()                                         # <--- DELETE THIS ON STABLE
+
+if(BR_NEWSERVER)                                # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/asio/newserver)        # <--- DELETE THIS ON STABLE
+endif()                                         # <--- DELETE THIS ON STABLE
+
+if(BR_NEWCLIENT)                                # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/asio/newclient)        # <--- DELETE THIS ON STABLE
 endif()                                         # <--- DELETE THIS ON STABLE
