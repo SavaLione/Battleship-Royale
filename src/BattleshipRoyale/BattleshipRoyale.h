@@ -85,7 +85,7 @@ namespace BR
      */
     const char SQLITE3_PRAGMA[] = "PRAGMA synchronous = OFF;"
                                   "PRAGMA encoding = \"UTF-8\";"
-                                  "PRAGMA journal_mode = OFF;";
+                                  "PRAGMA journal_mode = DELETE;";
     ///////////////////////////////////////////////////////////////////////////////
     //      Server
     ///////////////////////////////////////////////////////////////////////////////
