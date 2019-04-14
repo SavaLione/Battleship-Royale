@@ -121,6 +121,26 @@ namespace BR
     /// @endcode
     const char REG_UID[] = "^UID:\\[([^\\[\\]]+)\\] data:\\[([^\\[\\]]+)\\]$";
 
+    /// Регулярное выражение для поиска ответа
+    ///
+    /// @code
+    ///     answer:[true]
+    /// @endcode
+    const char REG_ANSWER_TRUE[] = "^answer:\\[true\\]$";
+
+    /// Регулярное выражение для поиска ответа
+    ///
+    /// @code
+    ///     answer:[false]
+    /// @endcode
+    const char REG_ANSWER_FALSE[] = "^answer:\\[false\\]$";
+
+    /// Положительный ответ
+    const char ANSWER_TRUE[] = "answer:[true]";
+
+    /// Отрицательный ответ
+    const char ANSWER_FALSE[] = "answer:[false]";
+
 } // BR
 
 /*

@@ -28,7 +28,7 @@ private:
 	 * @brief Сообщение, которое будет отправлено клиенту
 	 * @warning Необходимо изменить структуру. Сообщение должно быть произвольным
 	 */
-	std::string message = "Hello From Server!";
+	std::string *message = new std::string;
 
 	/// Максимальная длина сообщения
 	enum
@@ -110,4 +110,4 @@ public:
 };
 
 #endif // CON_HANDLER_H
-	   /** @} */
+/** @} */
