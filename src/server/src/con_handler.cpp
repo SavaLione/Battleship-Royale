@@ -85,9 +85,8 @@ bool con_handler::processing_user_check(std::string *request)
     if (check_pattern(request, &s_pattern_reg_user))
     {
         getData(request, &s_pattern_reg_user, &s_param_one);
-        DB *db = new DB;
 
-        if ((*db).db_check_player(&s_param_one))
+        if (database->db_check_player(&s_param_one))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -96,7 +95,6 @@ bool con_handler::processing_user_check(std::string *request)
             *answ = BR::ANSWER_FALSE;
         }
 
-        delete db;
         ret = true;
     }
     return ret;
@@ -117,13 +115,12 @@ bool con_handler::processing_user_pass_check(std::string *request)
     if (check_pattern(request, &s_pattern_reg_user))
     {
         getData(request, &s_pattern_reg_user, &s_param_one, &s_param_two);
-        DB *db = new DB;
 
         login l_user;
         l_user.s_name = s_param_one;
         l_user.s_password = s_param_two;
 
-        if((*db).db_check_pass(&l_user))
+        if(database->db_check_pass(&l_user))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -132,7 +129,6 @@ bool con_handler::processing_user_pass_check(std::string *request)
             *answ = BR::ANSWER_FALSE;
         }
 
-        delete db;
         ret = true;
     }
     return ret;
@@ -164,5 +160,6 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
 con_handler::~con_handler()
 {
     delete answ;
+    delete database;
 }
 /** @} */

@@ -15,6 +15,8 @@
 #include <boost/asio.hpp>
 #include <boost/enable_shared_from_this.hpp>
 
+#include "DB.h"
+
 /**
  * @brief Класс для общения
  */
@@ -38,7 +40,8 @@ private:
 
 	/// Данные, полученные от клиента
 	char data[max_length];
-
+	
+	DB *database = new DB;
 public:
 	/// Указатель но handler
 	typedef boost::shared_ptr<con_handler> pointer;
