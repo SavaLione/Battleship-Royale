@@ -46,12 +46,6 @@ struct db_player
     int level;
 };
 
-struct login
-{
-    std::string s_name;
-    std::string s_password;
-};
-
 /**
  * @brief Подключение к базе данных
  */
@@ -144,7 +138,7 @@ public:
      * @brief Создать пользователя l
      * @param [in] l пользователь
      */
-    void db_add_player(login *l);
+    //void db_add_player(login *l);
 
     /**
      * @brief Проверка существования пользователя
@@ -169,17 +163,18 @@ public:
 
     /**
      * @brief Проверка пароля
-     * @param [in] l пользователь
+     * @param [in] name имя пользователя
+     * @param [in] pass пароль
      * @return true - пароль правильный, false - пароль не правильный.
      */
-    bool db_check_pass(login *l);
+    bool db_check_pass(std::string *name, std::string *pass);
 
     /**
      * @brief Получение UID пользователя
      * @param [in] l пользователь
      * @return UID
      */
-    UID uid_get_np(login *l);
+    //UID uid_get_np(login *l);
 
     /**
      * @brief Получение UID пользователя
@@ -187,7 +182,7 @@ public:
      * @param [in] id id
      * @return UID
      */
-    UID uid_get_np(login *l, int *id);
+    //UID uid_get_np(login *l, int *id);
 
     /**
      * @brief Получение даты регистрации по имени

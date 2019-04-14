@@ -39,9 +39,12 @@ private:
 	};
 
 	/// Данные, полученные от клиента
-	char data[max_length];
-	
+	//char data[max_length];
+	char *data = new char[max_length];
+	std::string *data_check = new std::string;
+
 	DB *database = new DB;
+
 public:
 	/// Указатель но handler
 	typedef boost::shared_ptr<con_handler> pointer;
@@ -109,7 +112,7 @@ public:
 	/**
      * @brief Деструктор класса
      */
-		~con_handler();
+	~con_handler();
 };
 
 #endif // CON_HANDLER_H

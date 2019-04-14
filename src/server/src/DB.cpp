@@ -179,24 +179,24 @@ bool DB::db_check_player(std::string *s_name)
 
 /**
  * @brief Проверка пароля
- * @param [in] l пользователь
+ * @param [in] name имя пользователя
+ * @param [in] pass пароль
  * @return true - пароль правильный, false - пароль не правильный.
  */
-bool DB::db_check_pass(login *l)
+bool DB::db_check_pass(std::string *name, std::string *pass)
 {
-    bool ret = false;
-    std::string pass = db_get_password(&l->s_name);
-    if(pass == l->s_name)
+    if (db_get_password(name) == *pass)
     {
-        ret = true;
+        return true;
     }
-    return ret;
+    return false;
 }
 
 /**
  * @brief Создать пользователя l
  * @param [in] l пользователь
  */
+/*
 void DB::db_add_player(login *l)
 {
     std::string sql =
@@ -225,18 +225,8 @@ void DB::db_add_player(login *l)
     sql += "0, 0, 0);";
 
     *rc = sqlite3_exec(db, sql.c_str(), NULL, 0, &messageError);
-    /*
-    if (*rc != SQLITE_OK)
-    {
-        spdlog::error("Failed to create player: {}", l->s_name);
-        spdlog::error("Error: {}", sqlite3_errmsg(db));
-    }
-    else
-    {
-        spdlog::info("Player {} successfully created.", l->s_name);
-    }
-    */
 }
+*/
 
 /**
  * @brief Получить карточку пользователя db_player по ссылке
@@ -321,6 +311,7 @@ int DB::db_get_id(std::string *s_name)
  * @param [in] l пользователь
  * @return UID
  */
+/*
 UID DB::uid_get_np(login *l)
 {
     unsigned int u_i_random[4];
@@ -333,6 +324,7 @@ UID DB::uid_get_np(login *l)
 
     return uid_ret;
 }
+*/
 
 /**
  * @brief Получение UID пользователя
@@ -340,6 +332,7 @@ UID DB::uid_get_np(login *l)
  * @param [in] id id
  * @return UID
  */
+/*
 UID DB::uid_get_np(login *l, int *id)
 {
     UID uid_ret;
@@ -349,6 +342,7 @@ UID DB::uid_get_np(login *l, int *id)
 
     return uid_ret;
 }
+*/
 
 /**
  * @brief Получение даты регистрации по имени

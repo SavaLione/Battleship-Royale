@@ -20,7 +20,6 @@
 #include <spdlog/sinks/basic_file_sink.h>
 
 #include "BattleshipRoyale.h"
-#include "DB.h"
 #include "Regex.h"
 
 /**
@@ -49,12 +48,12 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
 {
     if (!err)
     {
-        std::string s_data = data;
-        if(processing_user_check(&s_data))
+        *data_check = data;
+        if(processing_user_check(data_check))
         {
 
         }
-        else if(processing_user_pass_check(&s_data))
+        else if(processing_user_pass_check(data_check))
         {
 
         }
@@ -80,7 +79,6 @@ bool con_handler::processing_user_check(std::string *request)
 {
     std::string s_param_one = "";
     std::string s_pattern_reg_user = BR::REG_USER;
-    bool ret = false;
 
     if (check_pattern(request, &s_pattern_reg_user))
     {
@@ -95,9 +93,9 @@ bool con_handler::processing_user_check(std::string *request)
             *answ = BR::ANSWER_FALSE;
         }
 
-        ret = true;
+        return true;
     }
-    return ret;
+    return false;
 }
 
 /**
@@ -110,17 +108,12 @@ bool con_handler::processing_user_pass_check(std::string *request)
     std::string s_param_one = "";
     std::string s_param_two = "";
     std::string s_pattern_reg_user = BR::REG_USER_PASS;
-    bool ret = false;
 
     if (check_pattern(request, &s_pattern_reg_user))
     {
         getData(request, &s_pattern_reg_user, &s_param_one, &s_param_two);
-
-        login l_user;
-        l_user.s_name = s_param_one;
-        l_user.s_password = s_param_two;
-
-        if(database->db_check_pass(&l_user))
+        
+        if(database->db_check_pass(&s_param_one, &s_param_two))
         {
             *answ = BR::ANSWER_TRUE;
         }
@@ -129,9 +122,9 @@ bool con_handler::processing_user_pass_check(std::string *request)
             *answ = BR::ANSWER_FALSE;
         }
 
-        ret = true;
+        return true;
     }
-    return ret;
+    return false;
 }
 
 /**
@@ -151,6 +144,7 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
         sock.close();
     }
     memset(data, 0, max_length);
+    //*data = "";
     *answ = "";
 }
 
@@ -159,7 +153,9 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
  */
 con_handler::~con_handler()
 {
+    delete[] data;
     delete answ;
     delete database;
+    delete data_check;
 }
 /** @} */
