@@ -35,14 +35,13 @@ bool MiniDB::checkPlayer(std::string const& name)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
-    int rc;
     std::string sql = BR::SQLITE3_PRAGMA;
 
     bool fl = false;
 
     sqlite3_open(BR::DB_NAME, &db);
 
-    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
     sql += name;
@@ -59,6 +58,9 @@ bool MiniDB::checkPlayer(std::string const& name)
     sqlite3_finalize(stmt);
     sqlite3_close(db);
 
+    free(db);
+    free(stmt);
+
     return fl;
 }
 
@@ -72,17 +74,16 @@ void MiniDB::getPassword(std::string const& name, std::string& sha2_ret)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
-    int rc = 0;
     std::string sql = BR::SQLITE3_PRAGMA;
 
     sqlite3_open(BR::DB_NAME, &db);
-    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT PASSWORD FROM PLAYER WHERE NAME =\"";
     sql += name;
     sql += "\";";
 
-    rc = sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
