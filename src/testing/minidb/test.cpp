@@ -7,7 +7,7 @@ using namespace std;
 
 void createMoreObjects();
 
-const int OJECTS = 1000;
+const int OBJECTS = 1000;
 
 int main()
 {
@@ -23,27 +23,10 @@ int main()
 
 void createMoreObjects()
 {
-    for(int i = 0; i < OJECTS; i++)
+    for(int i = 0; i < OBJECTS; i++)
     {
-        string *s = new string;
-        
-        checkPlayer(s);
-
-        delete s;
+        string s = "SavaLione";
+        MiniDB mdb;
+        mdb.checkPlayer(&s);
     }
-    /*
-    for(int i = 0; i < OJECTS; i++)
-    {
-        string *s = new string;
-        MiniDB *mdb = new MiniDB;
-        
-        *s = "SavaLione";
-
-        mdb->checkPlayer(s);
-        mdb->close();
-
-        delete mdb;
-        delete s;
-    }
-    */
 }
