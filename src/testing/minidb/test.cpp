@@ -5,27 +5,21 @@
 
 using namespace std;
 
-void createMoreObjects();
-
-const int OBJECTS = 1000;
-
 int main()
 {
     MiniDB mdb;
     mdb.setTable();
-
-    ///
-    createMoreObjects();
-
+    cout << mdb.checkPlayer("SavaLione") << endl;
+    cout << mdb.checkPlayer("OwO") << endl;
+    cout << mdb.checkPlayer("asdwqfzbdr") << endl;
+    cout << "---------------------------" << endl;
+    string pass = "";
+    cout << pass << endl;
+    mdb.getPassword("SavaLione", pass);
+    cout << pass << endl;
+    mdb.getPassword("OwO", pass);
+    cout << pass << endl;
+    mdb.getPassword("asdwqfzbdr", pass);
+    cout << pass << endl;
     return 0;
-}
-
-void createMoreObjects()
-{
-    for(int i = 0; i < OBJECTS; i++)
-    {
-        string s = "SavaLione";
-        MiniDB mdb;
-        mdb.checkPlayer(s);
-    }
 }

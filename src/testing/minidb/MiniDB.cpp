@@ -2,7 +2,7 @@
  * @file
  * @brief Облегчённый класс для работы с бд
  * @author SavaLione
- * @date 14 Apr 2019
+ * @date 15 Apr 2019
  */
 /**
  * @defgroup minidb_cpp MiniDB.cpp
