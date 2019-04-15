@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['processing_5fuser_5fcheck',['processing_user_check',['../group__con__handler__cpp.html#ga98e4756151b8044ac6700ce668620f78',1,'con_handler']]],
-  ['processing_5fuser_5fpass_5fcheck',['processing_user_pass_check',['../group__con__handler__cpp.html#ga04464d188e9fc40873ccfd6342c71590',1,'con_handler']]]
+  ['onconnect',['OnConnect',['../class_server_link.html#ab9e341037ea6395e4a73aeefd1d61847',1,'ServerLink']]],
+  ['onread',['OnRead',['../class_server_link.html#ad9c2be6ec4e96b40892726c661e05e4e',1,'ServerLink']]],
+  ['onsend',['OnSend',['../class_server_link.html#a37800b28376bd4fb1eece4d83275f010',1,'ServerLink']]]
 ];

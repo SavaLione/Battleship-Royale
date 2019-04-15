@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +55,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__servercpp.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -78,6 +102,9 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Функции</h2></td></tr>
+<tr class="memitem:gab19cf3e5b775cd1b4eeb6d936340e712"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__servercpp.html#gab19cf3e5b775cd1b4eeb6d936340e712">Server::start_accept</a> ()</td></tr>
+<tr class="memdesc:gab19cf3e5b775cd1b4eeb6d936340e712"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запуск acceptor_.  <a href="#gab19cf3e5b775cd1b4eeb6d936340e712">Подробнее...</a><br /></td></tr>
+<tr class="separator:gab19cf3e5b775cd1b4eeb6d936340e712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gadb53e5d1b7c0ad8a79ce236c8ca5d50c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__servercpp.html#gadb53e5d1b7c0ad8a79ce236c8ca5d50c">Server::handle_accept</a> (<a class="el" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">con_handler::pointer</a> connection, const boost::system::error_code &amp;err)</td></tr>
 <tr class="memdesc:gadb53e5d1b7c0ad8a79ce236c8ca5d50c"><td class="mdescLeft">&#160;</td><td class="mdescRight">handle  <a href="#gadb53e5d1b7c0ad8a79ce236c8ca5d50c">Подробнее...</a><br /></td></tr>
 <tr class="separator:gadb53e5d1b7c0ad8a79ce236c8ca5d50c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -113,6 +140,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="server_2src_2_server_8h.html">Server.h</a>&gt;</code></p>
+
 <p>handle </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -123,6 +152,37 @@ $(function() {
 </dl>
 
 <p class="definition">См. определение в файле <a class="el" href="server_2src_2_server_8cpp_source.html">server/src/Server.cpp</a> строка <a class="el" href="server_2src_2_server_8cpp_source.html#l00034">34</a></p>
+
+</div>
+</div>
+<a id="gab19cf3e5b775cd1b4eeb6d936340e712"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab19cf3e5b775cd1b4eeb6d936340e712">&#9670;&nbsp;</a></span>start_accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Server::start_accept </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="server_2src_2_server_8h.html">Server.h</a>&gt;</code></p>
+
+<p>Запуск acceptor_. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_server_8cpp_source.html">server/src/Server.cpp</a> строка <a class="el" href="server_2src_2_server_8cpp_source.html#l00019">19</a></p>
 
 </div>
 </div>
@@ -141,6 +201,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="server_2src_2_server_8h.html">Server.h</a>&gt;</code></p>
+
 <p>Деструктор класса </p>
 
 <p class="definition">См. определение в файле <a class="el" href="server_2src_2_server_8cpp_source.html">server/src/Server.cpp</a> строка <a class="el" href="server_2src_2_server_8cpp_source.html#l00046">46</a></p>
@@ -148,11 +210,14 @@ $(function() {
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

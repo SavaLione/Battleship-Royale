@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['s_5fparam_5fone',['s_param_one',['../classcon__handler.html#a7992ae8537dd8cff2a90929a12378ed2',1,'con_handler']]],
+  ['s_5fparam_5ftwo',['s_param_two',['../classcon__handler.html#a5e5a3f9b639a46d849900ee4ba79e7cb',1,'con_handler']]],
+  ['s_5fpattern_5freg',['s_pattern_reg',['../classcon__handler.html#a5346577457d8d5f9b7e7f68e8a332a6f',1,'con_handler']]],
+  ['s_5fsha2',['s_sha2',['../classcon__handler.html#a3bf0324832d08ef3279f652e567c03dc',1,'con_handler']]],
+  ['s_5fsql',['s_sql',['../class_d_b.html#a25a925a9f5a21a2eda6ef4a8150f780e',1,'DB']]],
+  ['score',['score',['../structdb__player.html#a49a7074936df50c10ce3573663e902bc',1,'db_player']]],
+  ['sendbuffer',['sendBuffer',['../class_server_link.html#a156357298a26924dc29f0914f1fc0ddf',1,'ServerLink']]],
+  ['sending',['sending',['../class_server_link.html#a1c9905db0c1aac29576f7e01518c8d6e',1,'ServerLink']]],
+  ['server_5fip',['SERVER_IP',['../namespace_b_r.html#ae2055a331ff0a0d44ecdf49d643c143b',1,'BR']]],
+  ['server_5fport',['SERVER_PORT',['../namespace_b_r.html#a93dcd985876e063e59cb37eeb4f49bc8',1,'BR']]],
+  ['server_5fversion',['SERVER_VERSION',['../namespace_b_r.html#adfde74493201d02cbbe52fc1d83bf1ec',1,'BR']]],
+  ['server_5fversion_5fmajor',['SERVER_VERSION_MAJOR',['../namespace_b_r.html#a767d5d7fec5adfa1bf5a7c03f98beaaf',1,'BR']]],
+  ['server_5fversion_5fminor',['SERVER_VERSION_MINOR',['../namespace_b_r.html#afb69faba1bc3b5d31b8514c0103b72a0',1,'BR']]],
+  ['server_5fversion_5fpatch',['SERVER_VERSION_PATCH',['../namespace_b_r.html#ad496b6d1eb6371bb740df7c7fac12aba',1,'BR']]],
+  ['service',['service',['../_client_8h.html#a632571e5ad0b35ab596dc375b3ce45b5',1,'Client.h']]],
+  ['sock',['sock',['../class_server_link.html#ab44d72d22bc44a19a2c1c7a2af9a7f3a',1,'ServerLink::sock()'],['../classcon__handler.html#ad23f2e7bef296da53cd171335affd300',1,'con_handler::sock()']]],
+  ['sqlite3_5fmax_5fmessage_5fsize',['SQLITE3_MAX_MESSAGE_SIZE',['../namespace_b_r.html#aba1ab75d8e974ded295ec6790183f839',1,'BR']]],
+  ['sqlite3_5fpragma',['SQLITE3_PRAGMA',['../namespace_b_r.html#a044d1c57586ae775faa82b034a473690',1,'BR']]],
+  ['sqlite3_5ftest_5fdata',['SQLITE3_TEST_DATA',['../namespace_b_r.html#a19c30c5e6b815e6f9064466ff1c27147',1,'BR']]],
+  ['stmt',['stmt',['../class_d_b.html#a98c52263921eab7802f7e7ef3bb9ff1f',1,'DB']]]
+];

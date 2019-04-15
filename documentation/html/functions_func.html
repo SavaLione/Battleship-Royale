@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +55,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions_func.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -71,6 +95,9 @@ $(function() {
 <li>con_handler()
 : <a class="el" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a>
 </li>
+<li>Connect()
+: <a class="el" href="class_server_link.html#ad4c71cf9ab124f2c29ae99ca4a50f0ac">ServerLink</a>
+</li>
 <li>create()
 : <a class="el" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">con_handler</a>
 </li>
@@ -81,11 +108,20 @@ $(function() {
 <li>DB()
 : <a class="el" href="group__dbcpp.html#ga29a603c52c10831cddee82518417f992">DB</a>
 </li>
+<li>db_all_check()
+: <a class="el" href="group__dbcpp.html#ga880d6118bf0b4020049339afc7e825fd">DB</a>
+</li>
 <li>db_check_pass()
 : <a class="el" href="group__dbcpp.html#gae82d5ae6889418aaef76396a18e30895">DB</a>
 </li>
 <li>db_check_player()
 : <a class="el" href="group__dbcpp.html#gaea6044c3fffc4c31714c732bb3789f71">DB</a>
+</li>
+<li>db_close()
+: <a class="el" href="group__dbcpp.html#gaca4c951672c54766fdd039efd38e654b">DB</a>
+</li>
+<li>db_create()
+: <a class="el" href="group__dbcpp.html#gae7d842aa9002c6f8f7d026bcc55e88af">DB</a>
 </li>
 <li>db_get_id()
 : <a class="el" href="group__dbcpp.html#gaa8cdb5ec4f2f269d13cff52b9e47c4cb">DB</a>
@@ -102,14 +138,23 @@ $(function() {
 <li>db_get_player()
 : <a class="el" href="group__dbcpp.html#ga1e5d244a838c99a8753727cf0abd1f70">DB</a>
 </li>
+<li>db_get_player_print()
+: <a class="el" href="group__dbcpp.html#gade41c643f9d1e57ee02c107553877d64">DB</a>
+</li>
 <li>db_get_reg_date()
 : <a class="el" href="group__dbcpp.html#gad7c6310d2669acd40978fd4662f90d53">DB</a>
 </li>
 <li>db_get_score()
 : <a class="el" href="group__dbcpp.html#ga990cefb97ea7222649511f37334a8601">DB</a>
 </li>
+<li>db_open()
+: <a class="el" href="class_d_b.html#a5e70db458c90e54a2d22d1167f7b52f7">DB</a>
+</li>
 <li>db_open_log()
 : <a class="el" href="group__dbcpp.html#ga8c1dcfee12e16f2a62cbe328fc2b2261">DB</a>
+</li>
+<li>db_PRAGMA()
+: <a class="el" href="class_d_b.html#a379be53bb64208e8da6c4550865fb7ad">DB</a>
 </li>
 <li>db_PRAGMA_log()
 : <a class="el" href="group__dbcpp.html#gaf02f64c01e2fff747a0b271dbe4a25a0">DB</a>
@@ -145,10 +190,10 @@ $(function() {
 : <a class="el" href="group__servercpp.html#gadb53e5d1b7c0ad8a79ce236c8ca5d50c">Server</a>
 </li>
 <li>handle_read()
-: <a class="el" href="group__con__handler__cpp.html#ga3b8e9edfc8fed79fcba0242a58b54bc2">con_handler</a>
+: <a class="el" href="classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2">con_handler</a>
 </li>
 <li>handle_write()
-: <a class="el" href="group__con__handler__cpp.html#ga10169d7b3588adb849d7e7c02c46375a">con_handler</a>
+: <a class="el" href="classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a">con_handler</a>
 </li>
 </ul>
 
@@ -177,6 +222,19 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>OnConnect()
+: <a class="el" href="class_server_link.html#ab9e341037ea6395e4a73aeefd1d61847">ServerLink</a>
+</li>
+<li>OnRead()
+: <a class="el" href="class_server_link.html#ad9c2be6ec4e96b40892726c661e05e4e">ServerLink</a>
+</li>
+<li>OnSend()
+: <a class="el" href="class_server_link.html#a37800b28376bd4fb1eece4d83275f010">ServerLink</a>
+</li>
+</ul>
+
+
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>processing_user_check()
 : <a class="el" href="group__con__handler__cpp.html#ga98e4756151b8044ac6700ce668620f78">con_handler</a>
@@ -188,6 +246,9 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>Read()
+: <a class="el" href="class_server_link.html#a3da0dd06361d9b2f0ca6c7467d2efdde">ServerLink</a>
+</li>
 <li>ReadComplete()
 : <a class="el" href="class_server_link.html#a57df20ef340ea6f42157ff40aa57427a">ServerLink</a>
 </li>
@@ -201,8 +262,14 @@ $(function() {
 <li>Server()
 : <a class="el" href="class_server.html#a1de8ff546624394fae030c6434b22816">Server</a>
 </li>
+<li>ServerLink()
+: <a class="el" href="class_server_link.html#a4e713142012135151d872949c5931a41">ServerLink</a>
+</li>
 <li>setTable()
 : <a class="el" href="group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4">MiniDB</a>
+</li>
+<li>sha2()
+: <a class="el" href="group__dbcpp.html#ga491541bd875d5fab95aa913b970132f6">DB</a>
 </li>
 <li>socket()
 : <a class="el" href="group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22">con_handler</a>
@@ -212,6 +279,9 @@ $(function() {
 </li>
 <li>Start()
 : <a class="el" href="class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279">ServerLink</a>
+</li>
+<li>start_accept()
+: <a class="el" href="group__servercpp.html#gab19cf3e5b775cd1b4eeb6d936340e712">Server</a>
 </li>
 </ul>
 
@@ -234,18 +304,21 @@ $(function() {
 : <a class="el" href="group__dbcpp.html#ga7bd1418f67b11d0f752537123e7e6d28">DB</a>
 </li>
 <li>~MiniDB()
-: <a class="el" href="group__minidb__cpp.html#gab0ff056823088f612fb13d2aaea168cb">MiniDB</a>
+: <a class="el" href="class_mini_d_b.html#ab0ff056823088f612fb13d2aaea168cb">MiniDB</a>
 </li>
 <li>~Server()
 : <a class="el" href="group__servercpp.html#ga4b3aa2579cb1c8cd1d069582c14d0fa6">Server</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

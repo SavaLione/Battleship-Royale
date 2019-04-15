@@ -1,6 +1,7 @@
 /**
  * @file
  * @brief Работа с базой данных
+ * @deprecated
  * @author SavaLione
  * @date 14 Apr 2019
  */

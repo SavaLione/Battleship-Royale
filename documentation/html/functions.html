@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +55,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('functions.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -64,6 +88,16 @@ $(function() {
 <div class="contents">
 <div class="textblock">Список всех членов классов со ссылками на классы, к которым они принадлежат.</div>
 
+<h3><a id="index_a"></a>- a -</h3><ul>
+<li>acceptor_
+: <a class="el" href="class_server.html#a4e29f2fb9ced4b2c1bacc80a8d00e049">Server</a>
+</li>
+<li>answ
+: <a class="el" href="classcon__handler.html#a800e9a317456211bd412c1c8b14e4814">con_handler</a>
+</li>
+</ul>
+
+
 <h3><a id="index_c"></a>- c -</h3><ul>
 <li>checkPlayer()
 : <a class="el" href="group__minidb__cpp.html#ga3e8ada0d46bd60d7b4692d549f8d1caf">MiniDB</a>
@@ -74,6 +108,12 @@ $(function() {
 <li>con_handler()
 : <a class="el" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a>
 </li>
+<li>Connect()
+: <a class="el" href="class_server_link.html#ad4c71cf9ab124f2c29ae99ca4a50f0ac">ServerLink</a>
+</li>
+<li>connected
+: <a class="el" href="class_server_link.html#ac50a6b7b74cbf8aa0e95e1cacd03a3a6">ServerLink</a>
+</li>
 <li>create()
 : <a class="el" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">con_handler</a>
 </li>
@@ -81,14 +121,32 @@ $(function() {
 
 
 <h3><a id="index_d"></a>- d -</h3><ul>
+<li>data
+: <a class="el" href="classcon__handler.html#af6feec8ca98e8b25ca1b7bedcda5b3e9">con_handler</a>
+</li>
+<li>data_check
+: <a class="el" href="classcon__handler.html#a3645ff738400fc9fff3a1dea1aa0999f">con_handler</a>
+</li>
 <li>DB()
 : <a class="el" href="group__dbcpp.html#ga29a603c52c10831cddee82518417f992">DB</a>
+</li>
+<li>db
+: <a class="el" href="class_d_b.html#af006c980ee986ac5c39610c9afd62087">DB</a>
+</li>
+<li>db_all_check()
+: <a class="el" href="group__dbcpp.html#ga880d6118bf0b4020049339afc7e825fd">DB</a>
 </li>
 <li>db_check_pass()
 : <a class="el" href="group__dbcpp.html#gae82d5ae6889418aaef76396a18e30895">DB</a>
 </li>
 <li>db_check_player()
 : <a class="el" href="group__dbcpp.html#gaea6044c3fffc4c31714c732bb3789f71">DB</a>
+</li>
+<li>db_close()
+: <a class="el" href="group__dbcpp.html#gaca4c951672c54766fdd039efd38e654b">DB</a>
+</li>
+<li>db_create()
+: <a class="el" href="group__dbcpp.html#gae7d842aa9002c6f8f7d026bcc55e88af">DB</a>
 </li>
 <li>db_get_id()
 : <a class="el" href="group__dbcpp.html#gaa8cdb5ec4f2f269d13cff52b9e47c4cb">DB</a>
@@ -105,14 +163,23 @@ $(function() {
 <li>db_get_player()
 : <a class="el" href="group__dbcpp.html#ga1e5d244a838c99a8753727cf0abd1f70">DB</a>
 </li>
+<li>db_get_player_print()
+: <a class="el" href="group__dbcpp.html#gade41c643f9d1e57ee02c107553877d64">DB</a>
+</li>
 <li>db_get_reg_date()
 : <a class="el" href="group__dbcpp.html#gad7c6310d2669acd40978fd4662f90d53">DB</a>
 </li>
 <li>db_get_score()
 : <a class="el" href="group__dbcpp.html#ga990cefb97ea7222649511f37334a8601">DB</a>
 </li>
+<li>db_open()
+: <a class="el" href="class_d_b.html#a5e70db458c90e54a2d22d1167f7b52f7">DB</a>
+</li>
 <li>db_open_log()
 : <a class="el" href="group__dbcpp.html#ga8c1dcfee12e16f2a62cbe328fc2b2261">DB</a>
+</li>
+<li>db_PRAGMA()
+: <a class="el" href="class_d_b.html#a379be53bb64208e8da6c4550865fb7ad">DB</a>
 </li>
 <li>db_PRAGMA_log()
 : <a class="el" href="group__dbcpp.html#gaf02f64c01e2fff747a0b271dbe4a25a0">DB</a>
@@ -148,17 +215,18 @@ $(function() {
 : <a class="el" href="group__servercpp.html#gadb53e5d1b7c0ad8a79ce236c8ca5d50c">Server</a>
 </li>
 <li>handle_read()
-: <a class="el" href="group__con__handler__cpp.html#ga3b8e9edfc8fed79fcba0242a58b54bc2">con_handler</a>
+: <a class="el" href="classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2">con_handler</a>
 </li>
 <li>handle_write()
-: <a class="el" href="group__con__handler__cpp.html#ga10169d7b3588adb849d7e7c02c46375a">con_handler</a>
+: <a class="el" href="classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a">con_handler</a>
 </li>
 </ul>
 
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>id
-: <a class="el" href="structdb__player.html#adae59dcd7ab22b0e66cb829f1dc5b383">db_player</a>
+: <a class="el" href="class_d_b.html#a09ea7b9c2e26a2754a5fb64db3836cdb">DB</a>
+, <a class="el" href="structdb__player.html#adae59dcd7ab22b0e66cb829f1dc5b383">db_player</a>
 </li>
 <li>IsConnected()
 : <a class="el" href="class_server_link.html#a2f551c4fffbedab55adab3d528df0f0c">ServerLink</a>
@@ -180,9 +248,24 @@ $(function() {
 
 
 <h3><a id="index_m"></a>- m -</h3><ul>
+<li>max_length
+: <a class="el" href="classcon__handler.html#a6e8d2bba7b12a16472e69994294de369a69e7a0a8326fd1326088bd7ffc0d18d7">con_handler</a>
+</li>
+<li>mdb
+: <a class="el" href="classcon__handler.html#a2ff792b59e2e5f8e1f186f80087ce4e4">con_handler</a>
+</li>
+<li>message
+: <a class="el" href="classcon__handler.html#a047b0bd7c03bacb579ecced6c317f3cb">con_handler</a>
+</li>
 <li>Message()
 : <a class="el" href="class_message.html#ab24cdb2c9890d77e46a333f157e4f66d">Message</a>
 , <a class="el" href="class_server_link.html#a712791c09323fcf6db49ceb0a10f8d9c">ServerLink</a>
+</li>
+<li>message
+: <a class="el" href="class_server_link.html#a7099ff7be3198017ec7b8c90e77844ab">ServerLink</a>
+</li>
+<li>messageError
+: <a class="el" href="class_d_b.html#a5f143c4e687a890164e95683113205d5">DB</a>
 </li>
 <li>MiniDB()
 : <a class="el" href="group__minidb__cpp.html#gadcbeb29cd746f90566127cef68a44d77">MiniDB</a>
@@ -196,6 +279,22 @@ $(function() {
 <h3><a id="index_n"></a>- n -</h3><ul>
 <li>name
 : <a class="el" href="structdb__player.html#a182fb42d16b91d5dccc9c640bc649521">db_player</a>
+</li>
+</ul>
+
+
+<h3><a id="index_o"></a>- o -</h3><ul>
+<li>object
+: <a class="el" href="class_message.html#a4c807a96e51ea82146f5bf44a3e2a24a">Message</a>
+</li>
+<li>OnConnect()
+: <a class="el" href="class_server_link.html#ab9e341037ea6395e4a73aeefd1d61847">ServerLink</a>
+</li>
+<li>OnRead()
+: <a class="el" href="class_server_link.html#ad9c2be6ec4e96b40892726c661e05e4e">ServerLink</a>
+</li>
+<li>OnSend()
+: <a class="el" href="class_server_link.html#a37800b28376bd4fb1eece4d83275f010">ServerLink</a>
 </li>
 </ul>
 
@@ -220,8 +319,20 @@ $(function() {
 
 
 <h3><a id="index_r"></a>- r -</h3><ul>
+<li>rc
+: <a class="el" href="class_d_b.html#a8296a092faf547c071ed07e151f1e4d0">DB</a>
+</li>
+<li>Read()
+: <a class="el" href="class_server_link.html#a3da0dd06361d9b2f0ca6c7467d2efdde">ServerLink</a>
+</li>
+<li>readBuffer
+: <a class="el" href="class_server_link.html#a4abbd9bacfa29b9c761454858f6250ef">ServerLink</a>
+</li>
 <li>ReadComplete()
 : <a class="el" href="class_server_link.html#a57df20ef340ea6f42157ff40aa57427a">ServerLink</a>
+</li>
+<li>reading
+: <a class="el" href="class_server_link.html#a708932395f10d3bec59e0f70101907c5">ServerLink</a>
 </li>
 <li>reg_date
 : <a class="el" href="structdb__player.html#abef0de717f781b401effd7d3c35550c2">db_player</a>
@@ -230,26 +341,63 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
+<li>s_param_one
+: <a class="el" href="classcon__handler.html#a7992ae8537dd8cff2a90929a12378ed2">con_handler</a>
+</li>
+<li>s_param_two
+: <a class="el" href="classcon__handler.html#a5e5a3f9b639a46d849900ee4ba79e7cb">con_handler</a>
+</li>
+<li>s_pattern_reg
+: <a class="el" href="classcon__handler.html#a5346577457d8d5f9b7e7f68e8a332a6f">con_handler</a>
+</li>
+<li>s_sha2
+: <a class="el" href="classcon__handler.html#a3bf0324832d08ef3279f652e567c03dc">con_handler</a>
+</li>
+<li>s_sql
+: <a class="el" href="class_d_b.html#a25a925a9f5a21a2eda6ef4a8150f780e">DB</a>
+</li>
 <li>score
 : <a class="el" href="structdb__player.html#a49a7074936df50c10ce3573663e902bc">db_player</a>
 </li>
 <li>Send()
 : <a class="el" href="class_server_link.html#accf9e304c68111f1dbb1df82e2ae3ca5">ServerLink</a>
 </li>
+<li>sendBuffer
+: <a class="el" href="class_server_link.html#a156357298a26924dc29f0914f1fc0ddf">ServerLink</a>
+</li>
+<li>sending
+: <a class="el" href="class_server_link.html#a1c9905db0c1aac29576f7e01518c8d6e">ServerLink</a>
+</li>
 <li>Server()
 : <a class="el" href="class_server.html#a1de8ff546624394fae030c6434b22816">Server</a>
+</li>
+<li>ServerLink()
+: <a class="el" href="class_server_link.html#a4e713142012135151d872949c5931a41">ServerLink</a>
 </li>
 <li>setTable()
 : <a class="el" href="group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4">MiniDB</a>
 </li>
+<li>sha2()
+: <a class="el" href="group__dbcpp.html#ga491541bd875d5fab95aa913b970132f6">DB</a>
+</li>
+<li>sock
+: <a class="el" href="classcon__handler.html#ad23f2e7bef296da53cd171335affd300">con_handler</a>
+, <a class="el" href="class_server_link.html#ab44d72d22bc44a19a2c1c7a2af9a7f3a">ServerLink</a>
+</li>
 <li>socket()
-: <a class="el" href="group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22">con_handler</a>
+: <a class="el" href="classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06">con_handler</a>
 </li>
 <li>start()
 : <a class="el" href="group__con__handler__cpp.html#ga02d6691e226a75525a2ac83062b5c7f7">con_handler</a>
 </li>
 <li>Start()
 : <a class="el" href="class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279">ServerLink</a>
+</li>
+<li>start_accept()
+: <a class="el" href="class_server.html#ab19cf3e5b775cd1b4eeb6d936340e712">Server</a>
+</li>
+<li>stmt
+: <a class="el" href="class_d_b.html#a98c52263921eab7802f7e7ef3bb9ff1f">DB</a>
 </li>
 </ul>
 
@@ -264,6 +412,13 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_z"></a>- z -</h3><ul>
+<li>zErrMsg
+: <a class="el" href="class_d_b.html#acd42cf1722f8e515ca708dcdff84bc33">DB</a>
+</li>
+</ul>
+
+
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
 <li>~con_handler()
 : <a class="el" href="group__con__handler__cpp.html#gaa1bc82c764eb633355a52bd77689ed3f">con_handler</a>
@@ -272,18 +427,21 @@ $(function() {
 : <a class="el" href="group__dbcpp.html#ga7bd1418f67b11d0f752537123e7e6d28">DB</a>
 </li>
 <li>~MiniDB()
-: <a class="el" href="group__minidb__cpp.html#gab0ff056823088f612fb13d2aaea168cb">MiniDB</a>
+: <a class="el" href="class_mini_d_b.html#ab0ff056823088f612fb13d2aaea168cb">MiniDB</a>
 </li>
 <li>~Server()
 : <a class="el" href="group__servercpp.html#ga4b3aa2579cb1c8cd1d069582c14d0fa6">Server</a>
 </li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

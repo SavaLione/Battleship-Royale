@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -47,6 +55,22 @@ $(function() {
 /* @license-end */</script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__dbcpp.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -87,9 +111,18 @@ $(function() {
 <tr class="memitem:ga8c1dcfee12e16f2a62cbe328fc2b2261"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#ga8c1dcfee12e16f2a62cbe328fc2b2261">DB::db_open_log</a> ()</td></tr>
 <tr class="memdesc:ga8c1dcfee12e16f2a62cbe328fc2b2261"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка бд(получается открыть?)  <a href="#ga8c1dcfee12e16f2a62cbe328fc2b2261">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga8c1dcfee12e16f2a62cbe328fc2b2261"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca4c951672c54766fdd039efd38e654b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#gaca4c951672c54766fdd039efd38e654b">DB::db_close</a> ()</td></tr>
+<tr class="memdesc:gaca4c951672c54766fdd039efd38e654b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Закытие базы данных  <a href="#gaca4c951672c54766fdd039efd38e654b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gaca4c951672c54766fdd039efd38e654b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae7d842aa9002c6f8f7d026bcc55e88af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#gae7d842aa9002c6f8f7d026bcc55e88af">DB::db_create</a> ()</td></tr>
+<tr class="memdesc:gae7d842aa9002c6f8f7d026bcc55e88af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание базы данных  <a href="#gae7d842aa9002c6f8f7d026bcc55e88af">Подробнее...</a><br /></td></tr>
+<tr class="separator:gae7d842aa9002c6f8f7d026bcc55e88af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5001c33b72d0195db5375b042287a466"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#ga5001c33b72d0195db5375b042287a466">DB::db_table_check</a> ()</td></tr>
 <tr class="memdesc:ga5001c33b72d0195db5375b042287a466"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования таблицы Player.  <a href="#ga5001c33b72d0195db5375b042287a466">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga5001c33b72d0195db5375b042287a466"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga880d6118bf0b4020049339afc7e825fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#ga880d6118bf0b4020049339afc7e825fd">DB::db_all_check</a> ()</td></tr>
+<tr class="memdesc:ga880d6118bf0b4020049339afc7e825fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод всех пользователей с информацией в консоль  <a href="#ga880d6118bf0b4020049339afc7e825fd">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga880d6118bf0b4020049339afc7e825fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaea6044c3fffc4c31714c732bb3789f71"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#gaea6044c3fffc4c31714c732bb3789f71">DB::db_check_player</a> (std::string *s_name)</td></tr>
 <tr class="memdesc:gaea6044c3fffc4c31714c732bb3789f71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования пользователя  <a href="#gaea6044c3fffc4c31714c732bb3789f71">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaea6044c3fffc4c31714c732bb3789f71"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -99,6 +132,12 @@ $(function() {
 <tr class="memitem:ga1e5d244a838c99a8753727cf0abd1f70"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#ga1e5d244a838c99a8753727cf0abd1f70">DB::db_get_player</a> (std::string *name, <a class="el" href="structdb__player.html">db_player</a> *pl)</td></tr>
 <tr class="memdesc:ga1e5d244a838c99a8753727cf0abd1f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получить карточку пользователя <a class="el" href="structdb__player.html">db_player</a> по ссылке  <a href="#ga1e5d244a838c99a8753727cf0abd1f70">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga1e5d244a838c99a8753727cf0abd1f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gade41c643f9d1e57ee02c107553877d64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#gade41c643f9d1e57ee02c107553877d64">DB::db_get_player_print</a> (<a class="el" href="structdb__player.html">db_player</a> *pl)</td></tr>
+<tr class="memdesc:gade41c643f9d1e57ee02c107553877d64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод информации о пользователе по ссылке  <a href="#gade41c643f9d1e57ee02c107553877d64">Подробнее...</a><br /></td></tr>
+<tr class="separator:gade41c643f9d1e57ee02c107553877d64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga491541bd875d5fab95aa913b970132f6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#ga491541bd875d5fab95aa913b970132f6">DB::sha2</a> (std::string *s)</td></tr>
+<tr class="memdesc:ga491541bd875d5fab95aa913b970132f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание sha2 по ссылке  <a href="#ga491541bd875d5fab95aa913b970132f6">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga491541bd875d5fab95aa913b970132f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa8cdb5ec4f2f269d13cff52b9e47c4cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__dbcpp.html#gaa8cdb5ec4f2f269d13cff52b9e47c4cb">DB::db_get_id</a> (std::string *s_name)</td></tr>
 <tr class="memdesc:gaa8cdb5ec4f2f269d13cff52b9e47c4cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение id пользователя по имени. id уникальный  <a href="#gaa8cdb5ec4f2f269d13cff52b9e47c4cb">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa8cdb5ec4f2f269d13cff52b9e47c4cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,9 +177,42 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Конструктор класса </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00028">28</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00029">29</a></p>
+
+</div>
+</div>
+<a id="ga880d6118bf0b4020049339afc7e825fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga880d6118bf0b4020049339afc7e825fd">&#9670;&nbsp;</a></span>db_all_check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DB::db_all_check </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
+<p>Вывод всех пользователей с информацией в консоль </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00135">135</a></p>
 
 </div>
 </div>
@@ -170,6 +242,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Проверка пароля </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -180,7 +254,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true - пароль правильный, false - пароль не правильный. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00185">185</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00186">186</a></p>
 
 </div>
 </div>
@@ -200,6 +274,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Проверка существования пользователя </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -209,7 +285,69 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true - пользователь существует, false - пользователь не существует. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00160">160</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00161">161</a></p>
+
+</div>
+</div>
+<a id="gaca4c951672c54766fdd039efd38e654b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca4c951672c54766fdd039efd38e654b">&#9670;&nbsp;</a></span>db_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DB::db_close </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
+<p>Закытие базы данных </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00071">71</a></p>
+
+</div>
+</div>
+<a id="gae7d842aa9002c6f8f7d026bcc55e88af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7d842aa9002c6f8f7d026bcc55e88af">&#9670;&nbsp;</a></span>db_create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DB::db_create </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
+<p>Создание базы данных </p>
+
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00079">79</a></p>
 
 </div>
 </div>
@@ -229,6 +367,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение id пользователя по имени. id уникальный </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -238,7 +378,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>id пользователя </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00254">254</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00255">255</a></p>
 
 </div>
 </div>
@@ -258,6 +398,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение уровня доступа по имени </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -267,7 +409,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>уровень доступа </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00369">369</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00370">370</a></p>
 
 </div>
 </div>
@@ -287,6 +429,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение счёта по имени </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -296,7 +440,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>счёт </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00346">346</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00347">347</a></p>
 
 </div>
 </div>
@@ -316,6 +460,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение пароля по имени </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -325,7 +471,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>пароль (из бд. в sha2) </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00300">300</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00301">301</a></p>
 
 </div>
 </div>
@@ -355,6 +501,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получить карточку пользователя <a class="el" href="structdb__player.html">db_player</a> по ссылке </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -364,7 +512,45 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00199">199</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00200">200</a></p>
+
+</div>
+</div>
+<a id="gade41c643f9d1e57ee02c107553877d64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gade41c643f9d1e57ee02c107553877d64">&#9670;&nbsp;</a></span>db_get_player_print()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DB::db_get_player_print </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structdb__player.html">db_player</a> *&#160;</td>
+          <td class="paramname"><em>pl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
+<p>Вывод информации о пользователе по ссылке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pl</td><td>имя пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00227">227</a></p>
 
 </div>
 </div>
@@ -384,6 +570,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение даты регистрации по имени </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -393,7 +581,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>дата регистрации </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00277">277</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00278">278</a></p>
 
 </div>
 </div>
@@ -413,6 +601,8 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Получение результата по имени </p>
 <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
@@ -422,7 +612,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>результат(очки) </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00323">323</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00324">324</a></p>
 
 </div>
 </div>
@@ -441,9 +631,11 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Проверка бд(получается открыть?) </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00053">53</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00054">54</a></p>
 
 </div>
 </div>
@@ -462,9 +654,11 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Задать флаги sqlite3. Проверка возможности </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00390">390</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00391">391</a></p>
 
 </div>
 </div>
@@ -483,9 +677,50 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Проверка существования таблицы Player. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00103">103</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00104">104</a></p>
+
+</div>
+</div>
+<a id="ga491541bd875d5fab95aa913b970132f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga491541bd875d5fab95aa913b970132f6">&#9670;&nbsp;</a></span>sha2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string DB::sha2 </td>
+          <td>(</td>
+          <td class="paramtype">std::string *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
+<p>Создание sha2 по ссылке </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">s</td><td>строка для преобразования в sha2 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>sha2 сообщение </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00243">243</a></p>
 
 </div>
 </div>
@@ -504,18 +739,23 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
+<p><code>#include &lt;<a class="el" href="_d_b_8h.html">DB.h</a>&gt;</code></p>
+
 <p>Деструктор класса </p>
 
-<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00041">41</a></p>
+<p class="definition">См. определение в файле <a class="el" href="_d_b_8cpp_source.html">DB.cpp</a> строка <a class="el" href="_d_b_8cpp_source.html#l00042">42</a></p>
 
 </div>
 </div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>

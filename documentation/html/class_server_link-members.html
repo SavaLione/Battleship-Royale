@@ -9,6 +9,14 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -46,6 +54,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_server_link.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -60,7 +85,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">ServerLink Cписок членов класса</div>  </div>
@@ -69,21 +93,37 @@ $(function() {
 
 <p>Полный список членов класса <a class="el" href="class_server_link.html">ServerLink</a>, включая наследуемые из базового класса</p>
 <table class="directory">
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#ad4c71cf9ab124f2c29ae99ca4a50f0ac">Connect</a>(tcp::endpoint ep)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#ac50a6b7b74cbf8aa0e95e1cacd03a3a6">connected</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#afa570df0c508889210e9ac2ff5983306">Disconnect</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_link.html#a2f551c4fffbedab55adab3d528df0f0c">IsConnected</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a9cdc703cdda0ff80c49434d483654d7e">IsReading</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_link.html#ab79487df49a22e5533c96032ef413e16">IsSending</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a712791c09323fcf6db49ceb0a10f8d9c">Message</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a7099ff7be3198017ec7b8c90e77844ab">message</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a712791c09323fcf6db49ceb0a10f8d9c">Message</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#ab9e341037ea6395e4a73aeefd1d61847">OnConnect</a>(const system::error_code &amp;error)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#ad9c2be6ec4e96b40892726c661e05e4e">OnRead</a>(const system::error_code &amp;error, size_t bytes)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a37800b28376bd4fb1eece4d83275f010">OnSend</a>(const system::error_code &amp;error, size_t bytes)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_server_link.html#afb05b9f4060b17ac50d2fb3b874ce236">ptr</a> typedef</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a3da0dd06361d9b2f0ca6c7467d2efdde">Read</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a4abbd9bacfa29b9c761454858f6250ef">readBuffer</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a57df20ef340ea6f42157ff40aa57427a">ReadComplete</a>(const system::error_code &amp;error, size_t bytes)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_server_link.html#accf9e304c68111f1dbb1df82e2ae3ca5">Send</a>(const std::string &amp;msg)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279">Start</a>(ip::tcp::endpoint ep)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a708932395f10d3bec59e0f70101907c5">reading</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#accf9e304c68111f1dbb1df82e2ae3ca5">Send</a>(const std::string &amp;msg)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a156357298a26924dc29f0914f1fc0ddf">sendBuffer</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#a1c9905db0c1aac29576f7e01518c8d6e">sending</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a4e713142012135151d872949c5931a41">ServerLink</a>()</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_server_link.html#ab44d72d22bc44a19a2c1c7a2af9a7f3a">sock</a></td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279">Start</a>(ip::tcp::endpoint ep)</td><td class="entry"><a class="el" href="class_server_link.html">ServerLink</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Создано системой &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.15
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
 </body>
 </html>
