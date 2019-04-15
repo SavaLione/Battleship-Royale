@@ -116,12 +116,10 @@ bool con_handler::processing_user_pass_check(std::string const& request)
         if(s_param_two == s_sha2)
         {
             answ = BR::ANSWER_TRUE;
-            strncpy(ans, BR::ANSWER_TRUE, max_length);
         }
         else
         {
             answ = BR::ANSWER_FALSE;
-            strncpy(ans, BR::ANSWER_TRUE, max_length);
         }
 
         return true;
