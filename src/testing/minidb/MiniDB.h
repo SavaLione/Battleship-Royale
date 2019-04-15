@@ -20,39 +20,6 @@
 
 class MiniDB
 {
-private:
-    /**
-     * @brief Запрос
-     * @code
-     *      sqlite3 *db;
-     *      *sql = "SELECT NAME FROM PLAYER;";
-     *      request(db, sql);
-     * @endcode
-     * @param [in] db база данных
-     * @param [in] request запрос
-     */
-    inline void request(sqlite3 *db, std::string *request)
-    {
-        sqlite3_exec(db, request->c_str(), NULL, NULL, NULL);
-    }
-
-    /**
-     * @brief Запрос
-     * @code
-     *      sqlite3 *db;
-     *      int rc;
-     *      *sql = "SELECT NAME FROM PLAYER;";
-     *      request(db, sql, &rc);
-     * @endcode
-     * @param [in] db база данных
-     * @param [in] request запрос
-     * @param [in] rc ответ
-     */
-    inline void request(sqlite3 *db, std::string *request, int *rc)
-    {
-        *rc = sqlite3_exec(db, request->c_str(), NULL, NULL, NULL);
-    }
-
 public:
     /**
      * @brief Конструктор класса
