@@ -51,7 +51,7 @@ private:
      */
     inline void request(std::string *request)
     {
-        sqlite3_exec(db, request->c_str(), NULL, 0, NULL);
+        sqlite3_exec(db, request->c_str(), NULL, NULL, NULL);
     }
 
 public:
