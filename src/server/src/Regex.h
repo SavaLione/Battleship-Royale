@@ -28,7 +28,7 @@
  * @param [in] pattern Паттерн
  * @return true - соответствует, false - не соответствует.
  */
-bool check_pattern(std::string *msg, std::string *pattern);
+bool check_pattern(std::string const& msg, std::string const& pattern);
 
 /**
  * @brief Получение информации из строки
@@ -42,7 +42,7 @@ bool check_pattern(std::string *msg, std::string *pattern);
  * @param [in] pattern Паттерн
  * @param [out] ret_one Информация с первого нахождения в строке
  */
-void getData(std::string *msg, std::string *pattern, std::string *ret_one);
+void getData(std::string const& msg, std::string const& pattern, std::string& ret_one);
 
 /**
  * @brief Получение информации из строки
@@ -57,7 +57,7 @@ void getData(std::string *msg, std::string *pattern, std::string *ret_one);
  * @param [out] ret_one Информация с первого нахождения в строке
  * @param [out] ret_two Информация с второго нахождения в строке
  */
-void getData(std::string *msg, std::string *pattern, std::string *ret_one, std::string *ret_two);
+void getData(std::string const& msg, std::string const& pattern, std::string& ret_one, std::string& ret_two);
 
 #endif // REGEX_H
 /** @} */

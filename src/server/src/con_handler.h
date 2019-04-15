@@ -30,12 +30,12 @@ private:
 	 * @brief Сообщение, которое будет отправлено клиенту
 	 * @warning Необходимо изменить структуру. Сообщение должно быть произвольным
 	 */
-	std::string *answ = new std::string;
+	std::string answ;
 
-	std::string *s_param_one = new std::string;
-	std::string *s_param_two = new std::string;
-	std::string *s_pattern_reg = new std::string;
-	std::string *s_sha2 = new std::string;
+	std::string s_param_one;
+	std::string s_param_two;
+	std::string s_pattern_reg;
+	std::string s_sha2;
 
 	/// Максимальная длина сообщения
 	enum
@@ -44,11 +44,11 @@ private:
 	};
 
 	/// Данные, полученные от клиента
-	char *data = new char[max_length];
+	char data[max_length];
 	
-	std::string *data_check = new std::string;
+	std::string data_check;
 
-	MiniDB *mdb = new MiniDB;
+	MiniDB mdb;
 
 public:
 	/// Указатель но handler
@@ -112,14 +112,14 @@ public:
 	 * @param [in] request запрос
 	 * @return true - запрос подходит(обработан), false - запрос не подходит(не обработан)
 	 */
-	bool processing_user_check(std::string *request);
+	bool processing_user_check(std::string const& request);
 
 	/**
 	 * @brief обработка запроса. Поиск имени и пароля
 	 * @param [in] request запрос
 	 * @return true - имя и пароль верны, false - имя и пароль не верны.
 	 */
-	bool processing_user_pass_check(std::string *request);
+	bool processing_user_pass_check(std::string const& request);
 
 	/**
      * @brief Деструктор класса

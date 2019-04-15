@@ -14,12 +14,12 @@ else()
     set(    BR_UNIX    1    )
 endif()
 
-set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
-set(    BR_CLIENT      0    CACHE BOOL "BR_CLIENT"          )
+set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
+set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT"          )
 set(    BR_SERVER_TEST 0    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_TEST 0    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_REGEX_TEST  0    CACHE BOOL "BR_REGEX_TEST"      )           # <--- DELETE THIS ON STABLE
-set(    BR_MINIDB_TEST 1    CACHE BOOL "BR_MINIDB_TEST"     )           # <--- DELETE THIS ON STABLE
+set(    BR_MINIDB_TEST 0    CACHE BOOL "BR_MINIDB_TEST"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
