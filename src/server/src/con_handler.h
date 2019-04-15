@@ -28,13 +28,27 @@ private:
 
 	/**
 	 * @brief Сообщение, которое будет отправлено клиенту
-	 * @warning Необходимо изменить структуру. Сообщение должно быть произвольным
 	 */
 	std::string answ;
 
+	/**
+	 * @brief Первый полученный параметр для обработки
+	 */
 	std::string s_param_one;
+
+	/**
+	 * @brief Второй полученный параметр для обработки
+	 */
 	std::string s_param_two;
+
+	/**
+	 * @brief Паттерн для проверки регулярного выражения
+	 */
 	std::string s_pattern_reg;
+
+	/**
+	 * @brief Полученный пароль в sha2
+	 */
 	std::string s_sha2;
 
 	/// Максимальная длина сообщения
@@ -45,13 +59,21 @@ private:
 
 	/// Данные, полученные от клиента
 	char data[max_length];
-	
+
+	/**
+	 * @brief Данные для проверки
+	 */
 	std::string data_check;
 
+	/**
+	 * @brief Работа с базой данных
+	 */
 	MiniDB mdb;
 
 public:
-	/// Указатель но handler
+	/**
+	 * @brief Указатель но handler
+	 */
 	typedef boost::shared_ptr<con_handler> pointer;
 
 	/**
@@ -75,12 +97,6 @@ public:
 	{
 		return pointer(new con_handler(io_service));
 	}
-	/*
-	static pointer create(boost::asio::io_service &io_service)
-	{
-		return pointer(new con_handler(io_service));
-	}
-	*/
 
 	/**
 	 * @brief Сокет

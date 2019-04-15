@@ -19,7 +19,7 @@
  * @code
  *      string s = "user:[SavaLione]";
  *      string s_pattern = BR::REG_USER;
- *      if(check_pattern(&s, &s_pattern))
+ *      if(check_pattern(s, s_pattern))
  *      {
  *          //some
  *      }
@@ -36,7 +36,7 @@ bool check_pattern(std::string const& msg, std::string const& pattern);
  *      string s = "user:[SavaLione]";
  *      string s_pattern = BR::REG_USER;
  *      string s_ret_one = "";
- *      getData(&s, &s_pattern, &s_ret_one);
+ *      getData(s, s_pattern, s_ret_one);
  * @endcode
  * @param [in] msg Строка
  * @param [in] pattern Паттерн
@@ -50,7 +50,7 @@ void getData(std::string const& msg, std::string const& pattern, std::string& re
  *      string s = "user:[SavaLione]";
  *      string s_pattern = BR::REG_USER;
  *      string s_ret_one = "", s_ret_two = "";
- *      getData(&s, &s_pattern, &s_ret_one, &s_ret_two);
+ *      getData(s, s_pattern, s_ret_one, s_ret_two);
  * @endcode
  * @param [in] msg Строка
  * @param [in] pattern Паттерн
