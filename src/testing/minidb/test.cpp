@@ -26,12 +26,13 @@ void createMoreObjects()
     for(int i = 0; i < OJECTS; i++)
     {
         string *s = new string;
+        MiniDB *mdb = new MiniDB;
+        
+        *s = "SavaLione";
 
-        MiniDB mdb;
+        mdb->checkPlayer(s);
 
-        mdb.checkPlayer(s);
-        mdb.close();
-
+        delete mdb;
         delete s;
     }
 }

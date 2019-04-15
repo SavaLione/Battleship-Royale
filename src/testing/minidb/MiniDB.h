@@ -54,8 +54,6 @@ private:
         sqlite3_exec(db, request->c_str(), NULL, 0, NULL);
     }
 
-    bool connect;
-
 public:
     /**
      * @brief Конструктор класса
@@ -85,8 +83,6 @@ public:
      * @brief Инициализация базы данных
      */
     void setTable();
-
-    void close();
 };
 
 #endif // MINIDB_H

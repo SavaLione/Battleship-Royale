@@ -15,17 +15,11 @@
  * @brief Конструктор класса
  */
 MiniDB::MiniDB()
-    : connect(false)
 {
-    if(!connect)
-    {
-        sqlite3_open(BR::DB_NAME, &db);
+    sqlite3_open(BR::DB_NAME, &db);
 
-        *sql = BR::SQLITE3_PRAGMA;
-        request(sql);
-
-        connect = true;
-    }
+    *sql = BR::SQLITE3_PRAGMA;
+    request(sql);
 }
 
 /**
@@ -33,15 +27,10 @@ MiniDB::MiniDB()
  */
 MiniDB::~MiniDB()
 {
-    delete rc;
-    delete sql;
-}
-
-void MiniDB::close()
-{
     sqlite3_close(db);
     sqlite3_finalize(stmt);
-    connect = false;
+    delete rc;
+    delete sql;
 }
 
 /**
