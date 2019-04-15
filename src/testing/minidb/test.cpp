@@ -27,6 +27,10 @@ void createMoreObjects()
     {
         string s = "SavaLione";
         MiniDB mdb;
-        mdb.checkPlayer(s);
+        bool some = mdb.checkPlayer(s);
+        if(some)
+        {
+            
+        }
     }
 }

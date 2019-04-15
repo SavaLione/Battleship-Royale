@@ -35,13 +35,14 @@ bool MiniDB::checkPlayer(std::string const& name)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
+    int rc;
     std::string sql = BR::SQLITE3_PRAGMA;
 
     bool fl = false;
 
     sqlite3_open(BR::DB_NAME, &db);
 
-    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
     sql += name;
@@ -71,16 +72,17 @@ void MiniDB::getPassword(std::string const& name, std::string& sha2_ret)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
+    int rc = 0;
     std::string sql = BR::SQLITE3_PRAGMA;
 
     sqlite3_open(BR::DB_NAME, &db);
-    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT PASSWORD FROM PLAYER WHERE NAME =\"";
     sql += name;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    rc = sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
@@ -101,7 +103,7 @@ void MiniDB::setTable()
     
     sqlite3_open(BR::DB_NAME, &db);
 
-    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql =
         "CREATE TABLE PLAYER("
@@ -114,11 +116,11 @@ void MiniDB::setTable()
         "LEVEL INT      KEY     NOT NULL  "
         ");";
     
-    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
     if (rc == 0)
     {
         sql = BR::SQLITE3_TEST_DATA;
-        sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+        rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
     }
 
     sqlite3_close(db);
