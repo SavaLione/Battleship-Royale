@@ -107,4 +107,72 @@ void MiniDB::setTable()
         request(&sql);
     }
 }
+
+/**
+ * @brief Инициализация базы данных
+ */
+void setTable()
+{
+    sqlite3 *db;
+    int rc;
+    std::string sql = BR::SQLITE3_PRAGMA;
+    
+    sqlite3_open(BR::DB_NAME, &db);
+
+    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+
+    sql =
+        "CREATE TABLE PLAYER("
+        "ID INT PRIMARY KEY     NOT NULL, "
+        "NAME           TEXT    NOT NULL, "
+        "PASSWORD       TEXT    NOT NULL, "
+        "REG_DATE       TEXT    NOT NULL, "
+        "SCORE INT      KEY     NOT NULL, "
+        "MONEY INT      KEY     NOT NULL, "
+        "LEVEL INT      KEY     NOT NULL  "
+        ");";
+    rc = sqlite3_exec(db, sql.c_str(), NULL, 0, NULL);
+    if (rc == 0)
+    {
+        sql = BR::SQLITE3_TEST_DATA;
+        sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+    }
+
+    sqlite3_close(db);
+}
+
+/**
+ * @brief Проверка существования пользователя
+ * @param [in] name имя пользователя
+ * @return true - пользователь существует, false - пользователь не существует.
+ */
+bool checkPlayer(std::string *name)
+{
+    sqlite3 *db;
+    int rc;
+    sqlite3_stmt *stmt;
+    const char *tail;
+    std::string sql = BR::SQLITE3_PRAGMA;
+    bool fl = false;
+
+    sqlite3_open(BR::DB_NAME, &db);
+
+    sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
+    sql += *name;
+    sql += "\";";
+
+    sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW)
+    {
+        fl = true;
+    }
+
+    sqlite3_reset(stmt);
+    sqlite3_finalize(stmt);
+    sqlite3_close(db);
+
+    return fl;
+}
+
 /** @} */

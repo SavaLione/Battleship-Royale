@@ -18,6 +18,8 @@
 
 #include "BattleshipRoyale.h"
 
+bool checkPlayer(std::string *name);
+
 class MiniDB
 {
 private:

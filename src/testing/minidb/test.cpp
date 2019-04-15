@@ -26,6 +26,15 @@ void createMoreObjects()
     for(int i = 0; i < OJECTS; i++)
     {
         string *s = new string;
+        
+        checkPlayer(s);
+
+        delete s;
+    }
+    /*
+    for(int i = 0; i < OJECTS; i++)
+    {
+        string *s = new string;
         MiniDB *mdb = new MiniDB;
         
         *s = "SavaLione";
@@ -36,4 +45,5 @@ void createMoreObjects()
         delete mdb;
         delete s;
     }
+    */
 }
