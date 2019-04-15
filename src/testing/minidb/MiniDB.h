@@ -83,6 +83,8 @@ public:
      * @brief Инициализация базы данных
      */
     void setTable();
+
+    void close();
 };
 
 #endif // MINIDB_H

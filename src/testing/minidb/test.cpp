@@ -3,6 +3,8 @@
 
 #include "MiniDB.h"
 
+using namespace std;
+
 void createMoreObjects();
 
 const int OJECTS = 1000;
@@ -23,7 +25,13 @@ void createMoreObjects()
 {
     for(int i = 0; i < OJECTS; i++)
     {
-        MiniDB *mdb = new MiniDB;
-        delete mdb;
+        string *s = new string;
+
+        MiniDB mdb;
+
+        mdb.checkPlayer(s);
+        mdb.close();
+
+        delete s;
     }
 }

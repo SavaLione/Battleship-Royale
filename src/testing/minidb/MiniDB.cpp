@@ -27,9 +27,13 @@ MiniDB::MiniDB()
  */
 MiniDB::~MiniDB()
 {
-    sqlite3_close(db);
     delete rc;
     delete sql;
+}
+
+void MiniDB::close()
+{
+    sqlite3_close(db);
 }
 
 /**
