@@ -63,7 +63,7 @@ bool MiniDB::checkPlayer(std::string *name)
     {
         return true;
     }
-
+    sqlite3_finalize(stmt);
     return false;
 }
 
@@ -85,6 +85,7 @@ void MiniDB::getPassword(std::string *name, std::string *sha2_ret)
     {
         *sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
+    sqlite3_finalize(stmt);
 }
 
 /**
