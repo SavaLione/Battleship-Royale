@@ -11,10 +11,9 @@ const int OBJECTS = 1000;
 
 int main()
 {
-    MiniDB *mdb = new MiniDB;
-    mdb->setTable();
-    delete mdb;
-    
+    MiniDB mdb;
+    mdb.setTable();
+
     ///
     createMoreObjects();
 
@@ -27,10 +26,6 @@ void createMoreObjects()
     {
         string s = "SavaLione";
         MiniDB mdb;
-        bool some = mdb.checkPlayer(s);
-        if(some)
-        {
-            
-        }
+        mdb.checkPlayer(s);
     }
 }
