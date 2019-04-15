@@ -111,7 +111,7 @@
 </g>
 <!-- Node8 -->
 <g id="node9" class="node"><title>Node8</title>
-<g id="a_node9"><a xlink:href="_mini_d_b_8h.html" target="_top" xlink:title="Облегчённый класс для работы с бд">
+<g id="a_node9"><a xlink:href="server_2src_2_mini_d_b_8h.html" target="_top" xlink:title="Облегчённый класс для работы с бд">
 <polygon fill="white" stroke="black" points="148,-62 148,-81 204,-81 204,-62 148,-62"/>
 <text text-anchor="middle" x="176" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00">MiniDB.h</text>
 </a>

@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_mini_d_b_8h_source.html">MiniDB.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="server_2src_2_mini_d_b_8h_source.html">MiniDB.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
@@ -80,22 +80,160 @@ $(function() {
 <tr class="memitem:gab0ff056823088f612fb13d2aaea168cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#gab0ff056823088f612fb13d2aaea168cb">~MiniDB</a> ()</td></tr>
 <tr class="memdesc:gab0ff056823088f612fb13d2aaea168cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса  <a href="group__minidb__cpp.html#gab0ff056823088f612fb13d2aaea168cb">Подробнее...</a><br /></td></tr>
 <tr class="separator:gab0ff056823088f612fb13d2aaea168cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5dbd6c9a5504b95afd859224c06989d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#ga5dbd6c9a5504b95afd859224c06989d2">checkPlayer</a> (std::string *name)</td></tr>
-<tr class="memdesc:ga5dbd6c9a5504b95afd859224c06989d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования пользователя  <a href="group__minidb__cpp.html#ga5dbd6c9a5504b95afd859224c06989d2">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga5dbd6c9a5504b95afd859224c06989d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad8742d884ae7fcfc309583a77a260203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#gad8742d884ae7fcfc309583a77a260203">getPassword</a> (std::string *name, std::string *sha2_ret)</td></tr>
-<tr class="memdesc:gad8742d884ae7fcfc309583a77a260203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение пароля по имени  <a href="group__minidb__cpp.html#gad8742d884ae7fcfc309583a77a260203">Подробнее...</a><br /></td></tr>
-<tr class="separator:gad8742d884ae7fcfc309583a77a260203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3e8ada0d46bd60d7b4692d549f8d1caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#ga3e8ada0d46bd60d7b4692d549f8d1caf">checkPlayer</a> (std::string const &amp;name)</td></tr>
+<tr class="memdesc:ga3e8ada0d46bd60d7b4692d549f8d1caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования пользователя  <a href="group__minidb__cpp.html#ga3e8ada0d46bd60d7b4692d549f8d1caf">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga3e8ada0d46bd60d7b4692d549f8d1caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac81c196decb5fa5cf10c4be737260c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#gac81c196decb5fa5cf10c4be737260c8b">getPassword</a> (std::string const &amp;name, std::string &amp;sha2_ret)</td></tr>
+<tr class="memdesc:gac81c196decb5fa5cf10c4be737260c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение пароля по имени  <a href="group__minidb__cpp.html#gac81c196decb5fa5cf10c4be737260c8b">Подробнее...</a><br /></td></tr>
+<tr class="separator:gac81c196decb5fa5cf10c4be737260c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4">setTable</a> ()</td></tr>
 <tr class="memdesc:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация базы данных  <a href="group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adcbeb29cd746f90566127cef68a44d77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mini_d_b.html#adcbeb29cd746f90566127cef68a44d77">MiniDB</a> ()</td></tr>
+<tr class="memdesc:adcbeb29cd746f90566127cef68a44d77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса  <a href="#adcbeb29cd746f90566127cef68a44d77">Подробнее...</a><br /></td></tr>
+<tr class="separator:adcbeb29cd746f90566127cef68a44d77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ff056823088f612fb13d2aaea168cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mini_d_b.html#ab0ff056823088f612fb13d2aaea168cb">~MiniDB</a> ()</td></tr>
+<tr class="memdesc:ab0ff056823088f612fb13d2aaea168cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса  <a href="#ab0ff056823088f612fb13d2aaea168cb">Подробнее...</a><br /></td></tr>
+<tr class="separator:ab0ff056823088f612fb13d2aaea168cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e8ada0d46bd60d7b4692d549f8d1caf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mini_d_b.html#a3e8ada0d46bd60d7b4692d549f8d1caf">checkPlayer</a> (std::string const &amp;name)</td></tr>
+<tr class="memdesc:a3e8ada0d46bd60d7b4692d549f8d1caf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка существования пользователя  <a href="#a3e8ada0d46bd60d7b4692d549f8d1caf">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3e8ada0d46bd60d7b4692d549f8d1caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac81c196decb5fa5cf10c4be737260c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mini_d_b.html#ac81c196decb5fa5cf10c4be737260c8b">getPassword</a> (std::string const &amp;name, std::string &amp;sha2_ret)</td></tr>
+<tr class="memdesc:ac81c196decb5fa5cf10c4be737260c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Получение пароля по имени  <a href="#ac81c196decb5fa5cf10c4be737260c8b">Подробнее...</a><br /></td></tr>
+<tr class="separator:ac81c196decb5fa5cf10c4be737260c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mini_d_b.html#ad8faa1a8eb99a484d4c6098c6b56f4d4">setTable</a> ()</td></tr>
+<tr class="memdesc:ad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация базы данных  <a href="#ad8faa1a8eb99a484d4c6098c6b56f4d4">Подробнее...</a><br /></td></tr>
+<tr class="separator:ad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock">
-<p class="definition">См. определение в файле <a class="el" href="_mini_d_b_8h_source.html">MiniDB.h</a> строка <a class="el" href="_mini_d_b_8h_source.html#l00021">21</a></p>
-</div><hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="_mini_d_b_8h_source.html">MiniDB.h</a></li>
-<li><a class="el" href="_mini_d_b_8cpp_source.html">MiniDB.cpp</a></li>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8h_source.html">server/src/MiniDB.h</a> строка <a class="el" href="server_2src_2_mini_d_b_8h_source.html#l00021">21</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="adcbeb29cd746f90566127cef68a44d77"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcbeb29cd746f90566127cef68a44d77">&#9670;&nbsp;</a></span>MiniDB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiniDB::MiniDB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор класса </p>
+
+</div>
+</div>
+<a id="ab0ff056823088f612fb13d2aaea168cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0ff056823088f612fb13d2aaea168cb">&#9670;&nbsp;</a></span>~MiniDB()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">MiniDB::~MiniDB </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Деструктор класса </p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a3e8ada0d46bd60d7b4692d549f8d1caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e8ada0d46bd60d7b4692d549f8d1caf">&#9670;&nbsp;</a></span>checkPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool MiniDB::checkPlayer </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Проверка существования пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>имя пользователя </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>true - пользователь существует, false - пользователь не существует. </dd></dl>
+
+</div>
+</div>
+<a id="ac81c196decb5fa5cf10c4be737260c8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac81c196decb5fa5cf10c4be737260c8b">&#9670;&nbsp;</a></span>getPassword()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniDB::getPassword </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>sha2_ret</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Получение пароля по имени </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>имя пользователя </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">sha2_ret</td><td>пароль (из бд. в sha2) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad8faa1a8eb99a484d4c6098c6b56f4d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8faa1a8eb99a484d4c6098c6b56f4d4">&#9670;&nbsp;</a></span>setTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniDB::setTable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Инициализация базы данных </p>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="server_2src_2_mini_d_b_8h_source.html">server/src/MiniDB.h</a></li>
+<li><a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

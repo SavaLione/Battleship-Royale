@@ -1,8 +1,8 @@
 var searchData=
 [
   ['battleshiproyale_2ecpp',['BattleshipRoyale.cpp',['../client_2src_2_battleship_royale_8cpp.html',1,'']]],
-  ['check_5fpattern',['check_pattern',['../group__regexcpp.html#gac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp'],['../group__regexh.html#gac4882c93b963bd53fd60978a9661fa30',1,'check_pattern(std::string *msg, std::string *pattern):&#160;Regex.cpp']]],
-  ['checkplayer',['checkPlayer',['../group__minidb__cpp.html#ga5dbd6c9a5504b95afd859224c06989d2',1,'MiniDB']]],
+  ['check_5fpattern',['check_pattern',['../group__regexcpp.html#gaa3cead107f77154e052674ea9cff8c62',1,'check_pattern(std::string const &amp;msg, std::string const &amp;pattern):&#160;Regex.cpp'],['../group__regexh.html#gaa3cead107f77154e052674ea9cff8c62',1,'check_pattern(std::string const &amp;msg, std::string const &amp;pattern):&#160;Regex.cpp']]],
+  ['checkplayer',['checkPlayer',['../group__minidb__cpp.html#ga3e8ada0d46bd60d7b4692d549f8d1caf',1,'MiniDB::checkPlayer(std::string const &amp;name)'],['../class_mini_d_b.html#a3e8ada0d46bd60d7b4692d549f8d1caf',1,'MiniDB::checkPlayer(std::string const &amp;name)']]],
   ['client',['Client',['../group__client.html',1,'']]],
   ['client_2ecpp',['client.cpp',['../client_8cpp.html',1,'']]],
   ['client_2eh',['Client.h',['../_client_8h.html',1,'']]],

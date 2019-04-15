@@ -75,7 +75,7 @@ $(function() {
 <p>Класс для общения  
  <a href="classcon__handler.html#details">Подробнее...</a></p>
 
-<p><code>#include &lt;<a class="el" href="asio_2server_2con__handler_8h_source.html">con_handler.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="server_2src_2con__handler_8h_source.html">con_handler.h</a>&gt;</code></p>
 <div class="dynheader">
 Граф наследования:con_handler:</div>
 <div class="dyncontent">
@@ -92,14 +92,15 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Открытые типы</h2></td></tr>
 <tr class="memitem:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classcon__handler.html">con_handler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a></td></tr>
+<tr class="memdesc:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель но handler.  <a href="#ada4a1b970f9fd8e55460a58cf7f7ce2c">Подробнее...</a><br /></td></tr>
 <tr class="separator:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="memItemLeft" align="right" valign="top">typedef boost::shared_ptr&lt; <a class="el" href="classcon__handler.html">con_handler</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a></td></tr>
-<tr class="memdesc:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель но handler.  <a href="#ada4a1b970f9fd8e55460a58cf7f7ce2c">Подробнее...</a><br /></td></tr>
 <tr class="separator:ada4a1b970f9fd8e55460a58cf7f7ce2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Открытые члены</h2></td></tr>
 <tr class="memitem:a18e7e450430ebe71687a0fd0c79507aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a> (boost::asio::io_service &amp;io_service)</td></tr>
+<tr class="memdesc:a18e7e450430ebe71687a0fd0c79507aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса  <a href="#a18e7e450430ebe71687a0fd0c79507aa">Подробнее...</a><br /></td></tr>
 <tr class="separator:a18e7e450430ebe71687a0fd0c79507aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad168c799678add9fb23f3379e1d42b22"><td class="memItemLeft" align="right" valign="top">boost::asio::ip::tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22">socket</a> ()</td></tr>
 <tr class="memdesc:gad168c799678add9fb23f3379e1d42b22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сокет  <a href="group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22">Подробнее...</a><br /></td></tr>
@@ -113,46 +114,40 @@ $(function() {
 <tr class="memitem:ga10169d7b3588adb849d7e7c02c46375a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#ga10169d7b3588adb849d7e7c02c46375a">handle_write</a> (const boost::system::error_code &amp;err, size_t bytes_transferred)</td></tr>
 <tr class="memdesc:ga10169d7b3588adb849d7e7c02c46375a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка сообщения клиенту  <a href="group__con__handler__cpp.html#ga10169d7b3588adb849d7e7c02c46375a">Подробнее...</a><br /></td></tr>
 <tr class="separator:ga10169d7b3588adb849d7e7c02c46375a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga98e4756151b8044ac6700ce668620f78"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#ga98e4756151b8044ac6700ce668620f78">processing_user_check</a> (std::string const &amp;request)</td></tr>
+<tr class="memdesc:ga98e4756151b8044ac6700ce668620f78"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запроса. Поиск имени пользователя  <a href="group__con__handler__cpp.html#ga98e4756151b8044ac6700ce668620f78">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga98e4756151b8044ac6700ce668620f78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga04464d188e9fc40873ccfd6342c71590"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#ga04464d188e9fc40873ccfd6342c71590">processing_user_pass_check</a> (std::string const &amp;request)</td></tr>
+<tr class="memdesc:ga04464d188e9fc40873ccfd6342c71590"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запроса. Поиск имени и пароля  <a href="group__con__handler__cpp.html#ga04464d188e9fc40873ccfd6342c71590">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga04464d188e9fc40873ccfd6342c71590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa1bc82c764eb633355a52bd77689ed3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#gaa1bc82c764eb633355a52bd77689ed3f">~con_handler</a> ()</td></tr>
 <tr class="memdesc:gaa1bc82c764eb633355a52bd77689ed3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса  <a href="group__con__handler__cpp.html#gaa1bc82c764eb633355a52bd77689ed3f">Подробнее...</a><br /></td></tr>
 <tr class="separator:gaa1bc82c764eb633355a52bd77689ed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18e7e450430ebe71687a0fd0c79507aa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa">con_handler</a> (boost::asio::io_service &amp;io_service)</td></tr>
-<tr class="memdesc:a18e7e450430ebe71687a0fd0c79507aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор класса  <a href="#a18e7e450430ebe71687a0fd0c79507aa">Подробнее...</a><br /></td></tr>
 <tr class="separator:a18e7e450430ebe71687a0fd0c79507aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1cbd939db0c1c543425d7cd53702a06"><td class="memItemLeft" align="right" valign="top">boost::asio::ip::tcp::socket &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06">socket</a> ()</td></tr>
-<tr class="memdesc:ad1cbd939db0c1c543425d7cd53702a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сокет  <a href="#ad1cbd939db0c1c543425d7cd53702a06">Подробнее...</a><br /></td></tr>
 <tr class="separator:ad1cbd939db0c1c543425d7cd53702a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02d6691e226a75525a2ac83062b5c7f7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7">start</a> ()</td></tr>
-<tr class="memdesc:a02d6691e226a75525a2ac83062b5c7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Запуск handler.  <a href="#a02d6691e226a75525a2ac83062b5c7f7">Подробнее...</a><br /></td></tr>
 <tr class="separator:a02d6691e226a75525a2ac83062b5c7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b8e9edfc8fed79fcba0242a58b54bc2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2">handle_read</a> (const boost::system::error_code &amp;err, size_t bytes_transferred)</td></tr>
-<tr class="memdesc:a3b8e9edfc8fed79fcba0242a58b54bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Чтение сообщения от клиента  <a href="#a3b8e9edfc8fed79fcba0242a58b54bc2">Подробнее...</a><br /></td></tr>
 <tr class="separator:a3b8e9edfc8fed79fcba0242a58b54bc2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a10169d7b3588adb849d7e7c02c46375a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a">handle_write</a> (const boost::system::error_code &amp;err, size_t bytes_transferred)</td></tr>
-<tr class="memdesc:a10169d7b3588adb849d7e7c02c46375a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Отправка сообщения клиенту  <a href="#a10169d7b3588adb849d7e7c02c46375a">Подробнее...</a><br /></td></tr>
 <tr class="separator:a10169d7b3588adb849d7e7c02c46375a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga59d5e7ca90ffe7663b22a1a072659a4b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#ga59d5e7ca90ffe7663b22a1a072659a4b">processing_user_check</a> (std::string *request)</td></tr>
-<tr class="memdesc:ga59d5e7ca90ffe7663b22a1a072659a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запроса. Поиск имени пользователя  <a href="group__con__handler__cpp.html#ga59d5e7ca90ffe7663b22a1a072659a4b">Подробнее...</a><br /></td></tr>
-<tr class="separator:ga59d5e7ca90ffe7663b22a1a072659a4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gad7eced186d57cd0a928487421758bfda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__con__handler__cpp.html#gad7eced186d57cd0a928487421758bfda">processing_user_pass_check</a> (std::string *request)</td></tr>
-<tr class="memdesc:gad7eced186d57cd0a928487421758bfda"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запроса. Поиск имени и пароля  <a href="group__con__handler__cpp.html#gad7eced186d57cd0a928487421758bfda">Подробнее...</a><br /></td></tr>
-<tr class="separator:gad7eced186d57cd0a928487421758bfda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1bc82c764eb633355a52bd77689ed3f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#aa1bc82c764eb633355a52bd77689ed3f">~con_handler</a> ()</td></tr>
-<tr class="memdesc:aa1bc82c764eb633355a52bd77689ed3f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Деструктор класса  <a href="#aa1bc82c764eb633355a52bd77689ed3f">Подробнее...</a><br /></td></tr>
 <tr class="separator:aa1bc82c764eb633355a52bd77689ed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Открытые статические члены</h2></td></tr>
 <tr class="memitem:ab3cec40540ef3ff484ef0b639545eb17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">create</a> (boost::asio::io_service &amp;io_service)</td></tr>
+<tr class="memdesc:ab3cec40540ef3ff484ef0b639545eb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на созданный сервис  <a href="#ab3cec40540ef3ff484ef0b639545eb17">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab3cec40540ef3ff484ef0b639545eb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3cec40540ef3ff484ef0b639545eb17"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classcon__handler.html#ada4a1b970f9fd8e55460a58cf7f7ce2c">pointer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17">create</a> (boost::asio::io_service &amp;io_service)</td></tr>
-<tr class="memdesc:ab3cec40540ef3ff484ef0b639545eb17"><td class="mdescLeft">&#160;</td><td class="mdescRight">Указатель на созданный сервис  <a href="#ab3cec40540ef3ff484ef0b639545eb17">Подробнее...</a><br /></td></tr>
 <tr class="separator:ab3cec40540ef3ff484ef0b639545eb17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <div class="textblock"><p>Класс для общения </p>
 
-<p class="definition">См. определение в файле <a class="el" href="asio_2server_2con__handler_8h_source.html">asio/server/con_handler.h</a> строка <a class="el" href="asio_2server_2con__handler_8h_source.html#l00007">7</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00023">23</a></p>
 </div><h2 class="groupheader">Определения типов</h2>
 <a id="ada4a1b970f9fd8e55460a58cf7f7ce2c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada4a1b970f9fd8e55460a58cf7f7ce2c">&#9670;&nbsp;</a></span>pointer <span class="overload">[1/2]</span></h2>
@@ -166,7 +161,7 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="asio_2server_2con__handler_8h_source.html">asio/server/con_handler.h</a> строка <a class="el" href="asio_2server_2con__handler_8h_source.html#l00016">16</a></p>
+<p class="definition">См. определение в файле <a class="el" href="testing_2server_2con__handler_8h_source.html">testing/server/con_handler.h</a> строка <a class="el" href="testing_2server_2con__handler_8h_source.html#l00016">16</a></p>
 
 </div>
 </div>
@@ -184,41 +179,13 @@ $(function() {
 
 <p>Указатель но handler. </p>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00055">55</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00077">77</a></p>
 
 </div>
 </div>
 <h2 class="groupheader">Конструктор(ы)</h2>
 <a id="a18e7e450430ebe71687a0fd0c79507aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a18e7e450430ebe71687a0fd0c79507aa">&#9670;&nbsp;</a></span>con_handler() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">con_handler::con_handler </td>
-          <td>(</td>
-          <td class="paramtype">boost::asio::io_service &amp;&#160;</td>
-          <td class="paramname"><em>io_service</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">См. определение в файле <a class="el" href="asio_2server_2con__handler_8h_source.html">asio/server/con_handler.h</a> строка <a class="el" href="asio_2server_2con__handler_8h_source.html#l00017">17</a></p>
-
-</div>
-</div>
-<a id="a18e7e450430ebe71687a0fd0c79507aa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a18e7e450430ebe71687a0fd0c79507aa">&#9670;&nbsp;</a></span>con_handler() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,7 +217,35 @@ $(function() {
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00064">64</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00086">86</a></p>
+
+</div>
+</div>
+<a id="a18e7e450430ebe71687a0fd0c79507aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18e7e450430ebe71687a0fd0c79507aa">&#9670;&nbsp;</a></span>con_handler() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">con_handler::con_handler </td>
+          <td>(</td>
+          <td class="paramtype">boost::asio::io_service &amp;&#160;</td>
+          <td class="paramname"><em>io_service</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="testing_2server_2con__handler_8h_source.html">testing/server/con_handler.h</a> строка <a class="el" href="testing_2server_2con__handler_8h_source.html#l00017">17</a></p>
 
 </div>
 </div>
@@ -268,8 +263,6 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Деструктор класса </p>
 
 </div>
 </div>
@@ -298,7 +291,7 @@ $(function() {
 </table>
 </div><div class="memdoc">
 
-<p class="definition">См. определение в файле <a class="el" href="asio_2server_2con__handler_8h_source.html">asio/server/con_handler.h</a> строка <a class="el" href="asio_2server_2con__handler_8h_source.html#l00021">21</a></p>
+<p class="definition">См. определение в файле <a class="el" href="testing_2server_2con__handler_8h_source.html">testing/server/con_handler.h</a> строка <a class="el" href="testing_2server_2con__handler_8h_source.html#l00021">21</a></p>
 
 </div>
 </div>
@@ -335,7 +328,7 @@ $(function() {
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>указатель </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00074">74</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a> строка <a class="el" href="server_2src_2con__handler_8h_source.html#l00096">96</a></p>
 
 </div>
 </div>
@@ -365,15 +358,6 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Чтение сообщения от клиента </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">err</td><td>ошибка </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bytes_transferred</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="a10169d7b3588adb849d7e7c02c46375a"></a>
@@ -402,15 +386,6 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Отправка сообщения клиенту </p>
-<dl class="params"><dt>Аргументы</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">err</td><td>ошибка </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">bytes_transferred</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
 </div>
 </div>
 <a id="ad1cbd939db0c1c543425d7cd53702a06"></a>
@@ -427,9 +402,6 @@ $(function() {
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Сокет </p>
-<dl class="section return"><dt>Возвращает</dt><dd>Сокет </dd></dl>
 
 </div>
 </div>
@@ -448,13 +420,11 @@ $(function() {
       </table>
 </div><div class="memdoc">
 
-<p>Запуск handler. </p>
-
 </div>
 </div>
 <hr/>Объявления и описания членов классов находятся в файлах:<ul>
-<li><a class="el" href="asio_2server_2con__handler_8h_source.html">asio/server/con_handler.h</a></li>
-<li><a class="el" href="asio_2server_2con__handler_8cpp_source.html">asio/server/con_handler.cpp</a></li>
+<li><a class="el" href="server_2src_2con__handler_8h_source.html">server/src/con_handler.h</a></li>
+<li><a class="el" href="server_2src_2con__handler_8cpp_source.html">server/src/con_handler.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
