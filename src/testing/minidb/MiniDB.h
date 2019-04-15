@@ -54,6 +54,10 @@ private:
         sqlite3_exec(db, request->c_str(), NULL, 0, NULL);
     }
 
+    bool *opendb = new bool;
+
+    bool connectDB();
+
 public:
     /**
      * @brief Конструктор класса

@@ -11,15 +11,29 @@
  */
 #include "MiniDB.h"
 
+bool MiniDB::connectDB() {
+    if (false == *opendb && sqlite3_open(BR::DB_NAME, &db) == SQLITE_OK) {
+        *opendb = true;
+    }
+    else
+    {
+        *opendb = false;
+    }
+    return *opendb;
+}
+
 /**
  * @brief Конструктор класса
  */
 MiniDB::MiniDB()
 {
+    if(connectDB())
+    {
     sqlite3_open(BR::DB_NAME, &db);
 
     *sql = BR::SQLITE3_PRAGMA;
     request(sql);
+    }
 }
 
 /**
@@ -29,6 +43,7 @@ MiniDB::~MiniDB()
 {
     delete rc;
     delete sql;
+    delete opendb;
 }
 
 void MiniDB::close()
