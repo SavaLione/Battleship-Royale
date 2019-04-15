@@ -31,6 +31,7 @@ void createMoreObjects()
         *s = "SavaLione";
 
         mdb->checkPlayer(s);
+        mdb->close();
 
         delete mdb;
         delete s;

@@ -27,6 +27,10 @@ MiniDB::MiniDB()
  */
 MiniDB::~MiniDB()
 {
+}
+
+void MiniDB::close()
+{
     sqlite3_close(db);
     sqlite3_finalize(stmt);
 }
