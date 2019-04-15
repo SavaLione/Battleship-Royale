@@ -55,7 +55,7 @@ bool MiniDB::checkPlayer(std::string const& name)
         fl = true;
     }
 
-    sqlite3_reset(stmt);
+    //sqlite3_reset(stmt);
     sqlite3_finalize(stmt);
     sqlite3_close(db);
 
@@ -87,7 +87,7 @@ void MiniDB::getPassword(std::string const& name, std::string& sha2_ret)
     {
         sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
-    sqlite3_reset(stmt);
+    //sqlite3_reset(stmt);
     sqlite3_finalize(stmt);
     sqlite3_close(db);
 }
