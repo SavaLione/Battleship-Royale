@@ -14,17 +14,19 @@ else()
     set(    BR_UNIX    1    )
 endif()
 
-set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
-set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT"          )
+set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
+set(    BR_CLIENT      0    CACHE BOOL "BR_CLIENT"          )
 set(    BR_SERVER_TEST 0    CACHE BOOL "BR_SERVER_TEST"     )           # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_TEST 0    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
-set(    BR_REGEX_TEST  0    CACHE BOOL "BR_CLIENT_TEST"     )           # <--- DELETE THIS ON STABLE
+set(    BR_REGEX_TEST  0    CACHE BOOL "BR_REGEX_TEST"      )           # <--- DELETE THIS ON STABLE
+set(    BR_MINIDB_TEST 1    CACHE BOOL "BR_MINIDB_TEST"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
 set(    BR_SERVER_NAME_TEST     BattleshipRoyale_Server_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_CLIENT_NAME_TEST     BattleshipRoyale_CLIENT_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_REGEX_NAME_TEST      BattleshipRoyale_REGEX_TEST     )       # <--- DELETE THIS ON STABLE
+set(    BR_MINIDB_NAME_TEST     BattleshipRoyale_MINIDB_TEST    )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -99,14 +101,18 @@ if(BR_SERVER)
 	add_subdirectory(src/server)
 endif()
 
-if(BR_SERVER_TEST)                              # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/asio/server)           # <--- DELETE THIS ON STABLE
-endif()                                         # <--- DELETE THIS ON STABLE
+if(BR_SERVER_TEST)                                 # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/server)           # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
 
-if(BR_CLIENT_TEST)                              # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/asio/client)           # <--- DELETE THIS ON STABLE
-endif()                                         # <--- DELETE THIS ON STABLE
+if(BR_CLIENT_TEST)                                 # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/client)           # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
 
-if(BR_REGEX_TEST)                               # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/asio/regex)            # <--- DELETE THIS ON STABLE
-endif()                                         # <--- DELETE THIS ON STABLE
+if(BR_REGEX_TEST)                                  # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/regex)            # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
+
+if(BR_MINIDB_TEST)                                 # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/minidb)           # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
