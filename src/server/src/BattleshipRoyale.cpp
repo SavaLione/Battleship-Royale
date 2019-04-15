@@ -110,9 +110,8 @@ int main(int argc, char *argv[])
 	/*
 		DB initialization
 	*/
-	MiniDB *mdb = new MiniDB;
-	mdb->setTable();
-	delete mdb;
+	MiniDB mdb;
+	mdb.setTable();
 
 	/*
 		Start server
