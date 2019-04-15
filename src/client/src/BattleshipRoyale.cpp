@@ -135,7 +135,7 @@ int main(int argc, char *argv[])
     else
     {
         const char *data = boost::asio::buffer_cast<const char *>(receive_buffer.data());
-        spdlog::info("-----------------");
+        //spdlog::info("-----------------");
         spdlog::info(data);
     }
 	}

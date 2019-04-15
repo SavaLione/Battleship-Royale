@@ -116,10 +116,12 @@ bool con_handler::processing_user_pass_check(std::string const& request)
         if(s_param_two == s_sha2)
         {
             answ = BR::ANSWER_TRUE;
+            strncpy(ans, BR::ANSWER_TRUE, max_length);
         }
         else
         {
             answ = BR::ANSWER_FALSE;
+            strncpy(ans, BR::ANSWER_TRUE, max_length);
         }
 
         return true;
@@ -156,6 +158,5 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
  */
 con_handler::~con_handler()
 {
-    sock.close();
 }
 /** @} */
