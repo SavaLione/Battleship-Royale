@@ -6,7 +6,7 @@
 int main()
 {
     MiniDB *mdb = new MiniDB;
-
+    mdb->setTable();
     delete mdb;
     
     return 0;
