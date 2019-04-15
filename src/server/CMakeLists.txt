@@ -29,6 +29,12 @@ add_executable(${BR_SERVER_NAME} ${BR_SERVER_HEADERS} ${BR_SERVER_SOURCES})
 ################################
 target_link_libraries(${BR_SERVER_NAME} ${USE_LIB})
 
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${SPDLOG_LIB_INCLUDE})
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${CXXOPTS_LIB_INCLUDE})
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${BR_LIB_INCLUDE})
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${SQLITE3_LIB_INCLUDE})
+
 if(BR_UNIX)
 	target_link_libraries(${BR_SERVER_NAME} sqlite3)
 endif()
@@ -39,6 +45,3 @@ if(BR_WINDOWS)
 	target_link_libraries(${BR_SERVER_NAME} ws2_32)
 	target_link_libraries(${BR_SERVER_NAME} wsock32)
 endif()
-
-# Compiler
-#target_compile_options(${BR_SERVER_NAME} PUBLIC -j4)
