@@ -38,20 +38,21 @@ MiniDB::~MiniDB()
  */
 bool MiniDB::checkPlayer(std::string *name)
 {
+    bool fl = false;
     sql = "SELECT NAME FROM PLAYER WHERE NAME = \"";
     sql += *name;
     sql += "\";";
 
-    //const char *tail;
+    const char *tail;
 
-    //*rc = sqlite3_prepare_v2(db, s_sql->c_str(), 1000, &stmt, &tail);
-    sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, NULL);
+    sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
 
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
-        return true;
+        fl = true;
     }
-    return false;
+    sqlite3_reset(stmt);
+    return fl;
 }
 
 /**
@@ -67,11 +68,14 @@ void MiniDB::getPassword(std::string *name, std::string *sha2_ret)
     sql += *name;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, NULL);
+    const char *tail;
+
+    sqlite3_prepare_v2(db, sql.c_str(), 1000, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         *sha2_ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
     }
+    sqlite3_reset(stmt);
 }
 
 /**
