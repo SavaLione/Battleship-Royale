@@ -24,7 +24,7 @@ private:
     /**
      * @brief Ответ базы данных
      */
-    int *rc = new int;
+    int rc;
 
     /**
      * @brief База данных
@@ -39,7 +39,7 @@ private:
     /**
      * @brief Запрос
      */
-    std::string *sql = new std::string;
+    std::string sql;
 
     /**
      * @brief Запрос
