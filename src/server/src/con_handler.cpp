@@ -14,13 +14,11 @@
 #include <string>
 
 #include <boost/bind.hpp>
-#include <boost/regex.hpp>
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
 #include "BattleshipRoyale.h"
-#include "Regex.h"
 
 /**
  * @brief Сокет
@@ -49,18 +47,7 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
     if (!err)
     {
         data_check = data;
-        if(processing_user_check(data_check))
-        {
-
-        }
-        else if(processing_user_pass_check(data_check))
-        {
-
-        }
-        else
-        {
-
-        }
+        answ = prc.response(data_check);
     }
     else
     {
@@ -68,63 +55,6 @@ void con_handler::handle_read(const boost::system::error_code &err, size_t bytes
         sock.close();
     }
     sock.async_write_some(boost::asio::buffer(answ, max_length), boost::bind(&con_handler::handle_write, shared_from_this(), boost::asio::placeholders::error, boost::asio::placeholders::bytes_transferred));
-}
-
-/**
- * @brief обработка запроса. Поиск имени пользователя
- * @param [in] request запрос
- * @return true - запрос подходит(обработан), false - запрос не подходит(не обработан)
- */
-bool con_handler::processing_user_check(std::string const& request)
-{
-    s_param_one = "";
-    s_pattern_reg = BR::REG_USER;
-
-    if (check_pattern(request, s_pattern_reg))
-    {
-        getData(request, s_pattern_reg, s_param_one);
-
-        if (mdb.checkPlayer(s_param_one))
-        {
-            answ = BR::ANSWER_TRUE;
-        }
-        else
-        {
-            answ = BR::ANSWER_FALSE;
-        }
-
-        return true;
-    }
-    return false;
-}
-
-/**
- * @brief обработка запроса. Поиск имени и пароля
- * @param [in] request запрос
- * @return true - имя и пароль верны, false - имя и пароль не верны.
- */
-bool con_handler::processing_user_pass_check(std::string const& request)
-{
-    s_param_one = "";
-    s_param_two = "";
-    s_pattern_reg = BR::REG_USER_PASS;
-
-    if (check_pattern(request, s_pattern_reg))
-    {
-        getData(request, s_pattern_reg, s_param_one, s_param_two);
-        mdb.getPassword(s_param_one, s_sha2);
-        if(s_param_two == s_sha2)
-        {
-            answ = BR::ANSWER_TRUE;
-        }
-        else
-        {
-            answ = BR::ANSWER_FALSE;
-        }
-
-        return true;
-    }
-    return false;
 }
 
 /**
@@ -145,10 +75,6 @@ void con_handler::handle_write(const boost::system::error_code &err, size_t byte
     }
     memset(data, 0, max_length);
     answ = "";
-	s_param_one = "";
-	s_param_two = "";
-	s_pattern_reg = "";
-	s_sha2 = "";
 }
 
 /**
