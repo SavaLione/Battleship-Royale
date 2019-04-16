@@ -12,8 +12,16 @@ var searchData=
   ['server_5fversion_5fpatch',['SERVER_VERSION_PATCH',['../namespace_b_r.html#ad496b6d1eb6371bb740df7c7fac12aba',1,'BR']]],
   ['service',['service',['../_client_8h.html#a632571e5ad0b35ab596dc375b3ce45b5',1,'Client.h']]],
   ['sock',['sock',['../class_server_link.html#ab44d72d22bc44a19a2c1c7a2af9a7f3a',1,'ServerLink::sock()'],['../classcon__handler.html#ad23f2e7bef296da53cd171335affd300',1,'con_handler::sock()']]],
+  ['sqlite3_5fdb_5flocal_5fname',['SQLITE3_DB_LOCAL_NAME',['../namespace_b_r.html#ab6482bc2fd8737ee94d004dc6e282ee2',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fmap_5fdata',['SQLITE3_DB_MEMORY_MAP_DATA',['../namespace_b_r.html#a9816c79f5c0c3c185ffa55ba3b455ff3',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fmap_5fname',['SQLITE3_DB_MEMORY_MAP_NAME',['../namespace_b_r.html#a30af37d32ab934b07627181c7d04aafe',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fmap_5ftable',['SQLITE3_DB_MEMORY_MAP_TABLE',['../namespace_b_r.html#a6a2f3e742499d8bda1b1e7fdffd98874',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fuid_5fdata',['SQLITE3_DB_MEMORY_UID_DATA',['../namespace_b_r.html#a7e8651b477c01c584305067924943551',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fuid_5fname',['SQLITE3_DB_MEMORY_UID_NAME',['../namespace_b_r.html#a8f5455026d5b5f60bba8b3a60a8a6ac9',1,'BR']]],
+  ['sqlite3_5fdb_5fmemory_5fuid_5ftable',['SQLITE3_DB_MEMORY_UID_TABLE',['../namespace_b_r.html#aac6c556a1ba4a7e6bf7648656f65328c',1,'BR']]],
+  ['sqlite3_5flocal_5fdata',['SQLITE3_LOCAL_DATA',['../namespace_b_r.html#a4f80b7a32a4918eed0f29a81616e9745',1,'BR']]],
+  ['sqlite3_5flocal_5ftable',['SQLITE3_LOCAL_TABLE',['../namespace_b_r.html#a004bbb604682155741420583f555859e',1,'BR']]],
   ['sqlite3_5fmax_5fmessage_5fsize',['SQLITE3_MAX_MESSAGE_SIZE',['../namespace_b_r.html#aba1ab75d8e974ded295ec6790183f839',1,'BR']]],
   ['sqlite3_5fpragma',['SQLITE3_PRAGMA',['../namespace_b_r.html#a044d1c57586ae775faa82b034a473690',1,'BR']]],
-  ['sqlite3_5ftest_5fdata',['SQLITE3_TEST_DATA',['../namespace_b_r.html#a19c30c5e6b815e6f9064466ff1c27147',1,'BR']]],
   ['stmt',['stmt',['../class_d_b.html#a98c52263921eab7802f7e7ef3bb9ff1f',1,'DB']]]
 ];

@@ -116,6 +116,9 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 <tr class="memitem:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#gad8faa1a8eb99a484d4c6098c6b56f4d4">MiniDB::setTable</a> ()</td></tr>
 <tr class="memdesc:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Инициализация базы данных  <a href="#gad8faa1a8eb99a484d4c6098c6b56f4d4">Подробнее...</a><br /></td></tr>
 <tr class="separator:gad8faa1a8eb99a484d4c6098c6b56f4d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga120dfc32d59b8240bd2e066e1a3581ca"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__minidb__cpp.html#ga120dfc32d59b8240bd2e066e1a3581ca">MiniDB::createPlayer</a> (std::string const &amp;name, std::string const &amp;sha2)</td></tr>
+<tr class="memdesc:ga120dfc32d59b8240bd2e066e1a3581ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Создание пользователя  <a href="#ga120dfc32d59b8240bd2e066e1a3581ca">Подробнее...</a><br /></td></tr>
+<tr class="separator:ga120dfc32d59b8240bd2e066e1a3581ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
 <h2 class="groupheader">Функции</h2>
@@ -148,7 +151,48 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 <dl class="section examples"><dt>Примеры</dt><dd><a class="el" href="_mini_d_b_8cpp-example.html#a3">MiniDB.cpp</a>.</dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00033">33</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00035">35</a></p>
+
+</div>
+</div>
+<a id="ga120dfc32d59b8240bd2e066e1a3581ca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga120dfc32d59b8240bd2e066e1a3581ca">&#9670;&nbsp;</a></span>createPlayer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MiniDB::createPlayer </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>sha2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;<a class="el" href="server_2src_2_mini_d_b_8h.html">MiniDB.h</a>&gt;</code></p>
+
+<p>Создание пользователя </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>имя пользователя </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sha2</td><td>пароль (в sha2) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00124">124</a></p>
 
 </div>
 </div>
@@ -191,7 +235,7 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 <dl class="section examples"><dt>Примеры</dt><dd><a class="el" href="_mini_d_b_8cpp-example.html#a4">MiniDB.cpp</a>.</dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00068">68</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00070">70</a></p>
 
 </div>
 </div>
@@ -214,7 +258,7 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 
 <p>Конструктор класса </p>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00017">17</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00019">19</a></p>
 
 </div>
 </div>
@@ -239,7 +283,7 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 <dl class="section examples"><dt>Примеры</dt><dd><a class="el" href="_mini_d_b_8cpp-example.html#a2">MiniDB.cpp</a>.</dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00095">95</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00097">97</a></p>
 
 </div>
 </div>
@@ -262,7 +306,7 @@ $(document).ready(function(){initNavTree('group__minidb__cpp.html','');});
 
 <p>Деструктор класса </p>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00024">24</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html">server/src/MiniDB.cpp</a> строка <a class="el" href="server_2src_2_mini_d_b_8cpp_source.html#l00026">26</a></p>
 
 </div>
 </div>

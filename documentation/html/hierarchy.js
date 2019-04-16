@@ -7,6 +7,8 @@ var hierarchy =
       [ "con_handler", "classcon__handler.html", null ],
       [ "ServerLink", "class_server_link.html", null ]
     ] ],
+    [ "MemDBmap", "class_mem_d_bmap.html", null ],
+    [ "MemDBuid", "class_mem_d_buid.html", null ],
     [ "Message", "class_message.html", null ],
     [ "MessageObject", "class_message_object.html", null ],
     [ "MiniDB", "class_mini_d_b.html", null ],

@@ -4,5 +4,6 @@ var searchData=
   ['checkplayer',['checkPlayer',['../group__minidb__cpp.html#ga3e8ada0d46bd60d7b4692d549f8d1caf',1,'MiniDB::checkPlayer(std::string const &amp;name)'],['../class_mini_d_b.html#a3e8ada0d46bd60d7b4692d549f8d1caf',1,'MiniDB::checkPlayer(std::string const &amp;name)']]],
   ['con_5fhandler',['con_handler',['../classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa',1,'con_handler::con_handler(boost::asio::io_service &amp;io_service)'],['../classcon__handler.html#a18e7e450430ebe71687a0fd0c79507aa',1,'con_handler::con_handler(boost::asio::io_service &amp;io_service)']]],
   ['connect',['Connect',['../class_server_link.html#ad4c71cf9ab124f2c29ae99ca4a50f0ac',1,'ServerLink']]],
-  ['create',['create',['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create(boost::asio::io_service &amp;io_service)'],['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create(boost::asio::io_service &amp;io_service)']]]
+  ['create',['create',['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create()'],['../group__memdbmap__cpp.html#gac4fcbedb89c2e5622c4347303e4ef4b7',1,'MemDBmap::create()'],['../group__memdbuid__cpp.html#ga79b55a5f19680f3b9052a850e327f655',1,'MemDBuid::create()'],['../classcon__handler.html#ab3cec40540ef3ff484ef0b639545eb17',1,'con_handler::create()']]],
+  ['createplayer',['createPlayer',['../group__minidb__cpp.html#ga120dfc32d59b8240bd2e066e1a3581ca',1,'MiniDB']]]
 ];

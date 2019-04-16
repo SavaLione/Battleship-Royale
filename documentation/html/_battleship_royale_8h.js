@@ -1,16 +1,18 @@
 var _battleship_royale_8h =
 [
+    [ "ANSWER_ERROR_USER_ALREADY_EXIST", "_battleship_royale_8h.html#a2c087305b4b1660e9db10e4418605196", null ],
     [ "ANSWER_FALSE", "_battleship_royale_8h.html#ab6a300389a9580a0b56064ae270c0cae", null ],
+    [ "ANSWER_SUCCESSFUL_USER_CREATED", "_battleship_royale_8h.html#aab951ac29ff4a79156b8d84994cf472f", null ],
     [ "ANSWER_TRUE", "_battleship_royale_8h.html#a059b758442a69af28b36cf079b15cd81", null ],
     [ "CLIENT_VERSION", "_battleship_royale_8h.html#a5efdcacd78568f72acf52924873804a3", null ],
     [ "CLIENT_VERSION_MAJOR", "_battleship_royale_8h.html#a99a147d6069c07f03a2baf3bb531e308", null ],
     [ "CLIENT_VERSION_MINOR", "_battleship_royale_8h.html#a4182b988c7afdd13d1e00d1a558c44ab", null ],
     [ "CLIENT_VERSION_PATCH", "_battleship_royale_8h.html#a35ec7e796e49c1a6b87e73c07d643378", null ],
-    [ "DB_NAME", "_battleship_royale_8h.html#a30974fa6f1a17283bd60a3bb1e9501ff", null ],
     [ "REG_ANSWER_FALSE", "_battleship_royale_8h.html#a94419722319d8a4f02a831efaf4fec32", null ],
     [ "REG_ANSWER_TRUE", "_battleship_royale_8h.html#acf1d3b2d08c206a5c96e03f81c3f17e5", null ],
     [ "REG_UID", "_battleship_royale_8h.html#a6b288b2197101eea180f726c9ab3195a", null ],
     [ "REG_USER", "_battleship_royale_8h.html#adf62830a86680a1b129dc6a865c8ca5f", null ],
+    [ "REG_USER_CREATE", "_battleship_royale_8h.html#a6c20c454235c92384ddca7a050d67bd4", null ],
     [ "REG_USER_PASS", "_battleship_royale_8h.html#a81134999acb4e2183d0968fad32d055e", null ],
     [ "SERVER_IP", "_battleship_royale_8h.html#ae2055a331ff0a0d44ecdf49d643c143b", null ],
     [ "SERVER_PORT", "_battleship_royale_8h.html#a93dcd985876e063e59cb37eeb4f49bc8", null ],
@@ -18,7 +20,15 @@ var _battleship_royale_8h =
     [ "SERVER_VERSION_MAJOR", "_battleship_royale_8h.html#a767d5d7fec5adfa1bf5a7c03f98beaaf", null ],
     [ "SERVER_VERSION_MINOR", "_battleship_royale_8h.html#afb69faba1bc3b5d31b8514c0103b72a0", null ],
     [ "SERVER_VERSION_PATCH", "_battleship_royale_8h.html#ad496b6d1eb6371bb740df7c7fac12aba", null ],
+    [ "SQLITE3_DB_LOCAL_NAME", "_battleship_royale_8h.html#ab6482bc2fd8737ee94d004dc6e282ee2", null ],
+    [ "SQLITE3_DB_MEMORY_MAP_DATA", "_battleship_royale_8h.html#a9816c79f5c0c3c185ffa55ba3b455ff3", null ],
+    [ "SQLITE3_DB_MEMORY_MAP_NAME", "_battleship_royale_8h.html#a30af37d32ab934b07627181c7d04aafe", null ],
+    [ "SQLITE3_DB_MEMORY_MAP_TABLE", "_battleship_royale_8h.html#a6a2f3e742499d8bda1b1e7fdffd98874", null ],
+    [ "SQLITE3_DB_MEMORY_UID_DATA", "_battleship_royale_8h.html#a7e8651b477c01c584305067924943551", null ],
+    [ "SQLITE3_DB_MEMORY_UID_NAME", "_battleship_royale_8h.html#a8f5455026d5b5f60bba8b3a60a8a6ac9", null ],
+    [ "SQLITE3_DB_MEMORY_UID_TABLE", "_battleship_royale_8h.html#aac6c556a1ba4a7e6bf7648656f65328c", null ],
+    [ "SQLITE3_LOCAL_DATA", "_battleship_royale_8h.html#a4f80b7a32a4918eed0f29a81616e9745", null ],
+    [ "SQLITE3_LOCAL_TABLE", "_battleship_royale_8h.html#a004bbb604682155741420583f555859e", null ],
     [ "SQLITE3_MAX_MESSAGE_SIZE", "_battleship_royale_8h.html#aba1ab75d8e974ded295ec6790183f839", null ],
-    [ "SQLITE3_PRAGMA", "_battleship_royale_8h.html#a044d1c57586ae775faa82b034a473690", null ],
-    [ "SQLITE3_TEST_DATA", "_battleship_royale_8h.html#a19c30c5e6b815e6f9064466ff1c27147", null ]
+    [ "SQLITE3_PRAGMA", "_battleship_royale_8h.html#a044d1c57586ae775faa82b034a473690", null ]
 ];

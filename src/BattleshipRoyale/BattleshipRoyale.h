@@ -96,6 +96,7 @@ namespace BR
     
     /**
      * @brief Таблица локальной бд
+     * @todo добавить поде для бана
      * @code
      *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
      * @endcode
@@ -160,19 +161,21 @@ namespace BR
     /**
      * @brief Тестовые данные map
      * @todo Нужно создать запрет на вход SavaLione и OwO
-     * @code
-     *      |ID|         UID          |  NAME   |
-     *      |--|----------------------|---------|
-     *      |1 |SOME123STRONG456UID789|SavaLione|
-     *      |2 |OWWO111OwO123OwO111OwO|OwO      |
-     * @endcode
      */
     const char SQLITE3_DB_MEMORY_MAP_DATA[] = "";
 
     /**
      * @brief Тестовые данные
+     * @todo добавить поде для бана и запрет на вход
      * @code
-     *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
+     *      |ID|  NAME   |   PASSWORD   |REG_DATE|SCORE|MONEY|LEVEL|
+     *      |--|---------|--------------|--------|-----|-----|-----|
+     *      |1 |ZERO     |ZEROZERO      |ZERO    |1    |1    |1    |
+     *      |2 |SavaLione|MyOwOpass     |now     |0    |0    |7    |
+     *      |3 |OwO      |OwO           |1234d   |0    |0    |0    |
+     *      |4 |UwU      |UwU           |a       |0    |0    |0    |
+     *      |5 |Hewwwoo  |Hiii          |n       |0    |0    |0    |
+     *      |6 |Awwww    |Awwwwwwwwwwwww|www     |1234 |1234 |0    |
      * @endcode
      */
     const char SQLITE3_LOCAL_DATA[] =

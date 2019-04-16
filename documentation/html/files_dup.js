@@ -12,6 +12,11 @@ var files_dup =
     [ "testing/server/con_handler.h", "testing_2server_2con__handler_8h.html", null ],
     [ "DB.cpp", "_d_b_8cpp.html", null ],
     [ "DB.h", "_d_b_8h.html", null ],
+    [ "mem.cpp", "mem_8cpp.html", "mem_8cpp" ],
+    [ "MemDBmap.cpp", "_mem_d_bmap_8cpp.html", null ],
+    [ "MemDBmap.h", "_mem_d_bmap_8h.html", null ],
+    [ "MemDBuid.cpp", "_mem_d_buid_8cpp.html", null ],
+    [ "MemDBuid.h", "_mem_d_buid_8h.html", null ],
     [ "client/src/Message.h", "client_2src_2_message_8h.html", [
       [ "Message", "class_message.html", "class_message" ],
       [ "MessageObject", "class_message_object.html", "class_message_object" ]

@@ -24,6 +24,7 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "Battleship-Royale", "index.html", [
+    [ "Список задач", "todo.html", null ],
     [ "Список устаревших определений и описаний", "deprecated.html", null ],
     [ "Группы", "modules.html", "modules" ],
     [ "Пространства имен", "namespaces.html", [
@@ -62,7 +63,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_battleship_royale_8h.html",
-"group__rand__ssecpp.html#gae2c66d1d7db5adf0c1853960e2be1119"
+"group__memdbuid__cpp.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';
