@@ -78,7 +78,7 @@ std::string Processing::response(std::string const &request)
     }
     case USER_CREATE:
     {
-        std::string param_one = "", param_two;
+        std::string param_one = "", param_two = "";
         getData(request, BR::REG_USER_CREATE, param_one, param_two);
         if (mdb.checkPlayer(param_one))
         {

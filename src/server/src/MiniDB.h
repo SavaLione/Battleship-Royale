@@ -57,7 +57,7 @@ public:
     /**
      * @brief Создание пользователя
      * @param [in] name имя пользователя
-     * @param [in] sha2 пароль (из бд. в sha2)
+     * @param [in] sha2 пароль (в sha2)
      */
     void createPlayer(std::string const& name, std::string const& sha2);
 };

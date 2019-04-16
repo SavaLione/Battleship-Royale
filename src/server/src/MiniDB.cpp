@@ -125,7 +125,11 @@ void MiniDB::setTable()
     sqlite3_close(db);
 }
 
-
+/**
+ * @brief Создание пользователя
+ * @param [in] name имя пользователя
+ * @param [in] sha2 пароль (в sha2)
+ */
 void MiniDB::createPlayer(std::string const& name, std::string const& sha2)
 {
 	time_t t;

@@ -20,6 +20,7 @@ set(    BR_TEST_SERVER 1    CACHE BOOL "BR_TEST_SERVER"     )           # <--- D
 set(    BR_TEST_CLIENT 1    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_REGEX  1    CACHE BOOL "BR_TEST_REGEX"      )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MINIDB 1    CACHE BOOL "BR_TEST_MINIDB"     )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_MEMDB  1    CACHE BOOL "BR_TEST_MEMDB"      )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
@@ -27,6 +28,7 @@ set(    BR_TEST_SERVER_NAME     BattleshipRoyale_Server_TEST    )       # <--- D
 set(    BR_TEST_CLIENT_NAME     BattleshipRoyale_CLIENT_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_REGEX_NAME      BattleshipRoyale_REGEX_TEST     )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MINIDB_NAME     BattleshipRoyale_MINIDB_TEST    )       # <--- DELETE THIS ON STABLE
+set(    BR_TEST_MEMDB_NAME      BattleshipRoyale_MEMDB_TEST     )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -111,4 +113,8 @@ endif()                                            # <--- DELETE THIS ON STABLE
 
 if(BR_TEST_MINIDB)                                 # <--- DELETE THIS ON STABLE
 	add_subdirectory(src/testing/minidb)           # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
+
+if(BR_TEST_MEMDB)                                  # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/memorydb)         # <--- DELETE THIS ON STABLE
 endif()                                            # <--- DELETE THIS ON STABLE
