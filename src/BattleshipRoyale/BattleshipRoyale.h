@@ -69,8 +69,11 @@ namespace BR
     //      DB
     ///////////////////////////////////////////////////////////////////////////////
 
-    /// Название базы данных
+    /// Название локальной базы данных
     const char DB_NAME[] = "test.db";
+
+    /// Название базы данных в памяти
+    const char DB_NAME_MEMORY[] = "file:memdb1?mode=memory&cache=shared";
 
     /**
      * @brief Флаги sqlite3
@@ -88,6 +91,23 @@ namespace BR
         "PRAGMA encoding = \"UTF-8\";"
         "PRAGMA journal_mode = DELETE;";
     
+    /**
+     * @brief Тестовая таблица
+     * @code
+     *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
+     * @endcode
+     */
+    const char SQLITE3_TEST_TABLE[] =
+        "CREATE TABLE PLAYER("
+            "ID INT PRIMARY KEY     NOT NULL, "
+            "NAME           TEXT    NOT NULL, "
+            "PASSWORD       TEXT    NOT NULL, "
+            "REG_DATE       TEXT    NOT NULL, "
+            "SCORE INT      KEY     NOT NULL, "
+            "MONEY INT      KEY     NOT NULL, "
+            "LEVEL INT      KEY     NOT NULL  "
+        ");";
+
     /**
      * @brief Тестовые данные
      * @code

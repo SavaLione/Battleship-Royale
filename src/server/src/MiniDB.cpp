@@ -104,16 +104,7 @@ void MiniDB::setTable()
 
     rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
-    sql =
-        "CREATE TABLE PLAYER("
-        "ID INT PRIMARY KEY     NOT NULL, "
-        "NAME           TEXT    NOT NULL, "
-        "PASSWORD       TEXT    NOT NULL, "
-        "REG_DATE       TEXT    NOT NULL, "
-        "SCORE INT      KEY     NOT NULL, "
-        "MONEY INT      KEY     NOT NULL, "
-        "LEVEL INT      KEY     NOT NULL  "
-        ");";
+    sql = BR::SQLITE3_TEST_TABLE;
     
     rc = sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
     if (rc == 0)

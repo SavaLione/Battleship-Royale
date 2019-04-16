@@ -16,11 +16,11 @@ endif()
 
 set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
 set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT"          )
-set(    BR_TEST_SERVER 1    CACHE BOOL "BR_TEST_SERVER"     )           # <--- DELETE THIS ON STABLE
-set(    BR_TEST_CLIENT 1    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- DELETE THIS ON STABLE
-set(    BR_TEST_REGEX  1    CACHE BOOL "BR_TEST_REGEX"      )           # <--- DELETE THIS ON STABLE
-set(    BR_TEST_MINIDB 1    CACHE BOOL "BR_TEST_MINIDB"     )           # <--- DELETE THIS ON STABLE
-set(    BR_TEST_MEMDB  1    CACHE BOOL "BR_TEST_MEMDB"      )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_SERVER 0    CACHE BOOL "BR_TEST_SERVER"     )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_CLIENT 0    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_REGEX  0    CACHE BOOL "BR_TEST_REGEX"      )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_MINIDB 0    CACHE BOOL "BR_TEST_MINIDB"     )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_MEMDB  0    CACHE BOOL "BR_TEST_MEMDB"      )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
