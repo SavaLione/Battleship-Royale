@@ -6,6 +6,8 @@ project(${BR_SERVER_NAME})
 
 set(BR_SERVER_HEADERS
 	src/con_handler.h
+	src/MemDBmap.h
+	src/MemDBuid.h
 	src/MiniDB.h
 	src/Processing.h
 	src/rand_sse.h
@@ -15,6 +17,8 @@ set(BR_SERVER_HEADERS
 set(BR_SERVER_SOURCES
 	src/BattleshipRoyale.cpp
 	src/con_handler.cpp
+	src/MemDBmap.cpp
+	src/MemDBuid.cpp
 	src/MiniDB.cpp
 	src/Processing.cpp
 	src/rand_sse.cpp

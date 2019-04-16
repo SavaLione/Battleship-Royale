@@ -70,10 +70,13 @@ namespace BR
     ///////////////////////////////////////////////////////////////////////////////
 
     /// Название локальной базы данных
-    const char DB_NAME[] = "test.db";
+    const char SQLITE3_DB_LOCAL_NAME[] = "test.db";
 
     /// Название базы данных в памяти
-    const char DB_NAME_MEMORY[] = "file:memdb1?mode=memory&cache=shared";
+    const char SQLITE3_DB_MEMORY_UID_NAME[] = "file:memdb1?mode=memory&cache=shared";
+
+    /// Название базы данных в памяти
+    const char SQLITE3_DB_MEMORY_MAP_NAME[] = "file:memdb2?mode=memory&cache=shared";
 
     /**
      * @brief Флаги sqlite3
@@ -92,12 +95,31 @@ namespace BR
         "PRAGMA journal_mode = DELETE;";
     
     /**
-     * @brief Тестовая таблица
+     * @brief Таблица локальной бд
      * @code
      *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
      * @endcode
      */
-    const char SQLITE3_TEST_TABLE[] =
+    const char SQLITE3_LOCAL_TABLE[] =
+        "CREATE TABLE PLAYER("
+            "ID INT PRIMARY KEY     NOT NULL, "
+            "NAME           TEXT    NOT NULL, "
+            "PASSWORD       TEXT    NOT NULL, "
+            "REG_DATE       TEXT    NOT NULL, "
+            "SCORE INT      KEY     NOT NULL, "
+            "MONEY INT      KEY     NOT NULL, "
+            "LEVEL INT      KEY     NOT NULL  "
+        ");";
+    
+    /**
+     * @brief таблица памяти map
+     * @warning Нужно изменить
+     * @todo Создать структуру бд для MAP
+     * @code
+     *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
+     * @endcode
+     */
+    const char SQLITE3_DB_MEMORY_MAP_TABLE[] =
         "CREATE TABLE PLAYER("
             "ID INT PRIMARY KEY     NOT NULL, "
             "NAME           TEXT    NOT NULL, "
@@ -109,12 +131,51 @@ namespace BR
         ");";
 
     /**
+     * @brief таблица памяти uid
+     * @code
+     *      |ID|UID|NAME|
+     * @endcode
+     */
+    const char SQLITE3_DB_MEMORY_UID_TABLE[] =
+        "CREATE TABLE PLAYER("
+            "ID INT PRIMARY KEY     NOT NULL, "
+            "UID            TEXT    NOT NULL, "
+            "NAME           TEXT    NOT NULL  "
+        ");";
+
+    /**
+     * @brief Тестовые данные uid
+     * @todo Нужно создать запрет на вход SavaLione и OwO
+     * @code
+     *      |ID|         UID          |  NAME   |
+     *      |--|----------------------|---------|
+     *      |1 |SOME123STRONG456UID789|SavaLione|
+     *      |2 |OWWO111OwO123OwO111OwO|OwO      |
+     * @endcode
+     */
+    const char SQLITE3_DB_MEMORY_UID_DATA[] =
+        "INSERT INTO PLAYER (ID, UID, NAME) VALUES(1                               , 'SOME123STRONG456UID789', 'SavaLione');"
+        "INSERT INTO PLAYER (ID, UID, NAME) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'OWWO111OwO123OwO111OwO', 'OwO'      );";
+    
+    /**
+     * @brief Тестовые данные map
+     * @todo Нужно создать запрет на вход SavaLione и OwO
+     * @code
+     *      |ID|         UID          |  NAME   |
+     *      |--|----------------------|---------|
+     *      |1 |SOME123STRONG456UID789|SavaLione|
+     *      |2 |OWWO111OwO123OwO111OwO|OwO      |
+     * @endcode
+     */
+    const char SQLITE3_DB_MEMORY_MAP_DATA[] = "";
+
+    /**
      * @brief Тестовые данные
      * @code
      *      |ID|NAME|PASSWORD|REG_DATE|SCORE|MONEY|LEVEL|
      * @endcode
      */
-    const char SQLITE3_TEST_DATA[] =
+    const char SQLITE3_LOCAL_DATA[] =
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES(1,                                'ZERO',      'ZEROZERO',       'ZERO',  1,    1,    1);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'SavaLione', 'MyOwOpass',      'now',   0,    0,    7);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'OwO',       'OwO',            '1234d', 0,    0,    0);"
