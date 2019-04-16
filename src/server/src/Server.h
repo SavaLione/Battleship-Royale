@@ -1,6 +1,7 @@
 /**
  * @file
  * @brief Асинхронный сервер написанный на boost asio
+ * @example Server.cpp
  * @author SavaLione
  * @date 14 Apr 2019
  */

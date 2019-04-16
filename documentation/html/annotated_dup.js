@@ -6,6 +6,7 @@ var annotated_dup =
     [ "Message", "class_message.html", "class_message" ],
     [ "MessageObject", "class_message_object.html", "class_message_object" ],
     [ "MiniDB", "class_mini_d_b.html", "class_mini_d_b" ],
+    [ "Processing", "class_processing.html", "class_processing" ],
     [ "Server", "class_server.html", "class_server" ],
     [ "ServerLink", "class_server_link.html", "class_server_link" ]
 ];

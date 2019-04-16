@@ -2,8 +2,9 @@
 <area shape="rect" id="node1" title="handler" alt="" coords="157,5,259,32"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,87,112,114"/>
 <area shape="rect" id="node3" title=" " alt="" coords="137,80,279,121"/>
-<area shape="rect" id="node4" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="304,87,379,114"/>
-<area shape="rect" id="node5" title=" " alt="" coords="227,169,282,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="306,169,377,196"/>
-<area shape="rect" id="node7" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="401,169,532,196"/>
+<area shape="rect" id="node4" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="304,87,403,114"/>
+<area shape="rect" id="node5" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="316,169,391,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="239,244,294,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="318,244,389,271"/>
+<area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="413,244,544,271"/>
 </map>

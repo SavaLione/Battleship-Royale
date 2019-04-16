@@ -9,37 +9,37 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 80)">
 <title>Server.h</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-80 193.5,-80 193.5,4 -4,4"/>
-<!-- Node8 -->
-<g id="node1" class="node"><title>Node8</title>
+<!-- Node9 -->
+<g id="node1" class="node"><title>Node9</title>
 <g id="a_node1"><a xlink:title="Асинхронный сервер написанный на boost asio.">
 <polygon fill="#bfbfbf" stroke="black" points="80.5,-56.5 80.5,-75.5 132.5,-75.5 132.5,-56.5 80.5,-56.5"/>
 <text text-anchor="middle" x="106.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">Server.h</text>
 </a>
 </g>
 </g>
-<!-- Node9 -->
-<g id="node2" class="node"><title>Node9</title>
+<!-- Node10 -->
+<g id="node2" class="node"><title>Node10</title>
 <g id="a_node2"><a xlink:href="server_2src_2_battleship_royale_8cpp.html" target="_top" xlink:title="Сервер">
 <polygon fill="white" stroke="black" points="0,-0.5 0,-19.5 109,-19.5 109,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="54.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">BattleshipRoyale.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node9 -->
-<g id="edge1" class="edge"><title>Node8&#45;&gt;Node9</title>
+<!-- Node9&#45;&gt;Node10 -->
+<g id="edge1" class="edge"><title>Node9&#45;&gt;Node10</title>
 <path fill="none" stroke="midnightblue" d="M90.8206,-48.7175C81.6553,-39.1997 70.4474,-27.5608 62.927,-19.7511"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="88.4557,-51.3075 97.9133,-56.083 93.4979,-46.452 88.4557,-51.3075"/>
 </g>
-<!-- Node10 -->
-<g id="node3" class="node"><title>Node10</title>
+<!-- Node11 -->
+<g id="node3" class="node"><title>Node11</title>
 <g id="a_node3"><a xlink:href="server_2src_2_server_8cpp.html" target="_top" xlink:title="Асинхронный сервер написанный на boost asio.">
 <polygon fill="white" stroke="black" points="127.5,-0.5 127.5,-19.5 189.5,-19.5 189.5,-0.5 127.5,-0.5"/>
 <text text-anchor="middle" x="158.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Server.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node8&#45;&gt;Node10 -->
-<g id="edge2" class="edge"><title>Node8&#45;&gt;Node10</title>
+<!-- Node9&#45;&gt;Node11 -->
+<g id="edge2" class="edge"><title>Node9&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M122.179,-48.7175C131.345,-39.1997 142.553,-27.5608 150.073,-19.7511"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="119.502,-46.452 115.087,-56.083 124.544,-51.3075 119.502,-46.452"/>
 </g>

@@ -51,6 +51,7 @@ var menudata={children:[
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
+{text:"u",url:"functions.html#index_u"},
 {text:"z",url:"functions.html#index_z"},
 {text:"~",url:"functions.html#index__7E"}]},
 {text:"Функции",url:"functions_func.html",children:[
@@ -81,6 +82,7 @@ var menudata={children:[
 {text:"s",url:"functions_vars.html#index_s"},
 {text:"z",url:"functions_vars.html#index_z"}]},
 {text:"Определения типов",url:"functions_type.html"},
+{text:"Перечисления",url:"functions_enum.html"},
 {text:"Элементы перечислений",url:"functions_eval.html"}]}]},
 {text:"Файлы",url:"files.html",children:[
 {text:"Файлы",url:"files.html"},
@@ -88,4 +90,5 @@ var menudata={children:[
 {text:"Указатель",url:"globals.html"},
 {text:"Функции",url:"globals_func.html"},
 {text:"Переменные",url:"globals_vars.html"},
-{text:"Макросы",url:"globals_defs.html"}]}]}]}
+{text:"Макросы",url:"globals_defs.html"}]}]},
+{text:"Примеры",url:"examples.html"}]}

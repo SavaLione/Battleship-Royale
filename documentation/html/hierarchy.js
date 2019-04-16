@@ -13,5 +13,6 @@ var hierarchy =
     [ "noncopyable", null, [
       [ "ServerLink", "class_server_link.html", null ]
     ] ],
+    [ "Processing", "class_processing.html", null ],
     [ "Server", "class_server.html", null ]
 ];

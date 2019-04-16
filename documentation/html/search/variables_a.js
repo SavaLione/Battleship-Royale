@@ -1,9 +1,5 @@
 var searchData=
 [
-  ['s_5fparam_5fone',['s_param_one',['../classcon__handler.html#a7992ae8537dd8cff2a90929a12378ed2',1,'con_handler']]],
-  ['s_5fparam_5ftwo',['s_param_two',['../classcon__handler.html#a5e5a3f9b639a46d849900ee4ba79e7cb',1,'con_handler']]],
-  ['s_5fpattern_5freg',['s_pattern_reg',['../classcon__handler.html#a5346577457d8d5f9b7e7f68e8a332a6f',1,'con_handler']]],
-  ['s_5fsha2',['s_sha2',['../classcon__handler.html#a3bf0324832d08ef3279f652e567c03dc',1,'con_handler']]],
   ['s_5fsql',['s_sql',['../class_d_b.html#a25a925a9f5a21a2eda6ef4a8150f780e',1,'DB']]],
   ['score',['score',['../structdb__player.html#a49a7074936df50c10ce3573663e902bc',1,'db_player']]],
   ['sendbuffer',['sendBuffer',['../class_server_link.html#a156357298a26924dc29f0914f1fc0ddf',1,'ServerLink']]],

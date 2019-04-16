@@ -1,15 +1,16 @@
 var indexSectionsWithContent =
 {
-  0: "_abcdfghilmnoprstz~Ð",
-  1: "cdms",
+  0: "_abcdefghilmnoprstuz~Ð",
+  1: "cdmps",
   2: "b",
-  3: "abcdrst",
+  3: "abcdeprst",
   4: "cdfghimoprst~",
   5: "acdilmnoprsz",
   6: "p",
-  7: "m",
-  8: "bcdmrs",
-  9: "Ð"
+  7: "r",
+  8: "mru",
+  9: "bcdmprs",
+  10: "Ð"
 };
 
 var indexSectionNames =
@@ -21,9 +22,10 @@ var indexSectionNames =
   4: "functions",
   5: "variables",
   6: "typedefs",
-  7: "enumvalues",
-  8: "groups",
-  9: "pages"
+  7: "enums",
+  8: "enumvalues",
+  9: "groups",
+  10: "pages"
 };
 
 var indexSectionLabels =
@@ -35,8 +37,9 @@ var indexSectionLabels =
   4: "Функции",
   5: "Переменные",
   6: "Определения типов",
-  7: "Элементы перечислений",
-  8: "Группы",
-  9: "Страницы"
+  7: "Перечисления",
+  8: "Элементы перечислений",
+  9: "Группы",
+  10: "Страницы"
 };
 

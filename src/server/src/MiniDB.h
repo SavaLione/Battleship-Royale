@@ -1,6 +1,7 @@
 /**
  * @file
  * @brief Облегчённый класс для работы с бд
+ * @example MiniDB.cpp
  * @author SavaLione
  * @date 15 Apr 2019
  */
@@ -18,6 +19,9 @@
 
 #include "BattleshipRoyale.h"
 
+/**
+ * @brief Компактная база данных
+ */
 class MiniDB
 {
 public:

@@ -1,6 +1,7 @@
 /**
  * @file
  * @brief Работа с регулярными выражениями
+ * @example Regex.cpp
  * @author SavaLione
  * @date 13 Apr 2019
  */

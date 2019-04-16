@@ -83,9 +83,10 @@ namespace BR
      * 
      * Данные потеряются при аварийном завершении программы, при отключении питания и тд
      */
-    const char SQLITE3_PRAGMA[] = "PRAGMA synchronous = OFF;"
-                                  "PRAGMA encoding = \"UTF-8\";"
-                                  "PRAGMA journal_mode = DELETE;";
+    const char SQLITE3_PRAGMA[] = 
+        "PRAGMA synchronous = OFF;"
+        "PRAGMA encoding = \"UTF-8\";"
+        "PRAGMA journal_mode = DELETE;";
     
     /**
      * @brief Тестовые данные

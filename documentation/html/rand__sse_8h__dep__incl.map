@@ -1,6 +1,7 @@
 <map id="rand_sse.h" name="rand_sse.h">
-<area shape="rect" id="node1" title="Генерация рандомных чисел через SSE." alt="" coords="124,5,211,32"/>
+<area shape="rect" id="node1" title="Генерация рандомных чисел через SSE." alt="" coords="175,5,261,32"/>
 <area shape="rect" id="node2" href="$_d_b_8cpp.html" title="Работа с базой данных" alt="" coords="5,80,71,107"/>
-<area shape="rect" id="node3" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="95,80,240,107"/>
-<area shape="rect" id="node4" href="$rand__sse_8cpp.html" title="Генерация рандомных чисел через SSE." alt="" coords="264,80,364,107"/>
+<area shape="rect" id="node3" href="$examples_2rand__sse_8cpp.html" title=" " alt="" coords="95,80,195,107"/>
+<area shape="rect" id="node4" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="219,80,364,107"/>
+<area shape="rect" id="node5" href="$server_2src_2rand__sse_8cpp.html" title="Генерация рандомных чисел через SSE." alt="" coords="388,80,488,107"/>
 </map>

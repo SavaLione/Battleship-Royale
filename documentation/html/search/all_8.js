@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['id',['id',['../structdb__player.html#adae59dcd7ab22b0e66cb829f1dc5b383',1,'db_player::id()'],['../class_d_b.html#a09ea7b9c2e26a2754a5fb64db3836cdb',1,'DB::id()']]],
-  ['isconnected',['IsConnected',['../class_server_link.html#a2f551c4fffbedab55adab3d528df0f0c',1,'ServerLink']]],
-  ['isreading',['IsReading',['../class_server_link.html#a9cdc703cdda0ff80c49434d483654d7e',1,'ServerLink']]],
-  ['issending',['IsSending',['../class_server_link.html#ab79487df49a22e5533c96032ef413e16',1,'ServerLink']]]
+  ['handle_5faccept',['handle_accept',['../group__servercpp.html#gadb53e5d1b7c0ad8a79ce236c8ca5d50c',1,'Server::handle_accept(con_handler::pointer connection, const boost::system::error_code &amp;err)'],['../class_server.html#adb53e5d1b7c0ad8a79ce236c8ca5d50c',1,'Server::handle_accept(con_handler::pointer connection, const boost::system::error_code &amp;err)']]],
+  ['handle_5fread',['handle_read',['../group__con__handler__cpp.html#ga3b8e9edfc8fed79fcba0242a58b54bc2',1,'con_handler::handle_read(const boost::system::error_code &amp;err, size_t bytes_transferred)'],['../classcon__handler.html#a3b8e9edfc8fed79fcba0242a58b54bc2',1,'con_handler::handle_read(const boost::system::error_code &amp;err, size_t bytes_transferred)']]],
+  ['handle_5fwrite',['handle_write',['../group__con__handler__cpp.html#ga10169d7b3588adb849d7e7c02c46375a',1,'con_handler::handle_write(const boost::system::error_code &amp;err, size_t bytes_transferred)'],['../classcon__handler.html#a10169d7b3588adb849d7e7c02c46375a',1,'con_handler::handle_write(const boost::system::error_code &amp;err, size_t bytes_transferred)']]]
 ];

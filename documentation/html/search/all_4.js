@@ -2,7 +2,7 @@ var searchData=
 [
   ['data',['data',['../classcon__handler.html#af6feec8ca98e8b25ca1b7bedcda5b3e9',1,'con_handler']]],
   ['data_5fcheck',['data_check',['../classcon__handler.html#a3645ff738400fc9fff3a1dea1aa0999f',1,'con_handler']]],
-  ['db',['DB',['../class_d_b.html',1,'DB'],['../class_d_b.html#af006c980ee986ac5c39610c9afd62087',1,'DB::db()'],['../group__dbcpp.html#ga29a603c52c10831cddee82518417f992',1,'DB::DB()']]],
+  ['db',['DB',['../class_d_b.html',1,'DB'],['../group__dbcpp.html#ga29a603c52c10831cddee82518417f992',1,'DB::DB()'],['../class_d_b.html#af006c980ee986ac5c39610c9afd62087',1,'DB::db()']]],
   ['db_2ecpp',['DB.cpp',['../_d_b_8cpp.html',1,'']]],
   ['db_2eh',['DB.h',['../_d_b_8h.html',1,'']]],
   ['db_5fall_5fcheck',['db_all_check',['../group__dbcpp.html#ga880d6118bf0b4020049339afc7e825fd',1,'DB']]],

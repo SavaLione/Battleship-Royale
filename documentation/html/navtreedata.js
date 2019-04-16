@@ -42,6 +42,7 @@ var NAVTREE =
         [ "Функции", "functions_func.html", null ],
         [ "Переменные", "functions_vars.html", null ],
         [ "Определения типов", "functions_type.html", null ],
+        [ "Перечисления", "functions_enum.html", null ],
         [ "Элементы перечислений", "functions_eval.html", null ]
       ] ]
     ] ],
@@ -53,14 +54,15 @@ var NAVTREE =
         [ "Переменные", "globals_vars.html", null ],
         [ "Макросы", "globals_defs.html", null ]
       ] ]
-    ] ]
+    ] ],
+    [ "Примеры", "examples.html", "examples" ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
 "_battleship_royale_8h.html",
-"modules.html"
+"group__rand__ssecpp.html#gae2c66d1d7db5adf0c1853960e2be1119"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

@@ -7,6 +7,6 @@ var searchData=
   ['sha2',['sha2',['../group__dbcpp.html#ga491541bd875d5fab95aa913b970132f6',1,'DB']]],
   ['socket',['socket',['../group__con__handler__cpp.html#gad168c799678add9fb23f3379e1d42b22',1,'con_handler::socket()'],['../classcon__handler.html#ad1cbd939db0c1c543425d7cd53702a06',1,'con_handler::socket()']]],
   ['srand_5fsse',['srand_sse',['../group__rand__ssecpp.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp'],['../group__rand__sseh.html#ga80db1a2aa7de7edf52b9c60e101d556f',1,'srand_sse(unsigned int seed):&#160;rand_sse.cpp']]],
-  ['start',['start',['../group__con__handler__cpp.html#ga02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()']]],
+  ['start',['Start',['../class_server_link.html#a72edc7fb4b20cc9bd157863b2ee4b279',1,'ServerLink::Start()'],['../group__con__handler__cpp.html#ga02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()'],['../classcon__handler.html#a02d6691e226a75525a2ac83062b5c7f7',1,'con_handler::start()']]],
   ['start_5faccept',['start_accept',['../group__servercpp.html#gab19cf3e5b775cd1b4eeb6d936340e712',1,'Server::start_accept()'],['../class_server.html#ab19cf3e5b775cd1b4eeb6d936340e712',1,'Server::start_accept()']]]
 ];

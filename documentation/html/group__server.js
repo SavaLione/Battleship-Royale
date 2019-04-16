@@ -7,6 +7,8 @@ var group__server =
     [ "con_handler.h", "group__con__handler__h.html", "group__con__handler__h" ],
     [ "MiniDB.cpp", "group__minidb__cpp.html", "group__minidb__cpp" ],
     [ "MiniDB.h", "group__minidb__h.html", "group__minidb__h" ],
+    [ "Processing.cpp", "group__processing__cpp.html", "group__processing__cpp" ],
+    [ "Processing.h", "group__processing__h.html", "group__processing__h" ],
     [ "rand_sse.cpp", "group__rand__ssecpp.html", "group__rand__ssecpp" ],
     [ "rand_sse.h", "group__rand__sseh.html", "group__rand__sseh" ],
     [ "Regex.cpp", "group__regexcpp.html", "group__regexcpp" ],
