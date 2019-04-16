@@ -19,7 +19,6 @@ add_executable(${BR_TEST_MINIDB_NAME} ${BR_TEST_MINIDB_HEADERS} ${BR_TEST_MINIDB
 ################################
 # Link Lib
 ################################
-#target_link_libraries(${BR_MINIDB_NAME_TEST} ${USE_LIB})
 
 target_include_directories(${BR_TEST_MINIDB_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_TEST_MINIDB_NAME} PUBLIC ${SQLITE3_LIB_INCLUDE})

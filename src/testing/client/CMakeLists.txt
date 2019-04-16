@@ -21,10 +21,6 @@ target_include_directories(${BR_TEST_CLIENT_NAME} PUBLIC ${SPDLOG_LIB_INCLUDE})
 target_include_directories(${BR_TEST_CLIENT_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_TEST_CLIENT_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
 
-#if(BR_UNIX)
-#	target_link_libraries(${BR_TEST_CLIENT_NAME} sqlite3)
-#endif()
-
 # OS Specific
 if(BR_WINDOWS)
 #	target_link_libraries(${BR_TEST_CLIENT_NAME} ${SQLITE3_LIBRARY})

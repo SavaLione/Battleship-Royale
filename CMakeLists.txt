@@ -52,16 +52,8 @@ set(    BR_LIB_INCLUDE          "${CMAKE_SOURCE_DIR}/src/BattleshipRoyale"      
 # Inclu desu
 ################################
 
-# Header only
-#include_directories(${SPDLOG_LIB_INCLUDE})
-#include_directories(${CXXOPTS_LIB_INCLUDE})
-#include_directories(${PICOSHA2_LIB_INCLUDE})
-#include_directories(${BR_LIB_INCLUDE})
-
 # OS Specific
 if(BR_WINDOWS)
-#    include_directories(${SQLITE3_LIB_INCLUDE})
-#    include_directories(${Boost_INCLUDE_DIRS})
     link_directories(${Boost_LIBRARY_DIRS})
 endif()
 
