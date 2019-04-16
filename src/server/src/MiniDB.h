@@ -53,6 +53,13 @@ public:
      * @brief Инициализация базы данных
      */
     void setTable();
+
+    /**
+     * @brief Создание пользователя
+     * @param [in] name имя пользователя
+     * @param [in] sha2 пароль (из бд. в sha2)
+     */
+    void createPlayer(std::string const& name, std::string const& sha2);
 };
 
 #endif // MINIDB_H

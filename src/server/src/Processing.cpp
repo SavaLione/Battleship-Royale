@@ -78,7 +78,17 @@ std::string Processing::response(std::string const &request)
     }
     case USER_CREATE:
     {
-        ret = "USER_CREATE";
+        std::string param_one = "", param_two;
+        getData(request, BR::REG_USER_CREATE, param_one, param_two);
+        if (mdb.checkPlayer(param_one))
+        {
+            ret = BR::ANSWER_ERROR_USER_ALREADY_EXIST;
+        }
+        else
+        {
+            mdb.createPlayer(param_one, param_two);
+            ret = BR::ANSWER_SUCCESSFUL_USER_CREATED;
+        }
         break;
     }
     case REQ_ERROR:
@@ -107,6 +117,10 @@ Processing::REQ Processing::getREQ(std::string const &request)
     else if (check_pattern(request, BR::REG_UID))
     {
         return USER_UID;
+    }
+    else if (check_pattern(request, BR::REG_USER_CREATE))
+    {
+        return USER_CREATE;
     }
     else
     {

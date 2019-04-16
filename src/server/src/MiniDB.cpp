@@ -11,6 +11,8 @@
  */
 #include "MiniDB.h"
 
+#include <time.h>
+
 /**
  * @brief Конструктор класса
  */
@@ -123,4 +125,27 @@ void MiniDB::setTable()
     sqlite3_close(db);
 }
 
+
+void MiniDB::createPlayer(std::string const& name, std::string const& sha2)
+{
+	time_t t;
+	time(&t);
+
+    sqlite3 *db;
+    std::string sql = "";
+
+    sql += "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, '";
+    sql += name;
+    sql += "', '";
+    sql += sha2;
+    sql += "', '";
+    sql += ctime(&t);
+    sql += "', 0, 0, 0);";
+
+    sqlite3_open(BR::DB_NAME, &db);
+
+    sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
+
+    sqlite3_close(db);
+}
 /** @} */

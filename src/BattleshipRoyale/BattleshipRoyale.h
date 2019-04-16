@@ -139,6 +139,13 @@ namespace BR
     /// @endcode
     const char REG_UID[] = "UID:\\[([^\\[\\]]+)\\] data:\\[([^\\[\\]]+)\\]";
 
+    /// Регулярное выражение для создания пользователя
+    ///
+    /// @code
+    ///     user:[] password:[]
+    /// @endcode
+    const char REG_USER_CREATE[] = "user:\\[([^\\[\\]]+)\\] password:\\[([^\\[\\]]+)\\]";
+
     /// Регулярное выражение для поиска ответа
     ///
     /// @code
@@ -158,6 +165,12 @@ namespace BR
 
     /// Отрицательный ответ
     const char ANSWER_FALSE[] = "answer:[false]";
+
+    /// Пользователь успешно создан
+    const char ANSWER_SUCCESSFUL_USER_CREATED[] = "answer:[SUCCESSFUL_USER_CREATED]";
+
+    /// Пользователь уже существует
+    const char ANSWER_ERROR_USER_ALREADY_EXIST[] = "answer:[ERROR_USER_ALREADY_EXIST]";
 
 } // BR
 
