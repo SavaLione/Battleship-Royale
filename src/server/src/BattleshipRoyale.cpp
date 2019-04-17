@@ -45,7 +45,7 @@ int main(int argc, char *argv[])
 		Arg opt
 	*/
 	bool HIDE_LOG = false;
-	int PORT = BR::SERVER_PORT;
+	int PORT = BR::CONNECT::PORT;
 
 	/*
 		Парсер аргументов к программе
@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info("server version: {}", BR::SERVER_VERSION);
-			spdlog::info("client version: {}", BR::CLIENT_VERSION);
+			spdlog::info("server version: {}", BR::VERSION::server);
+			spdlog::info("client version: {}", BR::VERSION::client);
 			spdlog::info("sqlite3 version: {} ({})", SQLITE_VERSION, SQLITE_VERSION_NUMBER);
 			spdlog::info("cxxopts version: {}", ((CXXOPTS__VERSION_MAJOR * 10000) + (CXXOPTS__VERSION_MINOR * 100) + (SPDLOG_VER_PATCH)));
 			spdlog::info("spdlog version: {}", SPDLOG_VERSION);
@@ -130,7 +130,6 @@ int main(int argc, char *argv[])
 	/*
 		Console
 	*/
-	//std::future<void> result(std::async(console));
 	BR::Console con;
 
 	try
