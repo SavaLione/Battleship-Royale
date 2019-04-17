@@ -6,93 +6,84 @@
 #include "BattleshipRoyale.h"
 #include "MemDBuid.h"
 
-BR::Console::Console()
-{
-    std::future<void> result(std::async(start, this));
-}
-
-BR::Console::~Console()
-{
-}
-
-void BR::Console::start()
+void BR::CONSOLE::start()
 {
     for (std::string line; std::cout << BR::CONSOLE::GREETING && std::getline(std::cin, line);)
     {
         if (!line.empty())
         {
-            BR::Console::process(line);
+            BR::CONSOLE::process(line);
         }
     }
 }
 
-void BR::Console::process(std::string const &command)
+void BR::CONSOLE::process(std::string const &command)
 {
-    commands c = getCommand(command);
+    CMD c = getCommand(command);
     switch (c)
     {
-    case HELP:
+    case CMD::HELP:
     {
-        std::cout << BR::CONSOLE::HELP << std::endl;
+        std::cout << BR::CONSOLE::MESSAGE::HELP << std::endl;
         break;
     }
-    case SHUTDOWN:
+    case CMD::SHUTDOWN:
     {
         exit(1);
         break;
     }
-    case RESET:
+    case CMD::RESET:
     {
         MemDBuid mdbUid;
         mdbUid.del();
         mdbUid.create();
         break;
     }
-    case EXIT:
+    case CMD::EXIT:
     {
         MemDBuid mdbUid;
         mdbUid.del();
         exit(0);
         break;
     }
-    case NOT_FOUND:
+    case CMD::NOT_FOUND:
     {
-        std::cout << BR::CONSOLE::NOT_FOUND << std::endl;
+        std::cout << BR::CONSOLE::MESSAGE::NOT_FOUND << std::endl;
         break;
     }
     default:
-        std::cout << BR::CONSOLE::NOT_FOUND << std::endl;
+        std::cout << BR::CONSOLE::MESSAGE::NOT_FOUND << std::endl;
         break;
     }
 }
 
-BR::Console::commands BR::Console::getCommand(std::string const &command)
+BR::CONSOLE::CMD BR::CONSOLE::getCommand(std::string const &command)
 {
-    commands ret = NOT_FOUND;
+    CMD ret = BR::CONSOLE::CMD::NOT_FOUND;
 
     if (command == BR::CONSOLE::COMMANDS::HELP)
-        return HELP;
+        return CMD::HELP;
     
     if (command == BR::CONSOLE::COMMANDS::HELP_SHORT)
-        return HELP;
+        return CMD::HELP;
     
     if (command == BR::CONSOLE::COMMANDS::SHUTDOWN)
-        return SHUTDOWN;
+        return CMD::SHUTDOWN;
     
     if (command == BR::CONSOLE::COMMANDS::SHUTDOWN_SHORT)
-        return SHUTDOWN;
+        return CMD::SHUTDOWN;
     
     if (command == BR::CONSOLE::COMMANDS::RESET)
-        return RESET;
+        return CMD::RESET;
     
     if (command == BR::CONSOLE::COMMANDS::RESET_SHORT)
-        return RESET;
+        return CMD::RESET;
     
     if (command == BR::CONSOLE::COMMANDS::EXIT)
-        return EXIT;
+        return CMD::EXIT;
     
     if (command == BR::CONSOLE::COMMANDS::EXIT_SHORT)
-        return EXIT;
+        return CMD::EXIT;
 
     return ret;
 }

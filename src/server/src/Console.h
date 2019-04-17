@@ -3,27 +3,22 @@
 
 #include <string>
 
-namespace BR
+namespace BR::CONSOLE
 {
-    class Console
+    enum CMD
     {
-    private:
-        enum commands
-        {
-            HELP,
-            EXIT,
-            SHUTDOWN,
-            RESET,
-            NOT_FOUND = 1024
-        };
-        void process(std::string const& command);
-        void start();
-        commands getCommand(std::string const& command);
-    public:
-        Console();
-        ~Console();
+        HELP,
+        EXIT,
+        SHUTDOWN,
+        RESET,
+        NOT_FOUND = 1024
     };
-} // namespace BR
+
+    void process(std::string const& command);
+    CMD getCommand(std::string const& command);
+    void start();
+
+} // namespace BR::CONSOLE
 
 
 #endif // CONSOLE_H
