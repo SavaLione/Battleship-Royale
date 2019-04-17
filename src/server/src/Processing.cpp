@@ -58,12 +58,24 @@ std::string Processing::response(std::string const &request)
     }
     case USER_PASS_CHECK:
     {
-        std::string param_one = "", param_two = "", sha2 = "";
-        getData(request, BR::REG_USER_PASS, param_one, param_two);
-        mdb.getPassword(param_two, sha2);
-        if (param_two == sha2)
+        std::string user = "", pass = "", sha2 = "";
+        getData(request, BR::REG_USER_PASS, user, pass);
+        mdb.getPassword(user, sha2);
+        if (pass == sha2)
         {
-            ret = BR::ANSWER_TRUE;
+            if (mdbUid.ifFoundName(user))
+            {
+                // UID найден
+            }
+            else
+            {
+                // UID не найден
+                mdbUid.setUid(user);
+            }
+            ret = "UID:[";
+            ret += mdbUid.getUid(user);
+            ret += "] ";
+            
         }
         else
         {

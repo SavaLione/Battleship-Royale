@@ -40,6 +40,7 @@ target_include_directories(${BR_SERVER_NAME} PUBLIC ${CXXOPTS_LIB_INCLUDE})
 target_include_directories(${BR_SERVER_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_SERVER_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
 target_include_directories(${BR_SERVER_NAME} PUBLIC ${SQLITE3_LIB_INCLUDE})
+target_include_directories(${BR_SERVER_NAME} PUBLIC ${PICOSHA2_LIB_INCLUDE})
 
 if(BR_UNIX)
 	target_link_libraries(${BR_SERVER_NAME} sqlite3)

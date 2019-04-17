@@ -14,6 +14,7 @@
 #define PROCESSING_H
 
 #include "MiniDB.h"
+#include "MemDBuid.h"
 
 class Processing
 {
@@ -31,6 +32,8 @@ private:
 	 * @brief Работа с базой данных
 	 */
     MiniDB mdb;
+
+    MemDBuid mdbUid;
 
     REQ getREQ(std::string const& request);
 

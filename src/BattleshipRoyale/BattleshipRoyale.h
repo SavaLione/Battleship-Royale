@@ -121,7 +121,7 @@ namespace BR
      * @endcode
      */
     const char SQLITE3_DB_MEMORY_MAP_TABLE[] =
-        "CREATE TABLE PLAYER("
+        "CREATE TABLE MAP("
             "ID INT PRIMARY KEY     NOT NULL, "
             "NAME           TEXT    NOT NULL, "
             "PASSWORD       TEXT    NOT NULL, "
@@ -138,7 +138,7 @@ namespace BR
      * @endcode
      */
     const char SQLITE3_DB_MEMORY_UID_TABLE[] =
-        "CREATE TABLE PLAYER("
+        "CREATE TABLE UID("
             "ID INT PRIMARY KEY     NOT NULL, "
             "UID            TEXT    NOT NULL, "
             "NAME           TEXT    NOT NULL  "
@@ -155,8 +155,8 @@ namespace BR
      * @endcode
      */
     const char SQLITE3_DB_MEMORY_UID_DATA[] =
-        "INSERT INTO PLAYER (ID, UID, NAME) VALUES(1                               , 'SOME123STRONG456UID789', 'SavaLione');"
-        "INSERT INTO PLAYER (ID, UID, NAME) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'OWWO111OwO123OwO111OwO', 'OwO'      );";
+        "INSERT INTO UID (ID, UID, NAME) VALUES(1                               , 'SOME123STRONG456UID789', 'SavaLione');"
+        "INSERT INTO UID (ID, UID, NAME) VALUES((SELECT max(ID) FROM UID) + 1   , 'OWWO111OwO123OwO111OwO', 'OwO'      );";
     
     /**
      * @brief Тестовые данные map
@@ -187,6 +187,8 @@ namespace BR
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'Awwww',     'Awwwwwwwwwwwww', 'www',   1234, 1234, 0);";
     
     const int SQLITE3_MAX_MESSAGE_SIZE = 1024;
+
+    const char SQLITE3_DB_MEMORY_UID_SECRET_CODE[] = "SOME";
 
     ///////////////////////////////////////////////////////////////////////////////
     //      Server

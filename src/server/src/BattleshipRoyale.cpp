@@ -11,6 +11,8 @@
  */
 #include <iostream>
 #include <string>
+#include <future>
+#include <conio.h>
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -20,12 +22,15 @@
 #include "BattleshipRoyale.h"
 #include "Regex.h"
 #include "MiniDB.h"
+#include "MemDBuid.h"
 
 #include "Server.h"
 
 #include "rand_sse.h"
 
 using namespace std;
+
+void console();
 
 /**
  * @brief Точка входа в программу
@@ -52,17 +57,13 @@ int main(int argc, char *argv[])
 	{
 		cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
 
-		options.add_options()
-			("h,help", "Help")
-			("v,version", "Version")
-			("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))
-			("p,port", "Port", cxxopts::value<int>(PORT));
+		options.add_options()("h,help", "Help")("v,version", "Version")("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))("p,port", "Port", cxxopts::value<int>(PORT));
 
 		auto result = options.parse(argc, argv);
 
 		if (result.count("help"))
 		{
-			spdlog::info(options.help({ "", "Group" }));
+			spdlog::info(options.help({"", "Group"}));
 			exit(0);
 		}
 
@@ -76,7 +77,7 @@ int main(int argc, char *argv[])
 			exit(0);
 		}
 	}
-	catch (const cxxopts::OptionException& e)
+	catch (const cxxopts::OptionException &e)
 	{
 		spdlog::warn(e.what());
 		exit(1);
@@ -91,7 +92,7 @@ int main(int argc, char *argv[])
 		Нужно для проверки количества задействованных потоков
 	*/
 	string s_omp_parallel_cores_test = "";
-	#pragma omp parallel
+#pragma omp parallel
 	{
 		s_omp_parallel_cores_test += "[CORE] ";
 	}
@@ -114,23 +115,63 @@ int main(int argc, char *argv[])
 	mdb.setTable();
 
 	/*
+		MemDBuid initialization
+	*/
+	MemDBuid mdbUid;
+	mdbUid.create();
+
+	/*
 		Start server
 	*/
 	spdlog::info("Start Battleship Royale Server!");
 	spdlog::info("Port: {}", PORT);
 
-	try 
+	/*
+		Console
+	*/
+	std::future<void> result(std::async(console));
+
+	try
 	{
-		boost::asio::io_service io_service;   
+		boost::asio::io_service io_service;
 		Server server(io_service, &PORT);
 		io_service.run();
-	} 
-	catch(std::exception& e) 
+	}
+	catch (std::exception &e)
 	{
 		spdlog::error("Error create Server!");
 		spdlog::error(e.what());
 	}
 
 	return 0;
+}
+
+void console()
+{
+	bool fl = true;
+	while (fl)
+	{
+		char c = getch();
+		switch (c)
+		{
+		case 27:
+		{
+			spdlog::info("Exit");
+			fl = false;
+			MemDBuid mdbUid;
+			mdbUid.del();
+			exit(0);
+			break;
+		}
+		case 104:
+		{
+			spdlog::info("Help:\n \tESC - Exit\n\th - Help\n");
+			break;
+		}
+
+		default:
+			break;
+		}
+	}
 }
 /** @} */
