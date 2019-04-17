@@ -26,20 +26,16 @@
 
 /**
  * @brief Пространство имён с константами
- * 
- * Version - Информация о версии
- * 
- * DB - База данных
- * 
- * Server - Константы сервера
- * 
- * Regex - регулярные выражения
+ * @namespace BR
 */
 namespace BR
 {
 
 } // BR
 
+/**
+ * @namespace BR::REGEX
+ */
 namespace BR::REGEX
 {
     /// Регулярное выражение для поиска имени
@@ -86,6 +82,9 @@ namespace BR::REGEX
 
 } // namespace BR::REGEX
 
+/**
+ * @namespace BR::REGEX::ANSWER
+ */
 namespace BR::REGEX::ANSWER
 {
     /// Положительный ответ
@@ -101,7 +100,9 @@ namespace BR::REGEX::ANSWER
     const char ERROR_USER_ALREADY_EXIST[] = "answer:[ERROR_USER_ALREADY_EXIST]";
 } // namespace BR::REGEX::ANSWER
 
-
+/**
+ * @namespace BR::CONNECT
+ */
 namespace BR::CONNECT
 {
     /// Стандартный адрес сервера
@@ -111,6 +112,9 @@ namespace BR::CONNECT
     const int  PORT = 1234;
 } // namespace BR::CONNECT
 
+/**
+ * @namespace BR::VERSION::SERVER
+ */
 namespace BR::VERSION::SERVER
 {
     /// Сервер. Major версия
@@ -123,6 +127,9 @@ namespace BR::VERSION::SERVER
     const int PATCH = 5;
 } // namespace BR::VERSION::SERVER
 
+/**
+ * @namespace BR::VERSION::CLIENT
+ */
 namespace BR::VERSION::CLIENT
 {
     /// Клиент. Major версия
@@ -137,6 +144,7 @@ namespace BR::VERSION::CLIENT
 
 /**
  * @brief Версия
+ * @namespace BR::VERSION
  */
 namespace BR::VERSION
 {
@@ -150,6 +158,7 @@ namespace BR::VERSION
 
 /**
  * @brief Работа с базой данных
+ * @namespace BR::SQLITE3
  */
 namespace BR::SQLITE3
 {
@@ -173,6 +182,9 @@ namespace BR::SQLITE3
 
 } // namespace BR::SQLITE3
 
+/**
+ * @namespace BR::SQLITE3::LOCAL
+ */
 namespace BR::SQLITE3::LOCAL
 {
     /// Название локальной базы данных
@@ -220,6 +232,9 @@ namespace BR::SQLITE3::LOCAL
     
 } // namespace BR::SQLITE3::LOCAL
 
+/**
+ * @namespace BR::SQLITE3::MEMORY
+ */
 namespace BR::SQLITE3::MEMORY
 {
     /// Название базы данных uid в памяти
@@ -287,6 +302,7 @@ namespace BR::SQLITE3::MEMORY
 
 /**
  * @brief Работа с консолью сервера
+ * @namespace BR::CONSOLE
  */
 namespace BR::CONSOLE
 {
@@ -303,6 +319,9 @@ namespace BR::CONSOLE
 
 } // namespace BR::CONSOLE
 
+/**
+ * @namespace BR::CONSOLE::MESSAGE
+ */
 namespace BR::CONSOLE::MESSAGE
 {
     /// Помощь по командам
@@ -325,6 +344,7 @@ namespace BR::CONSOLE::MESSAGE
 
 /**
  * @brief Команды в консоли сервера
+ * @namespace BR::CONSOLE::COMMANDS
  */
 namespace BR::CONSOLE::COMMANDS
 {
