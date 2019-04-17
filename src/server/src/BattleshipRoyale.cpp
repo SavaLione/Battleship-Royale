@@ -23,6 +23,7 @@
 #include "Regex.h"
 #include "MiniDB.h"
 #include "MemDBuid.h"
+#include "Console.h"
 
 #include "Server.h"
 
@@ -129,7 +130,8 @@ int main(int argc, char *argv[])
 	/*
 		Console
 	*/
-	std::future<void> result(std::async(console));
+	//std::future<void> result(std::async(console));
+	BR::Console con;
 
 	try
 	{

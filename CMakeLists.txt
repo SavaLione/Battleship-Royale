@@ -21,6 +21,7 @@ set(    BR_TEST_CLIENT 0    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- D
 set(    BR_TEST_REGEX  0    CACHE BOOL "BR_TEST_REGEX"      )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MINIDB 0    CACHE BOOL "BR_TEST_MINIDB"     )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MEMDB  0    CACHE BOOL "BR_TEST_MEMDB"      )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_CONSO  0    CACHE BOOL "BR_TEST_CONSO"      )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
@@ -29,16 +30,28 @@ set(    BR_TEST_CLIENT_NAME     BattleshipRoyale_CLIENT_TEST    )       # <--- D
 set(    BR_TEST_REGEX_NAME      BattleshipRoyale_REGEX_TEST     )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MINIDB_NAME     BattleshipRoyale_MINIDB_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MEMDB_NAME      BattleshipRoyale_MEMDB_TEST     )       # <--- DELETE THIS ON STABLE
+set(    BR_TEST_CONSO_NAME      BattleshipRoyale_CONSO_TEST     )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
 ################################
-set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"                CACHE PATH "spdlog lib include"         )
-set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"               CACHE PATH "cxxopts lib include"        )
-set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"               CACHE PATH "sqlite3 lib include"        )
-set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"              CACHE PATH "picosha2 lib include"       )
+set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"                        CACHE PATH "spdlog lib include"                      )
+set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"                       CACHE PATH "cxxopts lib include"                     )
+set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"                       CACHE PATH "sqlite3 lib include"                     )
+set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"                      CACHE PATH "picosha2 lib include"                    )
+set(    PDCURSES_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/PDCurses/include"              CACHE PATH "PDCurses lib include"                    )
+set(    NCURSES_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/ncurses/include"               CACHE PATH "ncurses MingW64 port lib include"        )
 
-set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"   CACHE FILEPATH  "sqlite3 *.dll file"    )
+set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"           CACHE FILEPATH  "sqlite3 *.dll file"                 )
+
+# ncurses
+set(    NCURSES_LIBRARY_FORM    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libformw6.dll"     CACHE FILEPATH  "ncurses form *.dll file"            )
+set(    NCURSES_LIBRARY_MENU    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libmenuw6.dll"     CACHE FILEPATH  "ncurses panel *.dll file"           )
+set(    NCURSES_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libncursesw6.dll"  CACHE FILEPATH  "ncurses library *.dll file"         )
+set(    NCURSES_LIBRARY_PANEL   "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libpanelw6.dll"    CACHE FILEPATH  "ncurses panel *.dll file"           )
+
+
+#set(    PDCURSES_LIBRARY       "${CMAKE_SOURCE_DIR}/lib/PDCurses/pdcurses.a"           CACHE FILEPATH  "PDCurses *.a file"                  )
 
 # Boost
 set(    Boost_USE_STATIC_LIBS   OFF     )
@@ -48,7 +61,7 @@ find_package(Boost 1.65.0 REQUIRED COMPONENTS system thread regex)
 ################################
 # Local Lib
 ################################
-set(    BR_LIB_INCLUDE          "${CMAKE_SOURCE_DIR}/src/BattleshipRoyale"      CACHE PATH "BattleshipRoyale lib include")
+set(    BR_LIB_INCLUDE          "${CMAKE_SOURCE_DIR}/src/BattleshipRoyale"              CACHE PATH "BattleshipRoyale lib include"            )
 
 ################################
 # Inclu desu
@@ -117,4 +130,8 @@ endif()                                            # <--- DELETE THIS ON STABLE
 
 if(BR_TEST_MEMDB)                                  # <--- DELETE THIS ON STABLE
 	add_subdirectory(src/testing/memorydb)         # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
+
+if(BR_TEST_CONSO)                                  # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/console)          # <--- DELETE THIS ON STABLE
 endif()                                            # <--- DELETE THIS ON STABLE
