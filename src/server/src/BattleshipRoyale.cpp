@@ -130,7 +130,7 @@ int main(int argc, char *argv[])
 	/*
 		Console
 	*/
-	BR::Console con;
+	std::future<void> result(std::async(BR::CONSOLE::start));
 
 	try
 	{

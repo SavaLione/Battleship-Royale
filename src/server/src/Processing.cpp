@@ -45,21 +45,21 @@ std::string Processing::response(std::string const &request)
     case USER_CHECK:
     {
         std::string param_one = "";
-        getData(request, BR::REG_USER, param_one);
+        getData(request, BR::REGEX::USER, param_one);
         if (mdb.checkPlayer(param_one))
         {
-            ret = BR::ANSWER_TRUE;
+            ret = BR::REGEX::ANSWER::ANSWER_TRUE;
         }
         else
         {
-            ret = BR::ANSWER_FALSE;
+            ret = BR::REGEX::ANSWER::ANSWER_FALSE;
         }
         break;
     }
     case USER_PASS_CHECK:
     {
         std::string user = "", pass = "", sha2 = "";
-        getData(request, BR::REG_USER_PASS, user, pass);
+        getData(request, BR::REGEX::USER_PASS, user, pass);
         mdb.getPassword(user, sha2);
         if (pass == sha2)
         {
@@ -79,7 +79,7 @@ std::string Processing::response(std::string const &request)
         }
         else
         {
-            ret = BR::ANSWER_FALSE;
+            ret = BR::REGEX::ANSWER::ANSWER_FALSE;
         }
         break;
     }
@@ -91,15 +91,15 @@ std::string Processing::response(std::string const &request)
     case USER_CREATE:
     {
         std::string param_one = "", param_two = "";
-        getData(request, BR::REG_USER_CREATE, param_one, param_two);
+        getData(request, BR::REGEX::USER_CREATE, param_one, param_two);
         if (mdb.checkPlayer(param_one))
         {
-            ret = BR::ANSWER_ERROR_USER_ALREADY_EXIST;
+            ret = BR::REGEX::ANSWER::ERROR_USER_ALREADY_EXIST;
         }
         else
         {
             mdb.createPlayer(param_one, param_two);
-            ret = BR::ANSWER_SUCCESSFUL_USER_CREATED;
+            ret = BR::REGEX::ANSWER::SUCCESSFUL_USER_CREATED;
         }
         break;
     }
@@ -118,19 +118,19 @@ std::string Processing::response(std::string const &request)
 
 Processing::REQ Processing::getREQ(std::string const &request)
 {
-    if (check_pattern(request, BR::REG_USER))
+    if (check_pattern(request, BR::REGEX::USER))
     {
         return USER_CHECK;
     }
-    else if (check_pattern(request, BR::REG_USER_PASS))
+    else if (check_pattern(request, BR::REGEX::USER_PASS))
     {
         return USER_PASS_CHECK;
     }
-    else if (check_pattern(request, BR::REG_UID))
+    else if (check_pattern(request, BR::REGEX::UID))
     {
         return USER_UID;
     }
-    else if (check_pattern(request, BR::REG_USER_CREATE))
+    else if (check_pattern(request, BR::REGEX::USER_CREATE))
     {
         return USER_CREATE;
     }

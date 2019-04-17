@@ -111,20 +111,6 @@ namespace BR::CONNECT
     const int  PORT = 1234;
 } // namespace BR::CONNECT
 
-
-/**
- * @brief Версия
- */
-namespace BR::VERSION
-{
-    /// Версия Сервера
-    const int server = (BR::VERSION::SERVER::MAJOR * 10000 + BR::VERSION::SERVER::MINOR * 100 + BR::VERSION::SERVER::PATCH);
-
-    /// Версия клиента
-    const int client = (BR::VERSION::CLIENT::MAJOR * 10000 + BR::VERSION::CLIENT::MINOR * 100 + BR::VERSION::CLIENT::PATCH);
-
-} // namespace BR::VERSION
-
 namespace BR::VERSION::SERVER
 {
     /// Сервер. Major версия
@@ -148,6 +134,19 @@ namespace BR::VERSION::CLIENT
     /// Клиент. Path версия
     const int PATCH = 3;
 } // namespace BR::VERSION::CLIENT
+
+/**
+ * @brief Версия
+ */
+namespace BR::VERSION
+{
+    /// Версия Сервера
+    const int server = (BR::VERSION::SERVER::MAJOR * 10000 + BR::VERSION::SERVER::MINOR * 100 + BR::VERSION::SERVER::PATCH);
+
+    /// Версия клиента
+    const int client = (BR::VERSION::CLIENT::MAJOR * 10000 + BR::VERSION::CLIENT::MINOR * 100 + BR::VERSION::CLIENT::PATCH);
+
+} // namespace BR::VERSION
 
 /**
  * @brief Работа с базой данных
@@ -302,6 +301,10 @@ namespace BR::CONSOLE
     /// @endcode
     const char GREETING[] = "BR > ";
 
+} // namespace BR::CONSOLE
+
+namespace BR::CONSOLE::MESSAGE
+{
     /// Помощь по командам
     /// @code
     ///     help        h   -   Help Commands
@@ -314,11 +317,11 @@ namespace BR::CONSOLE
         "\t"    "exit        e   -   Exit from the program (soft)"      "\n"
         "\t"    "shutdown    s   -   Exit from the program (hard)"      "\n"
         "\t"    "reset       r   -   Reset database in memory"          "\n";
-
+    
     /// Сообщение о том, что команда не найдена
     const char NOT_FOUND[] = "Command not found.\nTry using: help";
+} // namespace BR::CONSOLE::MESSAGE
 
-} // namespace BR::CONSOLE
 
 /**
  * @brief Команды в консоли сервера

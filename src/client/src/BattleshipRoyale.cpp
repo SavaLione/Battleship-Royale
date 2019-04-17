@@ -35,8 +35,8 @@ int main(int argc, char *argv[])
 		Arg opt
 	*/
 	bool HIDE_LOG = false;
-	int PORT = BR::SERVER_PORT;
-    std::string s_ip = BR::SERVER_IP;
+	int PORT = BR::CONNECT::PORT;
+    std::string s_ip = BR::CONNECT::IP;
     std::string s_test = "1";
 	/*
 		Парсер аргументов к программе
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info("client version: {}", BR::CLIENT_VERSION);
+			spdlog::info("client version: {}", BR::VERSION::client);
 			exit(0);
 		}
 	}

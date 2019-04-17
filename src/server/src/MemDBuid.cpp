@@ -39,13 +39,13 @@ bool MemDBuid::ifFoundName(std::string const& name)
 
     bool fl = false;
 
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
 
     sql = "SELECT UID FROM UID WHERE NAME = \"";
     sql += name;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3::MAX_MESSAGE_SIZE, &stmt, &tail);
 
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
@@ -67,13 +67,13 @@ bool MemDBuid::ifFoundUid(std::string const& uid)
 
     bool fl = false;
 
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
 
     sql = "SELECT NAME FROM UID WHERE UID = \"";
     sql += uid;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3::MAX_MESSAGE_SIZE, &stmt, &tail);
 
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
@@ -88,7 +88,7 @@ bool MemDBuid::ifFoundUid(std::string const& uid)
 
 void MemDBuid::setUid(std::string const& name)
 {
-    std::string hash_hex_str = "", tosha2 = BR::SQLITE3_DB_MEMORY_UID_SECRET_CODE;
+    std::string hash_hex_str = "", tosha2 = BR::SQLITE3::MEMORY::UID_SECRET_CODE;
     std::time_t t = std::time(nullptr);
     tosha2 += std::to_string(t);
     tosha2 += name;
@@ -103,7 +103,7 @@ void MemDBuid::setUid(std::string const& name, std::string const& uid)
     std::string sql = "";
 
     sqlite3 *db;
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
 
     sql = "INSERT INTO UID (ID, UID, NAME) VALUES((SELECT max(ID) FROM UID) + 1, '";
     sql += uid;
@@ -123,16 +123,16 @@ std::string MemDBuid::getUid(std::string const& name)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
-    //std::string sql = BR::SQLITE3_PRAGMA;
+    //std::string sql = BR::SQLITE3::PRAGMA;
 
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
     sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT UID FROM UID WHERE NAME =\"";
     sql += name;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3::MAX_MESSAGE_SIZE, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
@@ -151,16 +151,16 @@ std::string MemDBuid::getName(std::string const& uid)
     sqlite3 *db;
     sqlite3_stmt *stmt;
     const char *tail;
-    //std::string sql = BR::SQLITE3_PRAGMA;
+    //std::string sql = BR::SQLITE3::PRAGMA;
 
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
     sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
     sql = "SELECT NAME FROM UID WHERE UID =\"";
     sql += uid;
     sql += "\";";
 
-    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3_MAX_MESSAGE_SIZE, &stmt, &tail);
+    sqlite3_prepare_v2(db, sql.c_str(), BR::SQLITE3::MAX_MESSAGE_SIZE, &stmt, &tail);
     while (sqlite3_step(stmt) == SQLITE_ROW)
     {
         ret = std::string(reinterpret_cast<const char *>(sqlite3_column_text(stmt, 0)));
@@ -177,13 +177,13 @@ void MemDBuid::create()
     std::string sql = "";
 
     sqlite3 *db;
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
 
-    sql = BR::SQLITE3_DB_MEMORY_UID_TABLE;
+    sql = BR::SQLITE3::MEMORY::TABLE_UID;
 
     sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
-    sql = BR::SQLITE3_DB_MEMORY_UID_DATA;
+    sql = BR::SQLITE3::MEMORY::DATA_UID;
 
     sqlite3_exec(db, sql.c_str(), NULL, NULL, NULL);
 
@@ -195,7 +195,7 @@ void MemDBuid::del()
     std::string sql = "";
 
     sqlite3 *db;
-    sqlite3_open(BR::SQLITE3_DB_MEMORY_UID_NAME, &db);
+    sqlite3_open(BR::SQLITE3::MEMORY::UID, &db);
 
     sql = "DROP TABLE UID;";
 
