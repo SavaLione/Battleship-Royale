@@ -165,7 +165,30 @@ void console()
 		}
 		case 104:
 		{
-			spdlog::info("Help:\n \tESC - Exit\n\th - Help\n");
+			spdlog::info(
+				"Help:" 		"\n\t"
+				"Ctrl+c - Exit" "\n\t"
+				"ESC - Exit" 	"\n\t"
+				"h - Help" 		"\n\t"
+				"r - Drop db"	"\n\t"
+				);
+			break;
+		}
+		case 3:
+		{
+			spdlog::info("Exit");
+			fl = false;
+			MemDBuid mdbUid;
+			mdbUid.del();
+			exit(0);
+			break;
+		}
+		case 114:
+		{
+			spdlog::info("Drop db");
+			MemDBuid mdbUid;
+			mdbUid.del();
+			mdbUid.create();
 			break;
 		}
 
