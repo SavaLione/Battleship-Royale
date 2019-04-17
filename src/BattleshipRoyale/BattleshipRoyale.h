@@ -260,5 +260,52 @@ namespace BR
 
 } // BR
 
+namespace BR::CONSOLE
+{
+    ///////////////////////////////////////////////////////////////////////////////
+    //      Console
+    ///////////////////////////////////////////////////////////////////////////////
+
+    /// Консоль
+    ///
+    /// @code
+    ///     BR > 
+    /// @endcode
+    const char GREETING[] = "\tBR > ";
+
+    /// Помощь по командам
+    /// @code
+    ///     help        h   -   Help Commands
+    ///     exit        e   -   Exit from the program (soft)
+    ///     shutdown    s   -   Exit from the program (hard)
+    ///     reset       r   -   Reset database in memory
+    /// @endcode
+    const char HELP[] = 
+        "\t\t"    "help        h   -   Help Commands"                     "\n"
+        "\t\t"    "exit        e   -   Exit from the program (soft)"      "\n"
+        "\t\t"    "shutdown    s   -   Exit from the program (hard)"      "\n"
+        "\t\t"    "reset       r   -   Reset database in memory"          "\n";
+
+    /// Сообщение о том, что команда не найдена
+    const char NOT_FOUND[] = "Command not found.\nTry using: help";
+
+} // namespace BR::CONSOLE
+
+namespace BR::CONSOLE::COMMANDS
+{
+    const char HELP[] = "help";
+    const char HELP_SHORT[] = "h";
+
+    const char EXIT[] = "exit";
+    const char EXIT_SHORT[] = "e";
+
+    const char SHUTDOWN[] = "shutdown";
+    const char SHUTDOWN_SHORT[] = "s";
+
+    const char RESET[] = "reset";
+    const char RESET_SHORT[] = "r";
+} // namespace BR::CONSOLE::HELP
+
+
 #endif // BATTLESHIPROYALE_H
 /** @} */
