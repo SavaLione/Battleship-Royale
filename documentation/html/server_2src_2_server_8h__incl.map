@@ -1,11 +1,12 @@
-<map id="Server.h" name="Server.h">
-<area shape="rect" id="node1" title="Асинхронный сервер написанный на boost asio." alt="" coords="173,5,243,32"/>
+<map id="src/server/src/Server.h" name="src/server/src/Server.h">
+<area shape="rect" id="node1" title="Асинхронный сервер написанный на boost asio." alt="" coords="133,5,283,32"/>
 <area shape="rect" id="node2" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="157,80,259,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="5,162,112,189"/>
 <area shape="rect" id="node4" title=" " alt="" coords="137,155,279,196"/>
 <area shape="rect" id="node5" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="304,162,403,189"/>
-<area shape="rect" id="node6" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="316,244,391,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="239,319,294,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="318,319,389,345"/>
-<area shape="rect" id="node9" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="413,319,544,345"/>
+<area shape="rect" id="node6" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="371,244,445,271"/>
+<area shape="rect" id="node10" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="249,244,346,271"/>
+<area shape="rect" id="node7" title=" " alt="" coords="282,319,337,345"/>
+<area shape="rect" id="node8" title=" " alt="" coords="366,319,437,345"/>
+<area shape="rect" id="node9" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="461,319,592,345"/>
 </map>

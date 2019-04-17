@@ -2,5 +2,6 @@
 <area shape="rect" id="node1" title="Класс для общения" alt="" coords="47,199,139,225"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,181,136"/>
 <area shape="rect" id="node3" href="$class_processing.html" title=" " alt="" coords="206,102,293,129"/>
-<area shape="rect" id="node4" href="$class_mini_d_b.html" title="Компактная база данных" alt="" coords="217,5,281,32"/>
+<area shape="rect" id="node4" href="$class_mini_d_b.html" title="Компактная база данных" alt="" coords="167,5,231,32"/>
+<area shape="rect" id="node5" href="$class_mem_d_buid.html" title=" " alt="" coords="255,5,342,32"/>
 </map>

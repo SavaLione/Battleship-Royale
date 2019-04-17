@@ -95,7 +95,8 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
 <div class="dynheader">
 Граф связей класса Regex.h:</div>
 <div class="dyncontent">
-<center><table><tr><td><div class="center"><iframe scrolling="no" frameborder="0" src="group__regexh.svg" width="188" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<center><table><tr><td><div class="center"><iframe scrolling="no" frameborder="0" src="group__regexh.svg" width="188" height="36"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </td></tr></table></center>
 </div>
 <table class="memberdecls">
@@ -139,10 +140,10 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="_regex_8h.html">Regex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_regex_8h.html">src/server/src/Regex.h</a>&gt;</code></p>
 
 <p>Проверка соответствия строки паттерну </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordflow">if</span>(<a class="code" href="group__regexcpp.html#gaa3cead107f77154e052674ea9cff8c62">check_pattern</a>(s, s_pattern))</div><div class="line">{</div><div class="line">    <span class="comment">//some</span></div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = BR::REG_USER;</div><div class="line"><span class="keywordflow">if</span>(<a class="code" href="group__regexcpp.html#gaa3cead107f77154e052674ea9cff8c62">check_pattern</a>(s, s_pattern))</div><div class="line">{</div><div class="line">    <span class="comment">//some</span></div><div class="line">}</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
@@ -151,7 +152,7 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
 </dl>
 <dl class="section return"><dt>Возвращает</dt><dd>true - соответствует, false - не соответствует. </dd></dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">server/src/Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00034">34</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00034">34</a></p>
 
 </div>
 </div>
@@ -187,10 +188,10 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="_regex_8h.html">Regex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_regex_8h.html">src/server/src/Regex.h</a>&gt;</code></p>
 
 <p>Получение информации из строки </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295">getData</a>(s, s_pattern, s_ret_one);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = BR::REG_USER;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295">getData</a>(s, s_pattern, s_ret_one);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
@@ -199,7 +200,7 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">server/src/Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00053">53</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00053">53</a></p>
 
 </div>
 </div>
@@ -241,10 +242,10 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
       </table>
 </div><div class="memdoc">
 
-<p><code>#include &lt;<a class="el" href="_regex_8h.html">Regex.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_regex_8h.html">src/server/src/Regex.h</a>&gt;</code></p>
 
 <p>Получение информации из строки </p>
-<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = <a class="code" href="namespace_b_r.html#adf62830a86680a1b129dc6a865c8ca5f">BR::REG_USER</a>;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>, s_ret_two = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295">getData</a>(s, s_pattern, s_ret_one, s_ret_two);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span> s = <span class="stringliteral">&quot;user:[SavaLione]&quot;</span>;</div><div class="line"><span class="keywordtype">string</span> s_pattern = BR::REG_USER;</div><div class="line"><span class="keywordtype">string</span> s_ret_one = <span class="stringliteral">&quot;&quot;</span>, s_ret_two = <span class="stringliteral">&quot;&quot;</span>;</div><div class="line"><a class="code" href="group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295">getData</a>(s, s_pattern, s_ret_one, s_ret_two);</div></div><!-- fragment --> <dl class="params"><dt>Аргументы</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">msg</td><td>Строка </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Паттерн </td></tr>
@@ -254,7 +255,7 @@ $(document).ready(function(){initNavTree('group__regexh.html','');});
   </dd>
 </dl>
 
-<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">server/src/Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00077">77</a></p>
+<p class="definition">См. определение в файле <a class="el" href="server_2src_2_regex_8cpp_source.html">Regex.cpp</a> строка <a class="el" href="server_2src_2_regex_8cpp_source.html#l00077">77</a></p>
 
 </div>
 </div>

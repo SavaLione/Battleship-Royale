@@ -1,10 +1,11 @@
-<map id="con_handler.h" name="con_handler.h">
-<area shape="rect" id="node1" title="handler" alt="" coords="157,5,259,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,87,112,114"/>
-<area shape="rect" id="node3" title=" " alt="" coords="137,80,279,121"/>
-<area shape="rect" id="node4" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="304,87,403,114"/>
-<area shape="rect" id="node5" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="316,169,391,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="239,244,294,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="318,244,389,271"/>
-<area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="413,244,544,271"/>
+<map id="src/server/src/con_handler.h" name="src/server/src/con_handler.h">
+<area shape="rect" id="node1" title="handler" alt="" coords="145,5,271,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,112,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="137,95,279,136"/>
+<area shape="rect" id="node4" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="304,102,403,129"/>
+<area shape="rect" id="node5" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="371,184,445,211"/>
+<area shape="rect" id="node9" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="249,184,346,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="282,259,337,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="366,259,437,285"/>
+<area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="461,259,592,285"/>
 </map>

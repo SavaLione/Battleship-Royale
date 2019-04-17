@@ -1,4 +1,4 @@
-<map id="MemDBmap.h" name="MemDBmap.h">
-<area shape="rect" id="node1" title="Облегчённый класс для работы с бд в памяти" alt="" coords="12,5,117,32"/>
-<area shape="rect" id="node2" href="$_mem_d_bmap_8cpp.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="5,80,124,107"/>
+<map id="src/server/src/MemDBmap.h" name="src/server/src/MemDBmap.h">
+<area shape="rect" id="node1" title="Облегчённый класс для работы с бд в памяти" alt="" coords="13,5,199,32"/>
+<area shape="rect" id="node2" href="$_mem_d_bmap_8cpp.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="5,80,207,107"/>
 </map>

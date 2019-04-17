@@ -1,7 +1,7 @@
-<map id="con_handler.h" name="con_handler.h">
-<area shape="rect" id="node1" title="handler" alt="" coords="155,5,257,32"/>
-<area shape="rect" id="node2" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="113,80,182,107"/>
-<area shape="rect" id="node5" href="$server_2src_2con__handler_8cpp.html" title="handler" alt="" coords="206,80,323,107"/>
-<area shape="rect" id="node3" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="5,155,151,181"/>
-<area shape="rect" id="node4" href="$server_2src_2_server_8cpp.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="175,155,258,181"/>
+<map id="src/server/src/con_handler.h" name="src/server/src/con_handler.h">
+<area shape="rect" id="node1" title="handler" alt="" coords="199,5,324,47"/>
+<area shape="rect" id="node2" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="105,102,255,129"/>
+<area shape="rect" id="node5" href="$server_2src_2con__handler_8cpp.html" title="handler" alt="" coords="280,95,405,136"/>
+<area shape="rect" id="node3" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="5,184,168,225"/>
+<area shape="rect" id="node4" href="$server_2src_2_server_8cpp.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="192,191,357,218"/>
 </map>

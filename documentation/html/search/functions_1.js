@@ -19,5 +19,6 @@ var searchData=
   ['db_5fpragma',['db_PRAGMA',['../class_d_b.html#a379be53bb64208e8da6c4550865fb7ad',1,'DB']]],
   ['db_5fpragma_5flog',['db_PRAGMA_log',['../group__dbcpp.html#gaf02f64c01e2fff747a0b271dbe4a25a0',1,'DB']]],
   ['db_5ftable_5fcheck',['db_table_check',['../group__dbcpp.html#ga5001c33b72d0195db5375b042287a466',1,'DB']]],
+  ['del',['del',['../group__memdbuid__cpp.html#ga81e620144697ca0336f7daff97a59bec',1,'MemDBuid']]],
   ['disconnect',['Disconnect',['../class_server_link.html#afa570df0c508889210e9ac2ff5983306',1,'ServerLink']]]
 ];

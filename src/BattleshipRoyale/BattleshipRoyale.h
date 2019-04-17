@@ -26,17 +26,15 @@
 
 /**
  * @brief Пространство имён с константами
- * @namespace BR
 */
 namespace BR
 {
 
 } // BR
 
-/**
- * @namespace BR::REGEX
- */
-namespace BR::REGEX
+namespace BR
+{
+namespace REGEX
 {
     /// Регулярное выражение для поиска имени
     ///
@@ -80,12 +78,14 @@ namespace BR::REGEX
     /// @endcode
     const char ANSWER_FALSE[] = "^answer:\\[false\\]$";
 
-} // namespace BR::REGEX
+} // namespace REGEX
+} // namespace BR
 
-/**
- * @namespace BR::REGEX::ANSWER
- */
-namespace BR::REGEX::ANSWER
+namespace BR
+{
+namespace REGEX
+{
+namespace ANSWER
 {
     /// Положительный ответ
     const char ANSWER_TRUE[] = "answer:[true]";
@@ -98,24 +98,27 @@ namespace BR::REGEX::ANSWER
 
     /// Пользователь уже существует
     const char ERROR_USER_ALREADY_EXIST[] = "answer:[ERROR_USER_ALREADY_EXIST]";
-} // namespace BR::REGEX::ANSWER
+} // namespace ANSWER
+} // namespace REGEX
+} // namespace BR
 
-/**
- * @namespace BR::CONNECT
- */
-namespace BR::CONNECT
+namespace BR
+{
+namespace CONNECT
 {
     /// Стандартный адрес сервера
     const char IP[] = "127.0.0.1";
 
     /// Стандартный порт сервера
     const int  PORT = 1234;
-} // namespace BR::CONNECT
+} // namespace CONNECT
+} // namespace BR
 
-/**
- * @namespace BR::VERSION::SERVER
- */
-namespace BR::VERSION::SERVER
+namespace BR
+{
+namespace VERSION
+{
+namespace SERVER
 {
     /// Сервер. Major версия
     const int MAJOR = 0;
@@ -125,12 +128,15 @@ namespace BR::VERSION::SERVER
 
     /// Сервер. Path версия
     const int PATCH = 5;
-} // namespace BR::VERSION::SERVER
+} // namespace SERVER
+} // namespace VERSION
+} // namespace BR
 
-/**
- * @namespace BR::VERSION::CLIENT
- */
-namespace BR::VERSION::CLIENT
+namespace BR
+{
+namespace VERSION
+{
+namespace CLIENT
 {
     /// Клиент. Major версия
     const int MAJOR = 0;
@@ -140,13 +146,13 @@ namespace BR::VERSION::CLIENT
 
     /// Клиент. Path версия
     const int PATCH = 3;
-} // namespace BR::VERSION::CLIENT
+} // namespace CLIENT
+} // namespace VERSION
+} // namespace BR
 
-/**
- * @brief Версия
- * @namespace BR::VERSION
- */
-namespace BR::VERSION
+namespace BR
+{
+namespace VERSION
 {
     /// Версия Сервера
     const int server = (BR::VERSION::SERVER::MAJOR * 10000 + BR::VERSION::SERVER::MINOR * 100 + BR::VERSION::SERVER::PATCH);
@@ -154,13 +160,12 @@ namespace BR::VERSION
     /// Версия клиента
     const int client = (BR::VERSION::CLIENT::MAJOR * 10000 + BR::VERSION::CLIENT::MINOR * 100 + BR::VERSION::CLIENT::PATCH);
 
-} // namespace BR::VERSION
+} // namespace VERSION
+} // namespace BR
 
-/**
- * @brief Работа с базой данных
- * @namespace BR::SQLITE3
- */
-namespace BR::SQLITE3
+namespace BR
+{
+namespace SQLITE3
 {
     /**
      * @brief Флаги sqlite3
@@ -180,12 +185,14 @@ namespace BR::SQLITE3
     
     const int MAX_MESSAGE_SIZE = 1024;
 
-} // namespace BR::SQLITE3
+} // namespace SQLITE3
+} // namespace BR
 
-/**
- * @namespace BR::SQLITE3::LOCAL
- */
-namespace BR::SQLITE3::LOCAL
+namespace BR
+{
+namespace SQLITE3
+{
+namespace LOCAL
 {
     /// Название локальной базы данных
     const char NAME[] = "test.db";
@@ -230,12 +237,15 @@ namespace BR::SQLITE3::LOCAL
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'Hewwwoo',   'Hiii',           'n',     0,    0,    0);"
         "INSERT INTO PLAYER (ID, NAME, PASSWORD, REG_DATE, SCORE, MONEY, LEVEL) VALUES((SELECT max(ID) FROM PLAYER) + 1, 'Awwww',     'Awwwwwwwwwwwww', 'www',   1234, 1234, 0);";
     
-} // namespace BR::SQLITE3::LOCAL
+} // namespace LOCAL
+} // namespace SQLITE3
+} // namespace BR
 
-/**
- * @namespace BR::SQLITE3::MEMORY
- */
-namespace BR::SQLITE3::MEMORY
+namespace BR
+{
+namespace SQLITE3
+{
+namespace MEMORY
 {
     /// Название базы данных uid в памяти
     const char UID[] = "file:memdb1?mode=memory&cache=shared";
@@ -297,14 +307,13 @@ namespace BR::SQLITE3::MEMORY
      * @todo Нужно создать запрет на вход SavaLione и OwO
      */
     const char DATA_MAP[] = "";
-} // namespace BR::SQLITE3::MEMORY
+} // namespace MEMORY
+} // namespace SQLITE3
+} // namespace BR
 
-
-/**
- * @brief Работа с консолью сервера
- * @namespace BR::CONSOLE
- */
-namespace BR::CONSOLE
+namespace BR
+{
+namespace CONSOLE
 {
     ///////////////////////////////////////////////////////////////////////////////
     //      Console
@@ -316,13 +325,14 @@ namespace BR::CONSOLE
     ///     BR > 
     /// @endcode
     const char GREETING[] = "BR > ";
+} // namespace CONSOLE
+} // namespace BR
 
-} // namespace BR::CONSOLE
-
-/**
- * @namespace BR::CONSOLE::MESSAGE
- */
-namespace BR::CONSOLE::MESSAGE
+namespace BR
+{
+namespace CONSOLE
+{
+namespace MESSAGE
 {
     /// Помощь по командам
     /// @code
@@ -339,14 +349,15 @@ namespace BR::CONSOLE::MESSAGE
     
     /// Сообщение о том, что команда не найдена
     const char NOT_FOUND[] = "Command not found.\nTry using: help";
-} // namespace BR::CONSOLE::MESSAGE
+} // namespace MESSAGE    
+} // namespace CONSOLE
+} // namespace BR
 
-
-/**
- * @brief Команды в консоли сервера
- * @namespace BR::CONSOLE::COMMANDS
- */
-namespace BR::CONSOLE::COMMANDS
+namespace BR
+{
+namespace CONSOLE
+{
+namespace COMMANDS
 {
     const char HELP[] = "help";
     const char HELP_SHORT[] = "h";
@@ -359,7 +370,9 @@ namespace BR::CONSOLE::COMMANDS
 
     const char RESET[] = "reset";
     const char RESET_SHORT[] = "r";
-} // namespace BR::CONSOLE::HELP
+} // namespace COMMANDS    
+} // namespace CONSOLE
+} // namespace BR
 
 
 #endif // BATTLESHIPROYALE_H

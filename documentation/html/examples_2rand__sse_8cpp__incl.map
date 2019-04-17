@@ -1,5 +1,5 @@
-<map id="rand_sse.cpp" name="rand_sse.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="33,5,133,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,64,107"/>
-<area shape="rect" id="node3" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="89,80,175,107"/>
+<map id="src/examples/rand_sse.cpp" name="src/examples/rand_sse.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,188,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="19,80,78,107"/>
+<area shape="rect" id="node3" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="103,80,189,107"/>
 </map>

@@ -31,7 +31,10 @@ var NAVTREE =
       [ "Пространства имен", "namespaces.html", "namespaces_dup" ],
       [ "Члены пространств имен", "namespacemembers.html", [
         [ "Указатель", "namespacemembers.html", null ],
-        [ "Переменные", "namespacemembers_vars.html", null ]
+        [ "Функции", "namespacemembers_func.html", null ],
+        [ "Переменные", "namespacemembers_vars.html", null ],
+        [ "Перечисления", "namespacemembers_enum.html", null ],
+        [ "Элементы перечислений", "namespacemembers_eval.html", null ]
       ] ]
     ] ],
     [ "Классы", "annotated.html", [
@@ -63,7 +66,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_battleship_royale_8h.html",
-"group__memdbuid__cpp.html"
+"group__dbcpp.html#ga29a603c52c10831cddee82518417f992"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

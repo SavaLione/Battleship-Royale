@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "BR", "namespace_b_r.html", "namespace_b_r" ],
     [ "con_handler", "classcon__handler.html", "classcon__handler" ],
     [ "DB", "class_d_b.html", "class_d_b" ],
     [ "db_player", "structdb__player.html", "structdb__player" ],

@@ -11,5 +11,6 @@ var class_processing =
     [ "~Processing", "group__processing__cpp.html#ga95dab1a596a090ab31a86259ac067d25", null ],
     [ "getREQ", "group__processing__cpp.html#gafc60589c53aba7709959682c67fc010f", null ],
     [ "response", "group__processing__cpp.html#ga8b180eaae9e701ba365333a04cb788f5", null ],
-    [ "mdb", "class_processing.html#a0e8fd37bdd3d1aedd7f3251e3278bc77", null ]
+    [ "mdb", "class_processing.html#a0e8fd37bdd3d1aedd7f3251e3278bc77", null ],
+    [ "mdbUid", "class_processing.html#a90e08e5f487e135005bc1168185c6e59", null ]
 ];

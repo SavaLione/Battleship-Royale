@@ -1,8 +1,8 @@
-<map id="con_handler.h" name="con_handler.h">
-<area shape="rect" id="node1" title=" " alt="" coords="161,5,263,32"/>
-<area shape="rect" id="node2" href="$testing_2server_2_server_8h.html" title=" " alt="" coords="119,80,188,107"/>
-<area shape="rect" id="node6" href="$testing_2server_2con__handler_8cpp.html" title=" " alt="" coords="212,80,329,107"/>
-<area shape="rect" id="node3" href="$examples_2_server_8cpp.html" title=" " alt="" coords="5,155,88,181"/>
-<area shape="rect" id="node4" href="$async_8cpp.html" title=" " alt="" coords="112,155,195,181"/>
-<area shape="rect" id="node5" href="$testing_2server_2_server_8cpp.html" title=" " alt="" coords="219,155,301,181"/>
+<map id="src/testing/server/con_handler.h" name="src/testing/server/con_handler.h">
+<area shape="rect" id="node1" title=" " alt="" coords="267,5,389,47"/>
+<area shape="rect" id="node2" href="$testing_2server_2_server_8h.html" title=" " alt="" coords="195,95,317,136"/>
+<area shape="rect" id="node6" href="$testing_2server_2con__handler_8cpp.html" title=" " alt="" coords="341,95,462,136"/>
+<area shape="rect" id="node3" href="$examples_2_server_8cpp.html" title=" " alt="" coords="5,191,171,218"/>
+<area shape="rect" id="node4" href="$async_8cpp.html" title=" " alt="" coords="195,184,317,225"/>
+<area shape="rect" id="node5" href="$testing_2server_2_server_8cpp.html" title=" " alt="" coords="341,184,462,225"/>
 </map>

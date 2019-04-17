@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['data',['data',['../classcon__handler.html#af6feec8ca98e8b25ca1b7bedcda5b3e9',1,'con_handler']]],
+  ['data',['data',['../classcon__handler.html#af6feec8ca98e8b25ca1b7bedcda5b3e9',1,'con_handler::data()'],['../namespace_b_r_1_1_s_q_l_i_t_e3_1_1_l_o_c_a_l.html#ad460f49f6d472b20d993115202878a56',1,'BR::SQLITE3::LOCAL::DATA()']]],
   ['data_5fcheck',['data_check',['../classcon__handler.html#a3645ff738400fc9fff3a1dea1aa0999f',1,'con_handler']]],
+  ['data_5fmap',['DATA_MAP',['../namespace_b_r_1_1_s_q_l_i_t_e3_1_1_m_e_m_o_r_y.html#a39e85ed77e2ca5074038e29a7868ff9b',1,'BR::SQLITE3::MEMORY']]],
+  ['data_5fuid',['DATA_UID',['../namespace_b_r_1_1_s_q_l_i_t_e3_1_1_m_e_m_o_r_y.html#a62bff1c89becdac067c00878a62009e1',1,'BR::SQLITE3::MEMORY']]],
   ['db',['DB',['../class_d_b.html',1,'DB'],['../group__dbcpp.html#ga29a603c52c10831cddee82518417f992',1,'DB::DB()'],['../class_d_b.html#af006c980ee986ac5c39610c9afd62087',1,'DB::db()']]],
   ['db_2ecpp',['DB.cpp',['../_d_b_8cpp.html',1,'']]],
   ['db_2eh',['DB.h',['../_d_b_8h.html',1,'']]],
@@ -28,5 +30,6 @@ var searchData=
   ['db_5ftable_5fcheck',['db_table_check',['../group__dbcpp.html#ga5001c33b72d0195db5375b042287a466',1,'DB']]],
   ['db_2ecpp',['DB.cpp',['../group__dbcpp.html',1,'']]],
   ['db_2eh',['DB.h',['../group__dbh.html',1,'']]],
+  ['del',['del',['../group__memdbuid__cpp.html#ga81e620144697ca0336f7daff97a59bec',1,'MemDBuid']]],
   ['disconnect',['Disconnect',['../class_server_link.html#afa570df0c508889210e9ac2ff5983306',1,'ServerLink']]]
 ];

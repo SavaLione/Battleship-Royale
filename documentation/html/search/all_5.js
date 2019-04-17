@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['minidb_2ecpp',['MiniDB.cpp',['../examples_2_mini_d_b_8cpp.html',1,'']]],
-  ['processing_2ecpp',['Processing.cpp',['../examples_2_processing_8cpp.html',1,'']]],
-  ['rand_5fsse_2ecpp',['rand_sse.cpp',['../examples_2rand__sse_8cpp.html',1,'']]],
-  ['regex_2ecpp',['Regex.cpp',['../examples_2_regex_8cpp.html',1,'']]],
-  ['server_2ecpp',['Server.cpp',['../examples_2_server_8cpp.html',1,'']]]
+  ['error_5fuser_5falready_5fexist',['ERROR_USER_ALREADY_EXIST',['../namespace_b_r_1_1_r_e_g_e_x_1_1_a_n_s_w_e_r.html#a9db2d69053624968825a52d89a9b78f7',1,'BR::REGEX::ANSWER']]],
+  ['exit',['EXIT',['../namespace_b_r_1_1_c_o_n_s_o_l_e_1_1_c_o_m_m_a_n_d_s.html#a4b7db28f1e12d3a5bc42f1e39705d4f3',1,'BR::CONSOLE::COMMANDS::EXIT()'],['../namespace_b_r_1_1_c_o_n_s_o_l_e.html#a1101a6cc4226e31c8826f5e1bbb37648a637e1465ca8216faf3ea43f998c57174',1,'BR::CONSOLE::EXIT()']]],
+  ['exit_5fshort',['EXIT_SHORT',['../namespace_b_r_1_1_c_o_n_s_o_l_e_1_1_c_o_m_m_a_n_d_s.html#a9f08554b7f367fe62fb1fe40e3cc8005',1,'BR::CONSOLE::COMMANDS']]]
 ];
