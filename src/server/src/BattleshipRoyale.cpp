@@ -12,7 +12,6 @@
 #include <iostream>
 #include <string>
 #include <future>
-#include <conio.h>
 
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
@@ -20,7 +19,7 @@
 #include <cxxopts.hpp>
 
 #include "BattleshipRoyale.h"
-#include "Regex.h"
+//#include "Regex.h"
 #include "MiniDB.h"
 #include "MemDBuid.h"
 #include "Console.h"
@@ -30,8 +29,6 @@
 #include "rand_sse.h"
 
 using namespace std;
-
-void console();
 
 /**
  * @brief Точка входа в программу
@@ -145,57 +142,5 @@ int main(int argc, char *argv[])
 	}
 
 	return 0;
-}
-
-void console()
-{
-	bool fl = true;
-	while (fl)
-	{
-		char c = getch();
-		switch (c)
-		{
-		case 27:
-		{
-			spdlog::info("Exit");
-			fl = false;
-			MemDBuid mdbUid;
-			mdbUid.del();
-			exit(0);
-			break;
-		}
-		case 104:
-		{
-			spdlog::info(
-				"Help:" 		"\n\t"
-				"Ctrl+c - Exit" "\n\t"
-				"ESC - Exit" 	"\n\t"
-				"h - Help" 		"\n\t"
-				"r - Drop db"	"\n\t"
-				);
-			break;
-		}
-		case 3:
-		{
-			spdlog::info("Exit");
-			fl = false;
-			MemDBuid mdbUid;
-			mdbUid.del();
-			exit(0);
-			break;
-		}
-		case 114:
-		{
-			spdlog::info("Drop db");
-			MemDBuid mdbUid;
-			mdbUid.del();
-			mdbUid.create();
-			break;
-		}
-
-		default:
-			break;
-		}
-	}
 }
 /** @} */
