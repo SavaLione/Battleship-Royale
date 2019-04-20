@@ -106,7 +106,6 @@ void test(int const& PORT, std::string const& s_ip)
 	while(true)
 	{
 		bool bt[] = { true, true , true, true};
-		connections++;
 		{
 			std::string msg = "user_check:[SavaLione]";
 			Client ct;
@@ -140,7 +139,7 @@ void test(int const& PORT, std::string const& s_ip)
 			ct.setIp(s_ip);
 			ct.connect();
 			ct.send(msg);
-			if(ct.receive() != "UID:[OWWO111OwO123OwO111OwO]")
+			if(ct.receive() == "answer:[false]")
 			{
 				bt[2] = false;
 			}
@@ -158,7 +157,7 @@ void test(int const& PORT, std::string const& s_ip)
 				bt[3] = false;
 			}
 		}
-
+		connections = connections + 4;
 		{
 			std::string s = "";
 			if(bt[0])
@@ -197,8 +196,8 @@ void test(int const& PORT, std::string const& s_ip)
 				s += "[X]";
 			}
 			s += " ";
-			s += connections;
-			
+			s += std::to_string(connections);
+
 			spdlog::info(s);
 		}
 	}
