@@ -5,7 +5,9 @@ project(${BR_SERVER_NAME})
 ################################
 
 set(BR_SERVER_HEADERS
+	src/check/OpenMP.h
 	src/con_handler.h
+	src/Check.h
 	src/Console.h
 	src/MemDBmap.h
 	src/MemDBuid.h
@@ -15,6 +17,7 @@ set(BR_SERVER_HEADERS
 	src/Server.h)
 
 set(BR_SERVER_SOURCES
+	src/check/OpenMP.cpp
 	src/BattleshipRoyale.cpp
 	src/con_handler.cpp
 	src/Console.cpp

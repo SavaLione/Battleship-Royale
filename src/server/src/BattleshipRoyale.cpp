@@ -19,7 +19,7 @@
 #include <cxxopts.hpp>
 
 #include "BattleshipRoyale.h"
-//#include "Regex.h"
+#include "Check.h"
 #include "MiniDB.h"
 #include "MemDBuid.h"
 #include "Console.h"
@@ -78,25 +78,22 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-#ifdef _OPENMP
-	/*
-		Выводим текст в консоль каждым потоком
-		Нужно для проверки количества задействованных потоков
-	*/
-	string s_omp_parallel_cores_test = "";
-#pragma omp parallel
 	{
-		s_omp_parallel_cores_test += "[CORE] ";
+		spdlog::info("Check OpenMP.");
+		int check = BR::CHECK::openmp();
+		if (check >= 0)
+		{
+			/*
+				Вывод данных о возможности использования OpenMP 
+			*/
+			spdlog::info("Compiled by an OpenMP-compliant implementation.");
+			spdlog::info("Cores: {}", check);
+		}
+		else
+		{
+			spdlog::warn("Compiled WITHOUT an OpenMP-compliant implementation.");
+		}
 	}
-	spdlog::info("Cores: {}", s_omp_parallel_cores_test);
-
-	/*
-		Вывод данных о возможности использования OpenMP 
-	*/
-	spdlog::info("Compiled by an OpenMP-compliant implementation.");
-#else
-	spdlog::warn("Compiled WITHOUT an OpenMP-compliant implementation.");
-#endif
 
 	spdlog::info("Welcome to Battleship Royale Server!");
 
