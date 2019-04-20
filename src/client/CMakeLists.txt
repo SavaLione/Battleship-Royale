@@ -5,11 +5,14 @@ project(${BR_CLIENT_NAME})
 ################################
 
 set(BR_CLIENT_HEADERS
-	src/Client.h)
+	src/Client.h
+	src/Test.h
+	src/test/LoopConnections.h)
 
 set(BR_CLIENT_SOURCES
 	src/BattleshipRoyale.cpp
-	src/Client.cpp)
+	src/Client.cpp
+	src/test/LoopConnections.cpp)
 
 #find_package(Curses REQUIRED)
 #include_directories(${CURSES_INCLUDE_DIR})

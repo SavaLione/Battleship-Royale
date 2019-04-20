@@ -19,7 +19,7 @@
 #include "BattleshipRoyale.h"
 #include "Client.h"
 
-void test(int const& PORT, std::string const& s_ip);
+#include "Test.h"
 
 /**
  * @brief Точка входа в программу
@@ -35,12 +35,13 @@ int main(int argc, char *argv[])
 	bool HIDE_LOG = false;
 	int PORT = BR::CONNECT::PORT;
     std::string s_ip = BR::CONNECT::IP;
-    std::string s_test = "1";
+    std::string s_test = "";
 	/*
 		Парсер аргументов к программе
 			h	help	Помощь
 			v	version	Версия программы
 			l	log		Логирование. Возможно стоит убрать
+			lo	loop	Тестирование на колличество подключений в секунду
 			p	port	Порт сервера
             i   ip      Адрес сервера
             t   test    Тест
@@ -53,6 +54,7 @@ int main(int argc, char *argv[])
 			("h,help", "Help")
 			("v,version", "Version")
 			("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))
+			("f,loop", "Loop test connections with out log")
 			("p,port", "Port", cxxopts::value<int>(PORT))
             ("i,ip", "IP", cxxopts::value<std::string>(s_ip))
             ("t,test", "Test", cxxopts::value<std::string>(s_test));
@@ -70,6 +72,12 @@ int main(int argc, char *argv[])
 			spdlog::info("client version: {}", BR::VERSION::CLIENT::VERSION);
 			exit(0);
 		}
+
+		if (result.count("loop"))
+		{
+			loopconn(PORT, s_ip);
+			exit(0);
+		}
 	}
 	catch (const cxxopts::OptionException& e)
 	{
@@ -82,124 +90,13 @@ int main(int argc, char *argv[])
     spdlog::info("IP: {}", s_ip);
     spdlog::info("PORT: {}", PORT);
 
-	// Client ct;
-	// ct.setPort(PORT);
-	// ct.setIp(s_ip);
-	// ct.connect();
-	// ct.send(s_test);
-	// spdlog::info(ct.receive());
-
-	test(PORT, s_ip);
+	Client ct;
+	ct.setPort(PORT);
+	ct.setIp(s_ip);
+	ct.connect();
+	ct.send(s_test);
+	spdlog::info(ct.receive());
 
     return 0;
-}
-
-/**
- * |user_check true|user_check false|user pass true|user pass false|
- * [ ][ ][ ][ ]
- */
-void test(int const& PORT, std::string const& s_ip)
-{
-	spdlog::info("|user_check true|user_check false|user pass true|user pass false|");
-	spdlog::info("|---------------|----------------|--------------|---------------|");
-	int connections = 0;
-	while(true)
-	{
-		bool bt[] = { true, true , true, true};
-		{
-			std::string msg = "user_check:[SavaLione]";
-			Client ct;
-			ct.setPort(PORT);
-			ct.setIp(s_ip);
-			ct.connect();
-			ct.send(msg);
-			if(ct.receive() != "answer:[true]")
-			{
-				bt[0] = false;
-			}
-		}
-
-		{
-			std::string msg = "user_check:[NOTNOTNOT]";
-			Client ct;
-			ct.setPort(PORT);
-			ct.setIp(s_ip);
-			ct.connect();
-			ct.send(msg);
-			if(ct.receive() != "answer:[false]")
-			{
-				bt[1] = false;
-			}
-		}
-
-		{
-			std::string msg = "user:[OwO] pass:[OwO]";
-			Client ct;
-			ct.setPort(PORT);
-			ct.setIp(s_ip);
-			ct.connect();
-			ct.send(msg);
-			if(ct.receive() == "answer:[false]")
-			{
-				bt[2] = false;
-			}
-		}
-
-		{
-			std::string msg = "user:[Hewwwoo] pass:[Hiii]";
-			Client ct;
-			ct.setPort(PORT);
-			ct.setIp(s_ip);
-			ct.connect();
-			ct.send(msg);
-			if(ct.receive() == "answer:[true]")
-			{
-				bt[3] = false;
-			}
-		}
-		connections = connections + 4;
-		{
-			std::string s = "";
-			if(bt[0])
-			{
-				s += "[ ]";
-			}
-			else
-			{
-				s += "[X]";
-			}
-
-			if(bt[1])
-			{
-				s += "[ ]";
-			}
-			else
-			{
-				s += "[X]";
-			}
-
-			if(bt[2])
-			{
-				s += "[ ]";
-			}
-			else
-			{
-				s += "[X]";
-			}
-
-			if(bt[3])
-			{
-				s += "[ ]";
-			}
-			else
-			{
-				s += "[X]";
-			}
-			s += " ";
-			s += std::to_string(connections);
-
-			spdlog::info(s);
-		}
-	}
 }
 /** @} */
