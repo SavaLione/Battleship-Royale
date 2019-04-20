@@ -27,7 +27,14 @@ Client::~Client()
 
 void Client::connect()
 {
-    this->socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(this->ip), this->port));
+    try
+    {
+        this->socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(this->ip), this->port));
+    }
+    catch(const std::exception& e)
+    {
+        spdlog::error(e.what());
+    }
 }
 
 void Client::setPort(int const& port)
