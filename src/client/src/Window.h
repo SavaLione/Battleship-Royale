@@ -12,9 +12,12 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
+#include <string>
+
 class Window
 {
 private:
+
 
 public:
     Window();
