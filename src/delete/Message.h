@@ -1,3 +1,7 @@
+/**
+ * @file
+ * @deprecated
+ */
 #pragma once
 
 #include <string>

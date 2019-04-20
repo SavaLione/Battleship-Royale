@@ -4,10 +4,12 @@ project(${BR_CLIENT_NAME})
 # Sources
 ################################
 
-set(BR_CLIENT_HEADERS)
+set(BR_CLIENT_HEADERS
+	src/Client.h)
 
 set(BR_CLIENT_SOURCES
-	src/BattleshipRoyale.cpp)
+	src/BattleshipRoyale.cpp
+	src/Client.cpp)
 
 #find_package(Curses REQUIRED)
 #include_directories(${CURSES_INCLUDE_DIR})

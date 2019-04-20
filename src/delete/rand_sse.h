@@ -27,6 +27,7 @@
  * @file
  * @brief Генерация рандомных чисел через SSE
  * @example rand_sse.cpp
+ * @deprecated
  * @author Kipp Owens, Rajiv Parikh, SavaLione
  * @date 13 Apr 2019
 */

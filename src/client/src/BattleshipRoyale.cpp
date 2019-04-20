@@ -11,17 +11,13 @@
  */
 #include <string>
 
-#include <boost/asio.hpp>
-
 #include <spdlog/spdlog.h>
 #include <spdlog/sinks/basic_file_sink.h>
 
 #include <cxxopts.hpp>
 
 #include "BattleshipRoyale.h"
-
-using namespace boost::asio;
-using ip::tcp;
+#include "Client.h"
 
 /**
  * @brief Точка входа в программу
@@ -69,7 +65,7 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info("client version: {}", BR::VERSION::client);
+			spdlog::info("client version: {}", BR::VERSION::CLIENT::VERSION);
 			exit(0);
 		}
 	}
@@ -103,38 +99,13 @@ int main(int argc, char *argv[])
 
     spdlog::info("IP: {}", s_ip);
     spdlog::info("PORT: {}", PORT);
-	
-    boost::asio::io_service io_service;
-    tcp::socket socket(io_service);
 
-    socket.connect(tcp::endpoint(boost::asio::ip::address::from_string(s_ip), PORT));
-
-    std::string msg = "";
-    msg += s_test;
-    boost::system::error_code error;
-    boost::asio::write(socket, boost::asio::buffer(msg), error);
-
-    if (!error)
-    {
-        // Client send message
-    }
-    else
-    {
-        spdlog::error("Send failed: {}", error.message());
-    }
-
-    boost::asio::streambuf receive_buffer;
-    boost::asio::read(socket, receive_buffer, boost::asio::transfer_all(), error);
-
-    if (error && error != boost::asio::error::eof)
-    {
-        spdlog::error("Receive failed: {}", error.message());
-    }
-    else
-    {
-        const char *data = boost::asio::buffer_cast<const char *>(receive_buffer.data());
-        spdlog::info(data);
-    }
+	Client ct;
+	ct.setPort(PORT);
+	ct.setIp(s_ip);
+	ct.connect();
+	ct.send(s_test);
+	spdlog::info(ct.receive());
 
     return 0;
 }

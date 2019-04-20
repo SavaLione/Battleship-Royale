@@ -26,6 +26,7 @@
 /**
  * @file
  * @brief Генерация рандомных чисел через SSE
+ * @deprecated
  * @author Kipp Owens, Rajiv Parikh, SavaLione
  * @date 13 Apr 2019
  */

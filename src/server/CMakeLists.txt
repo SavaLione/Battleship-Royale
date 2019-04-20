@@ -11,7 +11,6 @@ set(BR_SERVER_HEADERS
 	src/MemDBuid.h
 	src/MiniDB.h
 	src/Processing.h
-	src/rand_sse.h
 	src/Regex.h
 	src/Server.h)
 
@@ -23,7 +22,6 @@ set(BR_SERVER_SOURCES
 	src/MemDBuid.cpp
 	src/MiniDB.cpp
 	src/Processing.cpp
-	src/rand_sse.cpp
 	src/Regex.cpp
 	src/Server.cpp)
 

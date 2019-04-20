@@ -2,23 +2,18 @@
 #define CONSOLE_H
 
 #include <string>
+#include <BattleshipRoyale.h>
 
-namespace BR::CONSOLE
+namespace BR
 {
-    enum CMD
-    {
-        HELP,
-        EXIT,
-        SHUTDOWN,
-        RESET,
-        NOT_FOUND = 1024
-    };
-
+namespace CONSOLE
+{
     void process(std::string const& command);
-    CMD getCommand(std::string const& command);
+    BR::CODE::CONSOLE::CMD getCommand(std::string const& command);
     void start();
 
-} // namespace BR::CONSOLE
+} // namespace CONSOLE
+} // namespace BR
 
 
 #endif // CONSOLE_H

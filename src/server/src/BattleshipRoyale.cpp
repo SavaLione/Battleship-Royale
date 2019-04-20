@@ -26,8 +26,6 @@
 
 #include "Server.h"
 
-#include "rand_sse.h"
-
 using namespace std;
 
 /**
@@ -67,8 +65,7 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info("server version: {}", BR::VERSION::server);
-			spdlog::info("client version: {}", BR::VERSION::client);
+			spdlog::info("server version: {}", BR::VERSION::SERVER::VERSION);
 			spdlog::info("sqlite3 version: {} ({})", SQLITE_VERSION, SQLITE_VERSION_NUMBER);
 			spdlog::info("cxxopts version: {}", ((CXXOPTS__VERSION_MAJOR * 10000) + (CXXOPTS__VERSION_MINOR * 100) + (SPDLOG_VER_PATCH)));
 			spdlog::info("spdlog version: {}", SPDLOG_VERSION);
@@ -80,9 +77,6 @@ int main(int argc, char *argv[])
 		spdlog::warn(e.what());
 		exit(1);
 	}
-
-	/* RandSSE Seed */
-	srand_sse(time(NULL));
 
 #ifdef _OPENMP
 	/*

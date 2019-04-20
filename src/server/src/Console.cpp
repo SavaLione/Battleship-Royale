@@ -3,8 +3,9 @@
 #include <iostream>
 #include <future>
 
-#include "BattleshipRoyale.h"
 #include "MemDBuid.h"
+
+using namespace BR::CODE::CONSOLE;
 
 void BR::CONSOLE::start()
 {
@@ -19,7 +20,7 @@ void BR::CONSOLE::start()
 
 void BR::CONSOLE::process(std::string const &command)
 {
-    CMD c = getCommand(command);
+    CMD c = BR::CONSOLE::getCommand(command);
     switch (c)
     {
     case CMD::HELP:
@@ -57,9 +58,9 @@ void BR::CONSOLE::process(std::string const &command)
     }
 }
 
-BR::CONSOLE::CMD BR::CONSOLE::getCommand(std::string const &command)
+CMD BR::CONSOLE::getCommand(std::string const &command)
 {
-    CMD ret = BR::CONSOLE::CMD::NOT_FOUND;
+    CMD ret = CMD::NOT_FOUND;
 
     if (command == BR::CONSOLE::COMMANDS::HELP)
         return CMD::HELP;
