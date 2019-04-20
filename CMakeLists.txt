@@ -22,6 +22,7 @@ set(    BR_TEST_REGEX  0    CACHE BOOL "BR_TEST_REGEX"      )           # <--- D
 set(    BR_TEST_MINIDB 0    CACHE BOOL "BR_TEST_MINIDB"     )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MEMDB  0    CACHE BOOL "BR_TEST_MEMDB"      )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_CONSO  0    CACHE BOOL "BR_TEST_CONSO"      )           # <--- DELETE THIS ON STABLE
+set(    BR_TEST_SPDLOG 1    CACHE BOOL "BR_TEST_SPDLOG"     )           # <--- DELETE THIS ON STABLE
 
 set(    BR_SERVER_NAME          BattleshipRoyale_Server         )
 set(    BR_CLIENT_NAME          BattleshipRoyale_Client         )
@@ -31,6 +32,7 @@ set(    BR_TEST_REGEX_NAME      BattleshipRoyale_REGEX_TEST     )       # <--- D
 set(    BR_TEST_MINIDB_NAME     BattleshipRoyale_MINIDB_TEST    )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_MEMDB_NAME      BattleshipRoyale_MEMDB_TEST     )       # <--- DELETE THIS ON STABLE
 set(    BR_TEST_CONSO_NAME      BattleshipRoyale_CONSO_TEST     )       # <--- DELETE THIS ON STABLE
+set(    BR_TEST_SPDLOG_NAME     BattleshipRoyale_SPDLOG_TEST    )       # <--- DELETE THIS ON STABLE
 
 ################################
 # Lib
@@ -134,4 +136,8 @@ endif()                                            # <--- DELETE THIS ON STABLE
 
 if(BR_TEST_CONSO)                                  # <--- DELETE THIS ON STABLE
 	add_subdirectory(src/testing/console)          # <--- DELETE THIS ON STABLE
+endif()                                            # <--- DELETE THIS ON STABLE
+
+if(BR_TEST_SPDLOG)                                 # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/testing/spdlog)           # <--- DELETE THIS ON STABLE
 endif()                                            # <--- DELETE THIS ON STABLE

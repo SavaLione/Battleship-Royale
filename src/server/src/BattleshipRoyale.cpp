@@ -39,21 +39,35 @@ int main(int argc, char *argv[])
 	/*
 		Arg opt
 	*/
-	bool HIDE_LOG = false;
 	int PORT = BR::CONNECT::PORT;
+
+	/**
+	 * 0 - debug
+	 * 1 - info
+	 * 2 - warn
+	 * 3 - error
+	 * 4 - critical
+	 * 5 - off
+	 */
+	int LOG_LEVEL = 1;
 
 	/*
 		Парсер аргументов к программе
 			h	help	Помощь
 			v	version	Версия программы
-			l	log		Логирование. Возможно стоит убрать
+			l	log		Уровень логирования. Стандарт - info.
 			p	port	Порт сервера
 	*/
 	try
 	{
 		cxxopts::Options options("BattleshipRoyaleServer", " - Battleship Royale Server");
 
-		options.add_options()("h,help", "Help")("v,version", "Version")("l,log", "Log", cxxopts::value<bool>(HIDE_LOG))("p,port", "Port", cxxopts::value<int>(PORT));
+		options.add_options()
+			("h,help", "Help")
+			("v,version", "Version")
+			("l,log", "Log level. 0 - debug, 1 - info (default), 2 - warn, 3 - error, 4 - critical, 5 - off.", cxxopts::value<int>(LOG_LEVEL))
+			("L,LogFile", "Log to file")
+			("p,port", "Port", cxxopts::value<int>(PORT));
 
 		auto result = options.parse(argc, argv);
 
@@ -70,6 +84,41 @@ int main(int argc, char *argv[])
 			spdlog::info("cxxopts version: {}", ((CXXOPTS__VERSION_MAJOR * 10000) + (CXXOPTS__VERSION_MINOR * 100) + (SPDLOG_VER_PATCH)));
 			spdlog::info("spdlog version: {}", SPDLOG_VERSION);
 			exit(0);
+		}
+
+		if(LOG_LEVEL == 0)
+		{
+			spdlog::set_level(spdlog::level::debug);
+		}
+		else if (LOG_LEVEL == 1)
+		{
+			spdlog::set_level(spdlog::level::info);
+		}
+		else if (LOG_LEVEL == 2)
+		{
+			spdlog::set_level(spdlog::level::warn);
+		}
+		else if (LOG_LEVEL == 3)
+		{
+			spdlog::set_level(spdlog::level::err);
+		}
+		else if (LOG_LEVEL == 4)
+		{
+			spdlog::set_level(spdlog::level::critical);
+		}
+		else if (LOG_LEVEL == 5)
+		{
+			spdlog::set_level(spdlog::level::off);
+		}
+		else
+		{
+			spdlog::warn("Log level: {}. Not found!", LOG_LEVEL);
+		}
+
+		if (result.count("LogFile"))
+		{
+			auto file_logger = spdlog::basic_logger_mt("BR", "Battleship-Royale.log");
+    		spdlog::set_default_logger(file_logger);
 		}
 	}
 	catch (const cxxopts::OptionException &e)
