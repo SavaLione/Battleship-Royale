@@ -17,6 +17,7 @@
 #include "BattleshipRoyale.h"
 #include "Args.h"
 #include "Client.h"
+#include "Window.h"
 
 /**
  * @brief Точка входа в программу
@@ -31,8 +32,8 @@ int main(int argc, char *argv[])
 	*/
 	int LOG_LEVEL = 1;
 	int PORT = BR::CONNECT::PORT;
-    std::string s_ip = BR::CONNECT::IP;
-    std::string s_test = "";
+	std::string s_ip = BR::CONNECT::IP;
+	std::string s_test = "";
 
 	arg(argc, argv, LOG_LEVEL, PORT, s_ip, s_test);
 
@@ -41,16 +42,18 @@ int main(int argc, char *argv[])
 	 */
 	spdlog::info("Welcome to Battleship Royale Console Client!");
 
-    spdlog::info("IP: {}", s_ip);
-    spdlog::info("PORT: {}", PORT);
+	spdlog::info("IP: {}", s_ip);
+	spdlog::info("PORT: {}", PORT);
 
-	Client ct;
-	ct.setPort(PORT);
-	ct.setIp(s_ip);
-	ct.connect();
-	ct.send(s_test);
-	spdlog::info(ct.receive());
+	// Client ct;
+	// ct.setPort(PORT);
+	// ct.setIp(s_ip);
+	// ct.connect();
+	// ct.send(s_test);
+	// spdlog::info(ct.receive());
 
-    return 0;
+	Window wdw;
+
+	return 0;
 }
 /** @} */

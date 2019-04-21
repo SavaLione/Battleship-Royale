@@ -11,8 +11,15 @@
  */
 #include "Window.h"
 
+#include <ncursesw/curses.h>
+
 Window::Window()
 {
+    initscr();
+    printw("Hello world!\n");
+    refresh();
+    getch();
+    endwin();
 }
 
 Window::~Window()
