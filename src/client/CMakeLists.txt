@@ -9,14 +9,16 @@ set(BR_CLIENT_HEADERS
 	src/Client.h
 	src/Test.h
 	src/test/LoopConnections.h
-	src/Window.h)
+	src/Window.h
+	src/Registration.h)
 
 set(BR_CLIENT_SOURCES
 	src/Args.cpp
 	src/BattleshipRoyale.cpp
 	src/Client.cpp
 	src/test/LoopConnections.cpp
-	src/Window.cpp)
+	src/Window.cpp
+	src/Registration.cpp)
 
 #find_package(Curses REQUIRED)
 #include_directories(${CURSES_INCLUDE_DIR})

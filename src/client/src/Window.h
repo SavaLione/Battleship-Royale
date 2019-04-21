@@ -13,6 +13,9 @@
 #define WINDOW_H
 
 #include <string>
+#include <ncursesw/curses.h>
+#include <ncursesw/form.h>
+#include <cstring>
 
 class Window
 {
@@ -20,6 +23,10 @@ private:
 public:
     Window();
     ~Window();
+    void testWindow();
+    void newTest();
+    void registration();
+    void line();
 };
 
 #endif // WINDOW_H
