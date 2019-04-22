@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	// spdlog::info(ct.receive());
 
 	Window wdw;
-	wdw.line();
+	wdw.testWin();
 
 	return 0;
 }

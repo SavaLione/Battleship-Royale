@@ -17,7 +17,13 @@
 #include <ncursesw/form.h>
 #include <cstring>
 
-
+class Registration
+{
+private:
+public:
+    Registration();
+    ~Registration();
+};
 
 #endif // REGISTRATION_H
 /** @} */

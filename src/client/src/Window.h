@@ -27,6 +27,9 @@ public:
     void newTest();
     void registration();
     void line();
+    void testWin();
+    void navigation();
+    void color();
 };
 
 #endif // WINDOW_H
