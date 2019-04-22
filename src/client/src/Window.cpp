@@ -301,9 +301,7 @@ void Window::testWin()
 void Window::navigation()
 {
     color_set(11, NULL);
-    char nav[] = "USE ARROW FOR NAVIGATION";
-    mvaddstr(LINES, 0, nav);
-    mvprintw(LINES, 0, nav);
+    char nav[] = "USE [ARROWS] AND [TAB] TO NAVIGATE";
     mvwprintw(stdscr, LINES - 1, (COLS / 2) - (strlen(nav) / 2), nav);
     color_set(32, NULL);
 }
