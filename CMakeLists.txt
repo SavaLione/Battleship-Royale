@@ -52,7 +52,6 @@ set(    NCURSES_LIBRARY_MENU    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libmenuw6.d
 set(    NCURSES_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libncursesw6.dll"  CACHE FILEPATH  "ncurses library *.dll file"         )
 set(    NCURSES_LIBRARY_PANEL   "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libpanelw6.dll"    CACHE FILEPATH  "ncurses panel *.dll file"           )
 
-
 #set(    PDCURSES_LIBRARY       "${CMAKE_SOURCE_DIR}/lib/PDCurses/pdcurses.a"           CACHE FILEPATH  "PDCurses *.a file"                  )
 
 # Boost
@@ -101,7 +100,7 @@ if(BR_UNIX)
     #add_compile_options(-Wall -O0 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
 
     #release
-    add_compile_options(-Wall -O2 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+    add_compile_options(-Wall -O0 -g -lncursesw -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()

@@ -12,18 +12,6 @@
 #ifndef WINDOW_H
 #define WINDOW_H
 
-#include <string>
-
-#if _WIN32
-#include <ncursesw/curses.h>
-#include <ncursesw/form.h>
-#elif __unix__
-#include <ncurses/curses.h>
-#include <ncurses/form.h>
-#endif
-
-#include <cstring>
-
 class Window
 {
 private:
@@ -33,7 +21,6 @@ public:
     void testWindow();
     void newTest();
     void registration();
-    void line();
     void testWin();
     void navigation();
     void color();

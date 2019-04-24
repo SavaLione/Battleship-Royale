@@ -14,16 +14,6 @@
 
 #include <string>
 
-#if _WIN32
-#include <ncursesw/curses.h>
-#include <ncursesw/form.h>
-#elif __unix__
-#include <ncurses/curses.h>
-#include <ncurses/form.h>
-#endif
-
-#include <cstring>
-
 class Registration
 {
 private:
