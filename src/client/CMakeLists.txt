@@ -41,7 +41,6 @@ target_include_directories(${BR_CLIENT_NAME} PUBLIC ${SPDLOG_LIB_INCLUDE})
 target_include_directories(${BR_CLIENT_NAME} PUBLIC ${CXXOPTS_LIB_INCLUDE})
 target_include_directories(${BR_CLIENT_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_CLIENT_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
-target_include_directories(${BR_CLIENT_NAME} PUBLIC ${NCURSES_LIB_INCLUDE})
 
 #if(BR_UNIX)
 #	target_link_libraries(${BR_CLIENT_NAME} sqlite3)
@@ -49,7 +48,7 @@ target_include_directories(${BR_CLIENT_NAME} PUBLIC ${NCURSES_LIB_INCLUDE})
 
 # OS Specific
 if(BR_WINDOWS)
-	target_link_libraries(${BR_CLIENT_NAME} ${SQLITE3_LIBRARY})
+	target_include_directories(${BR_CLIENT_NAME} PUBLIC ${NCURSES_LIB_INCLUDE})
 
 	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY_FORM})
 	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY_MENU})

@@ -87,7 +87,12 @@ set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY
 # Build
 ################################
 if(BR_WINDOWS)
-    add_compile_options(-Wall -O0 -pipe -msse2)
+    #debug
+    #add_compile_options(-Wall -O0 -pipe -msse2)
+
+    #release
+    add_compile_options(-Wall -O2 -pipe -msse2)
+
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 
@@ -97,6 +102,7 @@ if(BR_UNIX)
 
     #release
     add_compile_options(-Wall -O2 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 
