@@ -26,7 +26,7 @@ void arg(int argc, char *argv[], int& LOG_LEVEL, int& PORT, std::string& s_ip, s
 			h	help	Помощь
 			v	version	Версия программы
 			l	log		Логирование. Возможно стоит убрать
-			lo	loop	Тестирование на колличество подключений в секунду
+				loop	Тестирование на колличество подключений в секунду
 			p	port	Порт сервера
             i   ip      Адрес сервера
             t   test    Тест
@@ -41,6 +41,9 @@ void arg(int argc, char *argv[], int& LOG_LEVEL, int& PORT, std::string& s_ip, s
 			("l,log", "Log level. 0 - debug, 1 - info (default), 2 - warn, 3 - error, 4 - critical, 5 - off.", cxxopts::value<int>(LOG_LEVEL))
 			("L,LogFile", "Log to file (default on)")
 			("loop", "Loop test connections with out log")
+			("tndc", "test noDatabaseConnection")
+			("twdc", "test withDatabaseConnection")
+			("twdmc", "test withDatabaseMemoryConnection")
 			("p,port", "Port", cxxopts::value<int>(PORT))
             ("i,ip", "IP", cxxopts::value<std::string>(s_ip))
             ("m,msg", "message to server", cxxopts::value<std::string>(s_test));
@@ -98,12 +101,15 @@ void arg(int argc, char *argv[], int& LOG_LEVEL, int& PORT, std::string& s_ip, s
     		spdlog::set_default_logger(file_logger);
 		}
 		
-
 		if (result.count("loop"))
 		{
 			loopconn(PORT, s_ip);
 			exit(0);
 		}
+
+		if (result.count("tndc")) noDatabaseConnection(PORT, s_ip);
+		if (result.count("twdc")) withDatabaseConnection(PORT, s_ip);
+		if (result.count("twdmc")) withDatabaseMemoryConnection(PORT, s_ip);
 	}
 	catch (const cxxopts::OptionException& e)
 	{

@@ -13,6 +13,7 @@
 #define TEST_H
 
 #include "test/LoopConnections.h"
+#include "test/SimultaneousConnections.h"
 
 #endif // TEST_H
 /** @} */

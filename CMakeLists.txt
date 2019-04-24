@@ -14,7 +14,7 @@ else()
     set(    BR_UNIX    1    )
 endif()
 
-set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
+set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
 set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT"          )
 set(    BR_TEST_SERVER 0    CACHE BOOL "BR_TEST_SERVER"     )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_CLIENT 0    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- DELETE THIS ON STABLE
@@ -92,7 +92,11 @@ if(BR_WINDOWS)
 endif()
 
 if(BR_UNIX)
-    add_compile_options(-Wall -O0 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+    #debug
+    #add_compile_options(-Wall -O0 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+
+    #release
+    add_compile_options(-Wall -O2 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 

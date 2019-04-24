@@ -29,7 +29,6 @@ void loopconn(int const& PORT, std::string const& s_ip)
 	int err[] = { 0, 0, 0, 0};
 	while(true)
 	{
-		bool bt[] = { true, true , true, true};
 		{
 			std::string msg = "user_check:[SavaLione]";
 			Client ct;

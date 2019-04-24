@@ -9,6 +9,7 @@ set(BR_CLIENT_HEADERS
 	src/Client.h
 	src/Test.h
 	src/test/LoopConnections.h
+	src/test/SimultaneousConnections.h
 	src/Window.h
 	src/Registration.h)
 
@@ -17,6 +18,7 @@ set(BR_CLIENT_SOURCES
 	src/BattleshipRoyale.cpp
 	src/Client.cpp
 	src/test/LoopConnections.cpp
+	src/test/SimultaneousConnections.cpp
 	src/Window.cpp
 	src/Registration.cpp)
 

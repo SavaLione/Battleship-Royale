@@ -25,6 +25,7 @@ private:
         USER_PASS_CHECK,
         USER_UID,
         USER_CREATE,
+        TEST_WITHOUT_DB_CONNECTION = 512,
         REQ_ERROR = 1024
     };
 
