@@ -43,14 +43,7 @@ target_include_directories(${BR_CLIENT_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_CLIENT_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
 
 # OS Specific
-if(BR_WINDOWS)
-	target_include_directories(${BR_CLIENT_NAME} PUBLIC ${NCURSES_LIB_INCLUDE})
-
-	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY_FORM})
-	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY_MENU})
-	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY})
-	target_link_libraries(${BR_CLIENT_NAME} ${NCURSES_LIBRARY_PANEL})
-	
+if(BR_WINDOWS)	
 	target_link_libraries(${BR_CLIENT_NAME} ws2_32)
 	target_link_libraries(${BR_CLIENT_NAME} wsock32)
 endif()

@@ -18,12 +18,6 @@ private:
 public:
     Window();
     ~Window();
-    void testWindow();
-    void newTest();
-    void registration();
-    void testWin();
-    void navigation();
-    void color();
 };
 
 #endif // WINDOW_H
