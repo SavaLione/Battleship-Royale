@@ -43,6 +43,11 @@ target_include_directories(${BR_CLIENT_NAME} PUBLIC ${BR_LIB_INCLUDE})
 target_include_directories(${BR_CLIENT_NAME} PUBLIC ${Boost_INCLUDE_DIRS})
 
 # OS Specific
+if(BR_UNIX)
+	target_include_directories(${BR_CLIENT_NAME} PUBLIC ${CURSES_INCLUDE_DIR})
+	target_link_libraries(${BR_CLIENT_NAME} ${CURSES_LIBRARIES})
+endif()
+
 if(BR_WINDOWS)
 	target_include_directories(${BR_CLIENT_NAME} PUBLIC ${PDCURSES_LIB_INCLUDE})
 	target_link_libraries(${BR_CLIENT_NAME} ${PDCURSES_LIBRARY})

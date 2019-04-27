@@ -83,6 +83,11 @@ endif()
 set(USE_LIB_EXP Boost::regex)
 set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY} ${USE_LIB_EXP})
 
+# OS Specific
+if(BR_UNIX)
+    find_package(Curses REQUIRED)
+endif()
+
 ################################
 # Build
 ################################
@@ -98,10 +103,10 @@ endif()
 
 if(BR_UNIX)
     #debug
-    #add_compile_options(-Wall -O0 -g -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+    add_compile_options(-Wall -O0 -g -lncurses -pipe -fopenmp -lsqlite3 -lpthread)
 
     #release
-    add_compile_options(-Wall -O2 -g -lncurses -pipe -msse2 -fopenmp -lsqlite3 -lpthread)
+    #add_compile_options(-Wall -O2 -g -lncurses -pipe -fopenmp -lsqlite3 -lpthread)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
