@@ -42,15 +42,16 @@ set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"               
 set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"                       CACHE PATH "sqlite3 lib include"                     )
 set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"                      CACHE PATH "picosha2 lib include"                    )
 set(    PDCURSES_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/PDCurses/include"              CACHE PATH "PDCurses lib include"                    )
-set(    NCURSES_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/ncurses/include"               CACHE PATH "ncurses MingW64 port lib include"        )
+#set(    NCURSES_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/ncurses/include"               CACHE PATH "ncurses lib include"                     )
 
 set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"           CACHE FILEPATH  "sqlite3 *.dll file"                 )
+set(    PDCURSES_LIBRARY        "${CMAKE_SOURCE_DIR}/lib/PDCurses/lib/pdcurses.dll"     CACHE FILEPATH  "pdcurses *.dll file"                )
 
 # ncurses
-set(    NCURSES_LIBRARY_FORM    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libformw6.dll"     CACHE FILEPATH  "ncurses form *.dll file"            )
-set(    NCURSES_LIBRARY_MENU    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libmenuw6.dll"     CACHE FILEPATH  "ncurses panel *.dll file"           )
-set(    NCURSES_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libncursesw6.dll"  CACHE FILEPATH  "ncurses library *.dll file"         )
-set(    NCURSES_LIBRARY_PANEL   "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libpanelw6.dll"    CACHE FILEPATH  "ncurses panel *.dll file"           )
+#set(    NCURSES_LIBRARY_FORM    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libformw6.dll"     CACHE FILEPATH  "ncurses form *.dll file"            )
+#set(    NCURSES_LIBRARY_MENU    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libmenuw6.dll"     CACHE FILEPATH  "ncurses panel *.dll file"           )
+#set(    NCURSES_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libncursesw6.dll"  CACHE FILEPATH  "ncurses library *.dll file"         )
+#set(    NCURSES_LIBRARY_PANEL   "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libpanelw6.dll"    CACHE FILEPATH  "ncurses panel *.dll file"           )
 
 #set(    PDCURSES_LIBRARY       "${CMAKE_SOURCE_DIR}/lib/PDCurses/pdcurses.a"           CACHE FILEPATH  "PDCurses *.a file"                  )
 

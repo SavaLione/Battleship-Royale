@@ -52,6 +52,8 @@ int main(int argc, char *argv[])
 	// ct.send(s_test);
 	// spdlog::info(ct.receive());
 
+	Window wnw;
+
 	return 0;
 }
 /** @} */

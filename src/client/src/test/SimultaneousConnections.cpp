@@ -68,25 +68,23 @@ void withDatabaseConnection(int const &PORT, std::string const &IP)
 
 void withDatabaseMemoryConnection(int const &PORT, std::string const &IP)
 {
-    int connections = 0, k = 0, error = 0;
+    int connections = 0, k = 0;
     while (true)
     {
-        std::string msg = "user:[OwO] pass:[OwO]";
+        std::string msg = "user:[Hewwwoo] pass:[Hiii]";
         Client ct;
         ct.setPort(PORT);
         ct.setIp(IP);
         ct.connect();
         ct.send(msg);
-        if (ct.receive() != "OWWO111OwO123OwO111OwO")
-        {
-            error++;
-        }
+        ct.receive();
+
         connections++;
         if (connections > 1000)
         {
             k++;
             connections = 0;
-            spdlog::info("wDMC {} {}", error, k);
+            spdlog::info("wDMC - {}", k);
         }
     }
 }

@@ -15,6 +15,8 @@
 class Window
 {
 private:
+    void color();
+
 public:
     Window();
     ~Window();
