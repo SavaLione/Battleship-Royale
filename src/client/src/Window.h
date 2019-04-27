@@ -16,10 +16,12 @@ class Window
 {
 private:
     void color();
+    void navigation();
 
 public:
     Window();
     ~Window();
+    void testWindow();
 };
 
 #endif // WINDOW_H

@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
 	// spdlog::info(ct.receive());
 
 	Window wnw;
+	wnw.testWindow();
 
 	return 0;
 }
