@@ -53,6 +53,7 @@ int main(int argc, char *argv[])
 	// spdlog::info(ct.receive());
 
 	TUI t;
+	t.colorTest();
 
 	return 0;
 }

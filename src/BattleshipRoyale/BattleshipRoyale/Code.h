@@ -133,15 +133,15 @@ namespace COLOR
         CYAN_WHITE,
         WHITE_WHITE,
 
-        BLACK = BLACK_BLACK,
-        BLUE = BLUE_BLUE,
-        GREEN = GREEN_GREEN,
-        RED = RED_RED,
+        BLACK,
+        BLUE,
+        GREEN,
+        RED,
 
-        YELLOW = YELLOW_YELLOW,
-        MAGENTA = MAGENTA_MAGENTA,
-        CYAN = CYAN_CYAN,
-        WHITE = WHITE_WHITE
+        YELLOW,
+        MAGENTA,
+        CYAN,
+        WHITE
     };
 }
 } // namespace MENU
