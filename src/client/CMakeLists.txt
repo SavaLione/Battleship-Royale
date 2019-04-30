@@ -11,6 +11,7 @@ set(BR_CLIENT_HEADERS
 	src/test/LoopConnections.h
 	src/test/SimultaneousConnections.h
 	src/Window.h
+	src/TUI.h
 	src/Registration.h)
 
 set(BR_CLIENT_SOURCES
@@ -20,6 +21,7 @@ set(BR_CLIENT_SOURCES
 	src/test/LoopConnections.cpp
 	src/test/SimultaneousConnections.cpp
 	src/Window.cpp
+	src/TUI.cpp
 	src/Registration.cpp)
 
 #find_package(Curses REQUIRED)

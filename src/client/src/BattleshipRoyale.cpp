@@ -17,7 +17,7 @@
 #include "BattleshipRoyale.h"
 #include "Args.h"
 #include "Client.h"
-#include "Window.h"
+#include "TUI.h"
 
 /**
  * @brief Точка входа в программу
@@ -52,8 +52,7 @@ int main(int argc, char *argv[])
 	// ct.send(s_test);
 	// spdlog::info(ct.receive());
 
-	Window wnw;
-	wnw.testWindow();
+	TUI t;
 
 	return 0;
 }

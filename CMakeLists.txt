@@ -93,10 +93,10 @@ endif()
 ################################
 if(BR_WINDOWS)
     #debug
-    #add_compile_options(-Wall -O0 -pipe -msse2)
+    add_compile_options(-Wall -O0 -pipe)
 
     #release
-    add_compile_options(-Wall -O2 -pipe -msse2)
+    #add_compile_options(-Wall -O2 -pipe)
 
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()

@@ -86,4 +86,9 @@ void Window::testWindow()
     endwin();
 }
 
+void Window::menu()
+{
+    
+}
+
 /** @} */

@@ -21,6 +21,7 @@ private:
 public:
     Window();
     ~Window();
+    void menu();
     void testWindow();
 };
 

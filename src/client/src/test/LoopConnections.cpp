@@ -77,7 +77,7 @@ void loopconn(int const& PORT, std::string const& s_ip)
 			ct.send(msg);
 			if(ct.receive() == "answer:[true]")
 			{
-				err[4]++;
+				err[3]++;
 			}
 		}
 		connections = connections + 4;
