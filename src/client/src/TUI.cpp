@@ -20,6 +20,7 @@
 
 TUI::TUI()
 {
+    setlocale(LC_ALL, "");
     initscr();
     start_color();
     initColor();

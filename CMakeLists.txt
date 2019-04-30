@@ -87,6 +87,7 @@ set(USE_LIB ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBARY
 
 # OS Specific
 if(BR_UNIX)
+    set(CURSES_NEED_WIDE TRUE)
     find_package(Curses REQUIRED)
 endif()
 
@@ -105,7 +106,7 @@ endif()
 
 if(BR_UNIX)
     #debug
-    add_compile_options(-Wall -O0 -g -lncursesw -pipe -fopenmp -lsqlite3 -lpthread)
+    add_compile_options(-Wall -O0 -g -pipe -lncursesw -fopenmp -lsqlite3 -lpthread)
 
     #release
     #add_compile_options(-Wall -O2 -g -lncurses -pipe -fopenmp -lsqlite3 -lpthread)
