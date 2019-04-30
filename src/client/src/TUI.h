@@ -21,6 +21,7 @@ public:
     TUI();
     ~TUI();
     void colorTest();
+    void locTest();
 };
 
 #endif // TUI_H

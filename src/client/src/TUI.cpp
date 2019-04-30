@@ -133,6 +133,13 @@ void TUI::colorTest()
     getch();
 }
 
+void TUI::locTest()
+{
+    std::string msg = "Привет! Тест локали!";
+    mvprintw(1, 1, msg.c_str());
+    getch();
+}
+
 /*
     COLOR_BLACK
     COLOR_BLUE
