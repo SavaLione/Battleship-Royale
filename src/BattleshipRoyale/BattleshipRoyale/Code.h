@@ -45,7 +45,7 @@ namespace MENU
 {
 namespace MAIN
 {
-    enum
+    enum items
     {
         NEW_GAME = 1,
         CONTINUE,
