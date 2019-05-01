@@ -3,12 +3,21 @@ cmake_minimum_required (VERSION 2.6)
 ################################
 # Вывод информации
 ################################
-set(BR_LOGO                 "   ___       __  __  __        __   _          ___                 __\n  / _ )___ _/ /_/ /_/ /__ ___ / /  (_)__  ____/ _ \\___  __ _____ _/ /__\n / _  / _ `/ __/ __/ / -_|_-</ _ \\/ / _ \\/___/ , _/ _ \\/ // / _ `/ / -_)\n/____/\\_,_/\\__/\\__/_/\\__/___/_//_/_/ .__/   /_/|_|\\___/\\_, /\\_,_/_/\\__/\n                                  /_/                 /___/\n\n")
+set(BR_MSG_LOGO                 "   ___       __  __  __        __   _          ___                 __\n  / _ )___ _/ /_/ /_/ /__ ___ / /  (_)__  ____/ _ \\___  __ _____ _/ /__\n / _  / _ `/ __/ __/ / -_|_-</ _ \\/ / _ \\/___/ , _/ _ \\/ // / _ `/ / -_)\n/____/\\_,_/\\__/\\__/_/\\__/___/_//_/_/ .__/   /_/|_|\\___/\\_, /\\_,_/_/\\__/\n                                  /_/                 /___/\n\n")
 
-set(BR_WINDOWS_MSG      "You are trying to compile the program under windows")
-set(BR_UNIX_MSG         "You are trying to compile a program under *nix")
+set(BR_MSG_CONNECTING_LIBRARIES "Connecting libraries to the project")
+set(BR_MSG_CONNECTING_LOCAL_LIBRARIES "Connecting local libraries to the project")
 
-message(${BR_LOGO})
+set(BR_MSG_INCLUDE_LIBRARIES "Include libraries to the project")
+
+set(BR_MSG_BUILD "Build")
+
+set(BR_MSG_ADD_SUB_PROJECTS "Add subprojects")
+
+set(BR_MSG_WINDOWS      "You are trying to compile the program under windows")
+set(BR_MSG_UNIX         "You are trying to compile a program under *nix")
+
+message(${BR_MSG_LOGO})
 
 ################################
 # Variables
@@ -19,11 +28,11 @@ set(    BR_UNIX    0    )
 if(MINGW)
     set(    BR_WINDOWS 1    )
     set(    BR_UNIX    0    )
-    message(${BR_WINDOWS_MSG})
+    message(${BR_MSG_WINDOWS})
 else()
     set(    BR_WINDOWS 0    )
     set(    BR_UNIX    1    )
-    message(${BR_UNIX_MSG})
+    message(${BR_MSG_UNIX})
 endif()
 
 set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
@@ -51,6 +60,8 @@ set(    BR_TEST_TRANSLATE_NAME  BattleshipRoyale_TRANSLATE_TEST )       # <--- D
 ################################
 # Lib
 ################################
+message(${BR_MSG_CONNECTING_LIBRARIES})
+
 set(    SPDLOG_LIB_INCLUDE      "${CMAKE_SOURCE_DIR}/lib/spdlog"                        CACHE PATH "spdlog lib include"                      )
 set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"                       CACHE PATH "cxxopts lib include"                     )
 set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"                       CACHE PATH "sqlite3 lib include"                     )
@@ -69,11 +80,14 @@ find_package(Boost 1.65.0 REQUIRED COMPONENTS system thread regex)
 ################################
 # Local Lib
 ################################
+message(${BR_MSG_CONNECTING_LOCAL_LIBRARIES})
+
 set(    BR_LIB_INCLUDE          "${CMAKE_SOURCE_DIR}/src/BattleshipRoyale"              CACHE PATH "BattleshipRoyale lib include"            )
 
 ################################
 # Inclu desu
 ################################
+message(${BR_MSG_INCLUDE_LIBRARIES})
 
 # OS Specific
 if(BR_WINDOWS)
@@ -98,6 +112,8 @@ endif()
 ################################
 # Build
 ################################
+message(${BR_MSG_BUILD})
+
 if(BR_WINDOWS)
     #debug
     add_compile_options(-Wall -O0 -pipe)
@@ -125,6 +141,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 ################################
 # SubDirs
 ################################
+message(${BR_MSG_ADD_SUB_PROJECTS})
 
 if(BR_CLIENT)
 	add_subdirectory(src/client)
@@ -135,7 +152,7 @@ if(BR_SERVER)
 endif()
 
 ################################
-# Тесты
+# Проверка возможностей
 ################################
 
 if(BR_TEST_SERVER)                                           # <--- DELETE THIS ON STABLE
