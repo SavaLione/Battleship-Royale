@@ -1,6 +1,16 @@
 cmake_minimum_required (VERSION 2.6)
 
 ################################
+# Вывод информации
+################################
+set(BR_LOGO                 "   ___       __  __  __        __   _          ___                 __\n  / _ )___ _/ /_/ /_/ /__ ___ / /  (_)__  ____/ _ \\___  __ _____ _/ /__\n / _  / _ `/ __/ __/ / -_|_-</ _ \\/ / _ \\/___/ , _/ _ \\/ // / _ `/ / -_)\n/____/\\_,_/\\__/\\__/_/\\__/___/_//_/_/ .__/   /_/|_|\\___/\\_, /\\_,_/_/\\__/\n                                  /_/                 /___/\n\n")
+
+set(BR_WINDOWS_MSG      "You are trying to compile the program under windows")
+set(BR_UNIX_MSG         "You are trying to compile a program under *nix")
+
+message(${BR_LOGO})
+
+################################
 # Variables
 ################################
 set(    BR_WINDOWS 0    )
@@ -9,9 +19,11 @@ set(    BR_UNIX    0    )
 if(MINGW)
     set(    BR_WINDOWS 1    )
     set(    BR_UNIX    0    )
+    message(${BR_WINDOWS_MSG})
 else()
     set(    BR_WINDOWS 0    )
     set(    BR_UNIX    1    )
+    message(${BR_UNIX_MSG})
 endif()
 
 set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
@@ -44,19 +56,10 @@ set(    CXXOPTS_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/cxxopts"               
 set(    SQLITE3_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/sqlite3"                       CACHE PATH "sqlite3 lib include"                     )
 set(    PICOSHA2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/picosha2"                      CACHE PATH "picosha2 lib include"                    )
 set(    PDCURSES_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/PDCurses/include"              CACHE PATH "PDCurses lib include"                    )
-#set(    NCURSES_LIB_INCLUDE     "${CMAKE_SOURCE_DIR}/lib/ncurses/include"               CACHE PATH "ncurses lib include"                     )
 set(    TINYXML2_LIB_INCLUDE    "${CMAKE_SOURCE_DIR}/lib/tinyxml2/include"              CACHE PATH "tinyxml2 lib include"                    )
 
 set(    SQLITE3_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/sqlite3/sqlite3.dll"           CACHE FILEPATH  "sqlite3 *.dll file"                 )
 set(    PDCURSES_LIBRARY        "${CMAKE_SOURCE_DIR}/lib/PDCurses/lib/pdcurses.dll"     CACHE FILEPATH  "pdcurses *.dll file"                )
-
-# ncurses
-#set(    NCURSES_LIBRARY_FORM    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libformw6.dll"     CACHE FILEPATH  "ncurses form *.dll file"            )
-#set(    NCURSES_LIBRARY_MENU    "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libmenuw6.dll"     CACHE FILEPATH  "ncurses panel *.dll file"           )
-#set(    NCURSES_LIBRARY         "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libncursesw6.dll"  CACHE FILEPATH  "ncurses library *.dll file"         )
-#set(    NCURSES_LIBRARY_PANEL   "${CMAKE_SOURCE_DIR}/lib/ncurses/bin/libpanelw6.dll"    CACHE FILEPATH  "ncurses panel *.dll file"           )
-
-#set(    PDCURSES_LIBRARY       "${CMAKE_SOURCE_DIR}/lib/PDCurses/pdcurses.a"           CACHE FILEPATH  "PDCurses *.a file"                  )
 
 # Boost
 set(    Boost_USE_STATIC_LIBS   OFF     )
@@ -115,6 +118,8 @@ if(BR_UNIX)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 endif()
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 #set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${BR_ARGS}")
 
 ################################
@@ -130,37 +135,37 @@ if(BR_SERVER)
 endif()
 
 ################################
-# Тестирование
+# Тесты
 ################################
 
-if(BR_TEST_SERVER)                                 # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/server)           # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_SERVER)                                           # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/server)           # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_CLIENT)                                 # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/client)           # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_CLIENT)                                           # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/client)           # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_REGEX)                                  # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/regex)            # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_REGEX)                                            # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/regex)            # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_MINIDB)                                 # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/minidb)           # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_MINIDB)                                           # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/minidb)           # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_MEMDB)                                  # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/memorydb)         # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_MEMDB)                                            # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/memorydb)         # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_CONSO)                                  # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/console)          # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_CONSO)                                            # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/console)          # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_SPDLOG)                                 # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/spdlog)           # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_SPDLOG)                                           # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/spdlog)           # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
 
-if(BR_TEST_TRANSLATE)                              # <--- DELETE THIS ON STABLE
-	add_subdirectory(src/testing/translation)      # <--- DELETE THIS ON STABLE
-endif()                                            # <--- DELETE THIS ON STABLE
+if(BR_TEST_TRANSLATE)                                        # <--- DELETE THIS ON STABLE
+	add_subdirectory(src/opportunity_check/translation)      # <--- DELETE THIS ON STABLE
+endif()                                                      # <--- DELETE THIS ON STABLE
