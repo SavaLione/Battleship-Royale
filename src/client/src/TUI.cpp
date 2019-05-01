@@ -20,6 +20,7 @@
 
 TUI::TUI()
 {
+    setlocale(LC_ALL, "");
     initscr();
     start_color();
     initColor();
@@ -130,6 +131,13 @@ void TUI::colorTest()
             line++;
         }
     }
+    getch();
+}
+
+void TUI::locTest()
+{
+    std::string msg = "Привет! Тест локали!";
+    mvprintw(1, 1, msg.c_str());
     getch();
 }
 
