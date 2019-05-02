@@ -199,7 +199,7 @@ void TUI::move()
 void TUI::MainMenu()
 {
     WINDOW *main_menu_win;
-    int startx, starty, width, height, ch;
+    
     cbreak();
     curs_set(0);
     keypad(stdscr, TRUE);
@@ -207,10 +207,6 @@ void TUI::MainMenu()
 
     bottom();
 
-    height = LINES - 1;
-    width = COLS - 1;
-    starty = 0;
-    startx = 0;
     bool fl_exit = false;
 
     std::vector<std::string> vec_menu_items;
@@ -222,7 +218,7 @@ void TUI::MainMenu()
     vec_menu_items.push_back("Help");
     vec_menu_items.push_back("Exit");
 
-    int choice = 0;
+    std::vector<std::string>::size_type choice = 0;
 
     //main_menu_win = create_newwin(height, width, starty, startx);
     main_menu_win = newwin(LINES - 1, COLS - 1, 0, 0);
@@ -236,7 +232,7 @@ void TUI::MainMenu()
         getmaxyx(main_menu_win, h, w);
 
         //wclear(main_menu_win);
-        for (int i = 0; i < vec_menu_items.size(); i++)
+        for (std::vector<std::string>::size_type i = 0; i < vec_menu_items.size(); i++)
         {
             if (i == choice)
             {
