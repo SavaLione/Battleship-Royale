@@ -198,14 +198,15 @@ void TUI::move()
 
 void TUI::MainMenu()
 {
-    WINDOW *main_menu_win;
+    WINDOW *main_menu_win, *main_menu_top, *main_menu_bottom;
     
     cbreak();
     curs_set(0);
     keypad(stdscr, TRUE);
     clear();
 
-    bottom();
+    //bottom();
+    refresh();
 
     bool fl_exit = false;
 
@@ -220,11 +221,21 @@ void TUI::MainMenu()
 
     std::vector<std::string>::size_type choice = 0;
 
-    //main_menu_win = create_newwin(height, width, starty, startx);
-    main_menu_win = newwin(LINES - 1, COLS - 1, 0, 0);
+    main_menu_top = newwin(7, COLS - 1, 0, 0);
+    main_menu_win = newwin(LINES - 10, COLS - 1, 7, 0);
+    main_menu_bottom = newwin(3, COLS - 1, LINES - 3, 0);
+
+    box(main_menu_top, 0, 0);
     box(main_menu_win, 0, 0);
+    box(main_menu_bottom, 0, 0);
+
+    touchwin(main_menu_top);
+    touchwin(main_menu_win);
+    touchwin(main_menu_bottom);
+
+    wrefresh(main_menu_top);
     wrefresh(main_menu_win);
-    //box(main_menu_win, 0, 0);
+    wrefresh(main_menu_bottom);
 
     while (!fl_exit)
     {
@@ -247,7 +258,9 @@ void TUI::MainMenu()
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
             }
         }
+        wrefresh(main_menu_top);
         wrefresh(main_menu_win);
+        wrefresh(main_menu_bottom);
 
         switch (getch())
         {
