@@ -53,7 +53,22 @@ int main(int argc, char *argv[])
 	// spdlog::info(ct.receive());
 
 	TUI t;
-	t.MainMenu();
+	BR::CODE::MENU::MAIN::items ite = t.MainMenu();
+	switch (ite)
+	{
+	case BR::CODE::MENU::MAIN::MULTIPLAYER:
+		spdlog::info("MULTIPLAYER");
+		break;
+	case BR::CODE::MENU::MAIN::NEW_GAME:
+		spdlog::info("NEW_GAME");
+		break;
+	case BR::CODE::MENU::MAIN::HELP:
+		spdlog::info("HELP");
+		break;
+	
+	default:
+		break;
+	}
 
 	return 0;
 }

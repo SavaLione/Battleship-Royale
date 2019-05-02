@@ -18,12 +18,17 @@
 
 #include <curses.h>
 
-#include "BattleshipRoyale.h"
+void MainMenuBottom(WINDOW *win);
+void MainMenuTop(WINDOW *win);
 
 TUI::TUI()
 {
     setlocale(LC_ALL, "");
     initscr();
+    raw();
+    noecho();
+    cbreak();
+    curs_set(0);
     start_color();
     initColor();
 }
@@ -196,21 +201,54 @@ void TUI::move()
     }
 }
 
-void TUI::MainMenu()
+void MainMenuTop(WINDOW *win)
 {
-    WINDOW *main_menu_win;
-    int startx, starty, width, height, ch;
-    cbreak();
-    curs_set(0);
+    std::string BR_LOGO[5];
+    BR_LOGO[0] = "   ___       __  __  __        __   _          ___                 __    ";
+    BR_LOGO[1] = "  / _ )___ _/ /_/ /_/ /__ ___ / /  (_)__  ____/ _ \\___  __ _____ _/ /__  ";
+    BR_LOGO[2] = " / _  / _ `/ __/ __/ / -_|_-</ _ \\/ / _ \\/___/ , _/ _ \\/ // / _ `/ / -_) ";
+    BR_LOGO[3] = "/____/\\_,_/\\__/\\__/_/\\__/___/_//_/_/ .__/   /_/|_|\\___/\\_, /\\_,_/_/\\__/  ";
+    BR_LOGO[4] = "                                  /_/                 /___/              ";
+
+    int h = 0, w = 0;
+
+    getmaxyx(win, h, w);
+    if (h)
+    {
+    }
+
+    wattron(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+    for (int i = 0; i < 5; i++)
+    {
+        mvwprintw(win, i + 1, (w - BR_LOGO[i].length()) / 2, BR_LOGO[i].c_str());
+    }
+    wattroff(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+}
+
+void MainMenuBottom(WINDOW *win)
+{
+    std::string msg = "USE THE ARROWS TO NAVIGATE. F1 TO EXIT";
+    int h = 0, w = 0;
+
+    getmaxyx(win, h, w);
+    if (h)
+    {
+    }
+    wattron(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLUE));
+    mvwprintw(win, 1, (w - msg.length()) / 2, msg.c_str());
+    wattroff(win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+}
+
+BR::CODE::MENU::MAIN::items TUI::MainMenu()
+{
+    BR::CODE::MENU::MAIN::items ret = BR::CODE::MENU::MAIN::NOT_FOUND;
+    WINDOW *main_menu_win, *main_menu_top, *main_menu_bottom;
+
     keypad(stdscr, TRUE);
     clear();
 
-    bottom();
+    refresh();
 
-    height = LINES - 1;
-    width = COLS - 1;
-    starty = 0;
-    startx = 0;
     bool fl_exit = false;
 
     std::vector<std::string> vec_menu_items;
@@ -222,13 +260,26 @@ void TUI::MainMenu()
     vec_menu_items.push_back("Help");
     vec_menu_items.push_back("Exit");
 
-    int choice = 0;
+    std::vector<std::string>::size_type choice = 0;
 
-    //main_menu_win = create_newwin(height, width, starty, startx);
-    main_menu_win = newwin(LINES - 1, COLS - 1, 0, 0);
+    main_menu_top = newwin(7, COLS, 0, 0);
+    main_menu_win = newwin(LINES - 10, COLS, 7, 0);
+    main_menu_bottom = newwin(3, COLS, LINES - 3, 0);
+
+    MainMenuTop(main_menu_top);
+    MainMenuBottom(main_menu_bottom);
+
+    box(main_menu_top, 0, 0);
     box(main_menu_win, 0, 0);
+    box(main_menu_bottom, 0, 0);
+
+    touchwin(main_menu_top);
+    touchwin(main_menu_win);
+    touchwin(main_menu_bottom);
+
+    wrefresh(main_menu_top);
     wrefresh(main_menu_win);
-    //box(main_menu_win, 0, 0);
+    wrefresh(main_menu_bottom);
 
     while (!fl_exit)
     {
@@ -236,49 +287,63 @@ void TUI::MainMenu()
         getmaxyx(main_menu_win, h, w);
 
         //wclear(main_menu_win);
-        for (int i = 0; i < vec_menu_items.size(); i++)
+        for (std::vector<std::string>::size_type i = 0; i < vec_menu_items.size(); i++)
         {
             if (i == choice)
             {
-                //color_set(BR::CODE::MENU::COLOR::BLACK_WHITE, NULL);
-                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
-                // wprintw(main_menu_win, vec_menu_items[i].c_str());
-                // wprintw(main_menu_win, "\n");
-                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
-                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - (vec_menu_items[i].size() / 2), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
             }
             else
             {
-                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
-                // wprintw(main_menu_win, vec_menu_items[i].c_str());
-                // wprintw(main_menu_win, "\n");
-                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
-                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - (vec_menu_items[i].size() / 2), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
             }
-            //mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
-            //mvwaddstr(main_menu_win, w / 2, 1 + i, vec_menu_items[i].c_str());
-            // wprintw(main_menu_win, vec_menu_items[i].c_str());
-            // wprintw(main_menu_win, "\n");
-            //color_set(BR::CODE::MENU::COLOR::WHITE_BLACK, NULL);
-            //attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
         }
-        //wrefresh(main_menu_win);
+        wrefresh(main_menu_top);
         wrefresh(main_menu_win);
+        wrefresh(main_menu_bottom);
 
         switch (getch())
         {
         case KEY_UP:
-            if (choice)
+            if (choice == 0)
+            {
+                choice = vec_menu_items.size() - 1;
+            }
+            else
             {
                 choice--;
             }
             break;
         case KEY_DOWN:
-            if (choice != vec_menu_items.size())
+            if (choice == vec_menu_items.size() - 1)
+            {
+                choice = 0;
+            }
+            else
+            {
+                choice++;
+            }
+            break;
+        case KEY_LEFT:
+            if (choice == 0)
+            {
+                choice = vec_menu_items.size() - 1;
+            }
+            else
+            {
+                choice--;
+            }
+            break;
+        case KEY_RIGHT:
+            if (choice == vec_menu_items.size() - 1)
+            {
+                choice = 0;
+            }
+            else
             {
                 choice++;
             }
@@ -286,39 +351,42 @@ void TUI::MainMenu()
         case KEY_F(1):
             exit(0);
             break;
-
+        case 10:
+            fl_exit = true;
+            break;
+        case '\r':
+            fl_exit = true;
+            break;
         default:
             break;
         }
     }
 
-    // while (!fl_exit && (ch = getch()))
-    // {
-    //     switch (ch)
-    //     {
-    //     case KEY_LEFT:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, starty, --startx);
-    //         break;
-    //     case KEY_RIGHT:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, starty, ++startx);
-    //         break;
-    //     case KEY_UP:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, --starty, startx);
-    //         break;
-    //     case KEY_DOWN:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, ++starty, startx);
-    //         break;
-    //     case KEY_F(1):
-    //         fl_exit = true;
-    //         break;
-    //     default:
-    //         break;
-    //     }
-    // }
+    switch (choice)
+    {
+    case 0:
+        ret = BR::CODE::MENU::MAIN::NEW_GAME;
+        break;
+    case 1:
+        ret = BR::CODE::MENU::MAIN::CONTINUE;
+        break;
+    case 2:
+        ret = BR::CODE::MENU::MAIN::MULTIPLAYER;
+        break;
+    case 3:
+        ret = BR::CODE::MENU::MAIN::SETTINGS;
+        break;
+    case 4:
+        ret = BR::CODE::MENU::MAIN::HELP;
+        break;
+    case 5:
+        ret = BR::CODE::MENU::MAIN::EXIT;
+        break;
+    default:
+        break;
+    }
+
+    return ret;
 }
 
 void TUI::bottom()
