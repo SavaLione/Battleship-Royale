@@ -14,7 +14,9 @@
 #include <string>
 #include <cstring>
 
-#include "curses.h"
+#include <vector>
+
+#include <curses.h>
 
 #include "BattleshipRoyale.h"
 
@@ -116,6 +118,217 @@ void TUI::initColor()
     init_pair(BR::CODE::MENU::COLOR::WHITE, COLOR_WHITE, COLOR_WHITE);
 }
 
+WINDOW *create_newwin(int height, int width, int starty, int startx)
+{
+    WINDOW *local_win;
+
+    local_win = newwin(height, width, starty, startx);
+    box(local_win, 0, 0); /* 0, 0 gives default characters 
+					 * for the vertical and horizontal
+					 * lines			*/
+    wrefresh(local_win);  /* Show that box 		*/
+
+    return local_win;
+}
+
+void destroy_win(WINDOW *local_win)
+{
+    /* box(local_win, ' ', ' '); : This won't produce the desired
+	 * result of erasing the window. It will leave it's four corners 
+	 * and so an ugly remnant of window. 
+	 */
+    wborder(local_win, ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ');
+    /* The parameters taken are 
+	 * 1. win: the window on which to operate
+	 * 2. ls: character to be used for the left side of the window 
+	 * 3. rs: character to be used for the right side of the window 
+	 * 4. ts: character to be used for the top side of the window 
+	 * 5. bs: character to be used for the bottom side of the window 
+	 * 6. tl: character to be used for the top left corner of the window 
+	 * 7. tr: character to be used for the top right corner of the window 
+	 * 8. bl: character to be used for the bottom left corner of the window 
+	 * 9. br: character to be used for the bottom right corner of the window
+	 */
+    wrefresh(local_win);
+    delwin(local_win);
+}
+
+void TUI::move()
+{
+    WINDOW *my_win;
+    int startx, starty, width, height;
+    int ch;
+
+    //initscr();            /* Start curses mode 		*/
+    cbreak();             /* Line buffering disabled, Pass on
+					 * everty thing to me 		*/
+    keypad(stdscr, TRUE); /* I need that nifty F1 	*/
+
+    height = 3;
+    width = 10;
+    starty = (LINES - height) / 2; /* Calculating for a center placement */
+    startx = (COLS - width) / 2;   /* of the window		*/
+    printw("Press F1 to exit");
+    refresh();
+    my_win = create_newwin(height, width, starty, startx);
+
+    while ((ch = getch()) != KEY_F(1))
+    {
+        switch (ch)
+        {
+        case KEY_LEFT:
+            destroy_win(my_win);
+            my_win = create_newwin(height, width, starty, --startx);
+            break;
+        case KEY_RIGHT:
+            destroy_win(my_win);
+            my_win = create_newwin(height, width, starty, ++startx);
+            break;
+        case KEY_UP:
+            destroy_win(my_win);
+            my_win = create_newwin(height, width, --starty, startx);
+            break;
+        case KEY_DOWN:
+            destroy_win(my_win);
+            my_win = create_newwin(height, width, ++starty, startx);
+            break;
+        }
+    }
+}
+
+void TUI::MainMenu()
+{
+    WINDOW *main_menu_win;
+    int startx, starty, width, height, ch;
+    cbreak();
+    curs_set(0);
+    keypad(stdscr, TRUE);
+    clear();
+
+    bottom();
+
+    height = LINES - 1;
+    width = COLS - 1;
+    starty = 0;
+    startx = 0;
+    bool fl_exit = false;
+
+    std::vector<std::string> vec_menu_items;
+    vec_menu_items.reserve(6);
+    vec_menu_items.push_back("New game");
+    vec_menu_items.push_back("Continue");
+    vec_menu_items.push_back("Multiplayer");
+    vec_menu_items.push_back("Settings");
+    vec_menu_items.push_back("Help");
+    vec_menu_items.push_back("Exit");
+
+    int choice = 0;
+
+    //main_menu_win = create_newwin(height, width, starty, startx);
+    main_menu_win = newwin(LINES - 1, COLS - 1, 0, 0);
+    box(main_menu_win, 0, 0);
+    wrefresh(main_menu_win);
+    //box(main_menu_win, 0, 0);
+
+    while (!fl_exit)
+    {
+        int h = 0, w = 0;
+        getmaxyx(main_menu_win, h, w);
+
+        //wclear(main_menu_win);
+        for (int i = 0; i < vec_menu_items.size(); i++)
+        {
+            if (i == choice)
+            {
+                //color_set(BR::CODE::MENU::COLOR::BLACK_WHITE, NULL);
+                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+                // wprintw(main_menu_win, vec_menu_items[i].c_str());
+                // wprintw(main_menu_win, "\n");
+                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+                wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+            }
+            else
+            {
+                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+                // wprintw(main_menu_win, vec_menu_items[i].c_str());
+                // wprintw(main_menu_win, "\n");
+                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+                wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+            }
+            //mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+            //mvwaddstr(main_menu_win, w / 2, 1 + i, vec_menu_items[i].c_str());
+            // wprintw(main_menu_win, vec_menu_items[i].c_str());
+            // wprintw(main_menu_win, "\n");
+            //color_set(BR::CODE::MENU::COLOR::WHITE_BLACK, NULL);
+            //attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+        }
+        //wrefresh(main_menu_win);
+        wrefresh(main_menu_win);
+
+        switch (getch())
+        {
+        case KEY_UP:
+            if (choice)
+            {
+                choice--;
+            }
+            break;
+        case KEY_DOWN:
+            if (choice != vec_menu_items.size())
+            {
+                choice++;
+            }
+            break;
+        case KEY_F(1):
+            exit(0);
+            break;
+
+        default:
+            break;
+        }
+    }
+
+    // while (!fl_exit && (ch = getch()))
+    // {
+    //     switch (ch)
+    //     {
+    //     case KEY_LEFT:
+    //         destroy_win(main_menu_win);
+    //         main_menu_win = create_newwin(height, width, starty, --startx);
+    //         break;
+    //     case KEY_RIGHT:
+    //         destroy_win(main_menu_win);
+    //         main_menu_win = create_newwin(height, width, starty, ++startx);
+    //         break;
+    //     case KEY_UP:
+    //         destroy_win(main_menu_win);
+    //         main_menu_win = create_newwin(height, width, --starty, startx);
+    //         break;
+    //     case KEY_DOWN:
+    //         destroy_win(main_menu_win);
+    //         main_menu_win = create_newwin(height, width, ++starty, startx);
+    //         break;
+    //     case KEY_F(1):
+    //         fl_exit = true;
+    //         break;
+    //     default:
+    //         break;
+    //     }
+    // }
+}
+
+void TUI::bottom()
+{
+    color_set(BR::CODE::MENU::COLOR::WHITE_BLUE, NULL);
+    mvprintw(LINES - 1, (COLS - 37) / 2, "USE ARROWS FOR NAVIGATION. F1 TO EXIT");
+    color_set(BR::CODE::MENU::COLOR::WHITE_BLACK, NULL);
+    refresh();
+}
+
 void TUI::colorTest()
 {
     std::string msg = "A1!@#$%^&";
@@ -140,91 +353,5 @@ void TUI::locTest()
     mvprintw(1, 1, msg.c_str());
     getch();
 }
-
-/*
-    COLOR_BLACK
-    COLOR_BLUE
-    COLOR_GREEN
-    COLOR_RED
-
-    COLOR_YELLOW
-    COLOR_MAGENTA
-    COLOR_CYAN
-    COLOR_WHITE
-*/
-
-/*
-    COLOR_BLACK     COLOR_BLACK
-    COLOR_BLUE      COLOR_BLACK
-    COLOR_GREEN     COLOR_BLACK
-    COLOR_RED       COLOR_BLACK
-    COLOR_YELLOW    COLOR_BLACK
-    COLOR_MAGENTA   COLOR_BLACK
-    COLOR_CYAN      COLOR_BLACK
-    COLOR_WHITE     COLOR_BLACK
-
-    COLOR_BLACK     COLOR_BLUE
-    COLOR_BLUE      COLOR_BLUE
-    COLOR_GREEN     COLOR_BLUE
-    COLOR_RED       COLOR_BLUE
-    COLOR_YELLOW    COLOR_BLUE
-    COLOR_MAGENTA   COLOR_BLUE
-    COLOR_CYAN      COLOR_BLUE
-    COLOR_WHITE     COLOR_BLUE
-
-    COLOR_BLACK     COLOR_GREEN
-    COLOR_BLUE      COLOR_GREEN
-    COLOR_GREEN     COLOR_GREEN
-    COLOR_RED       COLOR_GREEN
-    COLOR_YELLOW    COLOR_GREEN
-    COLOR_MAGENTA   COLOR_GREEN
-    COLOR_CYAN      COLOR_GREEN
-    COLOR_WHITE     COLOR_GREEN
-
-    COLOR_BLACK     COLOR_RED
-    COLOR_BLUE      COLOR_RED
-    COLOR_GREEN     COLOR_RED
-    COLOR_RED       COLOR_RED
-    COLOR_YELLOW    COLOR_RED
-    COLOR_MAGENTA   COLOR_RED
-    COLOR_CYAN      COLOR_RED
-    COLOR_WHITE     COLOR_RED
-
-    COLOR_BLACK     COLOR_YELLOW
-    COLOR_BLUE      COLOR_YELLOW
-    COLOR_GREEN     COLOR_YELLOW
-    COLOR_RED       COLOR_YELLOW
-    COLOR_YELLOW    COLOR_YELLOW
-    COLOR_MAGENTA   COLOR_YELLOW
-    COLOR_CYAN      COLOR_YELLOW
-    COLOR_WHITE     COLOR_YELLOW
-
-    COLOR_BLACK     COLOR_MAGENTA
-    COLOR_BLUE      COLOR_MAGENTA
-    COLOR_GREEN     COLOR_MAGENTA
-    COLOR_RED       COLOR_MAGENTA
-    COLOR_YELLOW    COLOR_MAGENTA
-    COLOR_MAGENTA   COLOR_MAGENTA
-    COLOR_CYAN      COLOR_MAGENTA
-    COLOR_WHITE     COLOR_MAGENTA
-
-    COLOR_BLACK     COLOR_CYAN
-    COLOR_BLUE      COLOR_CYAN
-    COLOR_GREEN     COLOR_CYAN
-    COLOR_RED       COLOR_CYAN
-    COLOR_YELLOW    COLOR_CYAN
-    COLOR_MAGENTA   COLOR_CYAN
-    COLOR_CYAN      COLOR_CYAN
-    COLOR_WHITE     COLOR_CYAN
-
-    COLOR_BLACK     COLOR_WHITE
-    COLOR_BLUE      COLOR_WHITE
-    COLOR_GREEN     COLOR_WHITE
-    COLOR_RED       COLOR_WHITE
-    COLOR_YELLOW    COLOR_WHITE
-    COLOR_MAGENTA   COLOR_WHITE
-    COLOR_CYAN      COLOR_WHITE
-    COLOR_WHITE     COLOR_WHITE
-*/
 
 /** @} */

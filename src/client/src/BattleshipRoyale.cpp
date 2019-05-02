@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 	// spdlog::info(ct.receive());
 
 	TUI t;
-	t.locTest();
+	t.MainMenu();
 
 	return 0;
 }

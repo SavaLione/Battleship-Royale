@@ -16,10 +16,13 @@ class TUI
 {
 private:
     void initColor();
+    void bottom();
 
 public:
     TUI();
     ~TUI();
+    void move();
+    void MainMenu();
     void colorTest();
     void locTest();
 };
