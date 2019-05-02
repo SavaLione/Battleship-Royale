@@ -1,21 +1,3 @@
-
-/*
-void log_file()
-{
-    auto my_logger = spdlog::basic_logger_mt("basic_logger", "server.log");
-    my_logger->info("Some log message");
-    spdlog::info("Some log message");
-}
-
-void log_test()
-{
-    spdlog::info("Welcome to spdlog!");
-    spdlog::info("INFO");
-    spdlog::warn("WARN");
-    spdlog::critical("CRITICAL");
-    spdlog::debug("DEBUG");
-}
-*/
 void test()
 {
     int i_size = 16;

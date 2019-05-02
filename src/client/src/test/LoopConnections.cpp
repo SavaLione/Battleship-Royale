@@ -29,7 +29,6 @@ void loopconn(int const& PORT, std::string const& s_ip)
 	int err[] = { 0, 0, 0, 0};
 	while(true)
 	{
-		bool bt[] = { true, true , true, true};
 		{
 			std::string msg = "user_check:[SavaLione]";
 			Client ct;
@@ -39,7 +38,6 @@ void loopconn(int const& PORT, std::string const& s_ip)
 			ct.send(msg);
 			if(ct.receive() != "answer:[true]")
 			{
-				bt[0] = false;
 				err[0]++;
 			}
 		}
@@ -53,7 +51,6 @@ void loopconn(int const& PORT, std::string const& s_ip)
 			ct.send(msg);
 			if(ct.receive() != "answer:[false]")
 			{
-				bt[1] = false;
 				err[1]++;
 			}
 		}
@@ -67,7 +64,6 @@ void loopconn(int const& PORT, std::string const& s_ip)
 			ct.send(msg);
 			if(ct.receive() == "answer:[false]")
 			{
-				bt[2] = false;
 				err[2]++;
 			}
 		}
@@ -81,8 +77,7 @@ void loopconn(int const& PORT, std::string const& s_ip)
 			ct.send(msg);
 			if(ct.receive() == "answer:[true]")
 			{
-				bt[3] = false;
-				err[4]++;
+				err[3]++;
 			}
 		}
 		connections = connections + 4;

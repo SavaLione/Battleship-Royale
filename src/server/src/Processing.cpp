@@ -103,6 +103,11 @@ std::string Processing::response(std::string const &request)
         }
         break;
     }
+    case TEST_WITHOUT_DB_CONNECTION:
+    {
+        ret = "test_without_db_from_server";
+        break;
+    }
     case REQ_ERROR:
     {
         ret = "REQ_ERROR";
@@ -133,6 +138,10 @@ Processing::REQ Processing::getREQ(std::string const &request)
     else if (check_pattern(request, BR::REGEX::USER_CREATE))
     {
         return USER_CREATE;
+    }
+    else if(request == "test_without_db")
+    {
+        return TEST_WITHOUT_DB_CONNECTION;
     }
     else
     {
