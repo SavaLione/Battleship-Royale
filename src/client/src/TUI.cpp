@@ -20,6 +20,8 @@
 
 #include "BattleshipRoyale.h"
 
+void MainMenuBottom(WINDOW *win);
+
 TUI::TUI()
 {
     setlocale(LC_ALL, "");
@@ -196,6 +198,18 @@ void TUI::move()
     }
 }
 
+void MainMenuBottom(WINDOW *win)
+{
+    std::string msg = "USE THE ARROWS TO NAVIGATE. F1 TO EXIT";
+    int h = 0, w = 0;
+    
+    getmaxyx(win, h, w);
+
+    wattron(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLUE));
+    mvwprintw(win, h - 2, (w - msg.length()) / 2, msg.c_str());
+    wattroff(win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
+}
+
 void TUI::MainMenu()
 {
     WINDOW *main_menu_win, *main_menu_top, *main_menu_bottom;
@@ -224,6 +238,8 @@ void TUI::MainMenu()
     main_menu_top = newwin(7, COLS - 1, 0, 0);
     main_menu_win = newwin(LINES - 10, COLS - 1, 7, 0);
     main_menu_bottom = newwin(3, COLS - 1, LINES - 3, 0);
+
+    MainMenuBottom(main_menu_bottom);
 
     box(main_menu_top, 0, 0);
     box(main_menu_win, 0, 0);
