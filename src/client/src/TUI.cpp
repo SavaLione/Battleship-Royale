@@ -18,14 +18,17 @@
 
 #include <curses.h>
 
-#include "BattleshipRoyale.h"
-
 void MainMenuBottom(WINDOW *win);
+void MainMenuTop(WINDOW *win);
 
 TUI::TUI()
 {
     setlocale(LC_ALL, "");
     initscr();
+    raw();
+    noecho();
+    cbreak();
+    curs_set(0);
     start_color();
     initColor();
 }
@@ -198,28 +201,52 @@ void TUI::move()
     }
 }
 
+void MainMenuTop(WINDOW *win)
+{
+    std::string BR_LOGO[5];
+    BR_LOGO[0] = "   ___       __  __  __        __   _          ___                 __    ";
+    BR_LOGO[1] = "  / _ )___ _/ /_/ /_/ /__ ___ / /  (_)__  ____/ _ \\___  __ _____ _/ /__  ";
+    BR_LOGO[2] = " / _  / _ `/ __/ __/ / -_|_-</ _ \\/ / _ \\/___/ , _/ _ \\/ // / _ `/ / -_) ";
+    BR_LOGO[3] = "/____/\\_,_/\\__/\\__/_/\\__/___/_//_/_/ .__/   /_/|_|\\___/\\_, /\\_,_/_/\\__/  ";
+    BR_LOGO[4] = "                                  /_/                 /___/              ";
+
+    int h = 0, w = 0;
+
+    getmaxyx(win, h, w);
+    if (h)
+    {
+    }
+
+    wattron(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+    for (int i = 0; i < 5; i++)
+    {
+        mvwprintw(win, i + 1, (w - BR_LOGO[i].length()) / 2, BR_LOGO[i].c_str());
+    }
+    wattroff(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
+}
+
 void MainMenuBottom(WINDOW *win)
 {
     std::string msg = "USE THE ARROWS TO NAVIGATE. F1 TO EXIT";
     int h = 0, w = 0;
-    
-    getmaxyx(win, h, w);
 
+    getmaxyx(win, h, w);
+    if (h)
+    {
+    }
     wattron(win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLUE));
-    mvwprintw(win, h - 2, (w - msg.length()) / 2, msg.c_str());
+    mvwprintw(win, 1, (w - msg.length()) / 2, msg.c_str());
     wattroff(win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
 }
 
-void TUI::MainMenu()
+BR::CODE::MENU::MAIN::items TUI::MainMenu()
 {
+    BR::CODE::MENU::MAIN::items ret = BR::CODE::MENU::MAIN::NOT_FOUND;
     WINDOW *main_menu_win, *main_menu_top, *main_menu_bottom;
 
-    cbreak();
-    curs_set(0);
     keypad(stdscr, TRUE);
     clear();
 
-    //bottom();
     refresh();
 
     bool fl_exit = false;
@@ -235,10 +262,11 @@ void TUI::MainMenu()
 
     std::vector<std::string>::size_type choice = 0;
 
-    main_menu_top = newwin(7, COLS - 1, 0, 0);
-    main_menu_win = newwin(LINES - 10, COLS - 1, 7, 0);
-    main_menu_bottom = newwin(3, COLS - 1, LINES - 3, 0);
+    main_menu_top = newwin(7, COLS, 0, 0);
+    main_menu_win = newwin(LINES - 10, COLS, 7, 0);
+    main_menu_bottom = newwin(3, COLS, LINES - 3, 0);
 
+    MainMenuTop(main_menu_top);
     MainMenuBottom(main_menu_bottom);
 
     box(main_menu_top, 0, 0);
@@ -323,11 +351,42 @@ void TUI::MainMenu()
         case KEY_F(1):
             exit(0);
             break;
-
+        case 10:
+            fl_exit = true;
+            break;
+        case '\r':
+            fl_exit = true;
+            break;
         default:
             break;
         }
     }
+
+    switch (choice)
+    {
+    case 0:
+        ret = BR::CODE::MENU::MAIN::NEW_GAME;
+        break;
+    case 1:
+        ret = BR::CODE::MENU::MAIN::CONTINUE;
+        break;
+    case 2:
+        ret = BR::CODE::MENU::MAIN::MULTIPLAYER;
+        break;
+    case 3:
+        ret = BR::CODE::MENU::MAIN::SETTINGS;
+        break;
+    case 4:
+        ret = BR::CODE::MENU::MAIN::HELP;
+        break;
+    case 5:
+        ret = BR::CODE::MENU::MAIN::EXIT;
+        break;
+    default:
+        break;
+    }
+
+    return ret;
 }
 
 void TUI::bottom()

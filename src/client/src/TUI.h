@@ -12,6 +12,8 @@
 #ifndef TUI_H
 #define TUI_H
 
+#include "BattleshipRoyale.h"
+
 class TUI
 {
 private:
@@ -22,7 +24,7 @@ public:
     TUI();
     ~TUI();
     void move();
-    void MainMenu();
+    BR::CODE::MENU::MAIN::items MainMenu();
     void colorTest();
     void locTest();
 };
