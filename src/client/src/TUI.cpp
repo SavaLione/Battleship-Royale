@@ -199,7 +199,7 @@ void TUI::move()
 void TUI::MainMenu()
 {
     WINDOW *main_menu_win, *main_menu_top, *main_menu_bottom;
-    
+
     cbreak();
     curs_set(0);
     keypad(stdscr, TRUE);
@@ -265,31 +265,43 @@ void TUI::MainMenu()
         switch (getch())
         {
         case KEY_UP:
-            choice--;
-            if (choice < 0)
+            if (choice == 0)
             {
                 choice = vec_menu_items.size() - 1;
+            }
+            else
+            {
+                choice--;
             }
             break;
         case KEY_DOWN:
-            choice++;
-            if (choice > vec_menu_items.size() - 1)
+            if (choice == vec_menu_items.size() - 1)
             {
                 choice = 0;
+            }
+            else
+            {
+                choice++;
             }
             break;
         case KEY_LEFT:
-            choice--;
-            if (choice < 0)
+            if (choice == 0)
             {
                 choice = vec_menu_items.size() - 1;
             }
+            else
+            {
+                choice--;
+            }
             break;
         case KEY_RIGHT:
-            choice++;
-            if (choice > vec_menu_items.size() - 1)
+            if (choice == vec_menu_items.size() - 1)
             {
                 choice = 0;
+            }
+            else
+            {
+                choice++;
             }
             break;
         case KEY_F(1):
