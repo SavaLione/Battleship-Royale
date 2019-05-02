@@ -246,7 +246,7 @@ void TUI::MainMenu()
                 // wprintw(main_menu_win, "\n");
                 // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
-                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - vec_menu_items[i].size(), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
             }
             else
@@ -256,7 +256,7 @@ void TUI::MainMenu()
                 // wprintw(main_menu_win, "\n");
                 // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
-                mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - vec_menu_items[i].size(), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
             }
             //mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
@@ -272,15 +272,25 @@ void TUI::MainMenu()
         switch (getch())
         {
         case KEY_UP:
-            if (choice)
+            choice--;
+            if (choice < 0)
             {
-                choice--;
+                choice = vec_menu_items.size() - 1;
             }
+            // if (choice)
+            // {
+            //     choice--;
+            // }
             break;
         case KEY_DOWN:
-            if (choice != vec_menu_items.size())
+            choice++;
+            // if (choice != vec_menu_items.size())
+            // {
+            //     choice++;
+            // }
+            if (choice > vec_menu_items.size() - 1)
             {
-                choice++;
+                choice = 0;
             }
             break;
         case KEY_F(1):
