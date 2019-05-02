@@ -240,33 +240,17 @@ void TUI::MainMenu()
         {
             if (i == choice)
             {
-                //color_set(BR::CODE::MENU::COLOR::BLACK_WHITE, NULL);
-                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
-                // wprintw(main_menu_win, vec_menu_items[i].c_str());
-                // wprintw(main_menu_win, "\n");
-                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
-                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - vec_menu_items[i].size(), vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - (vec_menu_items[i].size() / 2), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
             }
             else
             {
-                // attron(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
-                // wprintw(main_menu_win, vec_menu_items[i].c_str());
-                // wprintw(main_menu_win, "\n");
-                // attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
                 wattron(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
-                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - vec_menu_items[i].size(), vec_menu_items[i].c_str());
+                mvwprintw(main_menu_win, h / 2 + i, (w / 2) - (vec_menu_items[i].size() / 2), vec_menu_items[i].c_str());
                 wattroff(main_menu_win, COLOR_PAIR(BR::CODE::MENU::COLOR::WHITE_BLACK));
             }
-            //mvwprintw(main_menu_win, h / 2 + i, w / 2, vec_menu_items[i].c_str());
-            //mvwaddstr(main_menu_win, w / 2, 1 + i, vec_menu_items[i].c_str());
-            // wprintw(main_menu_win, vec_menu_items[i].c_str());
-            // wprintw(main_menu_win, "\n");
-            //color_set(BR::CODE::MENU::COLOR::WHITE_BLACK, NULL);
-            //attroff(COLOR_PAIR(BR::CODE::MENU::COLOR::BLACK_WHITE));
         }
-        //wrefresh(main_menu_win);
         wrefresh(main_menu_win);
 
         switch (getch())
@@ -277,17 +261,23 @@ void TUI::MainMenu()
             {
                 choice = vec_menu_items.size() - 1;
             }
-            // if (choice)
-            // {
-            //     choice--;
-            // }
             break;
         case KEY_DOWN:
             choice++;
-            // if (choice != vec_menu_items.size())
-            // {
-            //     choice++;
-            // }
+            if (choice > vec_menu_items.size() - 1)
+            {
+                choice = 0;
+            }
+            break;
+        case KEY_LEFT:
+            choice--;
+            if (choice < 0)
+            {
+                choice = vec_menu_items.size() - 1;
+            }
+            break;
+        case KEY_RIGHT:
+            choice++;
             if (choice > vec_menu_items.size() - 1)
             {
                 choice = 0;
@@ -301,34 +291,6 @@ void TUI::MainMenu()
             break;
         }
     }
-
-    // while (!fl_exit && (ch = getch()))
-    // {
-    //     switch (ch)
-    //     {
-    //     case KEY_LEFT:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, starty, --startx);
-    //         break;
-    //     case KEY_RIGHT:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, starty, ++startx);
-    //         break;
-    //     case KEY_UP:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, --starty, startx);
-    //         break;
-    //     case KEY_DOWN:
-    //         destroy_win(main_menu_win);
-    //         main_menu_win = create_newwin(height, width, ++starty, startx);
-    //         break;
-    //     case KEY_F(1):
-    //         fl_exit = true;
-    //         break;
-    //     default:
-    //         break;
-    //     }
-    // }
 }
 
 void TUI::bottom()
