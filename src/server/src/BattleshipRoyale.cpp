@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 
 		if (result.count("version"))
 		{
-			spdlog::info("server version: {}", BR::VERSION::SERVER::VERSION);
+			spdlog::info("server version: {}.{}.{}", BR::VERSION::SERVER::MAJOR, BR::VERSION::SERVER::MINOR, BR::VERSION::SERVER::PATCH);
 			spdlog::info("sqlite3 version: {} ({})", SQLITE_VERSION, SQLITE_VERSION_NUMBER);
 			spdlog::info("cxxopts version: {}", ((CXXOPTS__VERSION_MAJOR * 10000) + (CXXOPTS__VERSION_MINOR * 100) + (SPDLOG_VER_PATCH)));
 			spdlog::info("spdlog version: {}", SPDLOG_VERSION);

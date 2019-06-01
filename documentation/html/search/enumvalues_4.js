@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['req_5ferror',['REQ_ERROR',['../class_processing.html#ab5035e1e4df7523e38f414242a610d3eaf4965540d0711f37fb006f4fee2a8993',1,'Processing']]],
-  ['reset',['RESET',['../namespace_b_r_1_1_c_o_n_s_o_l_e.html#a1101a6cc4226e31c8826f5e1bbb37648a4d3d7463471e38098f447684e010244e',1,'BR::CONSOLE']]]
+  ['help',['HELP',['../namespace_b_r_1_1_c_o_d_e_1_1_c_o_n_s_o_l_e.html#af08990ce55690c4e0bef4631713c19f6a4784fdebe1ed6600861fd7e9a5e02f00',1,'BR::CODE::CONSOLE::HELP()'],['../namespace_b_r_1_1_c_o_d_e_1_1_m_e_n_u_1_1_m_a_i_n.html#a4674df22ecab5fb92834b05e083e0fefa9a443fc9f159eec8f9c0b04ff7bff3a6',1,'BR::CODE::MENU::MAIN::HELP()']]]
 ];

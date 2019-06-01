@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['process',['process',['../namespace_b_r_1_1_c_o_n_s_o_l_e.html#a79e56527feead4542782224687f320fa',1,'BR::CONSOLE']]],
-  ['processing',['Processing',['../group__processing__cpp.html#gaa4691b916c54dc017299762903fe6e5e',1,'Processing']]]
+  ['loctest',['locTest',['../group__tui__cpp.html#ga768c7db4c714be3569ee78cbbbeb1f46',1,'TUI']]],
+  ['loopconn',['loopconn',['../group__loopconections__cpp.html#ga9f4a605410044745542c4738c4d60a81',1,'loopconn(int const &amp;PORT, std::string const &amp;s_ip):&#160;LoopConnections.cpp'],['../group__loopconections__h.html#ga9f4a605410044745542c4738c4d60a81',1,'loopconn(int const &amp;PORT, std::string const &amp;s_ip):&#160;LoopConnections.cpp']]]
 ];

@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Версия программы
  * @author SavaLione
  * @date 20 Apr 2019
 */
@@ -27,9 +27,6 @@ namespace SERVER
 
     /// Сервер. Path версия
     const int PATCH = 5;
-
-    /// Версия Сервера
-    const int VERSION = (MAJOR * 10000 + MINOR * 100 + PATCH);
 } // namespace SERVER
 
 namespace CLIENT
@@ -42,9 +39,6 @@ namespace CLIENT
 
     /// Клиент. Path версия
     const int PATCH = 3;
-
-    /// Версия клиента
-    const int VERSION = (MAJOR * 10000 + MINOR * 100 + PATCH);
 
 } // namespace CLIENT
 

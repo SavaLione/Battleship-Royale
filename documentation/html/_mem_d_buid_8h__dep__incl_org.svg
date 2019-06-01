@@ -44,29 +44,29 @@
 <path fill="none" stroke="midnightblue" d="M286.424,-251.38C272.688,-241.62 255.075,-229.106 243.433,-220.834"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="284.61,-254.385 294.789,-257.324 288.665,-248.679 284.61,-254.385"/>
 </g>
-<!-- Node11 -->
-<g id="node10" class="node"><title>Node11</title>
-<g id="a_node10"><a xlink:href="server_2src_2_console_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node12 -->
+<g id="node11" class="node"><title>Node12</title>
+<g id="a_node11"><a xlink:href="server_2src_2_console_8cpp.html" target="_top" xlink:title="Обработка команд в консоли сервера">
 <polygon fill="white" stroke="black" points="317,-201.5 317,-220.5 449,-220.5 449,-201.5 317,-201.5"/>
 <text text-anchor="middle" x="383" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Console.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node11 -->
-<g id="edge10" class="edge"><title>Node2&#45;&gt;Node11</title>
+<!-- Node2&#45;&gt;Node12 -->
+<g id="edge11" class="edge"><title>Node2&#45;&gt;Node12</title>
 <path fill="none" stroke="midnightblue" d="M327.576,-251.38C341.312,-241.62 358.925,-229.106 370.567,-220.834"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="325.335,-248.679 319.211,-257.324 329.39,-254.385 325.335,-248.679"/>
 </g>
-<!-- Node12 -->
-<g id="node11" class="node"><title>Node12</title>
-<g id="a_node11"><a xlink:href="_mem_d_buid_8cpp.html" target="_top" xlink:title="Облегчённый класс для работы с бд в памяти">
+<!-- Node13 -->
+<g id="node12" class="node"><title>Node13</title>
+<g id="a_node12"><a xlink:href="_mem_d_buid_8cpp.html" target="_top" xlink:title="Облегчённый класс для работы с бд в памяти">
 <polygon fill="white" stroke="black" points="467.5,-201.5 467.5,-220.5 612.5,-220.5 612.5,-201.5 467.5,-201.5"/>
 <text text-anchor="middle" x="540" y="-208.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/MemDBuid.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node2&#45;&gt;Node12 -->
-<g id="edge11" class="edge"><title>Node2&#45;&gt;Node12</title>
+<!-- Node2&#45;&gt;Node13 -->
+<g id="edge12" class="edge"><title>Node2&#45;&gt;Node13</title>
 <path fill="none" stroke="midnightblue" d="M353.803,-255.153C397.827,-244.95 462.847,-229.881 503.253,-220.516"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="352.871,-251.776 343.92,-257.444 354.452,-258.595 352.871,-251.776"/>
 </g>
@@ -97,63 +97,76 @@
 <path fill="none" stroke="midnightblue" d="M248.486,-194.921C259.32,-185.579 273.14,-173.662 283.738,-164.523"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="246.174,-192.294 240.886,-201.475 250.745,-197.595 246.174,-192.294"/>
 </g>
-<!-- Node10 -->
-<g id="node9" class="node"><title>Node10</title>
-<g id="a_node9"><a xlink:href="server_2src_2_processing_8cpp.html" target="_top" xlink:title="Обработка запросов">
+<!-- Node11 -->
+<g id="node10" class="node"><title>Node11</title>
+<g id="a_node10"><a xlink:href="server_2src_2_processing_8cpp.html" target="_top" xlink:title="Обработка запросов">
 <polygon fill="white" stroke="black" points="365,-140 365,-159 511,-159 511,-140 365,-140"/>
 <text text-anchor="middle" x="438" y="-147" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Processing.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node10 -->
-<g id="edge9" class="edge"><title>Node4&#45;&gt;Node10</title>
+<!-- Node4&#45;&gt;Node11 -->
+<g id="edge10" class="edge"><title>Node4&#45;&gt;Node11</title>
 <path fill="none" stroke="midnightblue" d="M270.397,-198.676C310.619,-187.114 372.146,-169.429 408.397,-159.009"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="269.302,-195.349 260.658,-201.475 271.236,-202.076 269.302,-195.349"/>
 </g>
 <!-- Node7 -->
 <g id="node6" class="node"><title>Node7</title>
 <g id="a_node6"><a xlink:href="server_2src_2_server_8h.html" target="_top" xlink:title="Асинхронный сервер написанный на boost asio.">
-<polygon fill="white" stroke="black" points="133.5,-73 133.5,-92 246.5,-92 246.5,-73 133.5,-73"/>
-<text text-anchor="middle" x="190" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Server.h</text>
+<polygon fill="white" stroke="black" points="145.5,-73 145.5,-92 258.5,-92 258.5,-73 145.5,-73"/>
+<text text-anchor="middle" x="202" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Server.h</text>
 </a>
 </g>
 </g>
 <!-- Node6&#45;&gt;Node7 -->
 <g id="edge5" class="edge"><title>Node6&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M267.52,-129.307C246.566,-116.926 220.342,-101.43 204.396,-92.007"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="265.742,-132.322 276.132,-134.396 269.303,-126.295 265.742,-132.322"/>
+<path fill="none" stroke="midnightblue" d="M270.31,-128.808C251.771,-116.512 228.842,-101.303 214.826,-92.007"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="268.467,-131.785 278.735,-134.396 272.336,-125.952 268.467,-131.785"/>
 </g>
-<!-- Node9 -->
-<g id="node8" class="node"><title>Node9</title>
-<g id="a_node8"><a xlink:href="server_2src_2con__handler_8cpp.html" target="_top" xlink:title="handler">
-<polygon fill="white" stroke="black" points="265,-67.5 265,-97.5 359,-97.5 359,-67.5 265,-67.5"/>
-<text text-anchor="start" x="273" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/con</text>
-<text text-anchor="middle" x="312" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_handler.cpp</text>
+<!-- Node10 -->
+<g id="node9" class="node"><title>Node10</title>
+<g id="a_node9"><a xlink:href="server_2src_2con__handler_8cpp.html" target="_top" xlink:title="handler">
+<polygon fill="white" stroke="black" points="277,-67.5 277,-97.5 371,-97.5 371,-67.5 277,-67.5"/>
+<text text-anchor="start" x="285" y="-85.5" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/con</text>
+<text text-anchor="middle" x="324" y="-74.5" font-family="Helvetica,sans-Serif" font-size="10.00">_handler.cpp</text>
 </a>
 </g>
 </g>
-<!-- Node6&#45;&gt;Node9 -->
-<g id="edge8" class="edge"><title>Node6&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M304.449,-124.403C306.116,-115.37 307.955,-105.408 309.401,-97.5765"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="300.978,-123.927 302.604,-134.396 307.861,-125.198 300.978,-123.927"/>
+<!-- Node6&#45;&gt;Node10 -->
+<g id="edge9" class="edge"><title>Node6&#45;&gt;Node10</title>
+<path fill="none" stroke="midnightblue" d="M308.68,-124.991C312.072,-115.804 315.848,-105.578 318.803,-97.5765"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="305.388,-123.803 305.208,-134.396 311.955,-126.227 305.388,-123.803"/>
 </g>
 <!-- Node7&#45;&gt;Node3 -->
-<g id="edge6" class="edge"><title>Node7&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M163.886,-68.3419C142.171,-57.4 111.331,-41.8604 89.0855,-30.6516"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="162.364,-71.4943 172.87,-72.8685 165.514,-65.243 162.364,-71.4943"/>
+<g id="edge7" class="edge"><title>Node7&#45;&gt;Node3</title>
+<path fill="none" stroke="midnightblue" d="M174.062,-68.6206C150.21,-57.6252 115.971,-41.8413 91.4301,-30.5281"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="172.73,-71.8605 183.276,-72.8685 175.66,-65.5034 172.73,-71.8605"/>
 </g>
 <!-- Node8 -->
 <g id="node7" class="node"><title>Node8</title>
-<g id="a_node7"><a xlink:href="server_2src_2_server_8cpp.html" target="_top" xlink:title="Асинхронный сервер написанный на boost asio.">
+<g id="a_node7"><a xlink:href="examples_2_server_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="white" stroke="black" points="140,-6 140,-25 264,-25 264,-6 140,-6"/>
-<text text-anchor="middle" x="202" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Server.cpp</text>
+<text text-anchor="middle" x="202" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">src/examples/Server.cpp</text>
 </a>
 </g>
 </g>
 <!-- Node7&#45;&gt;Node8 -->
-<g id="edge7" class="edge"><title>Node7&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M193.501,-62.537C195.784,-50.1703 198.655,-34.6198 200.407,-25.1273"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="189.992,-62.2645 191.618,-72.7338 196.876,-63.5354 189.992,-62.2645"/>
+<g id="edge6" class="edge"><title>Node7&#45;&gt;Node8</title>
+<path fill="none" stroke="midnightblue" d="M202,-62.537C202,-50.1703 202,-34.6198 202,-25.1273"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="198.5,-62.7338 202,-72.7338 205.5,-62.7338 198.5,-62.7338"/>
+</g>
+<!-- Node9 -->
+<g id="node8" class="node"><title>Node9</title>
+<g id="a_node8"><a xlink:href="server_2src_2_server_8cpp.html" target="_top" xlink:title="Асинхронный сервер написанный на boost asio.">
+<polygon fill="white" stroke="black" points="282,-6 282,-25 406,-25 406,-6 282,-6"/>
+<text text-anchor="middle" x="344" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">src/server/src/Server.cpp</text>
+</a>
+</g>
+</g>
+<!-- Node7&#45;&gt;Node9 -->
+<g id="edge8" class="edge"><title>Node7&#45;&gt;Node9</title>
+<path fill="none" stroke="midnightblue" d="M230.154,-68.6127C258.279,-55.7387 300.732,-36.3059 325.066,-25.1672"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="228.492,-65.5239 220.857,-72.8685 231.406,-71.8887 228.492,-65.5239"/>
 </g>
 </g>
 </svg>

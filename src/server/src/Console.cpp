@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Обработка команд в консоли сервера
+ * @author SavaLione
+ * @date 01 Jun 2019
+ */
+/**
+ * @defgroup console_cpp Console.cpp
+ * @ingroup server
+ * @{
+ */
 #include "Console.h"
 
 #include <iostream>
@@ -88,3 +99,4 @@ CMD BR::CONSOLE::getCommand(std::string const &command)
 
     return ret;
 }
+/** @} */

@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Константы консоли
  * @author SavaLione
  * @date 20 Apr 2019
 */

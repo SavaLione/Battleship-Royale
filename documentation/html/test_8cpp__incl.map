@@ -1,8 +1,13 @@
-<map id="src/testing/minidb/test.cpp" name="src/testing/minidb/test.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="52,5,177,47"/>
+<map id="src/opportunity_check/minidb/test.cpp" name="src/opportunity_check/minidb/test.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="39,5,190,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,77,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="85,169,139,196"/>
-<area shape="rect" id="node4" href="$testing_2minidb_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="157,95,232,121"/>
-<area shape="rect" id="node5" title=" " alt="" coords="163,169,234,196"/>
-<area shape="rect" id="node6" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="259,169,389,196"/>
+<area shape="rect" id="node3" title=" " alt="" coords="90,169,145,196"/>
+<area shape="rect" id="node4" href="$opportunity__check_2minidb_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="152,95,227,121"/>
+<area shape="rect" id="node5" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="25,244,95,271"/>
+<area shape="rect" id="node6" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="349,169,480,196"/>
+<area shape="rect" id="node7" href="$_version_8h.html" title="Версия программы" alt="" coords="120,244,299,271"/>
+<area shape="rect" id="node8" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="323,244,506,271"/>
+<area shape="rect" id="node9" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="530,244,713,271"/>
+<area shape="rect" id="node10" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="737,244,909,271"/>
+<area shape="rect" id="node11" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="933,244,1099,271"/>
 </map>

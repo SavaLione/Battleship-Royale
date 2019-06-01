@@ -1,0 +1,9 @@
+<map id="src/BattleshipRoyale/BattleshipRoyale.h" name="src/BattleshipRoyale/BattleshipRoyale.h">
+<area shape="rect" id="node1" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="533,5,675,47"/>
+<area shape="rect" id="node2" href="$_version_8h.html" title="Версия программы" alt="" coords="5,95,184,121"/>
+<area shape="rect" id="node3" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="209,95,391,121"/>
+<area shape="rect" id="node4" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="416,95,589,121"/>
+<area shape="rect" id="node5" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="614,95,797,121"/>
+<area shape="rect" id="node6" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="821,95,993,121"/>
+<area shape="rect" id="node7" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="1017,95,1183,121"/>
+</map>

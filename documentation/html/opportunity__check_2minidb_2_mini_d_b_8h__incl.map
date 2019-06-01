@@ -1,0 +1,11 @@
+<map id="src/opportunity_check/minidb/MiniDB.h" name="src/opportunity_check/minidb/MiniDB.h">
+<area shape="rect" id="node1" title="Облегчённый класс для работы с бд" alt="" coords="91,5,241,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="73,95,128,121"/>
+<area shape="rect" id="node3" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="5,169,76,196"/>
+<area shape="rect" id="node4" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="330,95,461,121"/>
+<area shape="rect" id="node5" href="$_version_8h.html" title="Версия программы" alt="" coords="101,169,279,196"/>
+<area shape="rect" id="node6" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="304,169,487,196"/>
+<area shape="rect" id="node7" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="511,169,693,196"/>
+<area shape="rect" id="node8" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="717,169,889,196"/>
+<area shape="rect" id="node9" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="914,169,1079,196"/>
+</map>

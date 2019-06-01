@@ -35,7 +35,7 @@ else()
     message(${BR_MSG_UNIX})
 endif()
 
-set(    BR_SERVER      0    CACHE BOOL "BR_SERVER"          )
+set(    BR_SERVER      1    CACHE BOOL "BR_SERVER"          )
 set(    BR_CLIENT      1    CACHE BOOL "BR_CLIENT"          )
 set(    BR_TEST_SERVER 0    CACHE BOOL "BR_TEST_SERVER"     )           # <--- DELETE THIS ON STABLE
 set(    BR_TEST_CLIENT 0    CACHE BOOL "BR_TEST_CLIENT"     )           # <--- DELETE THIS ON STABLE
@@ -116,7 +116,7 @@ message(${BR_MSG_BUILD})
 
 if(BR_WINDOWS)
     #debug
-    add_compile_options(-Wall -O0 -pipe)
+    add_compile_options(-Wall -O2 -pipe)
 
     #release
     #add_compile_options(-Wall -O2 -pipe)
@@ -126,7 +126,7 @@ endif()
 
 if(BR_UNIX)
     #debug
-    add_compile_options(-Wall -O0 -g -pipe -lncursesw -fopenmp -lsqlite3 -lpthread)
+    add_compile_options(-Wall -O2 -g -pipe -lncursesw -fopenmp -lsqlite3 -lpthread)
 
     #release
     #add_compile_options(-Wall -O2 -g -lncurses -pipe -fopenmp -lsqlite3 -lpthread)

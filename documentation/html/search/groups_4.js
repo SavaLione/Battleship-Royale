@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['processing_2ecpp',['Processing.cpp',['../group__processing__cpp.html',1,'']]],
-  ['processing_2eh',['Processing.h',['../group__processing__h.html',1,'']]]
+  ['loopconnections_2ecpp',['LoopConnections.cpp',['../group__loopconections__cpp.html',1,'']]],
+  ['loopconnections_2eh',['LoopConnections.h',['../group__loopconections__h.html',1,'']]]
 ];

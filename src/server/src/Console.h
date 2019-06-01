@@ -1,3 +1,14 @@
+/**
+ * @file
+ * @brief Обработка команд в консоли сервера
+ * @author SavaLione
+ * @date 01 Jun 2019
+ */
+/**
+ * @defgroup console_h Console.h
+ * @ingroup server
+ * @{
+ */
 #ifndef CONSOLE_H
 #define CONSOLE_H
 
@@ -17,3 +28,4 @@ namespace CONSOLE
 
 
 #endif // CONSOLE_H
+/** @} */

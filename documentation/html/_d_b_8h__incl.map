@@ -1,5 +1,10 @@
 <map id="src/delete/DB.h" name="src/delete/DB.h">
-<area shape="rect" id="node1" title="Работа с базой данных" alt="" coords="47,5,159,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,76,107"/>
-<area shape="rect" id="node3" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="101,80,231,107"/>
+<area shape="rect" id="node1" title="Работа с базой данных" alt="" coords="250,5,362,32"/>
+<area shape="rect" id="node2" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="5,155,76,181"/>
+<area shape="rect" id="node3" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="330,80,461,107"/>
+<area shape="rect" id="node4" href="$_version_8h.html" title="Версия программы" alt="" coords="101,155,279,181"/>
+<area shape="rect" id="node5" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="304,155,487,181"/>
+<area shape="rect" id="node6" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="511,155,693,181"/>
+<area shape="rect" id="node7" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="717,155,889,181"/>
+<area shape="rect" id="node8" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="914,155,1079,181"/>
 </map>

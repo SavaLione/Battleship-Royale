@@ -1,9 +1,14 @@
 <map id="src/server/src/MemDBuid.cpp" name="src/server/src/MemDBuid.cpp">
-<area shape="rect" id="node1" title="Облегчённый класс для работы с бд в памяти" alt="" coords="144,5,337,32"/>
+<area shape="rect" id="node1" title="Облегчённый класс для работы с бд в памяти" alt="" coords="123,5,316,32"/>
 <area shape="rect" id="node2" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="5,80,103,107"/>
 <area shape="rect" id="node4" title=" " alt="" coords="127,80,181,107"/>
-<area shape="rect" id="node5" title=" " alt="" coords="205,80,276,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="301,80,386,107"/>
-<area shape="rect" id="node7" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="410,80,541,107"/>
+<area shape="rect" id="node5" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="144,155,215,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="257,80,342,107"/>
+<area shape="rect" id="node7" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="469,80,599,107"/>
 <area shape="rect" id="node3" title=" " alt="" coords="27,155,81,181"/>
+<area shape="rect" id="node8" href="$_version_8h.html" title="Версия программы" alt="" coords="239,155,418,181"/>
+<area shape="rect" id="node9" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="443,155,625,181"/>
+<area shape="rect" id="node10" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="649,155,832,181"/>
+<area shape="rect" id="node11" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="856,155,1028,181"/>
+<area shape="rect" id="node12" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="1053,155,1218,181"/>
 </map>

@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Battleship-Royale: Исходный файл src/client/src/TUI.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Battleship-Royale
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_t_u_i_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">TUI.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_t_u_i_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef TUI_H</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define TUI_H</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_battleship_royale_8h.html">BattleshipRoyale.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_t_u_i.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_t_u_i.html">TUI</a></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__tui__cpp.html#gab79ea5d1087e224fea2bf658e4cd58fb">initColor</a>();</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__tui__cpp.html#ga400abb893a74a5d81676242d92931613">bottom</a>();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="group__tui__cpp.html#gaa8cfb113dfd2609966adf03af4b62cd3">TUI</a>();</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="group__tui__cpp.html#ga174f1a00ce41c9c99b18f2af70b1d340">~TUI</a>();</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__tui__cpp.html#gac83e9f5814229a933914e126ba4867e2">move</a>();</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="namespace_b_r_1_1_c_o_d_e_1_1_m_e_n_u_1_1_m_a_i_n.html#a4674df22ecab5fb92834b05e083e0fef">BR::CODE::MENU::MAIN::items</a> <a class="code" href="group__tui__cpp.html#ga8de8028bfe801e3b3722c2114c5efff1">MainMenu</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__tui__cpp.html#ga0d0d2334ed620100ed5d2b43698d5a78">colorTest</a>();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="group__tui__cpp.html#ga768c7db4c714be3569ee78cbbbeb1f46">locTest</a>();</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // TUI_H</span></div><div class="ttc" id="group__tui__cpp_html_ga8de8028bfe801e3b3722c2114c5efff1"><div class="ttname"><a href="group__tui__cpp.html#ga8de8028bfe801e3b3722c2114c5efff1">TUI::MainMenu</a></div><div class="ttdeci">BR::CODE::MENU::MAIN::items MainMenu()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00242">TUI.cpp:242</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_gab79ea5d1087e224fea2bf658e4cd58fb"><div class="ttname"><a href="group__tui__cpp.html#gab79ea5d1087e224fea2bf658e4cd58fb">TUI::initColor</a></div><div class="ttdeci">void initColor()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00041">TUI.cpp:41</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_gaa8cfb113dfd2609966adf03af4b62cd3"><div class="ttname"><a href="group__tui__cpp.html#gaa8cfb113dfd2609966adf03af4b62cd3">TUI::TUI</a></div><div class="ttdeci">TUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00024">TUI.cpp:24</a></div></div>
+<div class="ttc" id="class_t_u_i_html"><div class="ttname"><a href="class_t_u_i.html">TUI</a></div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8h_source.html#l00017">TUI.h:17</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_gac83e9f5814229a933914e126ba4867e2"><div class="ttname"><a href="group__tui__cpp.html#gac83e9f5814229a933914e126ba4867e2">TUI::move</a></div><div class="ttdeci">void move()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00161">TUI.cpp:161</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_ga768c7db4c714be3569ee78cbbbeb1f46"><div class="ttname"><a href="group__tui__cpp.html#ga768c7db4c714be3569ee78cbbbeb1f46">TUI::locTest</a></div><div class="ttdeci">void locTest()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00418">TUI.cpp:418</a></div></div>
+<div class="ttc" id="namespace_b_r_1_1_c_o_d_e_1_1_m_e_n_u_1_1_m_a_i_n_html_a4674df22ecab5fb92834b05e083e0fef"><div class="ttname"><a href="namespace_b_r_1_1_c_o_d_e_1_1_m_e_n_u_1_1_m_a_i_n.html#a4674df22ecab5fb92834b05e083e0fef">BR::CODE::MENU::MAIN::items</a></div><div class="ttdeci">items</div><div class="ttdef"><b>Definition:</b> <a href="_code_8h_source.html#l00048">Code.h:48</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_ga174f1a00ce41c9c99b18f2af70b1d340"><div class="ttname"><a href="group__tui__cpp.html#ga174f1a00ce41c9c99b18f2af70b1d340">TUI::~TUI</a></div><div class="ttdeci">~TUI()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00036">TUI.cpp:36</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_ga400abb893a74a5d81676242d92931613"><div class="ttname"><a href="group__tui__cpp.html#ga400abb893a74a5d81676242d92931613">TUI::bottom</a></div><div class="ttdeci">void bottom()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00392">TUI.cpp:392</a></div></div>
+<div class="ttc" id="group__tui__cpp_html_ga0d0d2334ed620100ed5d2b43698d5a78"><div class="ttname"><a href="group__tui__cpp.html#ga0d0d2334ed620100ed5d2b43698d5a78">TUI::colorTest</a></div><div class="ttdeci">void colorTest()</div><div class="ttdef"><b>Definition:</b> <a href="_t_u_i_8cpp_source.html#l00400">TUI.cpp:400</a></div></div>
+<div class="ttc" id="_battleship_royale_8h_html"><div class="ttname"><a href="_battleship_royale_8h.html">BattleshipRoyale.h</a></div><div class="ttdoc">Заголовочный файл с пространством имён, которое хранит в себе константы.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_78ce3fde11f1c50580f2f2c408f37c2f.html">src</a></li><li class="navelem"><a class="el" href="_t_u_i_8h.html">TUI.h</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

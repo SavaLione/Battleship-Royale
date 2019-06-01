@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "Client", "class_client.html", null ],
     [ "DB", "class_d_b.html", null ],
     [ "db_player", "structdb__player.html", null ],
     [ "enable_shared_from_this", null, [
@@ -16,5 +17,8 @@ var hierarchy =
       [ "ServerLink", "class_server_link.html", null ]
     ] ],
     [ "Processing", "class_processing.html", null ],
-    [ "Server", "class_server.html", null ]
+    [ "Registration", "class_registration.html", null ],
+    [ "Server", "class_server.html", null ],
+    [ "TUI", "class_t_u_i.html", null ],
+    [ "Window", "class_window.html", null ]
 ];

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['server',['Server',['../group__server.html',1,'']]],
-  ['server_2ecpp',['Server.cpp',['../group__servercpp.html',1,'']]],
-  ['server_2eh',['Server.h',['../group__serverh.html',1,'']]]
+  ['openmp_2ecpp',['OpenMP.cpp',['../group__openmp__cpp.html',1,'']]],
+  ['openmp_2eh',['OpenMP.h',['../group__openmp__h.html',1,'']]]
 ];

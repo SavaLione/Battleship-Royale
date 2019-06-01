@@ -1,22 +1,26 @@
 <map id="src/server/src/BattleshipRoyale.cpp" name="src/server/src/BattleshipRoyale.cpp">
-<area shape="rect" id="node1" title="Сервер" alt="" coords="620,5,783,47"/>
+<area shape="rect" id="node1" title="Сервер" alt="" coords="632,5,795,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,102,77,129"/>
-<area shape="rect" id="node3" title=" " alt="" coords="770,423,825,449"/>
-<area shape="rect" id="node4" title=" " alt="" coords="153,102,207,129"/>
-<area shape="rect" id="node5" title=" " alt="" coords="232,102,296,129"/>
-<area shape="rect" id="node6" title=" " alt="" coords="321,102,434,129"/>
-<area shape="rect" id="node7" title=" " alt="" coords="459,95,589,136"/>
-<area shape="rect" id="node8" title=" " alt="" coords="613,102,707,129"/>
-<area shape="rect" id="node9" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="265,423,396,449"/>
-<area shape="rect" id="node10" href="$_regex_8h.html" title="Работа с регулярными выражениями" alt="" coords="710,184,781,211"/>
-<area shape="rect" id="node11" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="635,348,709,375"/>
-<area shape="rect" id="node13" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="886,348,983,375"/>
-<area shape="rect" id="node14" href="$_console_8h.html" title=" " alt="" coords="805,184,885,211"/>
-<area shape="rect" id="node15" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="981,102,1051,129"/>
-<area shape="rect" id="node20" href="$rand__sse_8h.html" title="Генерация рандомных чисел через SSE." alt="" coords="1358,102,1445,129"/>
-<area shape="rect" id="node12" title=" " alt="" coords="637,423,707,449"/>
-<area shape="rect" id="node16" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="986,184,1089,211"/>
-<area shape="rect" id="node17" title=" " alt="" coords="1008,266,1115,293"/>
-<area shape="rect" id="node18" title=" " alt="" coords="1139,259,1282,300"/>
-<area shape="rect" id="node19" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="885,266,984,293"/>
+<area shape="rect" id="node3" title=" " alt="" coords="347,423,402,449"/>
+<area shape="rect" id="node4" title=" " alt="" coords="777,102,831,129"/>
+<area shape="rect" id="node5" title=" " alt="" coords="855,102,969,129"/>
+<area shape="rect" id="node6" title=" " alt="" coords="993,95,1124,136"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1148,102,1241,129"/>
+<area shape="rect" id="node8" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="635,423,765,449"/>
+<area shape="rect" id="node15" href="$_check_8h.html" title="Набор проверок (пример: Проверка поддержки OpenMP)" alt="" coords="1266,102,1337,129"/>
+<area shape="rect" id="node17" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="437,348,512,375"/>
+<area shape="rect" id="node18" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="315,348,413,375"/>
+<area shape="rect" id="node19" href="$server_2src_2_console_8h.html" title="Обработка команд в консоли сервера" alt="" coords="621,348,701,375"/>
+<area shape="rect" id="node20" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="489,102,559,129"/>
+<area shape="rect" id="node9" href="$_version_8h.html" title="Версия программы" alt="" coords="611,497,789,524"/>
+<area shape="rect" id="node10" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="814,497,997,524"/>
+<area shape="rect" id="node11" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="224,497,397,524"/>
+<area shape="rect" id="node12" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="1021,497,1203,524"/>
+<area shape="rect" id="node13" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="1227,497,1399,524"/>
+<area shape="rect" id="node14" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="421,497,587,524"/>
+<area shape="rect" id="node16" href="$_open_m_p_8h.html" title="Проверка поддержки OpenMP." alt="" coords="1240,184,1363,211"/>
+<area shape="rect" id="node21" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="431,184,534,211"/>
+<area shape="rect" id="node22" title=" " alt="" coords="493,266,600,293"/>
+<area shape="rect" id="node23" title=" " alt="" coords="203,259,346,300"/>
+<area shape="rect" id="node24" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="371,266,469,293"/>
 </map>

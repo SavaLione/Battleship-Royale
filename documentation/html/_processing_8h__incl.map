@@ -1,8 +1,13 @@
 <map id="src/server/src/Processing.h" name="src/server/src/Processing.h">
-<area shape="rect" id="node1" title="Обработка запросов" alt="" coords="19,5,199,32"/>
-<area shape="rect" id="node2" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="127,80,202,107"/>
-<area shape="rect" id="node6" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="5,80,103,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="39,155,93,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="123,155,193,181"/>
-<area shape="rect" id="node5" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="218,155,349,181"/>
+<area shape="rect" id="node1" title="Обработка запросов" alt="" coords="32,5,212,32"/>
+<area shape="rect" id="node2" href="$server_2src_2_mini_d_b_8h.html" title="Облегчённый класс для работы с бд" alt="" coords="141,80,215,107"/>
+<area shape="rect" id="node11" href="$_mem_d_buid_8h.html" title="Облегчённый класс для работы с бд в памяти" alt="" coords="19,80,116,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="51,155,105,181"/>
+<area shape="rect" id="node4" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="5,229,76,256"/>
+<area shape="rect" id="node5" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="330,155,461,181"/>
+<area shape="rect" id="node6" href="$_version_8h.html" title="Версия программы" alt="" coords="101,229,279,256"/>
+<area shape="rect" id="node7" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="304,229,487,256"/>
+<area shape="rect" id="node8" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="511,229,693,256"/>
+<area shape="rect" id="node9" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="717,229,889,256"/>
+<area shape="rect" id="node10" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="914,229,1079,256"/>
 </map>

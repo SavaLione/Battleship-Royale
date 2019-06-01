@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Battleship-Royale: Исходный файл src/client/src/Window.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="Logo.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Battleship-Royale
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_window_8cpp_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Window.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_window_8cpp.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_window_8h.html">Window.h</a>&quot;</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;cstring&gt;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;curses.h&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="group__window__cpp.html#ga74e6087da23d3c24e9fac0245e5ec92c">   19</a></span>&#160;<a class="code" href="group__window__cpp.html#ga74e6087da23d3c24e9fac0245e5ec92c">Window::Window</a>()</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    initscr();</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    start_color();</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="group__window__cpp.html#ga87ad39ead629cfb9ccd14ff7dc543b9c">color</a>();</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;}</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="group__window__cpp.html#ga245d821e6016fa1f6970ccbbedd635f6">   26</a></span>&#160;<a class="code" href="group__window__cpp.html#ga245d821e6016fa1f6970ccbbedd635f6">Window::~Window</a>()</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    endwin();</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="group__window__cpp.html#ga87ad39ead629cfb9ccd14ff7dc543b9c">   31</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__window__cpp.html#ga87ad39ead629cfb9ccd14ff7dc543b9c">Window::color</a>()</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;{</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    init_pair(1, COLOR_RED, COLOR_BLACK);</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    init_pair(2, COLOR_GREEN, COLOR_BLACK);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    init_pair(3, COLOR_YELLOW, COLOR_BLACK);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    init_pair(4, COLOR_BLUE, COLOR_BLACK);</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    init_pair(5, COLOR_MAGENTA, COLOR_BLACK);</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    init_pair(6, COLOR_CYAN, COLOR_BLACK);</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    init_pair(7, COLOR_BLUE, COLOR_WHITE);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    init_pair(8, COLOR_WHITE, COLOR_RED);</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    init_pair(9, COLOR_BLACK, COLOR_GREEN);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    init_pair(10, COLOR_BLUE, COLOR_YELLOW);</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    init_pair(11, COLOR_WHITE, COLOR_BLUE);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    init_pair(12, COLOR_WHITE, COLOR_MAGENTA);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    init_pair(13, COLOR_BLACK, COLOR_CYAN);</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    init_pair(32, COLOR_WHITE, COLOR_BLACK);</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="group__window__cpp.html#ga10357295d118b1f66838187740345547">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__window__cpp.html#ga10357295d118b1f66838187740345547">Window::navigation</a>()</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    color_set(11, NULL);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">char</span> nav[] = <span class="stringliteral">&quot;USE [ARROWS] AND [TAB] TO NAVIGATE&quot;</span>;</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    mvwprintw(stdscr, LINES - 1, (COLS / 2) - (strlen(nav) / 2), nav);</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    color_set(32, NULL);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="group__window__cpp.html#gaad547cc29bad816b7e2d468086da982c">   57</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__window__cpp.html#gaad547cc29bad816b7e2d468086da982c">Window::testWindow</a>()</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;{</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> width = COLS;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">int</span> height = LINES - 1;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="comment">//initscr();</span></div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    curs_set(0);</div><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    refresh();</div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">//COLS</span></div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//LINES</span></div><div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> offsetx = 0;</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">int</span> offsety = 0;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    WINDOW *win = newwin(height, width, offsety, offsetx);</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">char</span> hello[] = <span class="stringliteral">&quot;Hello, world!&quot;</span>;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    mvaddstr(LINES / 2, (COLS - strlen(hello)) / 2, hello);</div><div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    box(win, 0, 0);</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="group__window__cpp.html#ga10357295d118b1f66838187740345547">navigation</a>();</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    wrefresh(win);</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    refresh();</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    getch();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//delwin(win);</span></div><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    endwin();</div><div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;}</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="group__window__cpp.html#ga4652ce5af4ba21e0b29d6e570b8992bd">   89</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__window__cpp.html#ga4652ce5af4ba21e0b29d6e570b8992bd">Window::menu</a>()</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div><div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div><div class="ttc" id="group__window__cpp_html_ga4652ce5af4ba21e0b29d6e570b8992bd"><div class="ttname"><a href="group__window__cpp.html#ga4652ce5af4ba21e0b29d6e570b8992bd">Window::menu</a></div><div class="ttdeci">void menu()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00089">Window.cpp:89</a></div></div>
+<div class="ttc" id="group__window__cpp_html_ga10357295d118b1f66838187740345547"><div class="ttname"><a href="group__window__cpp.html#ga10357295d118b1f66838187740345547">Window::navigation</a></div><div class="ttdeci">void navigation()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00049">Window.cpp:49</a></div></div>
+<div class="ttc" id="group__window__cpp_html_gaad547cc29bad816b7e2d468086da982c"><div class="ttname"><a href="group__window__cpp.html#gaad547cc29bad816b7e2d468086da982c">Window::testWindow</a></div><div class="ttdeci">void testWindow()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00057">Window.cpp:57</a></div></div>
+<div class="ttc" id="_window_8h_html"><div class="ttname"><a href="_window_8h.html">Window.h</a></div></div>
+<div class="ttc" id="group__window__cpp_html_ga245d821e6016fa1f6970ccbbedd635f6"><div class="ttname"><a href="group__window__cpp.html#ga245d821e6016fa1f6970ccbbedd635f6">Window::~Window</a></div><div class="ttdeci">~Window()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00026">Window.cpp:26</a></div></div>
+<div class="ttc" id="group__window__cpp_html_ga74e6087da23d3c24e9fac0245e5ec92c"><div class="ttname"><a href="group__window__cpp.html#ga74e6087da23d3c24e9fac0245e5ec92c">Window::Window</a></div><div class="ttdeci">Window()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00019">Window.cpp:19</a></div></div>
+<div class="ttc" id="group__window__cpp_html_ga87ad39ead629cfb9ccd14ff7dc543b9c"><div class="ttname"><a href="group__window__cpp.html#ga87ad39ead629cfb9ccd14ff7dc543b9c">Window::color</a></div><div class="ttdeci">void color()</div><div class="ttdef"><b>Definition:</b> <a href="_window_8cpp_source.html#l00031">Window.cpp:31</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_6908ff505388a07996d238c763adbdab.html">client</a></li><li class="navelem"><a class="el" href="dir_78ce3fde11f1c50580f2f2c408f37c2f.html">src</a></li><li class="navelem"><a class="el" href="_window_8cpp.html">Window.cpp</a></li>
+    <li class="footer">Создано системой
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

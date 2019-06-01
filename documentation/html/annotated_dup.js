@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "BR", "namespace_b_r.html", "namespace_b_r" ],
+    [ "Client", "class_client.html", "class_client" ],
     [ "con_handler", "classcon__handler.html", "classcon__handler" ],
     [ "DB", "class_d_b.html", "class_d_b" ],
     [ "db_player", "structdb__player.html", "structdb__player" ],
@@ -10,6 +11,9 @@ var annotated_dup =
     [ "MessageObject", "class_message_object.html", "class_message_object" ],
     [ "MiniDB", "class_mini_d_b.html", "class_mini_d_b" ],
     [ "Processing", "class_processing.html", "class_processing" ],
+    [ "Registration", "class_registration.html", "class_registration" ],
     [ "Server", "class_server.html", "class_server" ],
-    [ "ServerLink", "class_server_link.html", "class_server_link" ]
+    [ "ServerLink", "class_server_link.html", "class_server_link" ],
+    [ "TUI", "class_t_u_i.html", "class_t_u_i" ],
+    [ "Window", "class_window.html", "class_window" ]
 ];

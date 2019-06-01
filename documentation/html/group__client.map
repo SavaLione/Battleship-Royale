@@ -1,4 +1,18 @@
 <map id="Client" name="Client">
-<area shape="rect" id="node1" title="Клиент" alt="" coords="5,5,60,31"/>
-<area shape="rect" id="node2" href="$group__battleshiproyale__cpp.html" title=" " alt="" coords="108,5,251,31"/>
+<area shape="rect" id="node1" href="$group__args__h.html" title=" " alt="" coords="177,5,237,31"/>
+<area shape="rect" id="node2" href="$group__simultaneousconnections__cpp.html" title=" " alt="" coords="108,55,307,80"/>
+<area shape="rect" id="node3" href="$group__client__cpp.html" title=" " alt="" coords="167,104,247,129"/>
+<area shape="rect" id="node4" href="$group__loopconections__cpp.html" title=" " alt="" coords="134,153,281,179"/>
+<area shape="rect" id="node5" href="$group__window__cpp.html" title=" " alt="" coords="161,203,254,228"/>
+<area shape="rect" id="node6" href="$group__registration__cpp.html" title=" " alt="" coords="149,252,265,277"/>
+<area shape="rect" id="node7" href="$group__client__h.html" title=" " alt="" coords="174,301,241,327"/>
+<area shape="rect" id="node8" title="Клиент" alt="" coords="5,351,60,376"/>
+<area shape="rect" id="node9" href="$group__simultaneousconnections__h.html" title=" " alt="" coords="115,351,299,376"/>
+<area shape="rect" id="node10" href="$group__tui__h.html" title=" " alt="" coords="181,400,233,425"/>
+<area shape="rect" id="node11" href="$group__loopconections__h.html" title=" " alt="" coords="141,449,274,475"/>
+<area shape="rect" id="node12" href="$group__battleshiproyale__cpp.html" title=" " alt="" coords="136,499,279,524"/>
+<area shape="rect" id="node13" href="$group__tui__cpp.html" title=" " alt="" coords="174,548,241,573"/>
+<area shape="rect" id="node14" href="$group__test__h.html" title=" " alt="" coords="178,597,237,623"/>
+<area shape="rect" id="node15" href="$group__registration__h.html" title=" " alt="" coords="156,647,259,672"/>
+<area shape="rect" id="node16" href="$group__window__h.html" title=" " alt="" coords="168,696,247,721"/>
 </map>

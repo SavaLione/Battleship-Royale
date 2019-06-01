@@ -6,6 +6,7 @@ var group__processing__h =
         [ "USER_PASS_CHECK", "class_processing.html#ab5035e1e4df7523e38f414242a610d3ea7014b1117a5ff3d0c6abd48938196539", null ],
         [ "USER_UID", "class_processing.html#ab5035e1e4df7523e38f414242a610d3ea8b5b05023b182a93192110a2c60c42f6", null ],
         [ "USER_CREATE", "class_processing.html#ab5035e1e4df7523e38f414242a610d3ea9707617ef14f99262c097fc2f57b6c3f", null ],
+        [ "TEST_WITHOUT_DB_CONNECTION", "class_processing.html#ab5035e1e4df7523e38f414242a610d3ea4804109ebc0bcf091ec92ce5fc430c5d", null ],
         [ "REQ_ERROR", "class_processing.html#ab5035e1e4df7523e38f414242a610d3eaf4965540d0711f37fb006f4fee2a8993", null ]
       ] ],
       [ "Processing", "group__processing__cpp.html#gaa4691b916c54dc017299762903fe6e5e", null ],

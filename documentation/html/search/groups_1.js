@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['client',['Client',['../group__client.html',1,'']]],
-  ['con_5fhandler_2ecpp',['con_handler.cpp',['../group__con__handler__cpp.html',1,'']]],
-  ['con_5fhandler_2eh',['con_handler.h',['../group__con__handler__h.html',1,'']]]
+  ['battleship_2droyale',['Battleship-Royale',['../group__battleship-royale.html',1,'']]],
+  ['battleshiproyale_2eh',['BattleShiproyale.h',['../group__battleshiproyale.html',1,'']]],
+  ['battleshiproyale_2ecpp',['BattleShiproyale.cpp',['../group__battleshiproyale__cpp.html',1,'']]],
+  ['battleshiproyale_2ecpp',['BattleShiproyale.cpp',['../group__battleshiproyalecpp.html',1,'']]]
 ];

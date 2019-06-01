@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Различные коды ответов
  * @author SavaLione
  * @date 20 Apr 2019
 */

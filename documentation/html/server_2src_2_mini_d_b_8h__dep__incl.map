@@ -1,12 +1,14 @@
 <map id="src/server/src/MiniDB.h" name="src/server/src/MiniDB.h">
-<area shape="rect" id="node1" title="Облегчённый класс для работы с бд" alt="" coords="235,5,392,32"/>
-<area shape="rect" id="node2" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="5,333,168,375"/>
-<area shape="rect" id="node3" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="223,80,403,107"/>
-<area shape="rect" id="node10" href="$server_2src_2_mini_d_b_8cpp.html" title="Облегчённый класс для работы с бд" alt="" coords="428,80,599,107"/>
-<area shape="rect" id="node4" href="$examples_2_processing_8cpp.html" title=" " alt="" coords="124,162,319,189"/>
-<area shape="rect" id="node5" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="343,155,468,196"/>
-<area shape="rect" id="node9" href="$server_2src_2_processing_8cpp.html" title="Обработка запросов" alt="" coords="492,162,687,189"/>
-<area shape="rect" id="node6" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="183,251,334,278"/>
-<area shape="rect" id="node8" href="$server_2src_2con__handler_8cpp.html" title="handler" alt="" coords="359,244,484,285"/>
-<area shape="rect" id="node7" href="$server_2src_2_server_8cpp.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="192,341,357,367"/>
+<area shape="rect" id="node1" title="Облегчённый класс для работы с бд" alt="" coords="201,5,359,32"/>
+<area shape="rect" id="node2" href="$examples_2_mini_d_b_8cpp.html" title=" " alt="" coords="5,80,176,107"/>
+<area shape="rect" id="node3" href="$server_2src_2_battleship_royale_8cpp.html" title="Сервер" alt="" coords="132,333,295,375"/>
+<area shape="rect" id="node4" href="$_processing_8h.html" title="Обработка запросов" alt="" coords="258,80,438,107"/>
+<area shape="rect" id="node12" href="$server_2src_2_mini_d_b_8cpp.html" title="Облегчённый класс для работы с бд" alt="" coords="463,80,633,107"/>
+<area shape="rect" id="node5" href="$examples_2_processing_8cpp.html" title=" " alt="" coords="251,162,445,189"/>
+<area shape="rect" id="node6" href="$server_2src_2con__handler_8h.html" title="handler" alt="" coords="469,155,595,196"/>
+<area shape="rect" id="node11" href="$server_2src_2_processing_8cpp.html" title="Обработка запросов" alt="" coords="619,162,813,189"/>
+<area shape="rect" id="node7" href="$server_2src_2_server_8h.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="326,251,477,278"/>
+<area shape="rect" id="node10" href="$server_2src_2con__handler_8cpp.html" title="handler" alt="" coords="501,244,627,285"/>
+<area shape="rect" id="node8" href="$examples_2_server_8cpp.html" title=" " alt="" coords="319,341,484,367"/>
+<area shape="rect" id="node9" href="$server_2src_2_server_8cpp.html" title="Асинхронный сервер написанный на boost asio." alt="" coords="508,341,673,367"/>
 </map>

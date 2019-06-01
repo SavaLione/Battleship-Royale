@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Набор проверок (пример: Проверка поддержки OpenMP)
  * @author SavaLione
  * @date 20 Apr 2019
 */

@@ -1,7 +1,13 @@
 var searchData=
 [
-  ['rand_5fsse',['rand_sse',['../group__rand__ssecpp.html#gab7ae3ab6c8fb3e31548413dd0154db7d',1,'rand_sse(unsigned int *result):&#160;rand_sse.cpp'],['../group__rand__sseh.html#gab7ae3ab6c8fb3e31548413dd0154db7d',1,'rand_sse(unsigned int *result):&#160;rand_sse.cpp']]],
-  ['read',['Read',['../class_server_link.html#a3da0dd06361d9b2f0ca6c7467d2efdde',1,'ServerLink']]],
-  ['readcomplete',['ReadComplete',['../class_server_link.html#a57df20ef340ea6f42157ff40aa57427a',1,'ServerLink']]],
-  ['response',['response',['../group__processing__cpp.html#ga8b180eaae9e701ba365333a04cb788f5',1,'Processing']]]
+  ['main',['main',['../group__battleshiproyale__cpp.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;BattleshipRoyale.cpp'],['../examples_2_mini_d_b_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;MiniDB.cpp'],['../examples_2_processing_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Processing.cpp'],['../examples_2rand__sse_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;rand_sse.cpp'],['../examples_2_regex_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Regex.cpp'],['../examples_2_server_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Server.cpp'],['../opportunity__check_2client_2_client_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;client.cpp'],['../opportunity__check_2console_2_console_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;Console.cpp'],['../mem_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;mem.cpp'],['../test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test.cpp'],['../opportunity__check_2regex_2_regex_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;regex.cpp'],['../async_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;async.cpp'],['../spdlog_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;spdlog.cpp'],['../translation_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;translation.cpp'],['../group__battleshiproyalecpp.html#ga0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;BattleshipRoyale.cpp']]],
+  ['mainmenu',['MainMenu',['../group__tui__cpp.html#ga8de8028bfe801e3b3722c2114c5efff1',1,'TUI']]],
+  ['mainmenubottom',['MainMenuBottom',['../group__tui__cpp.html#gad635b73de3e8a83df1a4e7e69b4d78c0',1,'TUI.cpp']]],
+  ['mainmenutop',['MainMenuTop',['../group__tui__cpp.html#ga4a7a94df8b3af13cb2065d49b76c3f77',1,'TUI.cpp']]],
+  ['memdbmap',['MemDBmap',['../group__memdbmap__cpp.html#ga3640a2116a29c6520ebf54a988143d6b',1,'MemDBmap']]],
+  ['memdbuid',['MemDBuid',['../group__memdbuid__cpp.html#gac9460a7fcfbdc816aab2961d4307482f',1,'MemDBuid']]],
+  ['menu',['menu',['../group__window__cpp.html#ga4652ce5af4ba21e0b29d6e570b8992bd',1,'Window']]],
+  ['message',['Message',['../class_server_link.html#a712791c09323fcf6db49ceb0a10f8d9c',1,'ServerLink::Message()'],['../class_message.html#ab24cdb2c9890d77e46a333f157e4f66d',1,'Message::Message(MessageObject obj)'],['../class_message.html#ab24cdb2c9890d77e46a333f157e4f66d',1,'Message::Message(MessageObject obj)']]],
+  ['minidb',['MiniDB',['../group__minidb__cpp.html#gadcbeb29cd746f90566127cef68a44d77',1,'MiniDB::MiniDB()'],['../class_mini_d_b.html#adcbeb29cd746f90566127cef68a44d77',1,'MiniDB::MiniDB()']]],
+  ['move',['move',['../group__tui__cpp.html#gac83e9f5814229a933914e126ba4867e2',1,'TUI']]]
 ];

@@ -65,8 +65,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_battleship_royale_8h.html",
-"group__dbcpp.html#ga29a603c52c10831cddee82518417f992"
+"_args_8cpp.html",
+"class_server_link.html#a4abbd9bacfa29b9c761454858f6250ef",
+"group__processing__h.html"
 ];
 
 var SYNCONMSG = 'нажмите на выключить для синхронизации панелей';

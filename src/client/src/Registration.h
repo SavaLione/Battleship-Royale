@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Регистрация пользователя
  * @author SavaLione
  * @date 22 Apr 2019
 */

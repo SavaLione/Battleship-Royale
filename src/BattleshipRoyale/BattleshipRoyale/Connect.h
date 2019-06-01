@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Константы с параметрами для подключения
  * @author SavaLione
  * @date 20 Apr 2019
 */

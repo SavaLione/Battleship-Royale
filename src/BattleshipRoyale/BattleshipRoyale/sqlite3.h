@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Константы для работы с базой данных sqlite3
  * @author SavaLione
  * @date 20 Apr 2019
 */

@@ -58,7 +58,7 @@ void arg(int argc, char *argv[], int& LOG_LEVEL, int& PORT, std::string& s_ip, s
 
 		if (result.count("version"))
 		{
-			spdlog::info("client version: {}", BR::VERSION::CLIENT::VERSION);
+			spdlog::info("client version: {}.{}.{}", BR::VERSION::CLIENT::MAJOR, BR::VERSION::CLIENT::MINOR, BR::VERSION::CLIENT::PATCH);
 			exit(0);
 		}
 
@@ -117,5 +117,4 @@ void arg(int argc, char *argv[], int& LOG_LEVEL, int& PORT, std::string& s_ip, s
 		exit(1);
 	}
 }
-
 /** @} */

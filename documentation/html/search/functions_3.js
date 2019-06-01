@@ -1,10 +1,25 @@
 var searchData=
 [
-  ['getcommand',['getCommand',['../namespace_b_r_1_1_c_o_n_s_o_l_e.html#a5d83bf786b4c44515c5462a5bf38a0f1',1,'BR::CONSOLE']]],
-  ['getdata',['getData',['../group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one):&#160;Regex.cpp'],['../group__regexcpp.html#gae261ba57d33adfe5b58bd7e15d81a748',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one, std::string &amp;ret_two):&#160;Regex.cpp'],['../group__regexh.html#ga733e9b99d11900d0c9bf62e6820e0295',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one):&#160;Regex.cpp'],['../group__regexh.html#gae261ba57d33adfe5b58bd7e15d81a748',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one, std::string &amp;ret_two):&#160;Regex.cpp']]],
-  ['getname',['getName',['../group__memdbuid__cpp.html#gabdd28b0a84ea397f4b4626f9bb09cb62',1,'MemDBuid']]],
-  ['getobject',['GetObject',['../class_message.html#a5e0807f65e54b9db9a9144d96c23c859',1,'Message::GetObject(const std::string &amp;msg)'],['../class_message.html#a5e0807f65e54b9db9a9144d96c23c859',1,'Message::GetObject(const std::string &amp;msg)']]],
-  ['getpassword',['getPassword',['../group__minidb__cpp.html#gac81c196decb5fa5cf10c4be737260c8b',1,'MiniDB::getPassword(std::string const &amp;name, std::string &amp;sha2_ret)'],['../class_mini_d_b.html#ac81c196decb5fa5cf10c4be737260c8b',1,'MiniDB::getPassword(std::string const &amp;name, std::string &amp;sha2_ret)']]],
-  ['getreq',['getREQ',['../group__processing__cpp.html#gafc60589c53aba7709959682c67fc010f',1,'Processing']]],
-  ['getuid',['getUid',['../group__memdbuid__cpp.html#ga02982ba5e52b541dd4cd36a4ec5f905d',1,'MemDBuid']]]
+  ['db',['DB',['../group__dbcpp.html#ga29a603c52c10831cddee82518417f992',1,'DB']]],
+  ['db_5fall_5fcheck',['db_all_check',['../group__dbcpp.html#ga880d6118bf0b4020049339afc7e825fd',1,'DB']]],
+  ['db_5fcheck_5fpass',['db_check_pass',['../group__dbcpp.html#gae82d5ae6889418aaef76396a18e30895',1,'DB']]],
+  ['db_5fcheck_5fplayer',['db_check_player',['../group__dbcpp.html#gaea6044c3fffc4c31714c732bb3789f71',1,'DB']]],
+  ['db_5fclose',['db_close',['../group__dbcpp.html#gaca4c951672c54766fdd039efd38e654b',1,'DB']]],
+  ['db_5fcreate',['db_create',['../group__dbcpp.html#gae7d842aa9002c6f8f7d026bcc55e88af',1,'DB']]],
+  ['db_5fget_5fid',['db_get_id',['../group__dbcpp.html#gaa8cdb5ec4f2f269d13cff52b9e47c4cb',1,'DB']]],
+  ['db_5fget_5flevel',['db_get_level',['../group__dbcpp.html#ga7792fdc9d2dc66bfa5ba84aa9db1ee8b',1,'DB']]],
+  ['db_5fget_5fmoney',['db_get_money',['../group__dbcpp.html#ga004b212ee48936251ff24b9f70d67dd0',1,'DB']]],
+  ['db_5fget_5fpassword',['db_get_password',['../group__dbcpp.html#ga35efc0a2ff41b4ef47c88c87f20feee4',1,'DB']]],
+  ['db_5fget_5fplayer',['db_get_player',['../group__dbcpp.html#ga1e5d244a838c99a8753727cf0abd1f70',1,'DB']]],
+  ['db_5fget_5fplayer_5fprint',['db_get_player_print',['../group__dbcpp.html#gade41c643f9d1e57ee02c107553877d64',1,'DB']]],
+  ['db_5fget_5freg_5fdate',['db_get_reg_date',['../group__dbcpp.html#gad7c6310d2669acd40978fd4662f90d53',1,'DB']]],
+  ['db_5fget_5fscore',['db_get_score',['../group__dbcpp.html#ga990cefb97ea7222649511f37334a8601',1,'DB']]],
+  ['db_5fopen',['db_open',['../class_d_b.html#a5e70db458c90e54a2d22d1167f7b52f7',1,'DB']]],
+  ['db_5fopen_5flog',['db_open_log',['../group__dbcpp.html#ga8c1dcfee12e16f2a62cbe328fc2b2261',1,'DB']]],
+  ['db_5fpragma',['db_PRAGMA',['../class_d_b.html#a379be53bb64208e8da6c4550865fb7ad',1,'DB']]],
+  ['db_5fpragma_5flog',['db_PRAGMA_log',['../group__dbcpp.html#gaf02f64c01e2fff747a0b271dbe4a25a0',1,'DB']]],
+  ['db_5ftable_5fcheck',['db_table_check',['../group__dbcpp.html#ga5001c33b72d0195db5375b042287a466',1,'DB']]],
+  ['del',['del',['../group__memdbuid__cpp.html#ga81e620144697ca0336f7daff97a59bec',1,'MemDBuid']]],
+  ['destroy_5fwin',['destroy_win',['../group__tui__cpp.html#gada66364dd2a35d4c59586818d91dfcf8',1,'TUI.cpp']]],
+  ['disconnect',['Disconnect',['../class_server_link.html#afa570df0c508889210e9ac2ff5983306',1,'ServerLink']]]
 ];

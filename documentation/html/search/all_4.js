@@ -31,5 +31,6 @@ var searchData=
   ['db_2ecpp',['DB.cpp',['../group__dbcpp.html',1,'']]],
   ['db_2eh',['DB.h',['../group__dbh.html',1,'']]],
   ['del',['del',['../group__memdbuid__cpp.html#ga81e620144697ca0336f7daff97a59bec',1,'MemDBuid']]],
+  ['destroy_5fwin',['destroy_win',['../group__tui__cpp.html#gada66364dd2a35d4c59586818d91dfcf8',1,'TUI.cpp']]],
   ['disconnect',['Disconnect',['../class_server_link.html#afa570df0c508889210e9ac2ff5983306',1,'ServerLink']]]
 ];

@@ -1,8 +1,10 @@
 var searchData=
 [
-  ['iffoundname',['ifFoundName',['../group__memdbuid__cpp.html#ga52a49d488148bdf26fd070e4a6e1ebfc',1,'MemDBuid']]],
-  ['iffounduid',['ifFoundUid',['../group__memdbuid__cpp.html#gab6e9df9ec9200f17a50a1c6bba335aeb',1,'MemDBuid']]],
-  ['isconnected',['IsConnected',['../class_server_link.html#a2f551c4fffbedab55adab3d528df0f0c',1,'ServerLink']]],
-  ['isreading',['IsReading',['../class_server_link.html#a9cdc703cdda0ff80c49434d483654d7e',1,'ServerLink']]],
-  ['issending',['IsSending',['../class_server_link.html#ab79487df49a22e5533c96032ef413e16',1,'ServerLink']]]
+  ['getcommand',['getCommand',['../group__console__cpp.html#ga65c406c2409a47a1291e0e2373a526f9',1,'BR::CONSOLE']]],
+  ['getdata',['getData',['../group__regexcpp.html#ga733e9b99d11900d0c9bf62e6820e0295',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one):&#160;Regex.cpp'],['../group__regexcpp.html#gae261ba57d33adfe5b58bd7e15d81a748',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one, std::string &amp;ret_two):&#160;Regex.cpp'],['../group__regexh.html#ga733e9b99d11900d0c9bf62e6820e0295',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one):&#160;Regex.cpp'],['../group__regexh.html#gae261ba57d33adfe5b58bd7e15d81a748',1,'getData(std::string const &amp;msg, std::string const &amp;pattern, std::string &amp;ret_one, std::string &amp;ret_two):&#160;Regex.cpp']]],
+  ['getname',['getName',['../group__memdbuid__cpp.html#gabdd28b0a84ea397f4b4626f9bb09cb62',1,'MemDBuid']]],
+  ['getobject',['GetObject',['../class_message.html#a5e0807f65e54b9db9a9144d96c23c859',1,'Message::GetObject(const std::string &amp;msg)'],['../class_message.html#a5e0807f65e54b9db9a9144d96c23c859',1,'Message::GetObject(const std::string &amp;msg)']]],
+  ['getpassword',['getPassword',['../group__minidb__cpp.html#gac81c196decb5fa5cf10c4be737260c8b',1,'MiniDB::getPassword(std::string const &amp;name, std::string &amp;sha2_ret)'],['../class_mini_d_b.html#ac81c196decb5fa5cf10c4be737260c8b',1,'MiniDB::getPassword(std::string const &amp;name, std::string &amp;sha2_ret)']]],
+  ['getreq',['getREQ',['../group__processing__cpp.html#gafc60589c53aba7709959682c67fc010f',1,'Processing']]],
+  ['getuid',['getUid',['../group__memdbuid__cpp.html#ga02982ba5e52b541dd4cd36a4ec5f905d',1,'MemDBuid']]]
 ];

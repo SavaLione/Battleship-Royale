@@ -1,0 +1,11 @@
+<map id="src/server/src/Console.h" name="src/server/src/Console.h">
+<area shape="rect" id="node1" title="Обработка команд в консоли сервера" alt="" coords="464,5,627,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="459,80,514,107"/>
+<area shape="rect" id="node3" href="$_battleship_royale_8h.html" title="Заголовочный файл с пространством имён, которое хранит в себе константы." alt="" coords="539,80,669,107"/>
+<area shape="rect" id="node4" href="$_version_8h.html" title="Версия программы" alt="" coords="5,155,184,181"/>
+<area shape="rect" id="node5" href="$_connect_8h.html" title="Константы с параметрами для подключения" alt="" coords="209,155,391,181"/>
+<area shape="rect" id="node6" href="$sqlite3_8h.html" title="Константы для работы с базой данных sqlite3." alt="" coords="416,155,589,181"/>
+<area shape="rect" id="node7" href="$_battleship_royale_2_battleship_royale_2_console_8h.html" title="Константы консоли" alt="" coords="614,155,797,181"/>
+<area shape="rect" id="node8" href="$_battleship_royale_2_battleship_royale_2_regex_8h.html" title="Константы регулярных выражений" alt="" coords="821,155,993,181"/>
+<area shape="rect" id="node9" href="$_code_8h.html" title="Различные коды ответов" alt="" coords="1017,155,1183,181"/>
+</map>

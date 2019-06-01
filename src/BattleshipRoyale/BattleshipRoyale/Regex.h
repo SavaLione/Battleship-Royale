@@ -1,6 +1,6 @@
 /**
  * @file
- * @brief 
+ * @brief Константы регулярных выражений
  * @author SavaLione
  * @date 20 Apr 2019
 */
